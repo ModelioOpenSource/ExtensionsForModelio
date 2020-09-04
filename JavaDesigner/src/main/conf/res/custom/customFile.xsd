@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Customization" type="Customization" />
+  <xs:complexType name="NamedElement">
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="BasicElement">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:complexType name="Customization">
+    <xs:sequence>
+      <xs:element name="ModelTypes" type="ModelTypes" />
+      <xs:element name="Elements" type="Elements" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModelTypes">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="ModelType">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="ModelType" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModelType">
+    <xs:sequence>
+      <xs:element name="JavaType" type="JavaType" />
+      <xs:element minOccurs="0" name="wrapper" type="JavaType" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="JavaType">
+    <xs:sequence minOccurs="0">
+      <xs:element minOccurs="0" name="import" type="NamedElement" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Elements">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Attribute" type="Element" />
+      <xs:element maxOccurs="unbounded" name="AssociationEnd" type="Element" />
+      <xs:element maxOccurs="unbounded" name="IOParameter" type="Element" />
+      <xs:element maxOccurs="unbounded" name="ReturnParameter" type="Element" />
+      <xs:element minOccurs="0" name="Class" type="Class" />
+      <xs:element name="Property" type="Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Element">
+    <xs:all>
+      <xs:element minOccurs="0" name="getter" type="Accessor" />
+      <xs:element minOccurs="0" name="setter" type="Accessor" />
+      <xs:element minOccurs="0" name="defaultInterfaceContainer" type="JavaType" />
+      <xs:element minOccurs="0" name="defaultImplementationContainer" type="JavaType" />
+    </xs:all>
+    <xs:attribute name="card" type="Multiplicity" />
+  </xs:complexType>
+  <xs:complexType name="Accessor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="defaultPattern" type="BasicElement" />
+      <xs:element minOccurs="0" name="variants" type="Variants" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Variants">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="pattern">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="BasicElement">
+              <xs:attribute name="type" type="xs:string" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Multiplicity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OptionalSimple" />
+      <xs:enumeration value="MandatorySimple" />
+      <xs:enumeration value="OptionalMultiple" />
+      <xs:enumeration value="MandatoryMultiple" />
+      <xs:enumeration value="Finite" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Visibility">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Public" />
+      <xs:enumeration value="Protected" />
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="Undefined" />
+      <xs:enumeration value="Package" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Class">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="header" type="BasicElement" />
+      <xs:element minOccurs="0" name="footer" type="BasicElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="5" maxOccurs="5" name="Visibility">
+        <xs:complexType>
+          <xs:attribute name="model" type="Visibility" use="required" />
+          <xs:attribute name="code" type="Visibility" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

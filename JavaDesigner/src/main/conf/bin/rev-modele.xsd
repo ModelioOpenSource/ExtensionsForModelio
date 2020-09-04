@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns="http://www.modeliosoft.com/rev-modele.xsd" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified" targetNamespace="http://www.modeliosoft.com/rev-modele.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="association-end">
+    <xs:annotation>
+      <xs:documentation> Copyright SOFTEAM 2003 - 2012 </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="base-type" />
+        <xs:element ref="class-type" />
+        <xs:element ref="note" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="constraint" />
+        <xs:element ref="value" />
+        <xs:element ref="attribute" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="multiplicity-min" type="xs:string" />
+      <xs:attribute name="multiplicity-max" type="xs:string" />
+      <xs:attribute name="aggregation">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="KindIsAssociation" />
+            <xs:enumeration value="KindIsAggregation" />
+            <xs:enumeration value="KindIsComposition" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-ordered" type="xs:boolean" />
+      <xs:attribute name="is-navigable" type="xs:boolean" />
+      <xs:attribute name="is-changeable" type="xs:boolean" />
+      <xs:attribute name="changeable">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Read" />
+            <xs:enumeration value="Write" />
+            <xs:enumeration value="ReadWrite" />
+            <xs:enumeration value="AccessNone" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-class" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="attribute">
+    <xs:annotation>
+      <xs:documentation> Metaclass Attribute </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="value" />
+        <xs:element ref="base-type" />
+        <xs:element ref="class-type" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-derived" type="xs:boolean" />
+      <xs:attribute name="is-set" type="xs:boolean" />
+      <xs:attribute name="multiplicity" type="xs:string" />
+      <xs:attribute name="type-constraint" type="xs:string" />
+      <xs:attribute name="changeable">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Read" />
+            <xs:enumeration value="Write" />
+            <xs:enumeration value="ReadWrite" />
+            <xs:enumeration value="AccessNone" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="target-is-class" type="xs:boolean" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-class" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="base-type" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Element describing a native type of the reversed language </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="class">
+    <xs:annotation>
+      <xs:documentation> Metaclass Class </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="class" />
+        <xs:element ref="interface" />
+        <xs:element ref="instance" />
+        <xs:element ref="signal" />
+        <xs:element ref="data-type" />
+        <xs:element ref="enumeration" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="generalization" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="realization" />
+        <xs:element ref="operation" />
+        <xs:element ref="attribute" />
+        <xs:element ref="association-end" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-main" type="xs:boolean" />
+      <xs:attribute name="is-active" type="xs:boolean" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-elementary" type="xs:boolean" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="class-type">
+    <xs:annotation>
+      <xs:documentation> Element describing the type of an UML element when this type is a class. 
+	 The destination element designates the path of the class in the model. 
+	 Its value is the complete name of the class including the name spacing. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="constraint">
+    <xs:annotation>
+      <xs:documentation> Metaclass Constraint 
+     The PCDATA field holds the constraint contents. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="content" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Element represents the content of a note </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="data-type">
+    <xs:annotation>
+      <xs:documentation> Metaclass DataType </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="operation" />
+        <xs:element ref="template-binding" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="generalization" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="realization" />
+        <xs:element ref="attribute" />
+        <xs:element ref="association-end" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-elementary" type="xs:boolean" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="default-value" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Property DefaultValue </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="destination">
+    <xs:annotation>
+      <xs:documentation> Element used to designate an element in the model using its unambiguous complete path in the model </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="package" type="xs:string" />
+      <xs:attribute name="class" type="xs:string" />
+      <xs:attribute name="template-parameter" type="xs:string" />
+      <xs:attribute name="feature" type="xs:string" />
+      <xs:attribute name="parameter" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dir">
+    <xs:annotation>
+      <xs:documentation> Element defining a directory
+	 A dir element contains the name of the directory.
+	 Used in:model.
+
+	 Example:
+	 Files :
+	 dir1/dir2/file1
+	 dir1/dir2/file2
+	 dir1/dir3/file3
+
+	 XML representation:
+	 &lt;dir name="dir1"&gt;
+		&lt;dir name="dir2"&gt;
+			&lt;group name"file1"&gt;
+				...
+			&lt;/group&gt;
+			&lt;group name"file2"&gt;
+				...
+			&lt;/group&gt;
+		&lt;/dir&gt;
+		&lt;dir name="dir3"&gt;
+			&lt;group name"file3"&gt;
+				...
+			&lt;/group&gt;
+		&lt;/dir&gt;
+	 &lt;/dir&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="dir" />
+        <xs:element ref="group" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="element-import">
+    <xs:annotation>
+      <xs:documentation> Metaclass ElementImport </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="used-class" />
+          <xs:element ref="used-package" />
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="note" />
+          <xs:element ref="constraint" />
+          <xs:element ref="stereotype" />
+          <xs:element ref="tagged-value" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enumeration">
+    <xs:annotation>
+      <xs:documentation> Metaclass Enumeration </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="enumeration" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="use" />
+        <xs:element ref="interface" />
+        <xs:element ref="data-type" />
+        <xs:element ref="class" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="constraint" />
+        <xs:element ref="note" />
+        <xs:element ref="attribute" />
+        <xs:element ref="package-import" />
+        <xs:element ref="operation" />
+        <xs:element ref="association-end" />
+        <xs:element ref="enumeration-literal" />
+        <xs:element ref="element-import" />
+        <xs:element ref="realization" />
+        <xs:element ref="generalization" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-elementary" type="xs:boolean" />
+      <xs:attribute name="objid" type="xs:string" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enumeration-literal">
+    <xs:annotation>
+      <xs:documentation> Metaclass EnumerationLiteral </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generalization">
+    <xs:annotation>
+      <xs:documentation> Metaclass Generalization </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="super-type" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="discriminator" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="group">
+    <xs:annotation>
+      <xs:documentation> Element defining the "group" concept
+ 	 A group is a high level set of parts of the application.
+	 It is used to map a language dependant structure which can't be directly
+     mapped in UML (For example multiple classes in one Java source file)  </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="package" />
+        <xs:element ref="class" />
+        <xs:element ref="interface" />
+        <xs:element ref="enumeration" />
+        <xs:element ref="data-type" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="generalization" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="realization" />
+        <xs:element ref="operation" />
+        <xs:element ref="association-end" />
+        <xs:element ref="attribute" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icon" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Property icon </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="implemented-class">
+    <xs:annotation>
+      <xs:documentation> Property ImplementedClass </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interface">
+    <xs:annotation>
+      <xs:documentation>Metaclass Interface </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="class" />
+        <xs:element ref="interface" />
+        <xs:element ref="enumeration" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="instance" />
+        <xs:element ref="generalization" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="operation" />
+        <xs:element ref="attribute" />
+        <xs:element ref="association-end" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-elementary" type="xs:boolean" />
+      <xs:attribute name="objid" type="xs:string" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="instance">
+    <xs:annotation>
+      <xs:documentation> Metaclass Instance </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-elementary" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="is-instantiable" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Property IsInstantiable </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="model">
+    <xs:annotation>
+      <xs:documentation> Model root element </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="package" />
+        <xs:element ref="class" />
+        <xs:element ref="interface" />
+        <xs:element ref="data-type" />
+        <xs:element ref="enumeration" />
+        <xs:element ref="group" />
+        <xs:element ref="dir" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="note">
+    <xs:annotation>
+      <xs:documentation>Metaclass Note.
+	The content of the note is stored in the content element.
+	Used in: class, data-type, package, operation, attribute, association-end, parameter, use, generalization, realization</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="content" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="note-type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="operation">
+    <xs:annotation>
+      <xs:documentation> Metaclass Operation </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="parameter" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="return-parameter" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="raised-exception" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="passing">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="MethodIn" />
+            <xs:enumeration value="MethodOut" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="final" type="xs:boolean" />
+      <xs:attribute name="concurrency" type="xs:boolean" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-class" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="package">
+    <xs:annotation>
+      <xs:documentation> Metaclass Package </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="group" />
+        <xs:element ref="package" />
+        <xs:element ref="class" />
+        <xs:element ref="interface" />
+        <xs:element ref="signal" />
+        <xs:element ref="enumeration" />
+        <xs:element ref="data-type" />
+        <xs:element ref="instance" />
+        <xs:element ref="template-parameter" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="generalization" />
+        <xs:element ref="use" />
+        <xs:element ref="element-import" />
+        <xs:element ref="package-import" />
+        <xs:element ref="realization" />
+        <xs:element ref="operation" />
+        <xs:element ref="association-end" />
+        <xs:element ref="attribute" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="is-abstract" type="xs:boolean" />
+      <xs:attribute name="is-leaf" type="xs:boolean" />
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+            <xs:enumeration value="Package_Visibility" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-instantiable" type="xs:boolean" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="package-import">
+    <xs:annotation>
+      <xs:documentation> Metaclass PackageImport </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="used-package" />
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="note" />
+          <xs:element ref="constraint" />
+          <xs:element ref="stereotype" />
+          <xs:element ref="tagged-value" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parameter">
+    <xs:annotation>
+      <xs:documentation> Metaclass Parameter </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="base-type" />
+        <xs:element ref="class-type" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="default-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="passing-mode">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="In" />
+            <xs:enumeration value="Out" />
+            <xs:enumeration value="Inout" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-set" type="xs:boolean" />
+      <xs:attribute name="multiplicity" type="xs:string" />
+      <xs:attribute name="type-constraint" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="passing-mode" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Property PassingMode </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="realization">
+    <xs:annotation>
+      <xs:documentation> Metaclass Realization </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="implemented-class" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="raised-exception">
+    <xs:annotation>
+      <xs:documentation> Metaclass RaisedException </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="used-class" />
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="note" />
+          <xs:element ref="constraint" />
+          <xs:element ref="stereotype" />
+          <xs:element ref="tagged-value" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="report" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> The reverse "report" </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="report-item">
+    <xs:annotation>
+      <xs:documentation>Element describing one reported information item.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element minOccurs="0" ref="target-item" />
+        <xs:element ref="report" />
+      </xs:sequence>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="info" />
+            <xs:enumeration value="warning" />
+            <xs:enumeration value="error" />
+            <xs:enumeration value="modification" />
+            <xs:enumeration value="addition" />
+            <xs:enumeration value="deletion" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="report-list">
+    <xs:annotation>
+      <xs:documentation>Element used to send back reports to Objecteering
+	Used in: reversed-data</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="report-item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="return-parameter">
+    <xs:annotation>
+      <xs:documentation> Metaclass Parameter Return</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="base-type" />
+        <xs:element ref="class-type" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="default-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="passing-mode">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="In" />
+            <xs:enumeration value="Out" />
+            <xs:enumeration value="Inout" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-set" type="xs:boolean" />
+      <xs:attribute name="multiplicity" type="xs:string" />
+      <xs:attribute name="type-constraint" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reversed-data">
+    <xs:annotation>
+      <xs:documentation> XML file root element </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="model" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="external-element" />
+        <xs:element ref="report-list" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signal">
+    <xs:annotation>
+      <xs:documentation> Metaclass Signal </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="operation-representation" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Public" />
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Private" />
+            <xs:enumeration value="Visibility_Undefined" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="is-class" type="xs:boolean" />
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+      <xs:attribute name="objid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="operation-representation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="external-element">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="id" type="xs:string" use="required" />
+        </xs:extension>
+      <xs:attribute name="package" type="xs:string" />
+      <xs:attribute name="class" type="xs:string" />
+      <xs:attribute name="metaclass" type="xs:string" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stereotype">
+    <xs:annotation>
+      <xs:documentation> Metaclass Stereotype </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="stereotype-type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="super-type">
+    <xs:annotation>
+      <xs:documentation> Association SuperType </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tagged-value">
+    <xs:annotation>
+      <xs:documentation> Metaclass TaggedValue </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tag-parameter" />
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="tag-type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tag-parameter" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Metaclass TagParameter </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="template-binding">
+    <xs:annotation>
+      <xs:documentation> Metaclass TemplateBinding </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="template-parameter-substitution" />
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="template-parameter-substitution">
+    <xs:annotation>
+      <xs:documentation> Metaclass TemplateParameterSubstitution </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="value" />
+        <xs:element ref="destination" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="template-parameter">
+    <xs:annotation>
+      <xs:documentation> Metaclass TemplateParameter </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="package" />
+        <xs:element ref="class" />
+        <xs:element ref="operation" />
+        <xs:element ref="attribute" />
+        <xs:element ref="association-end" />
+        <xs:element ref="default-value" />
+        <xs:element ref="type" />
+        <xs:element ref="default-type" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="stereotype" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="refid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="target-item">
+    <xs:annotation>
+      <xs:documentation> Model element the report-item is about </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type">
+    <xs:annotation>
+      <xs:documentation> Metaclass type </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="default-type">
+    <xs:annotation>
+      <xs:documentation> Metaclass  default-type </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="class-type" />
+        <xs:element ref="base-type" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Report title </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="use">
+    <xs:annotation>
+      <xs:documentation> Metaclass Use </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note" />
+        <xs:element ref="constraint" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+        <xs:element ref="used-class" />
+        <xs:element ref="used-package" />
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="used-class">
+    <xs:annotation>
+      <xs:documentation> Element representing a "used" element when this element is of type class </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="used-package">
+    <xs:annotation>
+      <xs:documentation> Element representing a used element when this element is of type package </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="value" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Element representing an attribute value </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="dependency">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="class-type" />
+        <xs:element ref="stereotype" />
+        <xs:element ref="tagged-value" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

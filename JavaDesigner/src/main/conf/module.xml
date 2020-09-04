@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Module id="${project.name}" class="org.modelio.module.javadesigner.impl.JavaDesignerModule" binaryversion="4.0.00" version="${project.version}" schema-level="2" uid="003800a8-0000-022e-0000-000000000000">
+    <ClassPath>
+        <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/org.modelio.documentation.javadesigner-${project.version}.jar"/>
+        <PathEntry path="lib/xmlreverse-3.4.03.jar"/>
+        <PathEntry path="lib/javatuples-1.2.jar"/>
+        <PathEntry path="lib/antlr-runtime-3.4.1.jar"/>
+    </ClassPath>
+    <Profiles>
+        <Profile uid="25801104-0000-1069-0000-000000000000" id="JavaExtensions">
+            <Stereotype name="JarFile" metaclass="Standard.Artifact" owner-stereotype="" is-hidden="false" label="%stereotype.JarFile.label" uid="00c80378-0000-01c6-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/jarfile.png"/>
+                <Image path="JavaDesigner/res/bmp/jarfile48.png"/>
+                <TagTypes>
+                    <TagType name="AntFilePath" uid="00d0068c-0000-03a8-0000-000000000000" label="%tagtype.AntFilePath.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaMainClass" uid="00d00c6c-0000-0b90-0000-000000000000" label="%tagtype.JavaMainClass.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaSourcesPath" uid="01ec2cc0-0000-0108-0000-000000000000" label="%tagtype.JavaSourcesPath.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="AntTarget" label="%notetype.AntTarget.label" is-hidden="false" uid="00c80378-0000-7792-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaAnnotation" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.JavaAnnotation.label" uid="000c0b48-0000-3a00-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaDocumentedAnnotation" uid="000c0b48-0000-3a59-0000-000000000000" label="%tagtype.JavaDocumentedAnnotation.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaInheritedAnnotation" uid="000c0b48-0000-3a5b-0000-000000000000" label="%tagtype.JavaInheritedAnnotation.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaRetentionAnnotation" uid="000c0b48-0000-3a5d-0000-000000000000" label="%tagtype.JavaRetentionAnnotation.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTargetAnnotation" uid="000c0b48-0000-3a5f-0000-000000000000" label="%tagtype.JavaTargetAnnotation.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="JavaAssociationEndProperty" metaclass="Standard.AssociationEnd" owner-stereotype="" is-hidden="false" label="%stereotype.JavaAssociationEndProperty.label" uid="a9eb2fd3-17fe-11e0-a45a-002564c97630">
+                <Icon path="JavaDesigner/res/bmp/associationend_property.png"/>
+                <Image path="JavaDesigner/res/bmp/associationend_property.png"/>
+                <TagTypes>
+                    <TagType name="JavaGetterVisibility" uid="47c9d3eb-18ba-11e0-ae4e-002564c97630" label="%tagtype.JavaGetterVisibility.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaSetterVisibility" uid="47c9d3ea-18ba-11e0-ae4e-002564c97630" label="%tagtype.JavaSetterVisibility.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="JavaAttributeProperty" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.JavaAttributeProperty.label" uid="a9808723-17fe-11e0-a45a-002564c97630">
+                <Icon path="JavaDesigner/res/bmp/attribute_property.png"/>
+                <Image path="JavaDesigner/res/bmp/attribute_property.png"/>
+                <TagTypes>
+                    <TagType name="JavaGetterVisibility" uid="3ff7dd1d-18ba-11e0-ae4e-002564c97630" label="%tagtype.JavaGetterVisibility.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaSetterVisibility" uid="4161b1ac-18ba-11e0-ae4e-002564c97630" label="%tagtype.JavaSetterVisibility.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="JavaComponent" metaclass="Standard.Component" owner-stereotype="" is-hidden="false" label="%stereotype.JavaComponent.label" uid="01ec1b44-0000-2111-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/component.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="GenerationPath" uid="01ec1b44-0000-2119-0000-000000000000" label="%tagtype.GenerationPath.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="CopyrightFile" uid="ae7ba76c-3e95-11e0-8fc3-002564c97630" label="%tagtype.CopyrightFile.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="JavaClass" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.JavaClass.label" uid="01ec23a8-0000-0258-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/class.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaName" uid="003800a8-0000-0158-0000-000000000000" label="%tagtype.JavaName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtends" uid="003800a8-0000-0154-0000-000000000000" label="%tagtype.JavaExtends.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtern" uid="003800a8-0000-0157-0000-000000000000" label="%tagtype.JavaExtern.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImplements" uid="003800a8-0000-0156-0000-000000000000" label="%tagtype.JavaImplements.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImport" uid="003800a8-0000-0155-0000-000000000000" label="%tagtype.JavaImport.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaStatic" uid="007c081c-0000-1af9-0000-000000000000" label="%tagtype.JavaStatic.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaTop" label="%notetype.JavaTop.label" is-hidden="false" uid="01840500-0000-a2a0-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="003800a8-0000-015d-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="69ed2595-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="000c0b48-0000-3a6f-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaHeader" label="%notetype.JavaHeader.label" is-hidden="false" uid="003800a8-0000-015a-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaMembers" label="%notetype.JavaMembers.label" is-hidden="false" uid="003800a8-0000-015b-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaBottom" label="%notetype.JavaBottom.label" is-hidden="false" uid="003800a8-0000-015c-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaDataType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.JavaDataType.label" uid="01ec23a8-0000-025d-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/datatype.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaName" uid="007c037c-0000-000c-0000-000000000000" label="%tagtype.JavaName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtends" uid="01240464-0000-006b-0000-000000000000" label="%tagtype.JavaExtends.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtern" uid="01240464-0000-006d-0000-000000000000" label="%tagtype.JavaExtern.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImport" uid="01240464-0000-0067-0000-000000000000" label="%tagtype.JavaImport.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaStatic" uid="01240464-0000-006f-0000-000000000000" label="%tagtype.JavaStatic.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaHeader" label="%notetype.JavaHeader.label" is-hidden="false" uid="01240464-0000-0073-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="01240464-0000-0075-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="6a023435-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaMembers" label="%notetype.JavaMembers.label" is-hidden="false" uid="01240464-0000-00f4-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="293cea58-7402-11e1-9ca8-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaTop" label="%notetype.JavaTop.label" is-hidden="false" uid="5643a93b-741e-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaBottom" label="%notetype.JavaBottom.label" is-hidden="false" uid="56d369c9-741e-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaDocInvariant" metaclass="Standard.Constraint" owner-stereotype="" is-hidden="false" label="%stereotype.JavaDocInvariant.label" uid="007c081c-0000-0251-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaEnumeration" metaclass="Standard.Enumeration" owner-stereotype="" is-hidden="false" label="%stereotype.JavaEnumeration.label" uid="01ec23a8-0000-0262-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/enumeration.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaImplements" uid="00d007fc-0001-e072-0000-000000000000" label="%tagtype.JavaImplements.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImport" uid="01ec24fc-0000-0203-0000-000000000000" label="%tagtype.JavaImport.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaStatic" uid="01ec24cc-0000-03dc-0000-000000000000" label="%tagtype.JavaStatic.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtern" uid="3ac7ce9b-423f-4ef0-9c40-8dcc9ddedcc6" label="%tagtype.JavaExtern.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="01ec24cc-0000-0154-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaMembers" label="%notetype.JavaMembers.label" is-hidden="false" uid="00d007fc-0001-e06d-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="000c11e0-0000-5bb9-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="6a182d35-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaTop" label="%notetype.JavaTop.label" is-hidden="false" uid="288a17df-dc2b-11df-bd5c-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaBottom" label="%notetype.JavaBottom.label" is-hidden="false" uid="288a17e0-dc2b-11df-bd5c-002564c97630" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaFileGroup" metaclass="Standard.ElementImport" owner-stereotype="" is-hidden="false" label="%stereotype.JavaFileGroup.label" uid="eb8c18e0-0002-d167-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaGetter" metaclass="Standard.Operation" owner-stereotype="" is-hidden="false" label="%stereotype.JavaGetter.label" uid="01ec25e8-0000-00f0-0000-000000000000">
+                <Icon path="res/bmp/auto.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaGetter" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="false" label="%stereotype.JavaGetter.label" uid="01ec23a8-0000-012b-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaInterface" metaclass="Standard.Interface" owner-stereotype="" is-hidden="false" label="%stereotype.JavaInterface.label" uid="01ec23a8-0000-0267-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/interface.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaName" uid="258012b4-0000-040a-0000-000000000000" label="%tagtype.JavaName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtends" uid="258012b4-0000-0428-0000-000000000000" label="%tagtype.JavaExtends.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtern" uid="258012b4-0000-0423-0000-000000000000" label="%tagtype.JavaExtern.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImport" uid="258012b4-0000-03f6-0000-000000000000" label="%tagtype.JavaImport.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaStatic" uid="258012b4-0000-0419-0000-000000000000" label="%tagtype.JavaStatic.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaTop" label="%notetype.JavaTop.label" is-hidden="false" uid="258012b4-0000-03dd-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaHeader" label="%notetype.JavaHeader.label" is-hidden="false" uid="258012b4-0000-03ec-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="258012b4-0000-03d3-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="6a2f5eb5-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="258012b4-0000-03e2-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaMembers" label="%notetype.JavaMembers.label" is-hidden="false" uid="258012b4-0000-03d8-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaBottom" label="%notetype.JavaBottom.label" is-hidden="false" uid="258012b4-0000-03c9-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaInvariant" metaclass="Standard.Constraint" owner-stereotype="" is-hidden="false" label="%stereotype.JavaInvariant.label" uid="007c037c-0000-0003-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaPackage" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.JavaPackage.label" uid="01ec23a8-0000-0126-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/package.png"/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="JavaName" uid="003800a8-0000-0198-0000-000000000000" label="%tagtype.JavaName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaExtern" uid="003800a8-0000-0197-0000-000000000000" label="%tagtype.JavaExtern.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImport" uid="003800a8-0000-0196-0000-000000000000" label="%tagtype.JavaImport.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaNoPackage" uid="007c081c-0000-2770-0000-000000000000" label="%tagtype.JavaNoPackage.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="000c0b48-0000-3ab3-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="JavaPostCondition" metaclass="Standard.Constraint" owner-stereotype="" is-hidden="false" label="%stereotype.JavaPostCondition.label" uid="007c037c-0000-0007-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaPreCondition" metaclass="Standard.Constraint" owner-stereotype="" is-hidden="false" label="%stereotype.JavaPreCondition.label" uid="007c037c-0000-0005-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaResource" metaclass="Standard.Artifact" owner-stereotype="" is-hidden="false" label="%stereotype.JavaResource.label" uid="00c80378-0001-ac88-0000-000000000000">
+                <Icon path="JavaDesigner/res/bmp/file.png"/>
+                <Image path="JavaDesigner/res/bmp/file.png"/>
+            </Stereotype>
+            <Stereotype name="JavaSetter" metaclass="Standard.Operation" owner-stereotype="" is-hidden="false" label="%stereotype.JavaSetter.label" uid="01ec25e8-0000-00f5-0000-000000000000">
+                <Icon path="res/bmp/auto.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaSetter" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="false" label="%stereotype.JavaSetter.label" uid="01ec23a8-0000-0130-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="JavaStatic" metaclass="Standard.ElementImport" owner-stereotype="" is-hidden="false" label="%stereotype.JavaStatic.label" uid="000c0b48-0000-37da-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="SeeJavadoc" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="false" label="%stereotype.SeeJavadoc.label" uid="01240268-0000-00e0-0000-000000000000">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="StandardMethod" metaclass="Standard.Operation" owner-stereotype="" is-hidden="false" label="%stereotype.StandardMethod.label" uid="35d8b4ff-a669-11e1-8eb3-002564c97630">
+                <Icon path="res/bmp/auto.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="AbstractJavaAnnotation" metaclass="Standard.UmlModelElement" owner-stereotype="" is-hidden="true" label="%stereotype.AbstractJavaAnnotation.label" uid="e8ecd0b2-3bf5-49d1-baca-ee1504b9ea22">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <MetaclassReference uid="258010dc-0000-006d-0000-000000000000" metaclass="Standard.AssociationEnd">
+                <TagTypes>
+                    <TagType name="JavaArrayDimension" uid="eb8c1900-000f-68b5-0000-000000000000" label="%tagtype.JavaArrayDimension.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaBind" uid="000c0b48-0000-38f9-0000-000000000000" label="%tagtype.JavaBind.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFinal" uid="003800a8-0000-0180-0000-000000000000" label="%tagtype.JavaFinal.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="01241558-0000-18e5-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImplementationType" uid="000c11e0-0000-5a73-0000-000000000000" label="%tagtype.JavaImplementationType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTransient" uid="003800a8-0000-0183-0000-000000000000" label="%tagtype.JavaTransient.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTypeExpr" uid="003800a8-0000-0187-0000-000000000000" label="%tagtype.JavaTypeExpr.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaVolatile" uid="003800a8-0000-0182-0000-000000000000" label="%tagtype.JavaVolatile.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaInitValue" label="%notetype.JavaInitValue.label" is-hidden="false" uid="00380080-0000-0994-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaInitValueComment" label="%notetype.JavaInitValueComment.label" is-hidden="false" uid="eb8c06dc-0000-0fac-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-00b7-0000-000000000000" metaclass="Standard.Attribute">
+                <TagTypes>
+                    <TagType name="JavaArrayDimension" uid="eb8c1900-000f-68b7-0000-000000000000" label="%tagtype.JavaArrayDimension.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaBind" uid="000c11e0-0000-5cc8-0000-000000000000" label="%tagtype.JavaBind.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFinal" uid="003800a8-0000-0161-0000-000000000000" label="%tagtype.JavaFinal.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="01241558-0000-18e3-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaImplementationType" uid="000c11e0-0000-5747-0000-000000000000" label="%tagtype.JavaImplementationType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTransient" uid="003800a8-0000-0164-0000-000000000000" label="%tagtype.JavaTransient.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTypeExpr" uid="003800a8-0000-0165-0000-000000000000" label="%tagtype.JavaTypeExpr.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaVolatile" uid="003800a8-0000-0163-0000-000000000000" label="%tagtype.JavaVolatile.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaWrapper" uid="007c081c-0000-2726-0000-000000000000" label="%tagtype.JavaWrapper.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaInitValueComment" label="%notetype.JavaInitValueComment.label" is-hidden="false" uid="eb8c06dc-0000-0f67-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-01e7-0000-000000000000" metaclass="Infrastructure.Dependency">
+                <NoteTypes>
+                    <NoteType name="SeeJavadoc" label="%notetype.SeeJavadoc.label" is-hidden="false" uid="01240268-0000-00de-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-05f1-0000-000000000000" metaclass="Standard.ElementImport">
+                <TagTypes>
+                    <TagType name="JavaFullName" uid="eb8c1900-0001-02c2-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="01240268-0000-004f-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="00d007fc-0003-d4af-0000-000000000000" metaclass="Standard.EnumerationLiteral">
+                <TagTypes>
+                    <TagType name="JavaArguments" uid="010c4ccc-0001-9137-0000-000000000000" label="%tagtype.JavaArguments.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="01ec24cc-0000-0159-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaCode" label="%notetype.JavaCode.label" is-hidden="false" uid="00d00c6c-0000-bbb9-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="00d007fc-0003-d694-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="69951a85-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                    <NoteType name="JavaInitValueComment" label="%notetype.JavaInitValueComment.label" is-hidden="false" uid="69ee7ff8-7402-11e1-9ca8-002564c97630" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-020f-0000-000000000000" metaclass="Standard.Feature">
+                <TagTypes>
+                    <TagType name="JavaName" uid="003800a8-0000-019d-0000-000000000000" label="%tagtype.JavaName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaNoInitValue" uid="00d007fc-0003-bf52-0000-000000000000" label="%tagtype.JavaNoInitValue.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaNoInvariant" uid="00380080-0000-14c4-0000-000000000000" label="%tagtype.JavaNoInvariant.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="000c0b48-0000-3aa1-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="003800a8-0000-015f-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaComment" label="%notetype.JavaComment.label" is-hidden="false" uid="69ab88b5-741c-11e1-89e3-002564c97630" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-0264-0000-000000000000" metaclass="Standard.Generalization">
+                <TagTypes>
+                    <TagType name="JavaBind" uid="00d007fc-0001-baee-0000-000000000000" label="%tagtype.JavaBind.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="01241558-0000-18b7-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaNoCode" uid="000c1728-0005-7258-0000-000000000000" label="%tagtype.JavaNoCode.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-05bf-0000-000000000000" metaclass="Standard.InterfaceRealization">
+                <TagTypes>
+                    <TagType name="JavaBind" uid="00d007fc-0001-baf3-0000-000000000000" label="%tagtype.JavaBind.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="01241558-0000-18ba-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaNoCode" uid="000c1728-0005-725a-0000-000000000000" label="%tagtype.JavaNoCode.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="00d01054-0001-1627-0000-000000000000" metaclass="Infrastructure.ModelElement">
+                <TagTypes>
+                    <TagType name="JavaNoCode" uid="00d011d0-0000-041f-0000-000000000000" label="%tagtype.JavaNoCode.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-04d6-0000-000000000000" metaclass="Standard.Operation">
+                <TagTypes>
+                    <TagType name="JavaNative" uid="003800a8-0000-017d-0000-000000000000" label="%tagtype.JavaNative.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaStrict" uid="0080045c-0000-90fd-0000-000000000000" label="%tagtype.JavaStrict.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaSynchronized" uid="003800a8-0000-017b-0000-000000000000" label="%tagtype.JavaSynchronized.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTemplateParameters" uid="000c0b48-0000-39d8-0000-000000000000" label="%tagtype.JavaTemplateParameters.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaThrownException" uid="003800a8-0000-017c-0000-000000000000" label="%tagtype.JavaThrownException.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaSuper" label="%notetype.JavaSuper.label" is-hidden="false" uid="003800a8-0000-018f-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaCode" label="%notetype.JavaCode.label" is-hidden="false" uid="003800a8-0000-018e-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaReturned" label="%notetype.JavaReturned.label" is-hidden="false" uid="003800a8-0000-0190-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="258010dc-0000-0575-0000-000000000000" metaclass="Standard.Parameter">
+                <TagTypes>
+                    <TagType name="JavaArrayDimension" uid="eb8c1900-000f-68b9-0000-000000000000" label="%tagtype.JavaArrayDimension.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaBind" uid="000c0b48-0000-3970-0000-000000000000" label="%tagtype.JavaBind.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFinal" uid="eb8c1900-000a-b31d-0000-000000000000" label="%tagtype.JavaFinal.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="01241558-0000-18e7-0000-000000000000" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaTypeExpr" uid="00380080-0000-01a4-0000-000000000000" label="%tagtype.JavaTypeExpr.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaVarArgs" uid="000c0b48-0000-3abe-0000-000000000000" label="%tagtype.JavaVarArgs.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaWrapper" uid="007c081c-0000-272a-0000-000000000000" label="%tagtype.JavaWrapper.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaAnnotation" label="%notetype.JavaAnnotation.label" is-hidden="false" uid="000c0b48-0000-3ab0-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="01240268-0000-0044-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="ccc1df05-0464-11e0-b652-002564c97630" metaclass="Standard.RaisedException">
+                <TagTypes>
+                    <TagType name="JavaFullName" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="Javadoc" label="%notetype.Javadoc.label" is-hidden="false" uid="d4d66828-0464-11e0-b652-002564c97630" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="010c4ccc-0001-ca9a-0000-000000000000" metaclass="Standard.TemplateParameter">
+                <TagTypes>
+                    <TagType name="JavaExtends" uid="010c4ccc-0001-cdcc-0000-000000000000" label="%tagtype.JavaExtends.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="JavaFullName" uid="0057f47c-85d2-10f5-9a2d-001d7d0c9107" label="%tagtype.JavaFullName.label" parameter-card="0" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+        </Profile>
+        <Profile uid="01ec24fc-0000-0208-0000-000000000000" id="JavaCompatibility">
+            <MetaclassReference uid="01ec24fc-0000-0009-0000-000000000000" metaclass="Standard.AssociationEnd">
+                <TagTypes>
+                    <TagType name="JavaFilterAccessor" uid="003800a8-0000-018a-0000-000000000000" label="%tagtype.JavaFilterAccessor.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaGenerateAccessor" uid="003800a8-0000-0189-0000-000000000000" label="%tagtype.JavaGenerateAccessor.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoAccessor" uid="003800a8-0000-018b-0000-000000000000" label="%tagtype.JavaNoAccessor.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaPublic" uid="007c081c-0000-272c-0000-000000000000" label="%tagtype.JavaPublic.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-000a-0000-000000000000" metaclass="Standard.Attribute">
+                <TagTypes>
+                    <TagType name="JavaByte" uid="003800a8-0000-016b-0000-000000000000" label="%tagtype.JavaByte.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaFilterAccessor" uid="003800a8-0000-0168-0000-000000000000" label="%tagtype.JavaFilterAccessor.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaGenerateAccessor" uid="003800a8-0000-0167-0000-000000000000" label="%tagtype.JavaGenerateAccessor.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaLong" uid="003800a8-0000-0169-0000-000000000000" label="%tagtype.JavaLong.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoAccessor" uid="003800a8-0000-016c-0000-000000000000" label="%tagtype.JavaNoAccessor.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaPublic" uid="007c081c-0000-2728-0000-000000000000" label="%tagtype.JavaPublic.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaShort" uid="003800a8-0000-016a-0000-000000000000" label="%tagtype.JavaShort.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaEclipseNLS" uid="eb8c18e0-0002-b45a-0000-000000000000" label="%tagtype.JavaEclipseNLS.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-000b-0000-000000000000" metaclass="Standard.Class">
+                <TagTypes>
+                    <TagType name="JavaBean" uid="00380098-0000-0545-0000-000000000000" label="%tagtype.JavaBean.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaBeanResource" uid="00380098-0000-0567-0000-000000000000" label="%tagtype.JavaBeanResource.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoAccessor" uid="00380080-0000-09c5-0000-000000000000" label="%tagtype.JavaNoAccessor.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoImport" uid="0124035c-0000-0163-0000-000000000000" label="%tagtype.JavaNoImport.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNonPublic" uid="00380080-0000-1527-0000-000000000000" label="%tagtype.JavaNonPublic.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaFileName" uid="eb8c1900-0019-f738-0000-000000000000" label="%tagtype.JavaFileName.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaCode" label="%notetype.JavaCode.label" is-hidden="true" uid="00380080-0000-060b-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaImport" label="%notetype.JavaImport.label" is-hidden="true" uid="0124035c-0000-0170-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-000c-0000-000000000000" metaclass="Standard.DataType">
+                <TagTypes>
+                    <TagType name="JavaNoImport" uid="01240464-0000-0069-0000-000000000000" label="%tagtype.JavaNoImport.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaImport" label="%notetype.JavaImport.label" is-hidden="true" uid="01240464-0000-0071-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-000d-0000-000000000000" metaclass="Standard.Enumeration">
+                <TagTypes>
+                    <TagType name="JavaNoImport" uid="0124035c-0000-0166-0000-000000000000" label="%tagtype.JavaNoImport.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaImport" label="%notetype.JavaImport.label" is-hidden="true" uid="0124035c-0000-0183-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-000f-0000-000000000000" metaclass="Standard.Interface">
+                <TagTypes>
+                    <TagType name="JavaBeanResource" uid="258012b4-0000-0405-0000-000000000000" label="%tagtype.JavaBeanResource.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaDocumentedAnnotation" uid="258012b4-0000-0437-0000-000000000000" label="%tagtype.JavaDocumentedAnnotation.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaInheritedAnnotation" uid="258012b4-0000-0414-0000-000000000000" label="%tagtype.JavaInheritedAnnotation.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoAccessor" uid="258012b4-0000-0400-0000-000000000000" label="%tagtype.JavaNoAccessor.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNoImport" uid="258012b4-0000-041e-0000-000000000000" label="%tagtype.JavaNoImport.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaNonPublic" uid="258012b4-0000-03fb-0000-000000000000" label="%tagtype.JavaNonPublic.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaRetentionAnnotation" uid="258012b4-0000-0432-0000-000000000000" label="%tagtype.JavaRetentionAnnotation.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaTargetAnnotation" uid="258012b4-0000-042d-0000-000000000000" label="%tagtype.JavaTargetAnnotation.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaImplements" uid="258012b4-0000-040f-0000-000000000000" label="%tagtype.JavaImplements.label" parameter-card="*" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaBean" uid="258012b4-0000-03f1-0000-000000000000" label="%tagtype.JavaBean.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaFileName" uid="258012b4-0000-043c-0000-000000000000" label="%tagtype.JavaFileName.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="JavaImport" label="%notetype.JavaImport.label" is-hidden="true" uid="258012b4-0000-03e7-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="JavaCode" label="%notetype.JavaCode.label" is-hidden="true" uid="258012b4-0000-03ce-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-0010-0000-000000000000" metaclass="Standard.Package">
+                <TagTypes>
+                    <TagType name="JavaBeanResource" uid="00380098-0000-0568-0000-000000000000" label="%tagtype.JavaBeanResource.label" parameter-card="1" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaRoot" uid="007c081c-0000-26ad-0000-000000000000" label="%tagtype.JavaRoot.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="01ec24fc-0000-0011-0000-000000000000" metaclass="Standard.Parameter">
+                <TagTypes>
+                    <TagType name="JavaByte" uid="003800a8-0000-0192-0000-000000000000" label="%tagtype.JavaByte.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaLong" uid="003800a8-0000-0194-0000-000000000000" label="%tagtype.JavaLong.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                    <TagType name="JavaShort" uid="003800a8-0000-0193-0000-000000000000" label="%tagtype.JavaShort.label" parameter-card="0" is-hidden="true" is-signed="false"/>
+                </TagTypes>
+            </MetaclassReference>
+        </Profile>
+    </Profiles>
+    <Parameters>
+        <Parameter id="GenerationMode" group="%group.General.label" uid="01ec25e8-0000-0700-0000-000000000000" type="Enum" default-value="" label="%parameter.GenerationMode.label">
+            <Enumeration>
+                <Literal value="RoundTrip" label="%parameter.GenerationMode.RoundTrip.label"/>
+                <Literal value="ModelDriven" label="%parameter.GenerationMode.ModelDriven.label"/>
+                <Literal value="Release" label="%parameter.GenerationMode.Release.label"/>
+            </Enumeration>
+            <Description>%parameter.GenerationMode.description</Description>
+        </Parameter>
+        <Parameter id="RetrieveDefaultBehaviour" group="%group.General.label" uid="01ec25e8-0000-0706-0000-000000000000" type="Enum" default-value="" label="%parameter.RetrieveDefaultBehaviour.label">
+            <Enumeration>
+                <Literal value="Ask" label="%parameter.RetrieveDefaultBehaviour.Ask.label"/>
+                <Literal value="Retrieve" label="%parameter.RetrieveDefaultBehaviour.Retrieve.label"/>
+                <Literal value="Keep" label="%parameter.RetrieveDefaultBehaviour.Keep.label"/>
+            </Enumeration>
+            <Description>%parameter.RetrieveDefaultBehaviour.description</Description>
+        </Parameter>
+        <Parameter id="Encoding" group="%group.General.label" uid="6a276a28-0bea-11df-b8eb-0019b95c085c" type="Enum" default-value="" label="%parameter.Encoding.label">
+            <Enumeration>
+                <Literal value="ISO-8859-1" label="%parameter.Encoding.ISO-8859-1.label"/>
+                <Literal value="US-ASCII" label="%parameter.Encoding.US-ASCII.label"/>
+                <Literal value="UTF-8" label="%parameter.Encoding.UTF-8.label"/>
+                <Literal value="UTF-16BE" label="%parameter.Encoding.UTF-16BE.label"/>
+                <Literal value="UTF-16LE" label="%parameter.Encoding.UTF-16LE.label"/>
+                <Literal value="UTF-16" label="%parameter.Encoding.UTF-16.label"/>
+            </Enumeration>
+            <Description>%parameter.Encoding.description</Description>
+        </Parameter>
+        <Parameter id="JavaCompatibility" group="%group.General.label" uid="cec5209f-5a2c-4897-8575-757650e8ab02" type="Enum" default-value="" label="%parameter.JavaCompatibility.label">
+            <Enumeration>
+                <Literal value="Java7" label="%parameter.JavaCompatibility.Java7.label"/>
+                <Literal value="Java8" label="%parameter.JavaCompatibility.Java8.label"/>
+            </Enumeration>
+            <Description>%parameter.JavaCompatibility.description</Description>
+        </Parameter>
+        <Parameter id="AccessibleClasses" group="%group.General.label" uid="01ec25e8-0000-070f-0000-000000000000" type="String" default-value="" label="%parameter.AccessibleClasses.label">
+            <Description>%parameter.AccessibleClasses.description</Description>
+        </Parameter>
+        <Parameter id="JDKPath" group="%group.Directories.label" uid="01ec25e8-0000-070d-0000-000000000000" type="Directory" default-value="" label="%parameter.JDKPath.label">
+            <Description>%parameter.JDKPath.description</Description>
+        </Parameter>
+        <Parameter id="GenerationPath" group="%group.Directories.label" uid="01ec25e8-0000-0711-0000-000000000000" type="Directory" default-value="" label="%parameter.GenerationPath.label">
+            <Description>%parameter.GenerationPath.description</Description>
+        </Parameter>
+        <Parameter id="ComponentSubPath" group="%group.Directories.label" uid="221d7c72-ca01-4094-97db-c9040b08fc75" type="String" default-value="" label="%parameter.ComponentSubPath.label">
+            <Description>%parameter.ComponentSubPath.description</Description>
+        </Parameter>
+        <Parameter id="JavahGenerationPath" group="%group.Directories.label" uid="01ec25e8-0000-0713-0000-000000000000" type="Directory" default-value="" label="%parameter.JavahGenerationPath.label">
+            <Description>%parameter.JavahGenerationPath.description</Description>
+        </Parameter>
+        <Parameter id="CompilationPath" group="%group.Directories.label" uid="01ec25e8-0000-0715-0000-000000000000" type="Directory" default-value="" label="%parameter.CompilationPath.label">
+            <Description>%parameter.CompilationPath.description</Description>
+        </Parameter>
+        <Parameter id="JarFilePath" group="%group.Directories.label" uid="01ec25e8-0000-0717-0000-000000000000" type="Directory" default-value="" label="%parameter.JarFilePath.label">
+            <Description>%parameter.JarFilePath.description</Description>
+        </Parameter>
+        <Parameter id="GenDocPath" group="%group.Directories.label" uid="01ec25e8-0000-0719-0000-000000000000" type="Directory" default-value="" label="%parameter.GenDocPath.label">
+            <Description>%parameter.GenDocPath.description</Description>
+        </Parameter>
+        <Parameter id="CustomizationFile" group="%group.Code generation.label" uid="01ec25e8-0000-071d-0000-000000000000" type="File" default-value="" label="%parameter.CustomizationFile.label">
+            <Description>%parameter.CustomizationFile.description</Description>
+        </Parameter>
+        <Parameter id="CopyrightFile" group="%group.Code generation.label" uid="6687a8d5-3e95-11e0-8fc3-002564c97630" type="File" default-value="" label="%parameter.CopyrightFile.label">
+            <Description>%parameter.CopyrightFile.description</Description>
+        </Parameter>
+        <Parameter id="ErrorOnFirstWarning" group="%group.Code generation.label" uid="01ec25e8-0000-071f-0000-000000000000" type="Boolean" default-value="" label="%parameter.ErrorOnFirstWarning.label">
+            <Description>%parameter.ErrorOnFirstWarning.description</Description>
+        </Parameter>
+        <Parameter id="FullNameGeneration" group="%group.Code generation.label" uid="01ec25e8-0000-0723-0000-000000000000" type="Boolean" default-value="" label="%parameter.FullNameGeneration.label">
+            <Description>%parameter.FullNameGeneration.description</Description>
+        </Parameter>
+        <Parameter id="GenerateFinalParameters" group="%group.Code generation.label" uid="ac898f03-b516-11df-b5f1-002564c97630" type="Boolean" default-value="" label="%parameter.GenerateFinalParameters.label">
+            <Description>%parameter.GenerateFinalParameters.description</Description>
+        </Parameter>
+        <Parameter id="GenerateDefaultReturn" group="%group.Code generation.label" uid="5ffba198-56f9-11e1-a8d2-002564c97630" type="Boolean" default-value="" label="%parameter.GenerateDefaultReturn.label">
+            <Description>%parameter.GenerateDefaultReturn.description</Description>
+        </Parameter>
+        <Parameter id="InterfaceImplementation" group="%group.Automation.label" uid="01ec2730-0000-04bd-0000-000000000000" type="Enum" default-value="" label="%parameter.InterfaceImplementation.label">
+            <Enumeration>
+                <Literal value="Ask" label="%parameter.InterfaceImplementation.Ask.label"/>
+                <Literal value="Always" label="%parameter.InterfaceImplementation.Always.label"/>
+                <Literal value="Never" label="%parameter.InterfaceImplementation.Never.label"/>
+            </Enumeration>
+            <Description>%parameter.InterfaceImplementation.description</Description>
+        </Parameter>
+        <Parameter id="AccessorsGeneration" group="%group.Automation.label" uid="01ec25e8-0000-0725-0000-000000000000" type="Enum" default-value="" label="%parameter.AccessorsGeneration.label">
+            <Enumeration>
+                <Literal value="Always" label="%parameter.AccessorsGeneration.Always.label"/>
+                <Literal value="Smart" label="%parameter.AccessorsGeneration.Smart.label"/>
+                <Literal value="Never" label="%parameter.AccessorsGeneration.Never.label"/>
+            </Enumeration>
+            <Description>%parameter.AccessorsGeneration.description</Description>
+        </Parameter>
+        <Parameter id="PublicAccessorVisibility" group="%group.Automation.label" uid="01ec25e8-0000-072a-0000-000000000000" type="Enum" default-value="" label="%parameter.PublicAccessorVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.PublicAccessorVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.PublicAccessorVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.PublicAccessorVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.PublicAccessorVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.PublicAccessorVisibility.description</Description>
+        </Parameter>
+        <Parameter id="PublicModifierVisibility" group="%group.Automation.label" uid="01ec25e8-0000-0730-0000-000000000000" type="Enum" default-value="" label="%parameter.PublicModifierVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.PublicModifierVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.PublicModifierVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.PublicModifierVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.PublicModifierVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.PublicModifierVisibility.description</Description>
+        </Parameter>
+        <Parameter id="ProtectedAccessorVisibility" group="%group.Automation.label" uid="01ec25e8-0000-0736-0000-000000000000" type="Enum" default-value="" label="%parameter.ProtectedAccessorVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.ProtectedAccessorVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.ProtectedAccessorVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.ProtectedAccessorVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.ProtectedAccessorVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.ProtectedAccessorVisibility.description</Description>
+        </Parameter>
+        <Parameter id="ProtectedModifierVisibility" group="%group.Automation.label" uid="01ec25e8-0000-073c-0000-000000000000" type="Enum" default-value="" label="%parameter.ProtectedModifierVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.ProtectedModifierVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.ProtectedModifierVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.ProtectedModifierVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.ProtectedModifierVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.ProtectedModifierVisibility.description</Description>
+        </Parameter>
+        <Parameter id="FriendlyAccessorVisibility" group="%group.Automation.label" uid="01ec25e8-0000-0742-0000-000000000000" type="Enum" default-value="" label="%parameter.FriendlyAccessorVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.FriendlyAccessorVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.FriendlyAccessorVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.FriendlyAccessorVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.FriendlyAccessorVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.FriendlyAccessorVisibility.description</Description>
+        </Parameter>
+        <Parameter id="FriendlyModifierVisibility" group="%group.Automation.label" uid="01ec25e8-0000-0748-0000-000000000000" type="Enum" default-value="" label="%parameter.FriendlyModifierVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.FriendlyModifierVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.FriendlyModifierVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.FriendlyModifierVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.FriendlyModifierVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.FriendlyModifierVisibility.description</Description>
+        </Parameter>
+        <Parameter id="PrivateAccessorVisibility" group="%group.Automation.label" uid="01ec25e8-0000-074e-0000-000000000000" type="Enum" default-value="" label="%parameter.PrivateAccessorVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.PrivateAccessorVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.PrivateAccessorVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.PrivateAccessorVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.PrivateAccessorVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.PrivateAccessorVisibility.description</Description>
+        </Parameter>
+        <Parameter id="PrivateModifierVisibility" group="%group.Automation.label" uid="01ec25e8-0000-0754-0000-000000000000" type="Enum" default-value="" label="%parameter.PrivateModifierVisibility.label">
+            <Enumeration>
+                <Literal value="Public" label="%parameter.PrivateModifierVisibility.Public.label"/>
+                <Literal value="Protected" label="%parameter.PrivateModifierVisibility.Protected.label"/>
+                <Literal value="Friendly" label="%parameter.PrivateModifierVisibility.Friendly.label"/>
+                <Literal value="Private" label="%parameter.PrivateModifierVisibility.Private.label"/>
+            </Enumeration>
+            <Description>%parameter.PrivateModifierVisibility.description</Description>
+        </Parameter>
+        <Parameter id="GeneratePrePostConditions" group="%group.Constraints.label" uid="01ec25e8-0000-075a-0000-000000000000" type="Boolean" default-value="" label="%parameter.GeneratePrePostConditions.label">
+            <Description>%parameter.GeneratePrePostConditions.description</Description>
+        </Parameter>
+        <Parameter id="GenerateInvariants" group="%group.Constraints.label" uid="01ec25e8-0000-0761-0000-000000000000" type="Boolean" default-value="" label="%parameter.GenerateInvariants.label">
+            <Description>%parameter.GenerateInvariants.description</Description>
+        </Parameter>
+        <Parameter id="InvariantsName" group="%group.Constraints.label" uid="01ec25e8-0000-0766-0000-000000000000" type="String" default-value="" label="%parameter.InvariantsName.label">
+            <Description>%parameter.InvariantsName.description</Description>
+        </Parameter>
+        <Parameter id="UseExternalEdition" group="%group.External edition.label" uid="01ec25e8-0000-076a-0000-000000000000" type="Boolean" default-value="" label="%parameter.UseExternalEdition.label">
+            <Description>%parameter.UseExternalEdition.description</Description>
+        </Parameter>
+        <Parameter id="ExternalEditorCommandLine" group="%group.External edition.label" uid="01ec25e8-0000-076c-0000-000000000000" type="File" default-value="" label="%parameter.ExternalEditorCommandLine.label">
+            <Description>%parameter.ExternalEditorCommandLine.description</Description>
+        </Parameter>
+        <Parameter id="CompilationOptions" group="%group.Compilation.label" uid="01ec25e8-0000-0772-0000-000000000000" type="String" default-value="" label="%parameter.CompilationOptions.label">
+            <Description>%parameter.CompilationOptions.description</Description>
+        </Parameter>
+        <Parameter id="UseJavah" group="%group.Compilation.label" uid="01ec25e8-0000-0774-0000-000000000000" type="Boolean" default-value="" label="%parameter.UseJavah.label">
+            <Description>%parameter.UseJavah.description</Description>
+        </Parameter>
+        <Parameter id="RunParameters" group="%group.Compilation.label" uid="01ec25e8-0000-0776-0000-000000000000" type="String" default-value="" label="%parameter.RunParameters.label">
+            <Description>%parameter.RunParameters.description</Description>
+        </Parameter>
+        <Parameter id="GenerateJavadoc" group="%group.JavaDoc.label" uid="01ec25e8-0000-0778-0000-000000000000" type="Boolean" default-value="" label="%parameter.GenerateJavadoc.label">
+            <Description>%parameter.GenerateJavadoc.description</Description>
+        </Parameter>
+        <Parameter id="DescriptionAsJavadoc" group="%group.JavaDoc.label" uid="01ec25e8-0000-077a-0000-000000000000" type="Boolean" default-value="" label="%parameter.DescriptionAsJavadoc.label">
+            <Description>%parameter.DescriptionAsJavadoc.description</Description>
+        </Parameter>
+        <Parameter id="JavaDocOptions" group="%group.JavaDoc.label" uid="01ec25e8-0000-077c-0000-000000000000" type="String" default-value="" label="%parameter.JavaDocOptions.label">
+            <Description>%parameter.JavaDocOptions.description</Description>
+        </Parameter>
+        <Parameter id="AutomaticallyOpenJavadoc" group="%group.JavaDoc.label" uid="01ec2a7c-0000-01e0-0000-000000000000" type="Boolean" default-value="" label="%parameter.AutomaticallyOpenJavadoc.label">
+            <Description>%parameter.AutomaticallyOpenJavadoc.description</Description>
+        </Parameter>
+        <Parameter id="GenerateJavadocMarkers" group="%group.JavaDoc.label" uid="c60eb8f5-c78b-11e2-9d6e-02004c4f4f50" type="Boolean" default-value="" label="%parameter.GenerateJavadocMarkers.label">
+            <Description>%parameter.GenerateJavadocMarkers.description</Description>
+        </Parameter>
+        <Parameter id="PackageSrcInRamc" group="%group.ModelComponents.label" uid="01ec25e8-0000-077e-0000-000000000000" type="Boolean" default-value="" label="%parameter.PackageSrcInRamc.label">
+            <Description>%parameter.PackageSrcInRamc.description</Description>
+        </Parameter>
+        <Parameter id="PackageJarInRamc" group="%group.ModelComponents.label" uid="01ec25e8-0000-0780-0000-000000000000" type="Boolean" default-value="" label="%parameter.PackageJarInRamc.label">
+            <Description>%parameter.PackageJarInRamc.description</Description>
+        </Parameter>
+    </Parameters>
+    <Gui>
+        <Commands>
+            <Command id="Generate" label="%Generate.label" tooltip="%Generate.tooltip" image="res/bmp/generate.png" group="%Generate.group" modify-model="false" group-image="%Generate.groupimage">
+                <Scope metaclass="Standard.UmlModelElement"/>
+                <Handler class="org.modelio.module.javadesigner.commands.Generate"/>
+            </Command>
+            <Command id="UpdateModel" label="%UpdateModel.label" tooltip="%UpdateModel.tooltip" image="res/bmp/update.png" group="%UpdateModel.group" modify-model="true" group-image="%UpdateModel.groupimage">
+                <Scope metaclass="Standard.UmlModelElement"/>
+                <Handler class="org.modelio.module.javadesigner.commands.UpdateModel"/>
+            </Command>
+            <Command id="Edit" label="%Edit.label" tooltip="%Edit.tooltip" image="res/bmp/edit.png" group="%Edit.group" modify-model="false" group-image="%Edit.groupimage">
+                <Scope metaclass="Standard.UmlModelElement"/>
+                <Handler class="org.modelio.module.javadesigner.commands.Edit"/>
+            </Command>
+            <Command id="CreateAttributeProperty" label="%CreateAttributeProperty.label" tooltip="%CreateAttributeProperty.tooltip" image="res/bmp/attribute_property.png" group="%CreateAttributeProperty.group" modify-model="false" group-image="%CreateAttributeProperty.groupimage">
+                <Scope metaclass="Standard.GeneralClass"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreateAttributeProperty"/>
+            </Command>
+            <Command id="CreateAssociationEndProperty" label="%CreateAssociationEndProperty.label" tooltip="%CreateAssociationEndProperty.tooltip" image="res/bmp/associationend_property.png" group="%CreateAssociationEndProperty.group" modify-model="false" group-image="%CreateAssociationEndProperty.groupimage">
+                <Scope metaclass="Standard.GeneralClass"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreateAssociationEndProperty"/>
+            </Command>
+            <Command id="JavaDocGenerate" label="%JavaDocGenerate.label" tooltip="%JavaDocGenerate.tooltip" image="res/bmp/javadocgenerate.png" group="%JavaDocGenerate.group" modify-model="false" group-image="%JavaDocGenerate.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Scope metaclass="Standard.Component"/>
+                <Handler class="org.modelio.module.javadesigner.commands.javadoc.JavaDocGenerate"/>
+            </Command>
+            <Command id="VisualizeJavaDoc" label="%VisualizeJavaDoc.label" tooltip="%VisualizeJavaDoc.tooltip" image="res/bmp/visualize.png" group="%VisualizeJavaDoc.group" modify-model="false" group-image="%VisualizeJavaDoc.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Scope metaclass="Standard.Component"/>
+                <Handler class="org.modelio.module.javadesigner.commands.javadoc.VisualizeJavaDoc"/>
+            </Command>
+            <Command id="CreateAntArtifact" label="%CreateAntArtifact.label" tooltip="%CreateAntArtifact.tooltip" image="res/bmp/jarfile.png" group="%CreateAntArtifact.group" modify-model="false" group-image="%CreateAntArtifact.groupimage">
+                <Scope metaclass="Standard.Component"/>
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreateAntArtifact"/>
+            </Command>
+            <Command id="GenerateAntFile" label="%GenerateAntFile.label" tooltip="%GenerateAntFile.tooltip" image="res/bmp/antgeneration.png" group="%GenerateAntFile.group" modify-model="false" group-image="%GenerateAntFile.groupimage">
+                <Scope metaclass="Standard.Artifact"/>
+                <Handler class="org.modelio.module.javadesigner.commands.ant.GenerateAntFile"/>
+            </Command>
+            <Command id="BuildAntFile" label="%BuildAntFile.label" tooltip="%BuildAntFile.tooltip" image="res/bmp/build.png" group="%BuildAntFile.group" modify-model="false" group-image="%BuildAntFile.groupimage">
+                <Scope metaclass="Standard.Artifact"/>
+                <Handler class="org.modelio.module.javadesigner.commands.ant.BuildAntFile"/>
+            </Command>
+            <Command id="ExecuteAntTarget" label="%ExecuteAntTarget.label" tooltip="%ExecuteAntTarget.tooltip" image="res/bmp/target.png" group="%ExecuteAntTarget.group" modify-model="false" group-image="%ExecuteAntTarget.groupimage">
+                <Scope metaclass="Standard.Artifact"/>
+                <Handler class="org.modelio.module.javadesigner.commands.ant.ExecuteAntTarget"/>
+            </Command>
+            <Command id="RunApplication" label="%RunApplication.label" tooltip="%RunApplication.tooltip" image="res/bmp/run.png" group="%RunApplication.group" modify-model="false" group-image="%RunApplication.groupimage">
+                <Scope metaclass="Standard.Artifact"/>
+                <Handler class="org.modelio.module.javadesigner.commands.ant.RunApplication"/>
+            </Command>
+            <Command id="UpdateClassesFromInterface" label="%UpdateClassesFromInterface.label" tooltip="%UpdateClassesFromInterface.tooltip" image="res/bmp/updateclassesfrominterface.png" group="%UpdateClassesFromInterface.group" modify-model="true" group-image="%UpdateClassesFromInterface.groupimage">
+                <Scope metaclass="Standard.Interface"/>
+                <Handler class="org.modelio.module.javadesigner.commands.UpdateClassesFromInterface"/>
+            </Command>
+            <Command id="UpdateClassFromInterfaces" label="%UpdateClassFromInterfaces.label" tooltip="%UpdateClassFromInterfaces.tooltip" image="res/bmp/updateclassesfrominterface.png" group="%UpdateClassFromInterfaces.group" modify-model="true" group-image="%UpdateClassFromInterfaces.groupimage">
+                <Scope metaclass="Standard.Classifier"/>
+                <Handler class="org.modelio.module.javadesigner.commands.UpdateClassFromInterfaces"/>
+            </Command>
+            <Command id="CreateJavaResource" label="%CreateJavaResource.label" tooltip="%CreateJavaResource.tooltip" image="res/bmp/file.png" group="%CreateJavaResource.group" modify-model="false" group-image="%CreateJavaResource.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreateJavaResource"/>
+            </Command>
+            <Command id="CreatePlugin" label="%CreatePlugin.label" tooltip="%CreatePlugin.tooltip" image="res/bmp/component.png" group="%CreatePlugin.group" modify-model="false" group-image="%CreatePlugin.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreatePlugin"/>
+            </Command>
+            <Command id="CreateAutoDiagrams" label="%CreateAutoDiagrams.label" tooltip="%CreateAutoDiagrams.tooltip" image="res/bmp/autodiagram.png" group="%CreateAutoDiagrams.group" modify-model="false" group-image="%CreateAutoDiagrams.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.creation.CreateAutoDiagrams"/>
+            </Command>
+            <Command id="ReverseSources" label="%ReverseSources.label" tooltip="%ReverseSources.tooltip" image="res/bmp/revsources.png" group="%ReverseSources.group" modify-model="true" group-image="%ReverseSources.groupimage">
+                <Scope metaclass="Standard.NameSpace"/>
+                <Handler class="org.modelio.module.javadesigner.commands.reverse.ReverseSources"/>
+            </Command>
+            <Command id="ReverseBinary" label="%ReverseBinary.label" tooltip="%ReverseBinary.tooltip" image="res/bmp/revbinary.png" group="%ReverseBinary.group" modify-model="true" group-image="%ReverseBinary.groupimage">
+                <Scope metaclass="Standard.NameSpace"/>
+                <Handler class="org.modelio.module.javadesigner.commands.reverse.ReverseBinary"/>
+            </Command>
+            <Command id="EditClasspath" label="%EditClasspath.label" tooltip="%EditClasspath.tooltip" image="res/bmp/EditClasspath.png" group="%EditClasspath.group" modify-model="false" group-image="%EditClasspath.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.configuration.EditClasspath"/>
+            </Command>
+            <Command id="LoadCustomizationFile" label="%LoadCustomizationFile.label" tooltip="%LoadCustomizationFile.tooltip" image="res/bmp/customizationfile.png" group="%LoadCustomizationFile.group" modify-model="false" group-image="%LoadCustomizationFile.groupimage">
+                <Scope metaclass="Standard.Package"/>
+                <Handler class="org.modelio.module.javadesigner.commands.configuration.LoadCustomizationFile"/>
+            </Command>
+        </Commands>
+        <ContextualMenu>
+            <CommandRef refid="Generate"/>
+            <CommandRef refid="UpdateModel"/>
+            <CommandRef refid="Edit"/>
+            <CommandRef refid="CreateAttributeProperty"/>
+            <CommandRef refid="CreateAssociationEndProperty"/>
+            <CommandRef refid="JavaDocGenerate"/>
+            <CommandRef refid="VisualizeJavaDoc"/>
+            <CommandRef refid="CreateAntArtifact"/>
+            <CommandRef refid="GenerateAntFile"/>
+            <CommandRef refid="BuildAntFile"/>
+            <CommandRef refid="ExecuteAntTarget"/>
+            <CommandRef refid="RunApplication"/>
+            <CommandRef refid="UpdateClassesFromInterface"/>
+            <CommandRef refid="UpdateClassFromInterfaces"/>
+            <CommandRef refid="CreateJavaResource"/>
+            <CommandRef refid="CreatePlugin"/>
+            <CommandRef refid="CreateAutoDiagrams"/>
+            <CommandRef refid="ReverseSources"/>
+            <CommandRef refid="ReverseBinary"/>
+            <CommandRef refid="EditClasspath"/>
+            <CommandRef refid="LoadCustomizationFile"/>
+        </ContextualMenu>
+        <Views>
+            <PropertyPage class="org.modelio.module.javadesigner.propertypage.JavaPropertyPage" label="%PropertyPage.label" image="res/bmp/JavaDesigner.png">
+                <CommandRef refid="Generate"/>
+                <CommandRef refid="UpdateModel"/>
+                <CommandRef refid="Edit"/>
+                <CommandRef refid="JavaDocGenerate"/>
+                <CommandRef refid="VisualizeJavaDoc"/>
+                <CommandRef refid="GenerateAntFile"/>
+                <CommandRef refid="BuildAntFile"/>
+                <CommandRef refid="ExecuteAntTarget"/>
+                <CommandRef refid="RunApplication"/>
+                <CommandRef refid="ReverseSources"/>
+                <CommandRef refid="ReverseBinary"/>
+            </PropertyPage>
+        </Views>
+    </Gui>
+    <Dependencies>
+        <Required name="ModelerModule" version="9.0.05"/>
+    </Dependencies>
+    <Resources>
+        <DocFiles>
+            <PathEntry path="lib/org.modelio.documentation.javadesigner-${project.version}.jar"/>
+        </DocFiles>
+    </Resources>
+</Module>

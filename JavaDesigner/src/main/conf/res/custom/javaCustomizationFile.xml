@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<Customization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="customFile.xsd">
+  <!-- Model Types -->
+  <ModelTypes>
+    <ModelType name="boolean">
+      <JavaType name="boolean"/>
+      <wrapper name="Boolean"/>
+    </ModelType>
+    <ModelType name="byte">
+      <JavaType name="byte"/>
+      <wrapper name="Byte"/>
+    </ModelType>
+    <ModelType name="char">
+      <JavaType name="char"/>
+      <wrapper name="Character"/>
+    </ModelType>
+    <ModelType name="date">
+      <JavaType name="Date">
+        <import name="java.util.Date"/>
+      </JavaType>
+    </ModelType>
+    <ModelType name="double">
+      <JavaType name="double"/>
+      <wrapper name="Double"/>
+    </ModelType>
+    <ModelType name="float">
+      <JavaType name="float"/>
+      <wrapper name="Float"/>
+    </ModelType>
+    <ModelType name="integer">
+      <JavaType name="int"/>
+      <wrapper name="Integer"/>
+    </ModelType>
+    <ModelType name="long">
+      <JavaType name="long"/>
+      <wrapper name="Long"/>
+    </ModelType>
+    <ModelType name="short">
+      <JavaType name="short"/>
+      <wrapper name="Short"/>
+    </ModelType>
+    <ModelType name="string">
+      <JavaType name="String"/>
+    </ModelType>
+  </ModelTypes>
+  <!-- Elements -->
+  <Elements>
+    <!--
+     Possible macros to expand:
+         $name
+         $Name
+         $visibility
+         $Visibility
+    
+     Possible cardinalities, according to multiplicities:
+	       0 - 1 -> OptionalSimple		 
+	       1 - 1 -> MandatorySimple
+	       0 - * -> OptionalMultiple
+	       n - * -> MandatoryMultiple
+	       n - m -> Finite
+	 -->
+
+<!-- Attribute -->
+
+   <Attribute card="OptionalSimple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+        <variants>
+          <pattern type="boolean">is$Name</pattern>
+        </variants>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </Attribute>
+
+    <Attribute card="MandatorySimple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+        <variants>
+          <pattern type="boolean">is$Name</pattern>
+        </variants>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </Attribute>
+
+    <Attribute card="OptionalMultiple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </Attribute>
+    
+     <Attribute card="MandatoryMultiple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </Attribute>
+    
+    <Attribute card="Finite">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </Attribute>
+    
+<!-- AssociationEnd -->
+
+    <AssociationEnd card="OptionalSimple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+        <variants>
+          <pattern type="boolean">is$Name</pattern>
+        </variants>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </AssociationEnd>
+
+    <AssociationEnd card="MandatorySimple">
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+        <variants>
+          <pattern type="boolean">is$Name</pattern>
+        </variants>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </AssociationEnd>
+
+    <AssociationEnd card="OptionalMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+      <defaultImplementationContainer name="ArrayList">
+        <import name="java.util.ArrayList"/>
+      </defaultImplementationContainer>
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </AssociationEnd>
+    
+     <AssociationEnd card="MandatoryMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+      <defaultImplementationContainer name="ArrayList">
+        <import name="java.util.ArrayList"/>
+      </defaultImplementationContainer>
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </AssociationEnd>
+    
+    <AssociationEnd card="Finite">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+      <defaultImplementationContainer name="ArrayList">
+        <import name="java.util.ArrayList"/>
+      </defaultImplementationContainer>
+      <getter>
+        <defaultPattern>get$Name</defaultPattern>
+      </getter>
+      <setter>
+        <defaultPattern>set$Name</defaultPattern>
+      </setter>
+    </AssociationEnd>
+
+<!-- IOParameter -->
+
+    <IOParameter card="OptionalSimple">
+    </IOParameter>
+
+    <IOParameter card="MandatorySimple">
+    </IOParameter>
+
+    <IOParameter card="OptionalMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </IOParameter>
+    
+     <IOParameter card="MandatoryMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </IOParameter>
+    
+    <IOParameter card="Finite">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </IOParameter>
+
+<!-- ReturnParameter -->
+
+    <ReturnParameter card="OptionalSimple">
+    </ReturnParameter>
+
+    <ReturnParameter card="MandatorySimple">
+    </ReturnParameter>
+
+    <ReturnParameter card="OptionalMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </ReturnParameter>
+    
+    <ReturnParameter card="MandatoryMultiple">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </ReturnParameter>
+    
+    <ReturnParameter card="Finite">
+      <defaultInterfaceContainer name="List">
+        <import name="java.util.List"/>
+      </defaultInterfaceContainer>
+    </ReturnParameter>
+
+<!-- Property -->
+	
+	<Property>
+		<Visibility model="Public" code="Private"/>
+		<Visibility model="Protected" code="Private"/>
+		<Visibility model="Private" code="Private"/>
+		<Visibility model="Undefined" code="Private"/>
+		<Visibility model="Package" code="Private"/>
+    </Property>
+  </Elements>
+</Customization>

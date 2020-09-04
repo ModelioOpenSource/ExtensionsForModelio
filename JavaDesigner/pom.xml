@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- definition -->
+	<groupId>org.modelio.module</groupId>
+	<artifactId>javadesigner</artifactId>
+	<version>3.9.00</version>
+	<name>JavaDesigner</name>
+
+	<!-- repositories -->
+ 	<repositories>
+		<repository>
+			<id>modelio</id>
+			<url>https://repository.modelio.org</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>modelio</id>
+			<url>https://repository.modelio.org</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<!-- properties -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- api modelio -->
+		<dependency>
+			<groupId>org.modelio</groupId>
+			<artifactId>MDAKit</artifactId>
+			<version>[4.0.0,4.0.1)</version>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelio</groupId>
+			<artifactId>org.modelio.documentation.javadesigner</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.modelio.module</groupId>
+			<artifactId>xmlreverse</artifactId>
+			<version>3.4.03</version>
+            <type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.javatuples</groupId>
+			<artifactId>javatuples</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelio.module.javadesigner</groupId>
+			<artifactId>antlr-runtime</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+
+        <dependency>
+            <groupId>org.modelio</groupId>
+            <artifactId>org.modelio.modelermodule</artifactId>
+            <version>9.1.00</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.modelio</groupId>
+            <artifactId>org.modelio.core.session</artifactId>
+            <version>[4.0.0,4.0.1)</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+
+	</dependencies>
+
+	<!-- // Build // -->
+	<build>
+		<plugins>
+			<!-- Use JVM 1.8 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.modelio</groupId>
+				<artifactId>modelio-maven-plugin</artifactId>
+                <version>4.0.0.00</version>
+				<executions>
+					<execution>
+					    <id>ModuleValidation</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>module-validation</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>ResourceManagement</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>module-configuration</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<moduleFile>${project.basedir}/src/main/conf/module.xml</moduleFile>
+				</configuration>
+			</plugin>
+
+			<!-- Copy maven dependencies -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<outputDirectory>${project.basedir}/target/lib</outputDirectory>
+					<overWriteReleases>false</overWriteReleases>
+					<overWriteSnapshots>false</overWriteSnapshots>
+					<overWriteIfNewer>true</overWriteIfNewer>
+					<excludeScope>provided</excludeScope>
+				</configuration>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Build zip -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
+					<finalName>${project.name}_${project.version}</finalName>
+					<attach>false</attach>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Rename zip into jmdac -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>rename</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+                                <move file="${project.basedir}/target/${project.name}_${project.version}.zip" tofile="${project.basedir}/target/${project.name}_${project.version}.jmdac" />
+
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!-- ignore plugin goal -> tells m2e to silently ignore the plugin execution. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.modelio</groupId>
+										<artifactId>
+											modelio-maven-plugin
+										</artifactId>
+										<versionRange>
+                                                [4.0.0.00,)
+										</versionRange>
+										<goals>
+											<goal>
+                                                    module-validation
+											</goal>
+											<goal>
+                                                    module-configuration
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+    <description>The Java Designer module provides a complete range of features dedicated to Java development, including Java code and Javadoc generation from UML2 models. It also provides an automatic model completion feature, incorporating automatic accessor production and synchronization, and a reverse service used to reverse-engineer existing Java application.</description>
+</project>
+

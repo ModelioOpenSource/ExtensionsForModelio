@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<containers>
+  <!-- interfaces -->
+  <container name="List" package="java.util" cardinality="*" type-index="0" />
+  <container name="Map" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="Queue" package="java.util" cardinality="*" type-index="0" />
+  <container name="Deque" package="java.util" cardinality="*" type-index="0" />
+  <container name="Set" package="java.util" cardinality="*" type-index="0" />
+  <container name="SortedMap" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="SortedSet" package="java.util" cardinality="*" type-index="0" />
+  <container name="Collection" package="java.util" cardinality="*" type-index="0" />
+  <container name="Reference" package="java.lang.ref" cardinality="1" type-index="0" />
+
+  <!-- concrete types -->
+  <container name="ArrayList" package="java.util" cardinality="*" type-index="0" />
+  <container name="ArrayBlockingQueue" package="java.util" cardinality="*" type-index="0" />
+  <container name="ConcurrentHashMap" package="java.util.concurrent" cardinality="*" type-index="1" key-index="0" />
+  <container name="ConcurrentSkipListMap" package="java.util.concurrent" cardinality="*" type-index="1" key-index="0" />
+  <container name="ConcurrentLinkedQueue" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="CopyOnWriteArrayList" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="CopyOnWriteArraySet" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="ConcurrentSkipListSet" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="LinkedBlockingQueue" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="PriorityBlockingQueue" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="SynchronousQueue" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="EnumMap" package="java.util" cardinality="*" type-index="1" key-index="0" />
+  <container name="EnumSet" package="java.util" cardinality="*" type-index="0" />
+  <container name="HashMap" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="HashSet" package="java.util" cardinality="*" type-index="0" />
+  <container name="Hashtable" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="IdentityHashMap" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="LinkedHashMap" package="java.util" cardinality="*" type-index="1" key-index="0" />
+  <container name="LinkedHashSet" package="java.util" cardinality="*" type-index="0" />
+  <container name="LinkedList" package="java.util" cardinality="*" type-index="0" />
+  <container name="PriorityQueue" package="java.util" cardinality="*" type-index="0" />
+  <container name="Stack" package="java.util" cardinality="*" type-index="0" />
+  <container name="TreeMap" package="java.util" cardinality="*" type-index="1" key-index="0" />
+  <container name="TreeSet" package="java.util" cardinality="*" type-index="0" />
+  <container name="Vector" package="java.util" cardinality="*" type-index="0" />
+  <container name="WeakHashMap" package="java.util" cardinality="*" type-index="1" key-index="0"/>
+  <container name="ArrayDeque" package="java.util" cardinality="*" type-index="0" />
+  <container name="LinkedBlockingDeque" package="java.util.concurrent" cardinality="*" type-index="0" />
+  <container name="WeakReference" package="java.lang.ref" cardinality="1" type-index="0" />
+  <container name="SoftReference" package="java.lang.ref" cardinality="1" type-index="0" />
+  <container name="PhantomReference" package="java.lang.ref" cardinality="1" type-index="0" />
+</containers>

@@ -1,0 +1,5 @@
+stylename=PlatformDecomposition
+basestyle=Togaf
+INSTANCE_REPRES_MODE=IMAGE
+
+INFOFLOWLINK_ITEMS_SHOWGROUP=TRUE
