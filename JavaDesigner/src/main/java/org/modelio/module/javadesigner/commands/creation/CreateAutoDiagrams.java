@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Set;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramService;
-import org.modelio.api.modelio.diagram.autodiagram.IDiagramCreator;
 import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.DefaultModuleCommandHandler;
+import org.modelio.api.ui.viewtemplate.IModelViewTemplate;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.statik.NameSpace;
@@ -59,8 +59,8 @@ public class CreateAutoDiagrams extends DefaultModuleCommandHandler {
 
     protected void generateDiagrams(final ModelTree elt, final IDiagramService diagramService) {
         if (elt instanceof Package) {
-            IDiagramCreator creator = diagramService.getAutoDiagramFactory().createSubPackageStructureCreator();
-            AbstractDiagram diagram = creator.createDiagram(elt);
+            IModelViewTemplate<AbstractDiagram> creator = diagramService.getDiagramTemplate("SubPackageStructureDiagramTemplate");
+            AbstractDiagram diagram = creator.createView(elt);
             if (diagram != null) {
                 try (IDiagramHandle diagramHandle = diagramService.getDiagramHandle(diagram)) {
         
@@ -77,17 +77,17 @@ public class CreateAutoDiagrams extends DefaultModuleCommandHandler {
                 }
             }
         
-            creator = diagramService.getAutoDiagramFactory().createDependencyCreator();
-            creator.createDiagram(elt);
+            creator = diagramService.getDiagramTemplate("DependencyDiagramTemplate");
+            creator.createView(elt);
         } else {
-            IDiagramCreator creator = diagramService.getAutoDiagramFactory().createClassStructureCreator();
-            creator.createDiagram(elt);
+            IModelViewTemplate<AbstractDiagram> creator = diagramService.getDiagramTemplate("ClassStructureDiagramTemplate");
+            creator.createView(elt);
         }
     }
 
     /**
-     * This method precizes if a command has to be desactivated. If the command has to be displayed (which means that
-     * the accept method has returned a positive value, it is sometimes needed to desactivate the command depending on
+     * This method precizes if a command has to be deactivated. If the command has to be displayed (which means that
+     * the accept method has returned a positive value, it is sometimes needed to deactivate the command depending on
      * specific constraints that are specific to the MDAC.
      */
     @Override

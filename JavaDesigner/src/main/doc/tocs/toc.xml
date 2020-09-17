@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Java Designer" topic="html/Index.html">
+	<topic comment="h2" href="" label="Introduction">		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_overview.html" label="Introducing Modelio Java Designer"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_main_features.html" label="Modelio Java Designer main features"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_java_designer_property_view.html" label="Java Designer property view"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_using_model_components_with_java.html" label="Using model components with Modelio Java Designer"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_managing_resources.html" label="Managing resources"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_intro_gloss.html" label="Glossary"></topic>
+
+	</topic>
+	<topic comment="h2" href="" label="Functionalities">		<topic comment="h4" href="" label="Choosing your functional mode">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes.html" label="Java functioning modes"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode.html" label="Model-driven mode"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode.html" label="Round-trip mode"></topic>
+
+		</topic>
+		<topic comment="h4" href="" label="Generating Java code">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_overview.html" label="Overview of Java code generation"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions.html" label="Java code generation functions"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.html" label="Tagged value types for Java"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_note_types.html" label="Note types for Java"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_stereo_types.html" label="Stereotypes for Java"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_generating_java_code_java_code_and_modeling_correspondence.html" label="Java code and modeling correspondance"></topic>
+
+		</topic>
+		<topic comment="h4" href="" label="Java documentation generation">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_doc_generation_overview.html" label="Overview of Java documentation generation"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_functions.html" label="Java documentation generation functions"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_note_types.html" label="Java documentation generation note types"></topic>
+
+		</topic>
+		<topic comment="h4" href="" label="ANT generation">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_ant_generation_gen_build_ant_file.html" label="Generating and building from a compilation artifact"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_ant_generation_running_applications.html" label="Running applications from a compilation artifact"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_ant_generation_creating_targets.html" label="Creating targets"></topic>
+
+		</topic>
+		<topic comment="h4" href="" label="Java Reverse">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_overview_reverse.html" label="Overview of Java Reverse"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_functioning_reverse_tool.html" label="Functioning of the reverse tool"></topic>
+			<topic comment="entry" href="html/Classpath_and_external_classes.html" label="Project classpath, types not found and external classes"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command.html" label="Launching the reverse command"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_three_reverse_levels.html" label="Three reverse levels"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_updating_model.html" label="Updating the UML model"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_reverse_restrictions_workarounds.html" label="Restrictions and workarounds"></topic>
+
+		</topic>
+		<topic comment="h4" href="" label="Java automation">			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_automation_access_methods.html" label="Access methods"></topic>
+			<topic comment="entry" href="html/Javadesigner-_javadeveloper_java_automation_interfaces.html" label="Interface implementation"></topic>
+
+		</topic>
+
+	</topic>
+	<topic comment="h2" href="" label="Customizing Java generation">		<topic comment="entry" href="html/Javadesigner-_javadeveloper_customizing_java_generation_overview.html" label="Overview of Java generation customization"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_customizing_java_generation_parameters.html" label="Modelio Java Designer parameters"></topic>
+		<topic comment="entry" href="html/Javadesigner-_javadeveloper_customizing_java_generation_customization_file.html" label="Customization file"></topic>
+
+	</topic>
+</toc>

@@ -1,0 +1,35 @@
+[[Updating-the-UML-model]]
+
+[[updating-the-uml-model]]
+= Updating the UML model
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+In “roundtrip” mode, the “objid” annotation is generated for classes, interfaces, enumerations, attributes, associations and operations. This annotation contains the identifier of the modeling element that has been generated.
+
+The “objid” annotation is used to find the modeling element in the Modelio project when it is reversed. Without it, the element is searched for by name. This makes it indispensable to update an element when it has been renamed or moved in the Java sources. For example, operations that have changed signature will be updated and not deleted, and then recreated.
+
+[[Copying]]
+
+[[copying]]
+=== Copying
+
+When copying code in Java sources, the “objid” annotation must never be copied, in order not to lose information when reversing or updating a modeling element that does not correspond to the Java code.
+
+[[Compilation]]
+
+[[compilation]]
+=== Compilation
+
+In order to be able to compile Java sources with this new annotation, an “import” is generated to the file containing the declaration of the annotation:
+
+....
+1import com.modeliosoft.modelio.javadesigner.annotations.objid;
+....
+
+In the module resources, a “javadesigner.jar” archive is provided, containing the declaration of the annotation. To be able to compile outside Modelio, you must add this archive. If you generate the ANT file from Modelio, the Jar archive is added automatically.
+
+[[footer]]

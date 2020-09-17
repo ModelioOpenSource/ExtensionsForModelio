@@ -1,0 +1,17 @@
+[[The-Introduction-topic]]
+
+[[the-introduction-topic]]
+===== The Introduction topic
+
+In the Introduction topic of the Modelio Java Designer user guide, you’ll find a general presentation of Modelio Java Designer, along with information on the main features of the module, the property view, resource management and a handy glossary.
+
+The Introduction topic contains the following sections:
+
+* <<Javadesigner-_javadeveloper_intro_overview.adoc#,Introducing Modelio Java Designer>>
+* <<Javadesigner-_javadeveloper_intro_main_features.adoc#,Modelio Java Designer main features>>
+* <<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>
+* <<Javadesigner-_javadeveloper_intro_using_model_components_with_java.adoc#,Using model components with Modelio Java Designer>>
+* <<Javadesigner-_javadeveloper_intro_managing_resources.adoc#,Managing resources>>
+* <<Javadesigner-_javadeveloper_intro_gloss.adoc#,Glossary>>
+
+[[footer]]

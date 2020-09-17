@@ -1,0 +1,32 @@
+[[Java-code-generation-functions]]
+
+[[java-code-generation-functions]]
+= Java code generation functions
+
+[[Generating-several-classes-within-a-single-source-file]]
+
+[[generating-several-classes-within-a-single-source-file]]
+=== Generating several classes within a single source file
+
+Java source files can contain several classes. To generate several classes in the same source file, the file’s main class is linked to the other files by an element import link stereotyped as JavaFileGroup.
+
+A Java source file containing several classes is generated in the model in the following way:
+
+image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_filegroup.png[image]
+
+The file’s main class is linked to the other files by an element import link stereotyped JavaFileGroup.
+
+[[Java-generation-commands]]
+
+[[java-generation-commands]]
+=== Java generation commands
+
+Modelio Java Designer generation provides several features related to generation.
+
+image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_fig72_mod.gif[image]
+
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_generate.png[image]: The “Generate” command will generate Java code for the class.
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_edit.png[image]: The “Edit” command will open an editor to modify the Java file content. When the editor is closed, the content of the file is automatically reversed.
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_update.png[image]: The “Update model” command will reverse the Java code for the class.
+
+[[footer]]

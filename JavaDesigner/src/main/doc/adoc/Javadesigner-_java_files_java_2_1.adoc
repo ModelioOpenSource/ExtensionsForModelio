@@ -1,0 +1,17 @@
+[[The-Generating-Java-Code-chapter]]
+
+[[the-generating-java-code-chapter]]
+===== The Generating Java Code chapter
+
+The Generating Java Code chapter of the Modelio Java Designer user guide provides all the information youll need on Java code generation with Modelio Java Designer, as well as details on the tagged values, notes and stereotypes used in Java code generation. The equivalence between Java code and modeling is also presented.
+
+The Generating Java Code chapter contains the following sections:
+
+* <<Javadesigner-_javadeveloper_generating_java_code_overview.adoc#,Overview of Java code generation>>
+* <<Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions.adoc#,Java code generation functions>>
+* <<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,Tagged value types for Java>>
+* <<Javadesigner-_javadeveloper_generating_java_code_note_types.adoc#,Note types for Java>>
+* <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,Stereotypes for Java>>
+* <<Javadesigner-_javadeveloper_generating_java_code_java_code_and_modeling_correspondence.adoc#,Java code and modeling correspondence>>
+
+[[footer]]

@@ -1,0 +1,30 @@
+[[Java-documentation-generation-note-types]]
+
+[[java-documentation-generation-note-types]]
+= Java documentation generation note types
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+Javadoc notes are used by Modelio Java Designer to enter information that will be included in Java documentation, at class, attribute, operation, operation parameter, operation return parameter and navigable association level.
+
+Javadoc notes can also be created on links stereotyped throw. A parameter allows the use of “description” type notes, as well as “Javadoc” type notes.
+
+*_Note:_* Only the final Javadoc zone preceding the documented element is taken into account by the documentation generation operation.
+
+[cols=",",options="header",]
+|==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+|In Modelio, a Javadoc note on... |produces Java documentation...
+|a class |for the deduced class.
+|an attribute |for the attribute and its accessors.
+|an operation |for the deduced operation.
+|an operation parameter or return parameter |for the deduced parameter or return parameter, concatenated with the operation's documentation. Documentation generation options at parameter configuration level are used to specify whether or not you wish to generate this information in your application's source code. If you check the tickboxes at parameter configuration level, the corresponding @param and @return markers will be generated in the Javadoc zone of the operation
+|a navigable association |for the attribute and its accessors.
+|a link stereotyped throw |for the link. Documentation generation options are used to specify whether or not you wish to generate this information in your application's source code. If you check the tickbox, the corresponding @throws marker will be generated in the Javadoc zone of the operation.
+|==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+*_Note:_* For further information on @param, @return, @throws and @see markers, please refer to the related Javadoc documentation provided by Sun.
+
+[[footer]]

@@ -1,0 +1,20 @@
+[[Automatic-creation-of-diagrams]]
+
+[[automatic-creation-of-diagrams]]
+= Automatic creation of diagrams
+
+It is possible to create class diagrams automatically after the reverse or by using a command.
+
+In order to create the diagram corresponding to the reversed classes after the reverse, open the <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,parameter configuration window>> (via the “Configuration/Settings"menu) and check the "Automatically create diagrams on initial reverse” tickbox.
+
+To ask for diagrams to be created on a particular package, use the “Java Designer/Create diagrams” command from the contextual menu of that package. The following diagrams will be created when necessary:
+
+* inheritance diagrams
+* association diagrams
+* package diagrams
+
+These diagrams can then be modified at your convenience just as with all diagrams in Modelio.
+
+If you need to access this feature again (using the command on a package or automatically after a reverse), the diagrams are not modified. They are renamed using the “old” prefix and new diagrams are created.
+
+[[footer]]

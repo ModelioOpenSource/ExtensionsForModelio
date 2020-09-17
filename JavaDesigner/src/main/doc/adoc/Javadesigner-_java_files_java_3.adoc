@@ -1,0 +1,14 @@
+[[The-Customizing-Java-generation-topic]]
+
+[[the-customizing-java-generation-topic]]
+===== The Customizing Java generation topic
+
+In the Customizing Java generation topic of the Modelio Java Designer user guide, you’ll find detailed information on the different ways in which you can customize Java generation with Modelio to meet your own specific needs and preferences.
+
+The Customizing Java generation topic contains the following sections:
+
+* <<Javadesigner-_javadeveloper_customizing_java_generation_overview.adoc#,Overview of Java generation customization>>
+* <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>
+* <<Javadesigner-_javadeveloper_customizing_java_generation_customization_file.adoc#,Customization file>>
+
+[[footer]]

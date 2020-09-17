@@ -23,7 +23,7 @@ import org.modelio.api.modelio.navigation.INavigationService;
 import org.modelio.api.ui.ModelioDialog;
 import org.modelio.module.javadesigner.i18n.Messages;
 import org.modelio.module.javadesigner.report.ReportModel.ElementMessage;
-import org.modelio.ui.UIColor;
+import org.modelio.platform.ui.UIColor;
 
 class ReportDialog extends ModelioDialog {
     private ReportModel model;

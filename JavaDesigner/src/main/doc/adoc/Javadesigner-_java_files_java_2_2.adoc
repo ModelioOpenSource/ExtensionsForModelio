@@ -1,0 +1,14 @@
+[[The-Java-Documentation-Generation-chapter]]
+
+[[the-java-documentation-generation-chapter]]
+===== The Java Documentation Generation chapter
+
+In the Java Documentation Generation chapter of the Modelio Java Designer user guide, you’ll find a general presentation of generating Java documentation with Modelio Java Designer, as well as detailed information on specific Java documentation generation functions and note types.
+
+The Java Documentation Generation chapter contains the following sections:
+
+* <<Javadesigner-_javadeveloper_java_doc_generation_overview.adoc#,Overview of Java documentation generation>>
+* <<Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_functions.adoc#,Java documentation generation functions>>
+* <<Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_note_types.adoc#,Java documentation generation note types>>
+
+[[footer]]

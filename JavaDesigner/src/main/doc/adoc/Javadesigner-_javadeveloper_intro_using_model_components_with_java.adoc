@@ -1,0 +1,32 @@
+[[Using-model-components-with-Modelio-Java-Designer]]
+
+[[using-model-components-with-modelio-java-designer]]
+= Using model components with Modelio Java Designer
+
+[[What-are-model-components]]
+
+[[what-are-model-components]]
+=== What are model components?
+
+Model components are independent, identified and coherent parts of a larger model, packaged into a single file.
+
+Model components can contain the following:
+
+* stable model extracts
+* tagged value and note types specific to certain modules
+* external files
+
+Sometimes referred to as RAM components (reusable autonomous model components) or RAMCs, model components are used in a teamwork context, to allow different developers or development teams working on the same project to work only on a limited part of the complete project model.
+
+In a large scale multi-user development project, with several people working together at the same time and in the same workspace, it can be challenging, not to say difficult, to efficiently manage all the interactions that take place.
+
+Model components allow you to increase your efficiency, by reducing the size of the different model extracts involved in a project, and the number of people working on any given model part. This means that each development team can progress in its own teamwork environment and according to its own schedule, without affecting the work of the other project participants.
+
+[[Deploying-a-model-component]]
+
+[[deploying-a-model-component]]
+=== Deploying a model component
+
+When you deploy a model component in a database, the model appears in your project, and you can make links to the model. Jar files deployed by this model component are also deployed and automatically taken into account as part of your classpath for compilation and reverse.
+
+[[footer]]

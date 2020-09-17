@@ -1,0 +1,92 @@
+[[Modelio-Java-Designer-User-Guide]]
+
+[[modelio-java-designer-user-guide]]
+= Modelio Java Designer User Guide
+
+[[Introduction]]
+
+[[introduction]]
+== Introduction
+
+* *<<Javadesigner-_javadeveloper_intro_overview.adoc#,Introducing Modelio Java Designer>>*
+* *<<Javadesigner-_javadeveloper_intro_main_features.adoc#,Modelio Java Designer main features>>*
+* *<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>*
+* *<<Javadesigner-_javadeveloper_intro_using_model_components_with_java.adoc#,Using model components with Modelio Java Designer>>*
+* *<<Javadesigner-_javadeveloper_intro_managing_resources.adoc#,Managing resources>>*
+* *<<Javadesigner-_javadeveloper_intro_gloss.adoc#,Glossary>>*
+
+[[Functionalities]]
+
+[[functionalities]]
+== Functionalities
+
+[[Choosing-your-functional-mode]]
+
+[[choosing-your-functional-mode]]
+===== Choosing your functional mode
+
+* *<<Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes.adoc#,Java functioning modes>>*
+* *<<Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode.adoc#,Model-driven mode>>*
+* *<<Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode.adoc#,Round-trip mode>>*
+
+[[Generating-Java-code]]
+
+[[generating-java-code]]
+===== Generating Java code
+
+* *<<Javadesigner-_javadeveloper_generating_java_code_overview.adoc#,Overview of Java code generation>>*
+* *<<Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions.adoc#,Java code generation functions>>*
+* *<<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,Tagged value types for Java>>*
+* *<<Javadesigner-_javadeveloper_generating_java_code_note_types.adoc#,Note types for Java>>*
+* *<<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,Stereotypes for Java>>*
+* *<<Javadesigner-_javadeveloper_generating_java_code_java_code_and_modeling_correspondence.adoc#,Java code and modeling correspondance>>*
+
+[[Java-documentation-generation]]
+
+[[java-documentation-generation]]
+===== Java documentation generation
+
+* *<<Javadesigner-_javadeveloper_java_doc_generation_overview.adoc#,Overview of Java documentation generation>>*
+* *<<Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_functions.adoc#,Java documentation generation functions>>*
+* *<<Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_note_types.adoc#,Java documentation generation note types>>*
+
+[[ANT-generation]]
+
+[[ant-generation]]
+===== ANT generation
+
+* *<<Javadesigner-_javadeveloper_ant_generation_gen_build_ant_file.adoc#,Generating and building from a compilation artifact>>*
+* *<<Javadesigner-_javadeveloper_ant_generation_running_applications.adoc#,Running applications from a compilation artifact>>*
+* *<<Javadesigner-_javadeveloper_ant_generation_creating_targets.adoc#,Creating targets>>*
+
+[[Java-Reverse]]
+
+[[java-reverse]]
+===== Java Reverse
+
+* *<<Javadesigner-_javadeveloper_java_reverse_overview_reverse.adoc#,Overview of Java Reverse>>*
+* *<<Javadesigner-_javadeveloper_java_reverse_functioning_reverse_tool.adoc#,Functioning of the reverse tool>>*
+* *<<Classpath_and_external_classes.adoc#,Project classpath, types not found and external classes>>*
+* *<<Javadesigner-_javadeveloper_java_reverse_launching_reverse_command.adoc#,Launching the reverse command>>*
+* *<<Javadesigner-_javadeveloper_java_reverse_three_reverse_levels.adoc#,Three reverse levels>>*
+* *<<Javadesigner-_javadeveloper_java_reverse_updating_model.adoc#,Updating the UML model>>*
+* *<<Javadesigner-_javadeveloper_java_reverse_restrictions_workarounds.adoc#,Restrictions and workarounds>>*
+
+[[Java-automation]]
+
+[[java-automation]]
+===== Java automation
+
+* *<<Javadesigner-_javadeveloper_java_automation_access_methods.adoc#,Access methods>>*
+* *<<Javadesigner-_javadeveloper_java_automation_interfaces.adoc#,Interface implementation>>*
+
+[[Customizing-Java-generation]]
+
+[[customizing-java-generation]]
+== Customizing Java generation
+
+* *<<Javadesigner-_javadeveloper_customizing_java_generation_overview.adoc#,Overview of Java generation customization>>*
+* *<<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>*
+* *<<Javadesigner-_javadeveloper_customizing_java_generation_customization_file.adoc#,Customization file>>*
+
+[[footer]]

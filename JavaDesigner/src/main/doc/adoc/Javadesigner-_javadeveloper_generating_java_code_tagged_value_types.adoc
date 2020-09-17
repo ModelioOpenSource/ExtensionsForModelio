@@ -1,0 +1,271 @@
+[[Tagged-value-types-for-Java]]
+
+[[tagged-value-types-for-java]]
+= Tagged value types for Java
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+The tagged values provided by Modelio Java Designer are designed to let you adapt Java semantics to a UML model, in order to generate all Java notions accurately. For example, the notion of native method in Java does not exist in UML. A \{JavaNative} tagged value on a UML operation enables you to specify this on a model.
+
+*_Note:_* Certain tagged values can be added to certain model elements directly through the “Java” tab. For more information, please see “<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>”.
+
+[[Tagged-values-on-a-class]]
+
+[[tagged-values-on-a-class]]
+===== Tagged values on a class
+
+[cols=",,,",options="header",]
+|==========================================================================================================
+|Name |Label |Parameters |Role
+|JavaStatic |Static |N/A |Used to declare the embedded class as being static.
+|JavaExtends |Extends |name of the parent class |Inherits non-modeled classes.
+|JavaImplements |Implements |names of implemented interfaces |Implements non-modeled interfaces.
+|JavaImport |Imports |names of the imported classes and packages |Imports non-modeled packages and classes.
+|JavaExtern |Extern |N/A |Indicates a class for which code must not be generated.
+|nocode | |N/A |Prevents this class from being generated. No Java file is generated for this class.
+|persistence | |N/A |Specifies that the class is persistent.
+|==========================================================================================================
+
+[[Tagged-values-on-a-package]]
+
+[[tagged-values-on-a-package]]
+=== Tagged values on a package
+
+[cols=",,,",options="header",]
+|==========================================================================================================
+|Name |Label |Parameters |Role
+|JavaImport |Imports |names of the imported classes and packages |Imports non-modeled packages and classes.
+|JavaExtern |Extern |N/A |Indicates a package for which code must not be generated from its classes.
+|nocode | |N/A |Prevents this package from being generated. No Java file is generated for this package.
+|==========================================================================================================
+
+[[Tagged-values-on-an-operation]]
+
+[[tagged-values-on-an-operation]]
+=== Tagged values on an operation
+
+[cols=",,,",options="header",]
+|===================================================================================================================================
+|Name |Label |Parameters |Role
+|JavaStrict |Strict |N/A |Representation of the Java keyword "strictfp" for the generated operation.
+|JavaSynchronized |Synchronized |N/A |Representation of the Java "synchronized" keyword meant for the multi-threading.
+|JavaNative |Native |N/A |Representation of the "native" Java keyword for the methods written in languages other than Java.
+|JavaThrownException |Thrown exceptions |name of the exceptions that may be called |Lists the exceptions the operation can generate.
+|JavaTemplateParameters |Template parameters |Template parameters |Specifies template parameters for a generic operation.
+|nocode | |N/A |Prevents this operation from being generated.
+|===================================================================================================================================
+
+[[Tagged-values-on-an-attribute]]
+
+[[tagged-values-on-an-attribute]]
+=== Tagged values on an attribute
+
+[cols=",,,",options="header",]
+|===============================================================================================================================================================================================================================================================================
+|Name |Label |Parameters |Role
+|JavaWrapper |Use wrapped type |N/A |Uses the Wrapper class as base type (for example, Integer for int).
+|type | |A collection interface |Indicates a class other than the default class for the generations related to the attribute. The \{type} tagged value can be used together with the \{JavaImplementationType} tagged value to define a personalized collection.
+|JavaTypeExpr |Manual type expression |text for specifying the attribute's Java type |Generation of the types that cannot be represented in Modelio (ex : int [ ] [ ]). Note: Setting an attribute's multiplicity to * leads to errors!.
+|JavaFinal |Final |N/A |Representation of the Java "final" keyword.
+|JavaVolatile |Volatile |N/A |Representation of the Java "volatile" keyword.
+|JavaTransient |Transient |N/A |Representation of the Java "transient" keyword.
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumeration used.
+|JavaImplementationType |Collection implementation type |A collection type |Specifies the concrete collection to use in a Java5Types context. The \{type} tagged value can be used together with the \{JavaImplementationType} tagged value to define a personalized collection.
+|JavaBind |Bind |Bound types on the attribute |Specifies the types bound by a generic attribute.
+|JavaArrayDimension |Array Dimension |Integer |Specifies the number of dimensions of an array.
+|nocode | |N/A |Prevents this attribute from being generated.
+|persistence | |N/A |Specifies that the attribute is persistent.
+|===============================================================================================================================================================================================================================================================================
+
+[[Tagged-values-on-a-navigable-association-end]]
+
+[[tagged-values-on-a-navigable-association-end]]
+=== Tagged values on a navigable association end
+
+[cols=",,,",options="header",]
+|=========================================================================================================================================================================================================================================================================================
+|Name |Label |Parameters |Role
+|type | |A collection interface |Indicates a class other than the default class for the generations related to the association. Specifies the exposed collection interface to use in a Java generation context.
+|JavaFinal |Final |N/A |Representation of the Java "final" keyword.
+|JavaVolatile |Volatile |N/A |Representation of the Java "volatile" keyword.
+|JavaTransient |Transient |N/A |Representation of the Java "transient" keyword.
+|JavaTypeExpr |Manual type expression |text for specifying the attribute's Java type |Specifies the concrete collection to use in a Java5Types context. The \{type} tagged value can be used together with the \{JavaImplementationType} tagged value to define a personalized collection.
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumerate used.
+|JavaImplementationType |Collection implementation type |A collection type |Specifies the concrete collection to use in a Java5Types context.
+|JavaBind |Bind |Bound types on the association |Specifies the types bound by a generic association.
+|JavaArrayDimension |Array Dimension |Integer |Specifies the number of dimensions of an array.
+|nocode | |N/A |Prevents this association from being generated.
+|ordered | |N/A |Specifies that the association is ordered.
+|qualifier | |N/A |Used to define the association more finely.
+|=========================================================================================================================================================================================================================================================================================
+
+[[Tagged-values-on-a-parameter]]
+
+[[tagged-values-on-a-parameter]]
+=== Tagged values on a parameter
+
+[cols=",,,",options="header",]
+|===================================================================================================================================================================================================================================
+|Name |Label |Parameters |Role
+|JavaWrapper |Use wrapped type |N/A |Uses Wrapper as its base type (for example, Integer instead of int).
+|JavaTypeExpr |Manual type expression |text for specifying the parameter's Java type |Generation of the types that cannot be represented in Modelio (ex: in [ ] [ ]). Note: Setting a parameter's multiplicity to * leads to errors!
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumerate used.
+|type | |name of the class for generating the parameter declaration |Indicates a class other than the default class to generate a parameter declaration.
+|JavaFinal |Final |N/A |Generates the "final" keyword before a parameter.
+|JavaBind |Bind |Bound types to the association |Specifies the types bound by a generic parameter.
+|JavaVarArgs |Is a VarArg |N/A |Specifies that this parameter is a VarArg parameter, as defined by Java 5.
+|JavaArrayDimension |Array Dimension |Integer |Specifies the number of dimensions of an array.
+|===================================================================================================================================================================================================================================
+
+[[Tagged-values-on-a-datatype]]
+
+[[tagged-values-on-a-datatype]]
+=== Tagged values on a datatype
+
+[cols=",,,",options="header",]
+|==========================================================================================================
+|Name |Label |Parameters |Role
+|JavaExtends |Extends |name of the mother class |Inherits non-modeled classes.
+|JavaExtern |Extern |N/A |Indicates a class for which code must not be generated.
+|JavaImport |Imports |names of the imported classes and packages |Imports non-modeled packages and classes.
+|JavaStatic |Static |JavaStatic |Used to declare the datatype as being static.
+|persistence | |N/A |Specifies that the datatype is persistent.
+|==========================================================================================================
+
+[[Tagged-values-on-a-generalization]]
+
+[[tagged-values-on-a-generalization]]
+=== Tagged values on a generalization
+
+[cols=",,,",options="header",]
+|===========================================================================================================================
+|Name |Label |Parameters |Role
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumerate used.
+|JavaNoCode |Do not generate |N/A |Prevents this generalization from being generated.
+|JavaBind |Bind |Bound types on the generalization |Specifies the types bound by a generic attribute.
+|===========================================================================================================================
+
+[[Tagged-values-on-an-element-import]]
+
+[[tagged-values-on-an-element-import]]
+=== Tagged values on an element import
+
+[cols=",,,",options="header",]
+|===========================================================================================================================
+|Name |Label |Parameters |Role
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumerate used.
+|===========================================================================================================================
+
+[[Tagged-values-on-an-enumeration]]
+
+[[tagged-values-on-an-enumeration]]
+=== Tagged values on an enumeration
+
+[cols=",,,",options="header",]
+|==============================================================================================
+|Name |Label |Parameters |Role
+|JavaImplements |Implements |name of the parent enumeration |Implements non-modeled interfaces.
+|JavaImport |Imports |name of the class to import |Imports non-modeled packages and classes.
+|JavaStatic |Static |N/A |Used to declare the embedded enumeration as being static.
+|==============================================================================================
+
+[[Tagged-values-on-an-enumeration-literal]]
+
+[[tagged-values-on-an-enumeration-literal]]
+=== Tagged values on an enumeration literal
+
+[cols=",,,",options="header",]
+|==========================================================================================================================================
+|Name |Label |Parameters |Role
+|JavaArguments |Arguments |Parameter definitions |Parameters to be passed to the constructor of the enumeration when a constant is created.
+|==========================================================================================================================================
+
+[[Tagged-values-on-a-feature]]
+
+[[tagged-values-on-a-feature]]
+=== Tagged values on a feature
+
+[cols=",,,",options="header",]
+|==================================================================================================
+|Name |Label |Parameters |Role
+|JavaNoInitValue |No initial value |N/A |Indicates that this feature will not have a default value.
+|==================================================================================================
+
+[[Tagged-values-on-an-interface]]
+
+[[tagged-values-on-an-interface]]
+=== Tagged values on an interface
+
+[cols=",,,",options="header",]
+|=============================================================================================
+|Name |Label |Parameters |Role
+|JavaExtends |Extends |name of the parent interface |Inherits non-modeled interfaces.
+|JavaExtern |Extern |N/A |Indicates a class for which code must not be generated.
+|JavaImport |Imports |name of the classes to import |Imports non-modeled packaged and classes.
+|JavaStatic |Static |N/A |Used to declare the embedded interface as being static.
+|=============================================================================================
+
+[[Tagged-values-on-an-interface-realization]]
+
+[[tagged-values-on-an-interface-realization]]
+=== Tagged values on an interface realization
+
+[cols=",,,",options="header",]
+|===========================================================================================================================
+|Name |Label |Parameters |Role
+|JavaBind |Bind |type to insert in the generic |Specifies the types bound by a generic attribute.
+|JavaFullName |Generate full name |N/A |Allows the generation of the complete name of the class, datatype or enumerate used.
+|JavaNoCode |Do not generate |N/A |Prevents this realization from being generated.
+|===========================================================================================================================
+
+[[Tagged-values-on-a-Java-annotation]]
+
+[[tagged-values-on-a-java-annotation]]
+=== Tagged values on a Java annotation
+
+[cols=",,,",options="header",]
+|==============================================================================================================================================
+|Name |Label |Parameters |Role
+|JavaDocumentedAnnotation |Documented Annotation |N/A |Indicates that annotations are to be documented by javadoc and similar tools by default.
+|JavaInheritedAnnotation |Inherited Annotation |N/A |Indicates that the annotation type is automatically inherited.
+|JavaRetentionAnnotation |Retention Annotation |N/A |Indicates how long annotations with the annotated type are to be retained.
+|JavaTargetAnnotation |Target Annotation |N/A |Indicates the kinds of program element to which the annotation type applies.
+|==============================================================================================================================================
+
+[[Tagged-values-on-a-Java-component]]
+
+[[tagged-values-on-a-java-component]]
+=== Tagged values on a Java component
+
+[cols=",,,",options="header",]
+|========================================================================================================================================
+|Name |Label |Parameters |Role
+|GenerationPath |Generation Path |complete path where files are generated |Generation path for Java elements contained in this component.
+|========================================================================================================================================
+
+[[Tagged-values-on-a-model-element]]
+
+[[tagged-values-on-a-model-element]]
+=== Tagged values on a model element
+
+[cols=",,,",options="header",]
+|=============================================================================
+|Name |Label |Parameters |Role
+|JavaNoCode |Do not generate |N/A |Prevents this element from being generated.
+|=============================================================================
+
+[[Tagged-values-on-a-template-parameter]]
+
+[[tagged-values-on-a-template-parameter]]
+=== Tagged values on a template parameter
+
+[cols=",,,",options="header",]
+|==========================================================================================
+|Name |Label |Parameters |Role
+|JavaExtends |Extends |name of the parent template parameter |Inherits non-modeled classes.
+|==========================================================================================
+
+[[footer]]

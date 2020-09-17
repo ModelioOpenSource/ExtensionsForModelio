@@ -1,0 +1,13 @@
+[[The-Java-Automation-chapter]]
+
+[[the-java-automation-chapter]]
+===== The Java Automation chapter
+
+In the Java Automation chapter of the Modelio Java Designer user guide, youll find everything you need to know on access methods and interface implementation.
+
+The Java Automation chapter contains the following sections:
+
+* <<Javadesigner-_javadeveloper_java_automation_access_methods.adoc#,Access methods>>
+* <<Javadesigner-_javadeveloper_java_automation_interfaces.adoc#,Interface implementation>>
+
+[[footer]]

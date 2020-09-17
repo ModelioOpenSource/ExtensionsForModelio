@@ -5,17 +5,17 @@
 	<!-- definition -->
 	<groupId>org.modelio.module</groupId>
 	<artifactId>javadesigner</artifactId>
-	<version>3.9.00</version>
+	<version>3.10.00</version>
 	<name>JavaDesigner</name>
+	<description>The Java Designer module provides a complete range of features dedicated to Java development, including Java code and Javadoc generation from UML2 models. It also provides an automatic model completion feature, incorporating automatic accessor production and synchronization, and a reverse service used to reverse-engineer existing Java application.</description>
 
 	<!-- repositories -->
- 	<repositories>
+	<repositories>
 		<repository>
 			<id>modelio</id>
 			<url>https://repository.modelio.org</url>
 		</repository>
 	</repositories>
-
 	<pluginRepositories>
 		<pluginRepository>
 			<id>modelio</id>
@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>org.modelio</groupId>
 			<artifactId>MDAKit</artifactId>
-			<version>[4.0.0,4.0.1)</version>
+			<version>[4.1.0,4.2.0)</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -48,7 +48,7 @@
 			<groupId>com.modelio.module</groupId>
 			<artifactId>xmlreverse</artifactId>
 			<version>3.4.03</version>
-            <type>jar</type>
+			<type>jar</type>
 		</dependency>
 
 		<dependency>
@@ -63,21 +63,28 @@
 			<version>3.4.1</version>
 		</dependency>
 
-        <dependency>
-            <groupId>org.modelio</groupId>
-            <artifactId>org.modelio.modelermodule</artifactId>
-            <version>9.1.00</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.modelio</groupId>
+			<artifactId>org.modelio.modelermodule</artifactId>
+			<version>9.1.00</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.modelio</groupId>
-            <artifactId>org.modelio.core.session</artifactId>
-            <version>[4.0.0,4.0.1)</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.modelio</groupId>
+			<artifactId>org.modelio.core.session</artifactId>
+			<version>[4.1.0,4.2.0)</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelio</groupId>
+			<artifactId>org.modelio.platform.core</artifactId>
+			<version>[4.1.0,4.2.0)</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -99,10 +106,10 @@
 			<plugin>
 				<groupId>org.modelio</groupId>
 				<artifactId>modelio-maven-plugin</artifactId>
-                <version>4.0.0.00</version>
+				<version>4.0.0.00</version>
 				<executions>
 					<execution>
-					    <id>ModuleValidation</id>
+						<id>ModuleValidation</id>
 						<phase>validate</phase>
 						<goals>
 							<goal>module-validation</goal>
@@ -180,8 +187,7 @@
 						<phase>package</phase>
 						<configuration>
 							<target>
-                                <move file="${project.basedir}/target/${project.name}_${project.version}.zip" tofile="${project.basedir}/target/${project.name}_${project.version}.jmdac" />
-
+								<move file="${project.basedir}/target/${project.name}_${project.version}.zip" tofile="${project.basedir}/target/${project.name}_${project.version}.jmdac" />
 							</target>
 						</configuration>
 						<goals>
@@ -222,14 +228,14 @@
 											modelio-maven-plugin
 										</artifactId>
 										<versionRange>
-                                                [4.0.0.00,)
+											[4.0.0.00,)
 										</versionRange>
 										<goals>
 											<goal>
-                                                    module-validation
+												module-validation
 											</goal>
 											<goal>
-                                                    module-configuration
+												module-configuration
 											</goal>
 										</goals>
 									</pluginExecutionFilter>
@@ -244,6 +250,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-    <description>The Java Designer module provides a complete range of features dedicated to Java development, including Java code and Javadoc generation from UML2 models. It also provides an automatic model completion feature, incorporating automatic accessor production and synchronization, and a reverse service used to reverse-engineer existing Java application.</description>
+
 </project>
 

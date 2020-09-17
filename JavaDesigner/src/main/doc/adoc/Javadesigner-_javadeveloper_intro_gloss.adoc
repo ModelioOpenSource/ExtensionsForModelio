@@ -1,0 +1,13 @@
+[[Glossary]]
+
+[[glossary]]
+= Glossary
+
+* Customization file: XML file containing information allowing Modelio types to be mapped into Java types, and accessors to be generated for attributes, navigable associations and parameters.
+* External edition: Operation allowing notes to be entered using an editor other than the Modelio text editor.
+* JDK (Java Development Kit): Library containing Java classes and tools, distributed by Sun for Java developers.
+* Model-driven mode: During generation, text is entered between pre- positioned markers. After edition, it is re-incorporated into the Modelio repository.
+* Round-trip mode: During generation, anotations are generated before methods and classes. After edition, all model parts that are now up to date with the file are added to the Modelio repository.
+* Security role: User group with the same rights regarding the calling of a function.
+
+[[footer]]

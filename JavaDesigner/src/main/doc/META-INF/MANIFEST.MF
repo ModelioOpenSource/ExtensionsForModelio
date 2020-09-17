@@ -1,0 +1,4 @@
+Bundle-SymbolicName: org.modelio.documentation.javadesigner;singleton=true
+Bundle-Version: 3.10.00
+Bundle-Name: Java designer documentation
+Bundle-Vendor: modelio.org

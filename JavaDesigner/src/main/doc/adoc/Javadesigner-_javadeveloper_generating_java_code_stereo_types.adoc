@@ -1,0 +1,109 @@
+[[Stereotypes-for-Java]]
+
+[[stereotypes-for-java]]
+= Stereotypes for Java
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+Modelio Java Designer defines stereotypes that enable you to designate certain objects as being concerned by the generation of Java code. In this way, a constraint concerning an operation will be used as a pre-condition if it carries the JavaPreConditions stereotype.
+
+*_Note:_* Certain stereotypes can be added to certain model elements directly through the “Java” tab. For more information, please see “<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>”.
+
+[[Stereotypes-on-a-class]]
+
+[[stereotypes-on-a-class]]
+=== Stereotypes on a class
+
+[cols=",",options="header",]
+|=========================================================
+|Name |Is used to...
+|JavaAnnotation |specify that this class is an annotation.
+|JavaClass |specify that this class is a Java element.
+|=========================================================
+
+[[Stereotypes-on-an-artifact]]
+
+[[stereotypes-on-an-artifact]]
+=== Stereotypes on an artifact
+
+[cols=",",options="header",]
+|============================================================
+|Name |Is used to...
+|JavaResource |specify that this artifact is a Java resource.
+|JarFile |specify that this artifact is a jar.
+|============================================================
+
+[[Stereotypes-on-a-component]]
+
+[[stereotypes-on-a-component]]
+=== Stereotypes on a component
+
+[cols=",",options="header",]
+|=========================================================
+|Name |Is used to...
+|JavaPlugin |specify that this component is a Java plugin.
+|=========================================================
+
+[[Stereotypes-on-a-constraint]]
+
+[[stereotypes-on-a-constraint]]
+=== Stereotypes on a constraint
+
+[cols=",",options="header",]
+|================================================================================================================================================================
+|Name |Is used to...
+|JavaDocInvariant |designate a constraint as being an invariant expressed in JavaDoc. Such a constraint is only taken into account if it concerns a class.
+|Invariant |When the "description note processed as Javadoc" parameter is selected, the constraint is taken into account in JavaDoc as for JavaDocInvariant.
+|JavaInvariant |designate a constraint as being an invariant expressed in Java. Such a constraint is only taken into account if it concerns a class.
+|JavaPreCondition |designate a constraint as being a pre-condition expressed in Java. Such a constraint is only taken into account if it concerns an operation.
+|JavaPostCondition |designate a constraint as being a post-condition expressed in Java. Such a constraint is only taken into account if it concerns an operation.
+|================================================================================================================================================================
+
+[[Stereotypes-on-a-datatype]]
+
+[[stereotypes-on-a-datatype]]
+=== Stereotypes on a datatype
+
+[cols=",",options="header",]
+|===========================================================
+|Name |Is used to...
+|JavaDataType |specify that this datatype is a Java element.
+|===========================================================
+
+[[Stereotypes-on-an-enumeration]]
+
+[[stereotypes-on-an-enumeration]]
+=== Stereotypes on an enumeration
+
+[cols=",",options="header",]
+|=================================================================
+|Name |Is used to...
+|JavaEnumeration |specify that this enumeration is a Java element.
+|=================================================================
+
+[[Stereotypes-on-an-interface]]
+
+[[stereotypes-on-an-interface]]
+=== Stereotypes on an interface
+
+[cols=",",options="header",]
+|=============================================================
+|Name |Is used to...
+|JavaInterface |specify that this interface is a Java element.
+|=============================================================
+
+[[Stereotypes-on-a-package]]
+
+[[stereotypes-on-a-package]]
+=== Stereotypes on a package
+
+[cols=",",options="header",]
+|=========================================================
+|Name |Is used to...
+|JavaPackage |specify that this package is a Java element.
+|=========================================================
+
+[[footer]]

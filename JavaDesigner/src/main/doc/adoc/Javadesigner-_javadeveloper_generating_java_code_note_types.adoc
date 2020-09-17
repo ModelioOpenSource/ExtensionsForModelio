@@ -1,0 +1,172 @@
+[[Note-types-for-Java]]
+
+[[note-types-for-java]]
+= Note types for Java
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+Modelio Java Designer notes are used to complete the UML model with texts expressed in Java syntax. Usually, the internal processing of a UML method is entered in Java in a “JavaCode” type note associated to a method's implementation.
+
+*_Note:_* Certain notes can be added to certain model elements directly through the “Java” tab. For more information, please see “<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>”.
+
+[[Type-of-notes-on-a-class]]
+
+[[type-of-notes-on-a-class]]
+=== Type of notes on a class
+
+[cols=",,",options="header",]
+|==========================================================================
+|The ... type of note |Label |Is used to...
+|JavaHeader |Header |insert a text before declaring the class.
+|JavaMembers |Members |insert a text in the class body.
+|JavaBottom |Bottom |insert a text after declaring the class.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|JavaTop |Top |insert a comment before the java file's package instruction.
+|JavaAnnotation |Annotations |specify the annotations added to the class.
+|==========================================================================
+
+[[Type-of-notes-on-an-operation]]
+
+[[type-of-notes-on-an-operation]]
+=== Type of notes on an operation
+
+[cols=",,",options="header",]
+|====================================================================================================================
+|The ... type of note |Label |Is used to...
+|Javadoc |Javadoc |add a comment which will be used by javadoc.
+|JavaCode |Code |provide Java code for implementing the operation.
+|JavaReturned |Return code |insert Java code after the post-condition (especially for instructing the method return).
+|JavaAnnotation |Annotations |specify the annotations added to the operation.
+|====================================================================================================================
+
+[[Type-of-notes-on-an-attribute]]
+
+[[type-of-notes-on-an-attribute]]
+== Type of notes on an attribute
+
+[cols=",,",options="header",]
+|======================================================================================
+|The ... type of note |Label |Is used to...
+|JavaInitValueComment |Comment on the initial value |add a comment about the attribute.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|JavaAnnotation |Annotations |specify the annotations added to the attribute.
+|======================================================================================
+
+[[Type-of-notes-on-an-association-end]]
+
+[[type-of-notes-on-an-association-end]]
+=== Type of notes on an association end
+
+[cols=",,",options="header",]
+|======================================================================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the association.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|JavaInitValue |Initial value |set initialization for the association.
+|JavaInitValueComment |Comment on the initial value |add a comment after the initialization of a navigable association.
+|======================================================================================================================
+
+[[Type-of-notes-on-a-package]]
+
+[[type-of-notes-on-a-package]]
+=== Type of notes on a package
+
+[cols=",,",options="header",]
+|==========================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the package.
+|==========================================================================
+
+[[Type-of-notes-on-a-datatype]]
+
+[[type-of-notes-on-a-datatype]]
+=== Type of notes on a datatype
+
+[cols=",,",options="header",]
+|=============================================================
+|The ... type of note |Label |Is used to...
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|JavaHeader |Header |insert a text before declaring the class.
+|JavaMembers |Members |insert a text in the class body.
+|=============================================================
+
+[[Type-of-notes-on-a-dependency]]
+
+[[type-of-notes-on-a-dependency]]
+=== Type of notes on a dependency
+
+[cols=",,",options="header",]
+|=================================================================
+|The ... type of note |Label |Is used to...
+|SeeJavadoc |See Javadoc |contain the format of a @see annotation.
+|=================================================================
+
+[[Type-of-notes-on-an-enumeration]]
+
+[[type-of-notes-on-an-enumeration]]
+=== Type of notes on an enumeration
+
+[cols=",,",options="header",]
+|==============================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the enumeration.
+|JavaCode |Code |specify the Java code to add in the enumeration.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|==============================================================================
+
+[[Type-of-notes-on-an-enumeration-literal]]
+
+[[type-of-notes-on-an-enumeration-literal]]
+=== Type of notes on an enumeration literal
+
+[cols=",,",options="header",]
+|======================================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the enumeration literal.
+|JavaCode |Code |add Java code to this literal.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|======================================================================================
+
+[[Type-of-notes-on-an-interface]]
+
+[[type-of-notes-on-an-interface]]
+=== Type of notes on an interface
+
+[cols=",,",options="header",]
+|============================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the interface.
+|JavaBottom |Bottom |insert a text after declaring the interface.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|JavaHeader |Header |insert a text before declaring the interface.
+|JavaMembers |Members |insert a text in the interface body.
+|JavaTop |Top |insert a comment before the Java file's package instruction.
+|============================================================================
+
+[[Type-of-notes-on-a-jar-file]]
+
+[[type-of-notes-on-a-jar-file]]
+=== Type of notes on a jar file
+
+[cols=",,",options="header",]
+|==================================================================================
+|The ... type of note |Label |Is used to...
+|AntTarget |Ant target |allow custom targets to be added in the generated ant file.
+|==================================================================================
+
+[[Type-of-notes-on-a-parameter]]
+
+[[type-of-notes-on-a-parameter]]
+=== Type of notes on a parameter
+
+[cols=",,",options="header",]
+|============================================================================
+|The ... type of note |Label |Is used to...
+|JavaAnnotation |Annotations |specify the annotations added to the parameter.
+|Javadoc |Javadoc |add a comment to be used by javadoc.
+|============================================================================
+
+[[footer]]

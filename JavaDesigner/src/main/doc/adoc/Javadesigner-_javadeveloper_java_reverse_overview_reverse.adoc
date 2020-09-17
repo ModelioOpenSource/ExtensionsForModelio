@@ -1,0 +1,64 @@
+[[Overview-of-Java-Reverse]]
+
+[[overview-of-java-reverse]]
+= Overview of Java Reverse
+
+[[Introduction]]
+
+[[introduction]]
+=== Introduction
+
+Reversing an application or a part of an application consists of creating a project that represents the application. A Java application can be reversed from Java source files. Modelio will produce the best possible model.
+
+However, the reverse operation is not defined or scarcely defined for certain code constructions, either because they are not directly in tune with the UML norm, because they are very specific to Java, or simply because they are not recommended for an object-oriented approach. This introduces some restrictions in the reverse tools ability to retrieve some parts of the code in the modeling project. For more information on these restrictions, please see “<<Javadesigner-_javadeveloper_java_reverse_restrictions_workarounds.adoc#,Restrictions and workarounds>>”.
+
+*_Note:_* The reverse tool is compatible with JDK versions 1.5 and more recent.
+
+[[Source-mode]]
+
+[[source-mode]]
+=== Source mode
+
+This reverse mode is run from the application sources. Using this mode, it is possible to retrieve:
+
+* The complete structure of the application to be reversed
+* The complete code of the classes and methods.
+* Some options make it possible to fit the quantity of retrieved elements to your needs. For more information, please see “<<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>”.
+
+[[Mixed-mode]]
+
+[[mixed-mode]]
+=== Mixed mode
+
+It can occur that a Java application is built from both the source files available at the time of the reverse and components available in binary version only (_.jar and_ .class).
+
+The reverse tool will perfectly adapt itself to the situation and will retrieve:
+
+* The complete structure of the application to reverse for the set of sources and binaries
+* The complete code of the classes and methods for the parts available as sources.
+
+[[Benefits-of-using-reversed-classes]]
+
+[[benefits-of-using-reversed-classes]]
+=== Benefits of using reversed classes
+
+The main advantages of reversing Java components into a project are:
+
+* the display of the reversed classes (in a structure of packages, attributes, associations, operations)
+* the specialization of the reversed classes and the redefinition of their methods
+* the visualization of documentation and code associated with the reversed elements, when the source code is available
+* the possibility of continuing to develop your project
+* the advantages of Modelio capabilities in domains such as modeling, model consistency checking, code generation, documentation generation and production of automatic tests
+
+[[Warning]]
+
+[[warning]]
+=== Warning
+
+A class reversed into a project receives an identifier just like an object created in the Modelio explorer or graphic editor.
+
+If two users reverse the same class into two different projecting projects, Modelio will consider them as two different objects.
+
+To avoid losing the links towards reversed classes during the import, it is necessary to run the reverse in a reference project from which each user imports the used classes.
+
+[[footer]]

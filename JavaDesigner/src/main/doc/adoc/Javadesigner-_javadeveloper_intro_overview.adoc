@@ -1,0 +1,56 @@
+[[Introducing-Modelio-Java-Designer]]
+
+[[introducing-modelio-java-designer]]
+= Introducing Modelio Java Designer
+
+[[Introduction]]
+
+[[introduction]]
+=== Introduction
+
+Welcome to the Modelio Java Designer user guide!
+
+Modelio Java Designer <<Javadesigner-_javadeveloper_generating_java_code_overview.adoc#,generates a Java application>> from a Modelio model, and also manages the <<Javadesigner-_javadeveloper_java_doc_generation_overview.adoc#,generation of its documentation>>.
+
+Modelio Java Designers automatic model completion features makes your modeling easier by <<Javadesigner-_javadeveloper_java_automation_access_methods.adoc#,managing accessors>> and <<Javadesigner-_javadeveloper_java_automation_interfaces.adoc#,implementing interfaces methods>>.
+
+During the modeling phase, a <<Javadesigner-_javadeveloper_java_reverse_overview_reverse.adoc#,reverse>> feature is provided to enable you to use classes in existing libraries, especially the <<Javadesigner-_javadeveloper_intro_gloss.adoc#,JDK>> (Java Development Kit).
+
+[[Modelio-Java-Designer-functions]]
+
+[[modelio-java-designer-functions]]
+=== Modelio Java Designer functions
+
+Modelio Java Designer provides five main features:
+
+* <<Javadesigner-_javadeveloper_generating_java_code_overview.adoc#,Generation of Java code>>
+* <<Javadesigner-_javadeveloper_java_doc_generation_overview.adoc#,Generation of Java documentation>>
+* <<Javadesigner-_javadeveloper_ant_generation_gen_build_ant_file.adoc#,Compilation of generated files>>
+* <<Javadesigner-_javadeveloper_java_reverse_overview_reverse.adoc#,Reverse of existing libraries>>
+* <<Javadesigner-_javadeveloper_java_automation_access_methods.adoc#,Java automation>>
+
+Powerful means of parameterization are also provided through:
+
+* <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>
+* <<Javadesigner-_javadeveloper_customizing_java_generation_overview.adoc#,Parameterization of basic types and accessors>>
+
+[[Adapting-to-your-development-environment]]
+
+[[adapting-to-your-development-environment]]
+=== Adapting to your development environment
+
+Modelio Java Designer provides <<Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes.adoc#,two functioning modes>>, to ensure consistency at all times between the model built in Modelio and the code produced:
+
+* The <<Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode.adoc#,model-driven mode>> generates the entire Java application from the model and retrieves the code inserted using markers.
+* The <<Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode.adoc#,round-trip mode>> combines code generation and reverse operations, retrieves freely typed code and creates new model elements when needed.
+
+[[Tools-used]]
+
+[[tools-used]]
+=== Tools used
+
+To use Modelio Java Designer, you need a <<Javadesigner-_javadeveloper_intro_gloss.adoc#,JDK>> 1.7 or later.
+
+*_Note:_* You must have a JDK. The JRE allows Java programs to be run, but does not allow them to be developed (compilation, documentation generation).
+
+[[footer]]

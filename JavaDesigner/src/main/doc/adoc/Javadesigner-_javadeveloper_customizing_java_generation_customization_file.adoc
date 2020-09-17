@@ -1,0 +1,102 @@
+[[Java-customization-file]]
+
+[[java-customization-file]]
+= Java customization file
+
+[[What-is-the-customization-file]]
+
+[[what-is-the-customization-file]]
+=== What is the customization file?
+
+Modelio Java Designer uses a specific XML file to define the mapping of base types, containers and the default creation of accessors.
+
+These packages are found in the “javaCustomizationFile” XML file, located in the module’s installation directory (< Project_Path >/mda/JavaDesigner/res/custom/).
+
+[[Mapping-model-types]]
+
+[[mapping-model-types]]
+=== Mapping model types
+
+You can modify basic type mapping in order to generate your own custom type. The following is an example of type definition from the customization file:
+
+....
+1 <ModelType name="date">
+2   <JavaType name="Date">
+3      <import name="java.util.Date"/>
+4      <wrapper name="Date"/>
+5   </JavaType>
+6 </ModelType>
+....
+
+* ModelType: the base type in Modelio.
+* JavaType: the corresponding java primitive type or class.
+* Import: the import line to add at generation, if necessary.
+* Wrapper: the java primitive type or class to use if the “wrapper” property is set on the model.
+
+[[Accessor-name-generation]]
+
+[[accessor-name-generation]]
+=== Accessor name generation
+
+The second part of the customization file contains the definition for accessor default patterns.
+
+Elements are defined with several cardinalities, according to multiplicities:
+
+[cols=",",options="header",]
+|=========================
+|Multiplicity |Cardinality
+|0..1 |OptionalSimple.
+|1..1 |MandatorySimple.
+|0..* |OptionalMultiple.
+|n..* |MandatoryMultiple.
+|n..m |Finite.
+|=========================
+
+Each definition corresponds to a specific metaclass, for example:
+
+....
+ 1 <Attribute card="OptionalSimple">
+ 2   <getter>
+ 3      <defaultPattern>get$Name</defaultPattern>
+ 4      <variants>
+ 5         <pattern type="boolean">is$Name</pattern>
+ 6      </variants>
+ 7   </getter>
+ 8   <setter>
+ 9      <defaultPattern>set$Name</defaultPattern>
+10   </setter>
+11 </Attribute>
+....
+
+This definition contains three parts:
+
+* The default name pattern for getters generated on an attribute is “get$Name”, where $Name is replaced by the name of the attribute.
+* If the attribute has a boolean type, the name of the getter is “is$Name” instead of “get$Name”.
+* The default name pattern for setters generated on an attribute is “set$Name”.
+
+[[Container-generation]]
+
+[[container-generation]]
+=== Container generation
+
+In the same part of the customization file, default container can also be specified, for multiple cardinalities. These containers are automatically generated if no container is defined on an element, such as an Attribute, an AssociationEnd or a Parameter. For example:
+
+....
+1  <AssociationEnd card="MandatoryMultiple">
+2  <defaultInterfaceContainer name="List">
+3  <import name="java.util.List"/>
+4  </defaultInterfaceContainer>
+5  <defaultImplementationContainer name="ArrayList">
+6  <import name="java.util.ArrayList"/>
+7  </defaultImplementationContainer>
+8...
+....
+
+This definition contains two parts:
+
+* The default interface container for an AssociationEnd with a n..* multiplicity is List, with a specific import.
+* The default implementation container for an AssociationEnd with a n..* multiplicity is ArrayList, with a specific import.
+
+*_Note:_* You can use “Array” if you do not want specific collections to be generated.
+
+[[footer]]

@@ -1,0 +1,14 @@
+[[The-Choosing-Your-Functional-Mode-chapter]]
+
+[[the-choosing-your-functional-mode-chapter]]
+===== The Choosing Your Functional Mode chapter
+
+In the Choosing Your Functional Mode chapter of the Modelio Java Designer user guide, you’ll find information on the two functioning modes available with the Modelio Java Designer module.
+
+The Choosing Your Functional Mode chapter contains the following sections:
+
+* <<Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes.adoc#,Java functioning modes>>
+* <<Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode.adoc#,Model-driven mode>>
+* <<Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode.adoc#,Round-trip mode>>
+
+[[footer]]

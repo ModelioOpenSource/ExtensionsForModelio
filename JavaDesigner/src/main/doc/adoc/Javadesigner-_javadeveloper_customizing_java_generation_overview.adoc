@@ -1,0 +1,23 @@
+[[Overview-of-Java-generation-customization]]
+
+[[overview-of-java-generation-customization]]
+= Overview of Java generation customization
+
+[[Overview]]
+
+[[overview]]
+=== Overview
+
+Modelio Java Designer provides several modes of customization, each aimed at a different category of user. This complete Java generation customization enables you to generate the exact programming form desired, by adapting Modelio Java Designer to your specific needs. For example, the mapping of types and the generation of accessors used by default can be modified, so as to create specific generations or to respect forms of imposed programming.
+
+[[Customization-modes]]
+
+[[customization-modes]]
+=== Customization modes
+
+Depending on the level of detail you want to use for parameterization, you can choose to:
+
+* <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,modify parameters>> and simply change the general options Modelio Java Designer
+* configure the <<Javadesigner-_javadeveloper_customizing_java_generation_customization_file.adoc#,mapping of types and the generation of accessors>>. The choice of basic types and the way they are used in code generation is then adapted to all generations.
+
+[[footer]]

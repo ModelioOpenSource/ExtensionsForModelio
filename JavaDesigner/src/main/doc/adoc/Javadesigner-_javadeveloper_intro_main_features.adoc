@@ -1,0 +1,46 @@
+[[Modelio-Java-Designer-main-features]]
+
+[[modelio-java-designer-main-features]]
+= Modelio Java Designer main features
+
+[[Generating-Java-files]]
+
+[[generating-java-files]]
+=== Generating Java files
+
+Java code generation consists of producing Java files for a model’s classes, using the <<Javadesigner-_javadeveloper_generating_java_code_java_code_and_modeling_correspondence.adoc#,correspondence between Java notions and modeling notions>>.
+
+Modelio Java Designer has a default strategy for generating parameter and attribute declarations. It converts UML types into Java 5 types, ensuring modern code generation, based on the Java collections framework. Other translations can be implemented easily, using the Modelio Java Designer <<Javadesigner-_javadeveloper_customizing_java_generation_customization_file.adoc#,customization file>>.
+
+*_Note:_* Before actually generating, it may be necessary to specify that classes or packages are Java elements using <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,stereotypes>> or to annotate the model using <<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,tagged values>> and <<Javadesigner-_javadeveloper_generating_java_code_note_types.adoc#,notes>>.
+
+[[Generating-documentation]]
+
+[[generating-documentation]]
+=== Generating documentation
+
+<<Javadesigner-_javadeveloper_java_doc_generation_overview.adoc#,Java documentation generation>> uses the <<Javadesigner-_javadeveloper_intro_gloss.adoc#,JDK>> javadoc tool to produce HTML files from the generated java files. This operation is therefore related to the generated java files. <<Javadesigner-_javadeveloper_java_doc_generation_java_doc_generation_note_types.adoc#,Special notes>>, inserted during the modeling phase and taken into account during code generation, are then used.
+
+[[Compiling-generated-files]]
+
+[[compiling-generated-files]]
+=== Compiling generated files
+
+The <<Javadesigner-_javadeveloper_ant_generation_gen_build_ant_file.adoc#,compilation of generated files>> consists of producing the class files from generated Java files. For this, Modelio Java Designer proposes the generation and execution of ANT files.
+
+[[Reverse-engineering]]
+
+[[reverse-engineering]]
+=== Reverse engineering
+
+The reverse engineering operation consists of incorporating classes of existing libraries, especially the <<Javadesigner-_javadeveloper_intro_gloss.adoc#,JDK>>, into a model. During the modeling phase, this allows you to:
+
+* specialize these classes
+* implement them
+* create associations towards them
+* create attributes that have one of these classes as their type
+* create methods parameters that have one of these classes as their type
+
+The reverse feature also allows you to reverse your developed code into a Modelio model.
+
+[[footer]]

@@ -22,7 +22,7 @@ import org.modelio.module.javadesigner.i18n.Messages;
 import org.modelio.module.javadesigner.reverse.ReverseConfig.GeneralReverseMode;
 import org.modelio.module.javadesigner.reverse.newwizard.ImageManager;
 import org.modelio.module.javadesigner.reverse.newwizard.api.IFileChooserModel;
-import org.modelio.ui.UIColor;
+import org.modelio.platform.ui.UIColor;
 
 public class FileChooserComposite extends Composite implements Listener {
     public IFileChooserModel model;
