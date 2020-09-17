@@ -1,0 +1,35 @@
+[[Introducing-Togaf]]
+
+[[introducing-togaf]]
+= Introducing Togaf
+
+Welcome to the Togaf Architect user guide.
+
+[[Modeling-enterprise-architecture-using-standards]]
+
+[[modeling-enterprise-architecture-using-standards]]
+===== Modeling enterprise architecture using standards
+
+Enterprise architecture is widely used within large enterprises, but still has significant ground to cover. The heterogeneous use of enterprise architecture through different methods, tools and models is an undeniable barrier to its generalization. And yet standards do exist, both for the approach itself (*TOGAF*, *DODAF*, …) and for modeling (*BPMN*, *UML*,*SysML*, …), and enterprise architecture practices are well known (process analysis, requirements analysis, goal analysis, business rules, …).
+
+However, each of these standards is a generic toolbox. Any attempt to implement them in a coordinated manner in order to model enterprise architecture requires a great deal of effort, which is beyond most users.
+
+The purpose of "*Modelio Togaf Architect*" is therefore to provide an off the shelf solution for Enterprise Architecture modeling, based on the appropriate combination of standards and good modeling practices. Modelio Togaf Architect implements the "*Enterprise Architecture Modeling Using Standards*" (*EAMUS*) extensions provided by the "http://www.togaf-modeling.org/[Togaf-Modeling.org]" site. Modelio Togaf Architect is the tool recommended by this site for standard-based Enterprise Architecture modeling.
+
+You can see modeling examples on http://www.togaf-modeling.org/[Togaf-Modeling.org], and participate by raising questions, giving your opinions, or sharing your experience.
+
+[[Enterprise-Architecture]]
+
+[[enterprise-architecture]]
+===== Enterprise Architecture
+
+*Enterprise architecture* (*EA*) is a rigorous description of the structure of an enterprise, including the business perspective and the information system perspective. EA describes the terminology, the composition of enterprise components, and their relationships with the external environment, as well as providing the guiding principles for the requirements, design, and evolution of an enterprise. This description is comprehensive, including enterprise goals, business processes, roles, organizational structures, organizational behaviors, business information, software applications and computer systems. EA is a major part of IT governance for any large organization, and its usage is increasingly widespread.
+
+[[TOGAF]]
+
+[[togaf]]
+===== TOGAF
+
+*TOGAF* is a framework for EA which provides a comprehensive approach to the design, planning, implementation, and governance of an enterprise information architecture. TOGAF is a registered trademark of The Open Group. TOGAF is a high level and holistic approach to design, which is typically modeled at four levels: Business, Application, Data, and Technology. As an open standard, TOGAF is widely adopted to support EA.
+
+[[footer]]

@@ -1,0 +1,39 @@
+[[Matrix-generation-tools]]
+
+[[matrix-generation-tools]]
+= Matrix generation tools
+
+[[Matrix-generation]]
+
+[[matrix-generation]]
+=== Matrix generation
+
+Togaf Architect enables you to generate traceability matrices from information system modeling. These matrices are provided in Excel (xls) format.
+
+To use this feature:
+
+* Run the generation command corresponding to the matrix that you want to generate: +
+"Togaf Architect > Matrix > …".
+
+[[List-of-matrices-provided]]
+
+[[list-of-matrices-provided]]
+=== List of matrices provided
+
+*Business Interaction Matrix:* Matrix representing the relationship between business organizations, functions and services.
+
+*Actor/Role Matrix:* Matrix representing the relationships between actors.
+
+*Data Entity/Business Function Matrix*: Depicts the relationship between data entities and business functions within the enterprise. Business functions are supported by business services with explicitly defined boundaries and will be supported and realized by business processes.
+
+*System/Data Matrix:* Matrix representing the relationships between system components and data components.
+
+*System/Organization Matrix:* Matrix representing the relationships between organizations (OrganizationUnit) and architecture components.
+
+*Role/System Matrix:* Matrix representing the relationships between roles and architecture components.
+
+*System/Function Matrix:* Depicts the relationship between systems (i.e., application components) and business functions within the enterprise.
+
+*Application Interaction Matrix:* The Application Interaction matrix is a two-dimensional table with Application Service, Logical Application Component, and Physical Application Component on both the rows and the columns of the table.
+
+[[footer]]

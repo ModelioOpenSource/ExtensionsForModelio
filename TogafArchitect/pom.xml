@@ -5,11 +5,11 @@
 
 	<groupId>org.modelio.module</groupId>
 	<artifactId>togafarchitect</artifactId>
-	<version>3.9.00</version>
+	<version>3.10.01</version>
 	<name>TogafArchitect</name>
 
 	<!-- repositories -->
- 	<repositories>
+	<repositories>
 		<repository>
 			<id>modelio</id>
 			<url>http://repository.modelio.org</url>
@@ -23,7 +23,6 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-    <!-- properties -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -33,7 +32,7 @@
 		<dependency>
 			<groupId>org.modelio</groupId>
 			<artifactId>MDAKit</artifactId>
-			<version>[4.0.0,4.0.1)</version>
+			<version>[4.1.0,4.2.0)</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -69,7 +68,7 @@
 			<plugin>
 				<groupId>org.modelio</groupId>
 				<artifactId>modelio-maven-plugin</artifactId>
-				<version>4.0.0.00</version>
+				<version>4.1.0.00</version>
 				<executions>
 					<execution>
 						<id>ModuleValidation</id>
@@ -193,7 +192,7 @@
 											modelio-maven-plugin
 										</artifactId>
 										<versionRange>
-											[4.0.0.00,)
+											[4.1.0.00,)
 										</versionRange>
 										<goals>
 											<goal>

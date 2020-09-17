@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.togaf.impl.TogafArchitectModule" binaryversion="4.0.00" version="${project.version}" schema-level="2" uid="a79b1502-ac66-11df-8037-0014224f9977">
+<Module id="${project.name}" class="org.modelio.togaf.impl.TogafArchitectModule" binaryversion="4.1.00" version="${project.version}" schema-level="2" uid="a79b1502-ac66-11df-8037-0014224f9977">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/poi-3.9.jar"/>
@@ -2007,7 +2007,7 @@
             <CommandRef refid="Invariant"/>
         </ContextualMenu>
         <Diagrams>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafApplicationAndUserLocationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafApplicationAndUserLocationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafApplicationAndUserLocationDiagramWizardContributor.label" icon="%TogafApplicationAndUserLocationDiagramWizardContributor.icon" information="%TogafApplicationAndUserLocationDiagramWizardContributor.info" details="%TogafApplicationAndUserLocationDiagramWizardContributor.detail" preview-image="%TogafApplicationAndUserLocationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2021,7 +2021,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafApplicationAndUserLocationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafProcessingDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafProcessingDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafProcessingDiagramWizardContributor.label" icon="%TogafProcessingDiagramWizardContributor.icon" information="%TogafProcessingDiagramWizardContributor.info" details="%TogafProcessingDiagramWizardContributor.detail" preview-image="%TogafProcessingDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2035,7 +2035,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafProcessingDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafCommunicationEngineeringDiagrams">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafCommunicationEngineeringDiagrams">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafCommunicationEngineeringDiagramsCommande.label" icon="%TogafCommunicationEngineeringDiagramsCommande.icon" information="%TogafCommunicationEngineeringDiagramsCommande.info" details="%TogafCommunicationEngineeringDiagramsCommande.detail" preview-image="%TogafCommunicationEngineeringDiagramsCommande.preview">
                     <Scope metaclass="Package"/>
@@ -2049,7 +2049,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafCommunicationEngineeringDiagramsCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafEnvironmentAndLocationsDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafEnvironmentAndLocationsDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafEnvironmentAndLocationsDiagramWizardContributor.label" icon="%TogafEnvironmentAndLocationsDiagramWizardContributor.icon" information="%TogafEnvironmentAndLocationsDiagramWizardContributor.info" details="%TogafEnvironmentAndLocationsDiagramWizardContributor.detail" preview-image="%TogafEnvironmentAndLocationsDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2063,7 +2063,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafEnvironmentAndLocationsDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafNewtorkComputingHardwareDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafNewtorkComputingHardwareDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafNewtorkComputingHardwareDiagramWizardContributor.label" icon="%TogafNewtorkComputingHardwareDiagramWizardContributor.icon" information="%TogafNewtorkComputingHardwareDiagramWizardContributor.info" details="%TogafNewtorkComputingHardwareDiagramWizardContributor.detail" preview-image="%TogafNewtorkComputingHardwareDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2077,7 +2077,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafNewtorkComputingHardwareDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafPlatformDecompositionDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafPlatformDecompositionDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafPlatformDecompositionDiagramWizardContributor.label" icon="%TogafPlatformDecompositionDiagramWizardContributor.icon" information="%TogafPlatformDecompositionDiagramWizardContributor.info" details="%TogafPlatformDecompositionDiagramWizardContributor.detail" preview-image="%TogafPlatformDecompositionDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2091,21 +2091,17 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.TogafPlatformDecompositionDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="SofwareDistributionDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="SofwareDistributionDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%SoftwareDistributionDiagramWizardContributor.label" icon="%SoftwareDistributionDiagramWizardContributor.icon" information="%SoftwareDistributionDiagramWizardContributor.info" details="%SoftwareDistributionDiagramWizardContributor.detail" preview-image="%SoftwareDistributionDiagramWizardContributor.preview">
-                    <Scope metaclass="Package"/>
-                    <Scope metaclass="Class"/>
-                    <Scope metaclass="Actor"/>
-                    <Scope metaclass="Instance"/>
-                    <Scope metaclass="Interface"/>
+                    <Scope metaclass="Package" stereotype="ApplicationArchitecture"/>
                     <Handler class="org.modelio.togaf.profile.applicationarchitecture.commande.explorer.diagram.wizard.SoftwareDistributionDiagramWizardContributor">
                         <HParameter name="style" value="PlatformDecomposition"/>
                     </Handler>
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.technologyarchitecture.customization.SofwareDistributionDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafBusinessFootPrintDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafBusinessFootPrintDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafBusinessFootPrintDiagramWizardContributor.label" icon="%TogafBusinessFootPrintDiagramWizardContributor.icon" information="%TogafBusinessFootPrintDiagramWizardContributor.info" details="%TogafBusinessFootPrintDiagramWizardContributor.detail" preview-image="%TogafBusinessFootPrintDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2119,7 +2115,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafBusinessFootPrintDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafBusinessServiceInformationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafBusinessServiceInformationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafBusinessServiceInformationDiagramWizardContributor.label" icon="%TogafBusinessServiceInformationDiagramWizardContributor.icon" information="%TogafBusinessServiceInformationDiagramWizardContributor.info" details="%TogafBusinessServiceInformationDiagramWizardContributor.detail" preview-image="%TogafBusinessServiceInformationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2147,7 +2143,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafBusinessUseCaseDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafDataSecurityDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafDataSecurityDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafDataSecurityDiagramWizardContributor.label" icon="%TogafDataSecurityDiagramWizardContributor.icon" information="%TogafDataSecurityDiagramWizardContributor.info" details="%TogafDataSecurityDiagramWizardContributor.detail" preview-image="%TogafDataSecurityDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2161,7 +2157,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafDataSecurityDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafEventDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafEventDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafEventDiagramWizardContributor.label" icon="%TogafEventDiagramWizardContributor.icon" information="%TogafEventDiagramWizardContributor.info" details="%TogafEventDiagramWizardContributor.detail" preview-image="%TogafEventDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2175,7 +2171,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafEventDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafFunctionalDecompositionDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafFunctionalDecompositionDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafFunctionalDecompositionDiagramWizardContributor.label" icon="%TogafFunctionalDecompositionDiagramWizardContributor.icon" information="%TogafFunctionalDecompositionDiagramWizardContributor.info" details="%TogafFunctionalDecompositionDiagramWizardContributor.detail" preview-image="%TogafFunctionalDecompositionDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2189,7 +2185,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafFunctionalDecompositionDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafGoalObjectiveServiceDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafGoalObjectiveServiceDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafGoalObjectiveServiceDiagramWizardContributor.label" icon="%TogafGoalObjectiveServiceDiagramWizardContributor.icon" information="%TogafGoalObjectiveServiceDiagramWizardContributor.info" details="%TogafGoalObjectiveServiceDiagramWizardContributor.detail" preview-image="%TogafGoalObjectiveServiceDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2203,7 +2199,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafGoalObjectiveServiceDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafLocationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafLocationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafLocationDiagramWizardContributor.label" icon="%TogafLocationDiagramWizardContributor.icon" information="%TogafLocationDiagramWizardContributor.info" details="%TogafLocationDiagramWizardContributor.detail" preview-image="%TogafLocationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2217,7 +2213,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafLocationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafOrganizationDecompositionDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafOrganizationDecompositionDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafOrganizationDecompositionDiagramWizardContributor.label" icon="%TogafOrganizationDecompositionDiagramWizardContributor.icon" information="%TogafOrganizationDecompositionDiagramWizardContributor.info" details="%TogafOrganizationDecompositionDiagramWizardContributor.detail" preview-image="%TogafOrganizationDecompositionDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2231,7 +2227,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafOrganizationDecompositionDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafOrganizationRoleDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafOrganizationRoleDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="DeploymentRouter" group="G1"/>
                     <ToolRef refid="TogafFunctionSequenceDiagramCommande" group="G1"/>
@@ -2273,7 +2269,7 @@
                 </Wizard>
                 <Handler class="StandardCustomizer"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafValueChainDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafValueChainDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafValueChainDiagramWizardContributor.label" icon="%TogafValueChainDiagramWizardContributor.icon" information="%TogafValueChainDiagramWizardContributor.info" details="%TogafValueChainDiagramWizardContributor.detail" preview-image="%TogafValueChainDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2287,7 +2283,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessarchitecture.customiszation.TogafValueChainDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafBenefitsDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafBenefitsDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafBenefitsDiagramWizardContributor.label" icon="%TogafBenefitsDiagramWizardContributor.icon" information="%TogafBenefitsDiagramWizardContributor.info" details="%TogafBenefitsDiagramWizardContributor.detail" preview-image="%TogafBenefitsDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2301,7 +2297,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafBenefitsDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafDataDisseminationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafDataDisseminationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafDataDisseminationDiagramWizardContributor.label" icon="%TogafDataDisseminationDiagramWizardContributor.icon" information="%TogafDataDisseminationDiagramWizardContributor.info" details="%TogafDataDisseminationDiagramWizardContributor.detail" preview-image="%TogafDataDisseminationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2315,7 +2311,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafDataDisseminationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafEnterpriseManageabilityDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafEnterpriseManageabilityDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafEnterpriseManageabilityDiagramWizardContributor.label" icon="%TogafEnterpriseManageabilityDiagramWizardContributor.icon" information="%TogafEnterpriseManageabilityDiagramWizardContributor.info" details="%TogafEnterpriseManageabilityDiagramWizardContributor.detail" preview-image="%TogafEnterpriseManageabilityDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2329,7 +2325,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafEnterpriseManageabilityDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafProjectContextDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafProjectContextDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafProjectContextDiagramWizardContributor.label" icon="%TogafProjectContextDiagramWizardContributor.icon" information="%TogafProjectContextDiagramWizardContributor.info" details="%TogafProjectContextDiagramWizardContributor.detail" preview-image="%TogafProjectContextDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2343,7 +2339,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafProjectContextDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafSolutionConceptDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafSolutionConceptDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafSolutionConceptDiagramWizardContributor.label" icon="%TogafSolutionConceptDiagramWizardContributor.icon" information="%TogafSolutionConceptDiagramWizardContributor.info" details="%TogafSolutionConceptDiagramWizardContributor.detail" preview-image="%TogafSolutionConceptDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2371,21 +2367,17 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafSystemUseCaseDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafApplicationCommunicationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafArchitect#TogafApplicationCommunicationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafApplicationCommunicationDiagramWizardContributor.label" icon="%TogafApplicationCommunicationDiagramWizardContributor.icon" information="%TogafApplicationCommunicationDiagramWizardContributor.info" details="%TogafApplicationCommunicationDiagramWizardContributor.detail" preview-image="%TogafApplicationCommunicationDiagramWizardContributor.preview">
-                    <Scope metaclass="Package"/>
-                    <Scope metaclass="Class"/>
-                    <Scope metaclass="Actor"/>
-                    <Scope metaclass="Instance"/>
-                    <Scope metaclass="Interface"/>
+                    <Scope metaclass="Standard.Package" stereotype="TogafArchitect#ApplicationArchitecture"/>
                     <Handler class="org.modelio.togaf.profile.applicationarchitecture.commande.explorer.diagram.wizard.TogafApplicationCommunicationDiagramWizardContributor">
                         <HParameter name="style" value="Togaf"/>
                     </Handler>
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafApplicationCommunicationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafApplicationMigrationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafApplicationMigrationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafApplicationMigrationDiagramWizardContributor.label" icon="%TogafApplicationMigrationDiagramWizardContributor.icon" information="%TogafApplicationMigrationDiagramWizardContributor.info" details="%TogafApplicationMigrationDiagramWizardContributor.detail" preview-image="%TogafApplicationMigrationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2399,21 +2391,18 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafApplicationMigrationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="ServiceDataDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ServiceDataDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%ServiceDataDiagramWizardContributor.label" icon="%ServiceDataDiagramWizardContributor.icon" information="%ServiceDataDiagramWizardContributor.info" details="%ServiceDataDiagramWizardContributor.detail" preview-image="%ServiceDataDiagramWizardContributor.preview">
-                    <Scope metaclass="Package"/>
-                    <Scope metaclass="Class"/>
-                    <Scope metaclass="Actor"/>
-                    <Scope metaclass="Instance"/>
-                    <Scope metaclass="Interface"/>
+                    <Scope metaclass="Package" stereotype="ApplicationArchitecture"/>
+                    <Scope metaclass="Component" stereotype="TogafApplicationComponent"/>
                     <Handler class="org.modelio.togaf.profile.applicationarchitecture.commande.explorer.diagram.wizard.ServiceDataDiagramWizardContributor">
                         <HParameter name="style" value="Togaf"/>
                     </Handler>
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.ServiceDataDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafProcessSystemRealizationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafProcessSystemRealizationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafProcessSystemRealizationDiagramWizardContributor.label" icon="%TogafProcessSystemRealizationDiagramWizardContributor.icon" information="%TogafProcessSystemRealizationDiagramWizardContributor.info" details="%TogafProcessSystemRealizationDiagramWizardContributor.detail" preview-image="%TogafProcessSystemRealizationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2427,7 +2416,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.applicationarchitecture.customization.TogafProcessSystemRealizationDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafClassDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafClassDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafClassDiagramWizardContributor.label" icon="%TogafClassDiagramWizardContributor.icon" information="%TogafClassDiagramWizardContributor.info" details="%TogafClassDiagramWizardContributor.detail" preview-image="%TogafClassDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2441,7 +2430,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessentities.customization.TogafClassDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafClassHierachyDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafClassHierachyDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafClassHierachyDiagramWizardContributor.label" icon="%TogafClassHierachyDiagramWizardContributor.icon" information="%TogafClassHierachyDiagramWizardContributor.info" details="%TogafClassHierachyDiagramWizardContributor.detail" preview-image="%TogafClassHierachyDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2455,7 +2444,7 @@
                 </Wizard>
                 <Handler class="org.modelio.togaf.profile.businessentities.customization.TogafClassHierachyDiagramCustomization"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafDataMigrationDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafDataMigrationDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafDataMigrationDiagramWizardContributor.label" icon="%TogafDataMigrationDiagramWizardContributor.icon" information="%TogafDataMigrationDiagramWizardContributor.info" details="%TogafDataMigrationDiagramWizardContributor.detail" preview-image="%TogafDataMigrationDiagramWizardContributor.preview">
                     <Scope metaclass="Package"/>
@@ -2497,14 +2486,10 @@
                 </Wizard>
                 <Handler class="StandardCustomizer"/>
             </DiagramType>
-            <DiagramType base-diagram="StaticDiagram" stereotype="TogafMatrixDiagram">
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="TogafArchitect#TogafMatrixDiagram">
                 <Palette keepBasePalette="false"/>
                 <Wizard label="%TogafMatrixDiagramWizardContributor.label" icon="%TogafMatrixDiagramWizardContributor.icon" information="%TogafMatrixDiagramWizardContributor.info" details="%TogafMatrixDiagramWizardContributor.detail" preview-image="%TogafMatrixDiagramWizardContributor.preview">
-                    <Scope metaclass="Package"/>
-                    <Scope metaclass="Class"/>
-                    <Scope metaclass="Actor"/>
-                    <Scope metaclass="Instance"/>
-                    <Scope metaclass="Interface"/>
+                    <Scope metaclass="Infrastructure.ModelElement" stereotype=""/>
                     <Handler class="org.modelio.togaf.profile.structure.commande.explorer.diagram.wizard.TogafMatrixDiagramWizardContributor">
                         <HParameter name="style" value="Togaf"/>
                     </Handler>
@@ -2513,7 +2498,7 @@
             </DiagramType>
         </Diagrams>
         <Views>
-            <PropertyPage id="TogafPropertyPage" class="org.modelio.togaf.properties.TogafPropertyPage" label="%TogafPropertyPage.label" image="%TogafPropertyPage.image">
+            <PropertyPage id="TogafPropertyPage" class="org.modelio.togaf.properties.TogafPropertyPage" label="%TogafPropertyPage.label" image="res/bmp/togaf16.png">
                 <CommandRef refid="BusinessToExchangeDataTransformation"/>
                 <CommandRef refid="BusinessToPersistantTransformation"/>
                 <CommandRef refid="ArchitectureToJavaTransformation"/>

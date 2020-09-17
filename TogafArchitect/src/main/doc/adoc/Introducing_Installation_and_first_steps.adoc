@@ -1,0 +1,27 @@
+[[Introducing-Installation-and-first-steps]]
+
+[[introducing-installation-and-first-steps]]
+= Introducing Installation and first steps
+
+[[Packaging]]
+
+[[packaging]]
+===== Packaging
+
+Togaf Architect is a module (a file with the ".jmdac" extension). The BPMN module must also be deployed to be used with Togaf Architect.
+
+[[Automatic-deployment]]
+
+[[automatic-deployment]]
+===== Automatic deployment
+
+If you want to be able to automatically deploy the Togaf Architect module when you create a project, simply copy the TogafArchitect _1.0.00.jmdac into the "mdastore" directory of your Modelio installation. When Modelio projects are created, Togaf Architect will then be available for selection in the "Modules" tab of the project creation wizard.
+
+[[Manual-deployment]]
+
+[[manual-deployment]]
+===== Manual deployment
+
+To deploy the Togaf Architect module manually, open your Modelio project or create a new one, then run the "Install a module" command from the "Configuration" menu and select the Togaf Architect module.
+
+[[footer]]

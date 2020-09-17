@@ -1,0 +1,52 @@
+[[Modeling-wizard-and-automation-tools]]
+
+[[modeling-wizard-and-automation-tools]]
+= Modeling wizard and automation tools
+
+[[Data-model-generator]]
+
+[[data-model-generator]]
+=== Data model generator
+
+*Transforming business data models into architecture level data models*
+
+Togaf Architect provides a model transformation service enabling architecture level data models to be automatically produced from business level data models.
+
+To use this feature:
+
+* Run the generation command corresponding to the matrix that you want to generate: +
+"Togaf Architect > Generate "Message" from Business Entities".
+
+[[SQL-model-generator]]
+
+[[sql-model-generator]]
+=== SQL model generator
+
+*Transforming a business data model into an SQL model*
+
+Togaf Architect provides a model transformation service enabling SQL database models (conceptual level) to be automatically produced from business level data models.
+
+To use this feature:
+
+* Run the generation command corresponding to the matrix that you want to generate: +
+"Togaf Architect > Generate persistent model from Business Entities".
+
+*Note :* This feature requires that the Togaf Architect module be used with the SQL Designer module. The SQL Designer module provides services for modeling SQL databases at conceptual and logical levels, as well as services for generating and reversing SQL scripts from data models. For more information on SQL Designer, please refer to the user guide for this module.
+
+[[Implementation-generator]]
+
+[[implementation-generator]]
+=== Implementation generator
+
+*Generating implementation from the architecture model*
+
+Togaf Architect provides a model transformation service enabling the Java implementation of the information system to be automatically produced from the architecture model.
+
+To use this feature:
+
+* Run the generation command corresponding to the matrix that you want to generate: +
+"Togaf Architect > Generate Java implementation from Business Entities".
+
+*Note :* This feature requires that Togaf Architect be used with the Java Designer module. For more information on Java Designer, please refer to the user guide of this module.
+
+[[footer]]

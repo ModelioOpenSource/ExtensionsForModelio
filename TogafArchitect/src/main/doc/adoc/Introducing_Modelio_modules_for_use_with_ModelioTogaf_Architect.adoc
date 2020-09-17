@@ -1,0 +1,14 @@
+[[Modelio-modules-for-use-with-ModelioTogaf-Architect]]
+
+[[modelio-modules-for-use-with-modeliotogaf-architect]]
+= Modelio modules for use with ModelioTogaf Architect
+
+When the Modelio Togaf Architect is used with the commercial edition of Modelio, we recommend that the Modelio Analyst module also be used, in order to cover the entire scope of enterprise architecture, in particular regarding the Architecture Vision and the Business Architecture phases. This Analyst module adds dedicated spreadsheet editors, dedicated diagrams, and allows analysis elements to be traced to the enterprise architecture models in each "Togaf Architect" diagrams. It also provides impact analysis support, generates documents, and can import elements from existing MS-Word documents.
+
+The Modelio Document Publisher module is required to generate the TOGAF Catalogs provided by Modelio TOGAF Architect.
+
+Modelio Commercial Edition also provides a set of modules dedicated to the software architecture and development phases. By using these modules in conjunction with Togaf Architect, you have complete tracability between the Enterprise Architecture Model and the software implementation model, as well as benefitting from model construction wizards and code generation automation. In particular, SOA architecture is well supported by this tooling. Depending on the technical target, there are modules dedicated to C#, Java, SQL, WSDL, XSD, and so on.
+
+Enterprise Architecture modeling within enterprises often requires that enterprise-dedicated approaches and environments be customized. The Modelio Open Source community lets you access the entire code of the open source distribution of TOGAF Architect, as well as taking advantage of the code generators’ customization capacity. In this way, the Modelio configuration with the Togaf Architect module can be entirely adapted to your specific configuration. You can contact Modeliosoft for specific support.
+
+[[footer]]

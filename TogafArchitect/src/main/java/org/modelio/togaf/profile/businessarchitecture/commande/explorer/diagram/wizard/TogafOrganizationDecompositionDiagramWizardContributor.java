@@ -37,63 +37,47 @@ import org.modelio.metamodel.diagrams.StaticDiagram;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.togaf.api.ITogafArchitectPeerModule;
-import org.modelio.togaf.impl.TogafArchitectModule;
 import org.modelio.togaf.profile.businessarchitecture.model.TogafOrganizationDecompositionDiagram;
 import org.modelio.togaf.profile.utils.TogafDiagramWizardContributor;
 import org.modelio.vcore.smkernel.mapi.MClass;
 import org.modelio.vcore.smkernel.mapi.MMetamodel;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 public class TogafOrganizationDecompositionDiagramWizardContributor extends TogafDiagramWizardContributor {
+    @Override
+    public AbstractDiagram actionPerformed(ModelElement diagramOwner, String diagramName, String diagramDescription) {
+        IModuleContext moduleContext = getModule().getModuleContext();
+        IModelingSession session = moduleContext.getModelingSession();
+        IDiagramService diagramService = moduleContext.getModelioServices().getDiagramService();
+        try (ITransaction transaction = session.createTransaction("");) {
+            IStyleHandle style = diagramService.getStyle(getStyle());
+            TogafOrganizationDecompositionDiagram proxy = new TogafOrganizationDecompositionDiagram(diagramOwner, style);
+            proxy.getElement().setName(diagramName);
+            proxy.getElement().putNoteContent("ModelerModule", ModelElement.MQNAME, "description", diagramDescription);
 
-	@Override
-	public boolean accept(MObject ielement) {
+            if (diagramOwner.isStereotyped("TogafArchitect", "OrganizationParticipant")) {
+                try (IDiagramHandle rep = moduleContext.getModelioServices().getDiagramService().getDiagramHandle(proxy.getElement())) {
+                    rep.unmask(diagramOwner, 0, 0);
+                    rep.save();
+                    rep.close();
+                }
+            }
+            moduleContext.getModelioServices().getEditionService().openEditor(proxy.getElement());
+            transaction.commit();
+            return proxy.getElement();
+        } catch (Exception e) {
+            moduleContext.getLogService().error(e);
+        }
+        return null;
+    }
 
-		ModelElement element = (ModelElement) ielement;
-		if (element.isStereotyped("TogafArchitect", "BusinessArchitecture")) {
-			return true;
-		} else if (element.isStereotyped("TogafArchitect", "TogafActor") || element.isStereotyped("TogafArchitect", "TogafRole")) {
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public AbstractDiagram actionPerformed(ModelElement diagramOwner, String diagramName, String diagramDescription) {
-
-		IModelingSession session = TogafArchitectModule.getInstance().getModuleContext().getModelingSession();
-		IDiagramService diagramService = TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getDiagramService();
-		try (ITransaction transaction = session.createTransaction("");) {
-			IStyleHandle style = diagramService.getStyle(getStyle());
-			TogafOrganizationDecompositionDiagram proxy = new TogafOrganizationDecompositionDiagram(diagramOwner,style);
-			proxy.getElement().setName(diagramName);
-			proxy.getElement().putNoteContent("ModelerModule", "description", diagramDescription);
-
-			if (diagramOwner.isStereotyped("TogafArchitect", "OrganizationParticipant")) {
-				try (IDiagramHandle rep = TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getDiagramService().getDiagramHandle(proxy.getElement())) {
-					rep.unmask(diagramOwner, 0, 0);
-					rep.save();
-					rep.close();
-				}
-			}
-			TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getEditionService().openEditor(proxy.getElement());
-			transaction.commit();
-			return proxy.getElement();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return null;
-	}
-
-	@Override
-	public ElementDescriptor getCreatedElementType() {
-		IModuleContext moduleContext = getModule().getModuleContext();
-		MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
-		MClass mClass = metamodel.getMClass(StaticDiagram.class);
-		IMetamodelExtensions extensions = moduleContext.getModelingSession().getMetamodelExtensions();
-		Stereotype stereotype = extensions.getStereotype(ITogafArchitectPeerModule.MODULE_NAME, "TogafOrganizationDecompositionDiagram", mClass);
-		return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
-	}
+    @Override
+    public ElementDescriptor getCreatedElementType() {
+        IModuleContext moduleContext = getModule().getModuleContext();
+        MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
+        MClass mClass = metamodel.getMClass(StaticDiagram.class);
+        IMetamodelExtensions extensions = moduleContext.getModelingSession().getMetamodelExtensions();
+        Stereotype stereotype = extensions.getStereotype(ITogafArchitectPeerModule.MODULE_NAME, "TogafOrganizationDecompositionDiagram", mClass);
+        return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
+    }
 
 }

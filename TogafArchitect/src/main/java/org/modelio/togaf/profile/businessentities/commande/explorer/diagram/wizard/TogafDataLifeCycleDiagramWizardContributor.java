@@ -39,85 +39,68 @@ import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.NameSpace;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.togaf.api.ITogafArchitectPeerModule;
-import org.modelio.togaf.impl.TogafArchitectModule;
 import org.modelio.togaf.profile.businessentities.model.BusinessEntity;
 import org.modelio.togaf.profile.businessentities.model.EntityLifeCycle;
 import org.modelio.togaf.profile.businessentities.model.TogafDataLifeCycleDiagram;
 import org.modelio.togaf.profile.utils.TogafDiagramWizardContributor;
 import org.modelio.vcore.smkernel.mapi.MClass;
 import org.modelio.vcore.smkernel.mapi.MMetamodel;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 public class TogafDataLifeCycleDiagramWizardContributor extends TogafDiagramWizardContributor {
+    @Override
+    public boolean accept(ModelElement element) {
+        if (element instanceof NameSpace) {
+            return super.accept(element);
+        } else {
+            ModelElement owner = (ModelElement) element.getCompositionOwner();
+            if (owner != null && owner.isStereotyped("TogafArchitect", "TogafProduct")) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-	@Override
-	public boolean accept(MObject ielement) {
+    @Override
+    public AbstractDiagram actionPerformed(ModelElement diagramOwner, String diagramName, String diagramDescription) {
+        IModuleContext moduleContext = getModule().getModuleContext();
+        IModelingSession session = moduleContext.getModelingSession();
+        IDiagramService diagramService = moduleContext.getModelioServices().getDiagramService();
+        try (ITransaction transaction = session.createTransaction("");) {
+            IStyleHandle style = diagramService.getStyle(getStyle());
+            TogafDataLifeCycleDiagram proxy = null;
+            if (diagramOwner instanceof Package) {
 
-		ModelElement element = (ModelElement) ielement;
-		if (element instanceof NameSpace) {
-			if (element.isStereotyped("TogafArchitect", "EntityLifeCycle")) {
-				return true;
-			}
+                BusinessEntity entity = new BusinessEntity();
+                entity.setParent((Package) diagramOwner);
 
-			if (element.isStereotyped("TogafArchitect", "BusinessEntities")) {
-				return true;
-			}
-			if (element.isStereotyped("TogafArchitect", "BusinessEntity")) {
-				return true;
-			}
-		} else {
-			ModelElement owner = (ModelElement) element.getCompositionOwner();
-			if (owner != null && owner.isStereotyped("TogafArchitect", "TogafProduct")) {
-				return true;
-			}
-		}
-		return false;
-	}
+                EntityLifeCycle element = new EntityLifeCycle();
+                element.setParent(entity.getElement());
+                proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner, style);
+                moduleContext.getModelioServices().getEditionService().openEditor(proxy.getElement());
+            } else if (diagramOwner instanceof NameSpace) {
+                EntityLifeCycle element = new EntityLifeCycle();
+                element.setParent((NameSpace) diagramOwner);
+                proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner, style);
+                moduleContext.getModelioServices().getEditionService().openEditor(proxy.getElement());
+            } else if (diagramOwner instanceof StateMachine) {
+                proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner, style);
+            }
+            transaction.commit();
+            return proxy != null ? proxy.getElement() : null;
+        } catch (Exception e) {
+            moduleContext.getLogService().error(e);
+        }
+        return null;
+    }
 
-	@Override
-	public AbstractDiagram actionPerformed(ModelElement diagramOwner, String diagramName, String diagramDescription) {
-		IModelingSession session = TogafArchitectModule.getInstance().getModuleContext().getModelingSession();
-		IDiagramService diagramService = TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getDiagramService();
-		try (ITransaction transaction = session.createTransaction("");) {
-			IStyleHandle style = diagramService.getStyle(getStyle());
-			TogafDataLifeCycleDiagram proxy = null;
-			if (diagramOwner instanceof Package) {
-				BusinessEntity entity = new BusinessEntity();
-				entity.setParent((Package) diagramOwner);
-
-				EntityLifeCycle element = new EntityLifeCycle();
-				element.setParent(entity.getElement());
-				diagramOwner = element.getElement();
-				proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner,style);
-				TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getEditionService().openEditor(proxy.getElement());
-			} else if (diagramOwner instanceof NameSpace) {
-				EntityLifeCycle element = new EntityLifeCycle();
-				element.setParent((NameSpace) diagramOwner);
-				diagramOwner = element.getElement();
-				proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner,style);
-				TogafArchitectModule.getInstance().getModuleContext().getModelioServices().getEditionService().openEditor(proxy.getElement());
-			} else if (diagramOwner instanceof StateMachine) {
-				proxy = new TogafDataLifeCycleDiagram((StateMachine) diagramOwner,style);
-			} else {
-				return null;
-			}
-			transaction.commit();
-			return proxy.getElement();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return null;
-	}
-
-	@Override
-	public ElementDescriptor getCreatedElementType() {
-		IModuleContext moduleContext = getModule().getModuleContext();
-		MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
-		MClass mClass = metamodel.getMClass(StateMachineDiagram.class);
-		IMetamodelExtensions extensions = moduleContext.getModelingSession().getMetamodelExtensions();
-		Stereotype stereotype = extensions.getStereotype(ITogafArchitectPeerModule.MODULE_NAME, "TogafDataLifeCycleDiagram", mClass);
-		return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
-	}
+    @Override
+    public ElementDescriptor getCreatedElementType() {
+        IModuleContext moduleContext = getModule().getModuleContext();
+        MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
+        MClass mClass = metamodel.getMClass(StateMachineDiagram.class);
+        IMetamodelExtensions extensions = moduleContext.getModelingSession().getMetamodelExtensions();
+        Stereotype stereotype = extensions.getStereotype(ITogafArchitectPeerModule.MODULE_NAME, "TogafDataLifeCycleDiagram", mClass);
+        return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
+    }
 
 }

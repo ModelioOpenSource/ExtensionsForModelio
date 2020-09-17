@@ -1,0 +1,4 @@
+Bundle-SymbolicName: org.modelio.documentation.togaf;singleton=true
+Bundle-Version: 3.10.01
+Bundle-Name: Togaf documentation
+Bundle-Vendor: modelio.org
