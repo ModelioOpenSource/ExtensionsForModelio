@@ -1,0 +1,10 @@
+[[SysML-Architect-introduction]]
+
+[[sysml-architect-introduction]]
+= SysML Architect introduction
+
+SysML is an OMG standard, defined as an extension of the UML language for specifying, analyzing, designing, and verifying complex systems. The Modelio SysML Designer module is based on the analysis of the SysML specification version 1.2, available since June 2010. The SysML module does not support requirement diagrams, but these diagrams are supported by the Modelio Analyst module. This module should be used in conjunction with the SysML module to get complete SysML support. Analyst module provides editors dedicated to requirement analysis, spreadsheet editors, requirement document generation, and requirement imports from MS-Word documents. Requirements can be traced from each SysML diagram, using SysML predefined dependencies (e.g.: refine, satisfy, verify ).
+
+The current documentation describes how to use Modelio with this SysML extension. For further information on how to use Modelio, the principal Modelio user guide should be consulted.
+
+[[footer]]

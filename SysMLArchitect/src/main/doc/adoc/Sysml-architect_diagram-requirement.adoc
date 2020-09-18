@@ -1,0 +1,57 @@
+[[SysML-Requirement-diagrams]]
+
+[[sysml-requirement-diagrams]]
+= SysML Requirement diagrams
+
+SysML Requirement diagrams are dedicated to modeling system requirements, in other words, the capabilities or conditions that must be fulfilled. Requirement relationships related to other requirements as to other model elements can be also specified using this type of diagram.
+
+[[Palette]]
+
+[[palette]]
+== Palette
+
+The following list represents the elements available in SysML requirement diagrams.
+
+*image:images/Sysml-architect_diagram-requirement_image093.png[image]RequirementContainer*: Creates a Requirement Container.
+
+*image:images/Sysml-architect_diagram-requirement_image094.png[image]Requirement*: Creates a Requirement.
+
+*image:images/Sysml-architect_diagram-requirement_image063.png[image]Allocate*: Creates an Allocate dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image095.png[image]Part*: Creates a Part dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image049.png[image]Derive*: Creates a Derive link.
+
+*image:images/Sysml-architect_diagram-requirement_image065.png[image]Copy*: Creates a Copy dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image067.png[image]Satisfy*: Creates a Satisfy dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image068.png[image]Verify*: Creates a Verify dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image066.png[image]Refine*: Creates a Refine dependency.
+
+*image:images/Sysml-architect_diagram-requirement_image070.png[image]Trace*: Creates a Traceability link.
+
+*image:images/Sysml-architect_diagram-requirement_image071.png[image]Problem*: Creates a Problem note.
+
+*image:images/Sysml-architect_diagram-requirement_image072.png[image]Rationale*: Creates a Rationale note.
+
+*image:images/Sysml-architect_diagram-requirement_image073.png[image]Note*: Creates a Note.
+
+*image:images/Sysml-architect_diagram-requirement_image074.png[image]Constraint*: Creates a Constraint.
+
+[[Example]]
+
+[[example]]
+== Example
+
+The following example is extracted from the http://www.omgwiki.org/model-interchange/doku.php[MIWG] test case list and implemented in the SysML Architect module.
+
+image:images/Sysml-architect_diagram-requirement_image096.png[image]
+
+[[Requirement-modeling-use-case]]
+
+[[requirement-modeling-use-case]]
+Requirement modeling use case
+
+[[footer]]

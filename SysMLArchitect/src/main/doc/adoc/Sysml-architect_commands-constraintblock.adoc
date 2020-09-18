@@ -1,0 +1,18 @@
+The commands available on a Constraint Block are as follows:
+
+image:images/Sysml-architect_commands-constraintblock_image028.jpg[image]
+
+[[Commands-on-a-Constraint-Block]]
+
+[[commands-on-a-constraint-block]]
+Commands on a Constraint Block
+
+*image:images/Sysml-architect_commands-constraintblock_image009.png[image] SysML diagram*: Launch the SyML diagram creation wizard.
+
+*image:images/Sysml-architect_commands-constraintblock_image024.png[image]Flow port*: Creates a FlowPort.
+
+*image:images/Sysml-architect_commands-constraintblock_image025.png[image]Port*: Creates a Port.
+
+*image:images/Sysml-architect_commands-constraintblock_image023.png[image]Part*: Creates a Part or an Instance.
+
+[[footer]]

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.modelio</groupId>
+	<artifactId>org.modelio.documentation.sysml</artifactId>
+	<version>3.10.00</version>
+	<packaging>eclipse-plugin</packaging>
+
+	<properties>
+		<tycho-version>1.5.0</tycho-version>
+		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
+		<html.directory>html</html.directory>
+		<adoc.directory>adoc</adoc.directory>
+		<asciidoctor.version>1.5.7.1</asciidoctor.version>
+		<phase.generate-documentation>generate-resources</phase.generate-documentation>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>modelio-plugin</id>
+			<url>http://repository.modelio.org/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>modelio-plugin</id>
+			<url>http://repository.modelio.org/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${tycho-groupid}</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<resolver>p2</resolver>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>${tycho-groupid}</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<strictVersions>false</strictVersions>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- Convert all asciidoc files in adoc directory to html files in ${html.directory}
+				directory (images are copied too) -->
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>${asciidoctor.version}</version>
+				<executions>
+					<execution>
+						<id>output-html</id>
+						<phase>${phase.generate-documentation}</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<headerFooter>true</headerFooter>
+							<compact>true</compact>
+							<sourceDirectory>${adoc.directory}</sourceDirectory>
+							<outputDirectory>${html.directory}</outputDirectory>
+							<preserveDirectories>true</preserveDirectories>
+							<backend>html5</backend>
+							<sourceHighlighter>coderay</sourceHighlighter>
+							<attributes>
+								<linkcss>true</linkcss>
+								<imagesdir>.</imagesdir>
+							</attributes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>clean-generated-files</id>
+						<phase>initialize</phase>
+						<configuration>
+							<target>
+								<delete verbose="false" failonerror="false">
+									<fileset dir="${project.basedir}/${html.directory}">
+										<include name="**/*" />
+									</fileset>
+								</delete>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

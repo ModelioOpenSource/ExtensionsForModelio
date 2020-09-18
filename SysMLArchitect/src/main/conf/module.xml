@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Module id="${project.name}" class="org.modelio.module.sysml.impl.SysMLModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="00bc42d0-0000-19fb-0000-000000000000" author="" image="" url="">
+    <ClassPath>
+        <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/org.modelio.documentation.sysml-${project.version}.jar"/>
+    </ClassPath>
+    <Profiles>
+        <Profile uid="00bc42a4-0000-1968-0000-000000000000" id="sysml">
+            <Stereotype name="Allocate" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.Allocate.label" uid="00bc42a4-0000-19b2-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="AllocateActivityPartition" metaclass="Standard.ActivityPartition" owner-stereotype="" is-hidden="true" label="%stereotype.AllocateActivityPartition.label" uid="00bc42d0-0001-803e-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Allocated" metaclass="Standard.UmlModelElement" owner-stereotype="" is-hidden="true" label="%stereotype.Allocated.label" uid="00bc42a4-0000-19b8-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="Allocated_allocatedTo" uid="6e7af61c-3a73-11e0-a52b-0027103f347c" label="%tagtype.Allocated_allocatedTo.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="Allocated_allocatedFrom" uid="7cbe081c-3a73-11e0-a52b-0027103f347c" label="%tagtype.Allocated_allocatedFrom.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="BindingConnector" metaclass="Standard.Connector" owner-stereotype="" is-hidden="true" label="%stereotype.BindingConnector.label" uid="00bc42a4-0000-19c3-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Block" metaclass="Standard.Class" owner-stereotype="" is-hidden="true" label="%stereotype.Block.label" uid="00bc42a4-0000-19c9-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/block.png"/>
+                <Image path="res/icons/block48.png"/>
+                <TagTypes>
+                    <TagType name="Block_isEncapsulated" uid="00bc42a4-0000-19d1-0000-000000000000" label="%tagtype.Block_isEncapsulated.label" parameter-card="0" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Conform" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.Conform.label" uid="00bc42a4-0000-1a27-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ConnectorProperty" metaclass="Standard.BindableInstance" owner-stereotype="" is-hidden="true" label="%stereotype.ConnectorProperty.label" uid="00bc42a4-0000-19d4-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/connectorproperty.png"/>
+                <Image path="res/icons/connectorproperty.png"/>
+                <TagTypes>
+                    <TagType name="ConnectorProperty_connector" uid="d49db246-fd49-11df-aca6-0027103f347c" label="%tagtype.ConnectorProperty_connector.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ConnectorPropertyConnector" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.ConnectorPropertyConnector.label" uid="775fe859-2eb7-11e0-8df2-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ConstraintBlock" metaclass="Standard.Class" owner-stereotype="mref#'' {00bc42a4-0000-19c9-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ConstraintBlock.label" uid="00bc42a4-0000-1a0b-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/constraintblock.png"/>
+                <Image path="res/icons/constraintblock48.png"/>
+            </Stereotype>
+            <Stereotype name="ConstraintProperty" metaclass="Standard.BindableInstance" owner-stereotype="" is-hidden="true" label="%stereotype.ConstraintProperty.label" uid="00bc42a4-0000-1a11-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/constraintproperty.png"/>
+                <Image path="res/icons/constraintproperty.png"/>
+            </Stereotype>
+            <Stereotype name="Continuous_ActivityEdge" metaclass="Standard.ActivityEdge" owner-stereotype="mref#'' {00bc42a4-0000-19a7-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Continuous_ActivityEdge.label" uid="00bc42a4-0000-1971-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/continuous.png"/>
+                <Image path="res/icons/continuous.png"/>
+            </Stereotype>
+            <Stereotype name="Continuous_Parameter" metaclass="Standard.Parameter" owner-stereotype="mref#'' {00bc42a4-0000-19a2-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Continuous_Parameter.label" uid="00bc42a4-0000-196b-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/continuousparameter.png"/>
+                <Image path="res/icons/continuousparameter.png"/>
+            </Stereotype>
+            <Stereotype name="ControlOperator_Behavior" metaclass="Standard.Behavior" owner-stereotype="" is-hidden="true" label="%stereotype.ControlOperator_Behavior.label" uid="00bc42a4-0000-1977-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ControlOperator_Operation" metaclass="Standard.Operation" owner-stereotype="" is-hidden="true" label="%stereotype.ControlOperator_Operation.label" uid="00bc42a4-0000-197d-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Dimension" metaclass="Standard.Instance" owner-stereotype="" is-hidden="true" label="%stereotype.Dimension.label" uid="00bc42a4-0000-19da-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Discrete_ActivityEdge" metaclass="Standard.ActivityEdge" owner-stereotype="mref#'' {00bc42a4-0000-19a7-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Discrete_ActivityEdge.label" uid="00bc42a4-0000-1987-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/discrete.png"/>
+                <Image path="res/icons/discrete.png"/>
+            </Stereotype>
+            <Stereotype name="Discrete_Parameter" metaclass="Standard.Parameter" owner-stereotype="mref#'' {00bc42a4-0000-19a2-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.Discrete_Parameter.label" uid="00bc42a4-0000-1982-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/discreteparameter.png"/>
+                <Image path="res/icons/discreteparameter.png"/>
+            </Stereotype>
+            <Stereotype name="DistributedProperty" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="true" label="%stereotype.DistributedProperty.label" uid="00bc42a4-0000-19df-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/distributedproperty.png"/>
+                <Image path="res/icons/distributedproperty.png"/>
+            </Stereotype>
+            <Stereotype name="FlowPort" metaclass="Standard.Port" owner-stereotype="" is-hidden="true" label="%stereotype.FlowPort.label" uid="00bc42a4-0000-1a57-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/flowport_inout.png"/>
+                <Image path="res/icons/flowport_inoutdiagram.png"/>
+                <TagTypes>
+                    <TagType name="FlowPort_direction" uid="00bc42a4-0000-1a5f-0000-000000000000" label="%tagtype.FlowPort_direction.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="FlowPort_isAtomic" uid="00bc42a4-0000-1a64-0000-000000000000" label="%tagtype.FlowPort_isAtomic.label" parameter-card="0" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="FlowProperty" metaclass="Standard.Feature" owner-stereotype="" is-hidden="true" label="%stereotype.FlowProperty.label" uid="00bc42a4-0000-1a6c-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="FlowProperty_direction" uid="00bc42a4-0000-1a74-0000-000000000000" label="%tagtype.FlowProperty_direction.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="FlowPort_In" metaclass="Standard.Port" owner-stereotype="mref#'' {00bc42a4-0000-1a57-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.FlowPort_In.label" uid="2c8f7fbb-f63f-11e0-9b85-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="FlowPort_InOut" metaclass="Standard.Port" owner-stereotype="mref#'' {00bc42a4-0000-1a57-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.FlowPort_InOut.label" uid="6f084d8e-f63f-11e0-9b85-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="FlowPort_Out" metaclass="Standard.Port" owner-stereotype="mref#'' {00bc42a4-0000-1a57-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.FlowPort_Out.label" uid="6f3ddc7e-f63f-11e0-9b85-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="FlowSpecification" metaclass="Standard.Interface" owner-stereotype="" is-hidden="true" label="%stereotype.FlowSpecification.label" uid="00bc42a4-0000-1a77-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/flowspecification.png"/>
+                <Image path="res/icons/flowspecification48.png"/>
+            </Stereotype>
+            <Stereotype name="ItemFlow" metaclass="Standard.InformationFlow" owner-stereotype="" is-hidden="true" label="%stereotype.ItemFlow.label" uid="00bc42d0-0001-380b-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/itemflow.png"/>
+                <Image path="res/icons/itemflow.png"/>
+                <TagTypes>
+                    <TagType name="ItemFlow_itemProperty" uid="f6c829c6-34ef-11e0-8a40-0027103f347c" label="%tagtype.ItemFlow_itemProperty.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ItemProperty" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.ItemProperty.label" uid="684f2c73-379f-11e0-95ae-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="NestedConnectorEnd" metaclass="Standard.ConnectorEnd" owner-stereotype="" is-hidden="true" label="%stereotype.NestedConnectorEnd.label" uid="00bc42a4-0000-19e5-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="NestedConnectorEnd_propertyPath" uid="00bc42a4-0000-19ed-0000-000000000000" label="%tagtype.NestedConnectorEnd_propertyPath.label" parameter-card="*" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="NestedConnectorEndPropertyPath" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.NestedConnectorEndPropertyPath.label" uid="77d7e3c1-2eb7-11e0-8df2-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="NoBuffer" metaclass="Standard.ObjectNode" owner-stereotype="" is-hidden="true" label="%stereotype.NoBuffer.label" uid="00bc42a4-0000-198d-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Optional" metaclass="Standard.Parameter" owner-stereotype="" is-hidden="true" label="%stereotype.Optional.label" uid="00bc42a4-0000-1992-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/optional.png"/>
+                <Image path="res/icons/optional.png"/>
+            </Stereotype>
+            <Stereotype name="Overwrite" metaclass="Standard.ObjectNode" owner-stereotype="" is-hidden="true" label="%stereotype.Overwrite.label" uid="00bc42a4-0000-1997-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ParticipantPropertyEnd" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.ParticipantPropertyEnd.label" uid="e6114e98-2eb8-11e0-8f32-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ParticipantProperty_AssociationEnd" metaclass="Standard.AssociationEnd" owner-stereotype="" is-hidden="true" label="%stereotype.ParticipantProperty_AssociationEnd.label" uid="00bc42a4-0000-19ef-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="ParticipantProperty_AssociationEnd_end" uid="ce7e9f75-fd49-11df-aca6-0027103f347c" label="%tagtype.ParticipantProperty_AssociationEnd_end.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ParticipantProperty_BindableInstance" metaclass="Standard.BindableInstance" owner-stereotype="" is-hidden="true" label="%stereotype.ParticipantProperty_BindableInstance.label" uid="be4f9250-fe30-11df-a577-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/participantproperty.png"/>
+                <Image path="res/icons/participantproperty.png"/>
+                <TagTypes>
+                    <TagType name="ParticipantProperty_BindableInstance_end" uid="be4f9251-fe30-11df-a577-0027103f347c" label="%tagtype.ParticipantProperty_BindableInstance_end.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Probability" metaclass="Standard.ActivityEdge" owner-stereotype="" is-hidden="true" label="%stereotype.Probability.label" uid="00bc42d0-0001-3805-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/probability.png"/>
+                <Image path="res/icons/probability.png"/>
+                <TagTypes>
+                    <TagType name="Probability_probability" uid="8ceeb68d-c25e-11df-b322-001302895b2b" label="%tagtype.Probability_probability.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="PropertySpecificType" metaclass="Standard.Classifier" owner-stereotype="" is-hidden="true" label="%stereotype.PropertySpecificType.label" uid="00bc42a4-0000-19f5-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="QuantityKind" metaclass="Standard.Instance" owner-stereotype="" is-hidden="true" label="%stereotype.QuantityKind.label" uid="d0c2eab1-c19f-11df-b3ac-001302895b2b" is-abstract="false">
+                <Icon path="res/icons/quantitykind.png"/>
+                <Image path="res/icons/quantitykind48.png"/>
+                <TagTypes>
+                    <TagType name="QuantityKind_symbol" uid="d0c2eab2-c19f-11df-b3ac-001302895b2b" label="%tagtype.QuantityKind_symbol.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="QuantityKind_description" uid="d0c2eab3-c19f-11df-b3ac-001302895b2b" label="%tagtype.QuantityKind_description.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="QuantityKind_descriptionURI" uid="d0c2eab4-c19f-11df-b3ac-001302895b2b" label="%tagtype.QuantityKind_descriptionURI.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Rate_ActivityEdge" metaclass="Standard.ActivityEdge" owner-stereotype="" is-hidden="true" label="%stereotype.Rate_ActivityEdge.label" uid="00bc42a4-0000-19a7-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/rate.png"/>
+                <Image path="res/icons/rate.png"/>
+                <TagTypes>
+                    <TagType name="Rate_ActivityEdge_rate" uid="a1603d72-77f2-11e1-bff7-0027103f347d" label="%tagtype.Rate_ActivityEdge_rate.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Rate_Parameter" metaclass="Standard.Parameter" owner-stereotype="" is-hidden="true" label="%stereotype.Rate_Parameter.label" uid="00bc42a4-0000-19a2-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/rateparameter.png"/>
+                <Image path="res/icons/rateparameter.png"/>
+                <TagTypes>
+                    <TagType name="Rate_Parameter_rate" uid="b6d505f2-77f2-11e1-bff7-0027103f347d" label="%tagtype.Rate_Parameter_rate.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="RequirementRelated" metaclass="Standard.UmlModelElement" owner-stereotype="" is-hidden="true" label="%stereotype.RequirementRelated.label" uid="55b2731f-a90d-11df-a01f-001302895b2b" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TestCase_Behavior" metaclass="Standard.Behavior" owner-stereotype="" is-hidden="true" label="%stereotype.TestCase_Behavior.label" uid="00bc42d0-0000-056f-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TestCase_Operation" metaclass="Standard.Operation" owner-stereotype="" is-hidden="true" label="%stereotype.TestCase_Operation.label" uid="00bc42d0-0000-0569-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/testcase.png"/>
+                <Image path="res/icons/testcase.png"/>
+            </Stereotype>
+            <Stereotype name="Unit" metaclass="Standard.Instance" owner-stereotype="" is-hidden="true" label="%stereotype.Unit.label" uid="00bc42a4-0000-19fa-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/unit.png"/>
+                <Image path="res/icons/unit48.png"/>
+                <TagTypes>
+                    <TagType name="Unit_symbol" uid="a8023330-c19c-11df-a585-001302895b2b" label="%tagtype.Unit_symbol.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="Unit_description" uid="aec06234-c19c-11df-a585-001302895b2b" label="%tagtype.Unit_description.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="Unit_descriptionURI" uid="af1afc02-c19c-11df-a585-001302895b2b" label="%tagtype.Unit_descriptionURI.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="Unit_quantityKind" uid="af86465b-c19c-11df-a585-001302895b2b" label="%tagtype.Unit_quantityKind.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="UnitQuantityKind" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.UnitQuantityKind.label" uid="e002f3a2-c234-11df-83b7-001302895b2b" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ValueType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="true" label="%stereotype.ValueType.label" uid="00bc42a4-0000-1a00-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/valuetype.png"/>
+                <Image path="res/icons/valuetype48.png"/>
+                <TagTypes>
+                    <TagType name="ValueType_unit" uid="1a60c02f-fded-11df-a577-0027103f347c" label="%tagtype.ValueType_unit.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="ValueType_quantityKind" uid="441441ef-fded-11df-a577-0027103f347c" label="%tagtype.ValueType_quantityKind.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="ValueTypeUnit" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.ValueTypeUnit.label" uid="1fcbb38d-fded-11df-a577-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ValueTypeQuantityKind" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.ValueTypeQuantityKind.label" uid="3032b3d9-fded-11df-a577-0027103f347c" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Rate" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="true" label="%stereotype.Rate.label" uid="6b54f1d4-7806-11e1-bff7-0027103f347d" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="View" metaclass="Standard.Package" owner-stereotype="" is-hidden="true" label="%stereotype.View.label" uid="00bc42a4-0000-1a2d-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/view.png"/>
+                <Image path="res/icons/view48.png"/>
+                <TagTypes>
+                    <TagType name="View_viewpoint" uid="d4e24361-c168-11df-a585-001302895b2b" label="%tagtype.View_viewpoint.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="Viewpoint" metaclass="Standard.Class" owner-stereotype="" is-hidden="true" label="%stereotype.Viewpoint.label" uid="00bc42a4-0000-1a33-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/viewpoint.png"/>
+                <Image path="res/icons/viewpoint48.png"/>
+                <TagTypes>
+                    <TagType name="Viewpoint_concerns" uid="00bc42a4-0000-1a40-0000-000000000000" label="%tagtype.Viewpoint_concerns.label" parameter-card="*" is-hidden="true" is-signed="true"/>
+                    <TagType name="Viewpoint_languages" uid="00bc42a4-0000-1a45-0000-000000000000" label="%tagtype.Viewpoint_languages.label" parameter-card="*" is-hidden="true" is-signed="true"/>
+                    <TagType name="Viewpoint_methods" uid="00bc42a4-0000-1a4a-0000-000000000000" label="%tagtype.Viewpoint_methods.label" parameter-card="*" is-hidden="true" is-signed="true"/>
+                    <TagType name="Viewpoint_purpose" uid="00bc42d0-0000-0395-0000-000000000000" label="%tagtype.Viewpoint_purpose.label" parameter-card="1" is-hidden="true" is-signed="true"/>
+                    <TagType name="Viewpoint_stakeholders" uid="00bc42a4-0000-1a4f-0000-000000000000" label="%tagtype.Viewpoint_stakeholders.label" parameter-card="*" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </Stereotype>
+            <MetaclassReference uid="00bc42a4-0000-1a1a-0000-000000000000" metaclass="Infrastructure.ModelElement">
+                <NoteTypes>
+                    <NoteType name="Problem" label="%notetype.Problem.label" is-hidden="true" uid="00bc42a4-0000-1a1f-0000-000000000000" mime-type="text/plain"/>
+                    <NoteType name="Rationale" label="%notetype.Rationale.label" is-hidden="true" uid="00bc42a4-0000-1a24-0000-000000000000" mime-type="text/plain"/>
+                </NoteTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="91ccb3a5-f8b3-11df-9c18-0027103f347c" metaclass="Standard.Pin">
+                <TagTypes>
+                    <TagType name="isStream" uid="a5e653ca-f8b3-11df-9c18-0027103f347c" label="%tagtype.isStream.label" parameter-card="0" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </MetaclassReference>
+            <MetaclassReference uid="ff1fd912-5484-11e0-b794-0027103f347c" metaclass="Standard.Port">
+                <TagTypes>
+                    <TagType name="isConjugated" uid="04c83455-5485-11e0-b794-0027103f347c" label="%tagtype.isConjugated.label" parameter-card="0" is-hidden="true" is-signed="true"/>
+                </TagTypes>
+            </MetaclassReference>
+        </Profile>
+        <Profile uid="00bc42ac-0000-1013-0000-000000000000" id="sysml.diagrams">
+            <Stereotype name="BlockDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.BlockDiagram.label" uid="00bc42ac-0000-1016-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/blockdiagram.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="InternalBlockDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.InternalBlockDiagram.label" uid="00bc42ac-0000-11b9-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/internalblockdiagram.png"/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="PackageDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.PackageDiagram.label" uid="24c648f8-d57b-11e0-8ec9-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/packagediagram.png"/>
+                <Image path="res/icons/packagediagram.png"/>
+            </Stereotype>
+            <Stereotype name="ParametricDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="mref#'' {00bc42ac-0000-11b9-0000-000000000000} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.ParametricDiagram.label" uid="00bc42ac-0000-11be-0000-000000000000" is-abstract="false">
+                <Icon path="res/icons/parametricdiagram.png"/>
+                <Image path="res/icons/parametricdiagram.png"/>
+            </Stereotype>
+            <Stereotype name="SysMLDiagram" metaclass="Infrastructure.AbstractDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.SysMLDiagram.label" uid="00bc42d0-0000-c661-0000-000000000000" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="SysMLActivityDiagram" metaclass="Standard.ActivityDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.SysMLActivityDiagram.label" uid="374ff012-d57b-11e0-8ec9-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/sysmlactivitydiagram.png"/>
+                <Image path="res/icons/sysmlactivitydiagram.png"/>
+            </Stereotype>
+            <Stereotype name="SysMLSequenceDiagram" metaclass="Standard.SequenceDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.SysMLSequenceDiagram.label" uid="0691339b-d7d7-11e0-9a40-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/sysmlsequencediagram.png"/>
+                <Image path="res/icons/sysmlsequencediagram.png"/>
+            </Stereotype>
+            <Stereotype name="SysMLStateMachineDiagram" metaclass="Standard.StateMachineDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.SysMLStateMachineDiagram.label" uid="0fd7b4e3-d7d7-11e0-9a40-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/sysmlstatemachinediagram.png"/>
+                <Image path="res/icons/sysmlstatemachinediagram.png"/>
+            </Stereotype>
+            <Stereotype name="SysMLUseCaseDiagram" metaclass="Standard.UseCaseDiagram" owner-stereotype="" is-hidden="true" label="%stereotype.SysMLUseCaseDiagram.label" uid="1a667602-d7d7-11e0-9a40-0027103f347c" is-abstract="false">
+                <Icon path="res/icons/sysmlusecasediagram.png"/>
+                <Image path="res/icons/sysmlusecasediagram.png"/>
+            </Stereotype>
+        </Profile>
+    </Profiles>
+    <Gui>
+        <Commands>
+            <Command id="ActivityExplorerCommand" label="%command.ActivityExplorerCommand.label" tooltip="%command.ActivityExplorerCommand.tooltip" image="res/icons/activity.png" modify-model="true">
+                <Scope metaclass="Standard.NameSpace" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ActivityExplorerCommand"/>
+            </Command>
+            <Command id="ActivitydiagramCommand" label="%command.ActivitydiagramCommand.label" tooltip="%command.ActivitydiagramCommand.tooltip" image="res/icons/sysmlactivitydiagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Scope metaclass="Standard.Interface" stereotype=""/>
+                <Scope metaclass="Standard.Signal" stereotype=""/>
+                <Scope metaclass="Standard.Actor" stereotype=""/>
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Scope metaclass="Standard.Node" stereotype=""/>
+                <Scope metaclass="Standard.UseCase" stereotype=""/>
+                <Scope metaclass="Standard.Collaboration" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Scope metaclass="Standard.Activity" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.SysMLActivityDiagramCommand"/>
+            </Command>
+            <Command id="ActorExplorerCommand" label="%command.ActorExplorerCommand.label" tooltip="%command.ActorExplorerCommand.tooltip" image="res/icons/actor.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ActorExplorerCommand"/>
+            </Command>
+            <Command id="BlockExplorerCommand" label="%command.BlockExplorerCommand.label" tooltip="%command.BlockExplorerCommand.tooltip" image="res/icons/block.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.BlockExplorerCommand"/>
+            </Command>
+            <Command id="BlockdiagramCommand" label="%command.BlockdiagramCommand.label" tooltip="%command.BlockdiagramCommand.tooltip" image="res/icons/blockdiagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.BlockDiagramCommand"/>
+            </Command>
+            <Command id="ConnectorPropertyExplorerCommand" label="%command.ConnectorPropertyExplorerCommand.label" tooltip="%command.ConnectorPropertyExplorerCommand.tooltip" image="res/icons/connectorproperty.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ConnectorPropertyExplorerCommand"/>
+            </Command>
+            <Command id="ConstraintBlockExplorerCommand" label="%command.ConstraintBlockExplorerCommand.label" tooltip="%command.ConstraintBlockExplorerCommand.tooltip" image="res/icons/constraintblock.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ConstraintBlockExplorerCommand"/>
+            </Command>
+            <Command id="ConstraintPropertyExplorerCommand" label="%command.ConstraintPropertyExplorerCommand.label" tooltip="%command.ConstraintPropertyExplorerCommand.tooltip" image="res/icons/constraintproperty.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#ConstraintBlock"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ConstraintPropertyExplorerCommand"/>
+            </Command>
+            <Command id="ContinuousExplorerCommand" label="%command.ContinuousExplorerCommand.label" tooltip="%command.ContinuousExplorerCommand.tooltip" image="res/icons/continuousparameter.png" modify-model="true">
+                <Scope metaclass="Standard.Activity" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ContinuousExplorerCommand"/>
+            </Command>
+            <Command id="DiscreteExplorerCommand" label="%command.DiscreteExplorerCommand.label" tooltip="%command.DiscreteExplorerCommand.tooltip" image="res/icons/discreteparameter.png" modify-model="true">
+                <Scope metaclass="Standard.Activity" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.DiscreteExplorerCommand"/>
+            </Command>
+            <Command id="DistributedPropertyExplorerCommand" label="%command.DistributedPropertyExplorerCommand.label" tooltip="%command.DistributedPropertyExplorerCommand.tooltip" image="res/icons/distributedproperty.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.DistributedPropertyExplorerCommand"/>
+            </Command>
+            <Command id="EnumerationExplorerCommand" label="%command.EnumerationExplorerCommand.label" tooltip="%command.EnumerationExplorerCommand.tooltip" image="res/icons/enumeration.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.EnumerationExplorerCommand"/>
+            </Command>
+            <Command id="EnumerationLiteralExplorerCommand" label="%command.EnumerationLiteralExplorerCommand.label" tooltip="%command.EnumerationLiteralExplorerCommand.tooltip" image="res/icons/enumerationliteral.png" modify-model="true">
+                <Scope metaclass="Standard.Enumeration" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.EnumerationLiteralExplorerCommand"/>
+            </Command>
+            <Command id="FlowPortExplorerCommand" label="%command.FlowPortExplorerCommand.label" tooltip="%command.FlowPortExplorerCommand.tooltip" image="res/icons/flowport_inout.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.FlowPortExplorerCommand"/>
+            </Command>
+            <Command id="FlowPropertyExplorerCommand" label="%command.FlowPropertyExplorerCommand.label" tooltip="%command.FlowPropertyExplorerCommand.tooltip" image="res/icons/flowproperty.png" modify-model="true">
+                <Scope metaclass="Standard.Interface" stereotype="SysMLArchitect#FlowSpecification"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.FlowPropertyExplorerCommand"/>
+            </Command>
+            <Command id="FlowSpecificationExplorerCommand" label="%command.FlowSpecificationExplorerCommand.label" tooltip="%command.FlowSpecificationExplorerCommand.tooltip" image="res/icons/flowspecification.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.FlowSpecificationExplorerCommand"/>
+            </Command>
+            <Command id="InteractionExplorerCommand" label="%command.InteractionExplorerCommand.label" tooltip="%command.InteractionExplorerCommand.tooltip" image="res/icons/interaction.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.InteractionExplorerCommand"/>
+            </Command>
+            <Command id="InternalBlockdiagramCommand" label="%command.InternalBlockdiagramCommand.label" tooltip="%command.InternalBlockdiagramCommand.tooltip" image="res/icons/internalblockdiagram.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.InternalBlockDiagramCommand"/>
+            </Command>
+            <Command id="OperationExplorerCommand" label="%command.OperationExplorerCommand.label" tooltip="%command.OperationExplorerCommand.tooltip" image="res/icons/operation.png" modify-model="true">
+                <Scope metaclass="Standard.Classifier" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.OperationExplorerCommand"/>
+            </Command>
+            <Command id="OptionalExplorerCommand" label="%command.OptionalExplorerCommand.label" tooltip="%command.OptionalExplorerCommand.tooltip" image="res/icons/optional.png" modify-model="true">
+                <Scope metaclass="Standard.Activity" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.OptionalExplorerCommand"/>
+            </Command>
+            <Command id="PackagediagramCommand" label="%command.PackagediagramCommand.label" tooltip="%command.PackagediagramCommand.tooltip" image="res/icons/packagediagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.PackageDiagramCommand"/>
+            </Command>
+            <Command id="ParameterExplorerCommand" label="%command.ParameterExplorerCommand.label" tooltip="%command.ParameterExplorerCommand.tooltip" image="res/icons/parameter.png" modify-model="true">
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ParameterExplorerCommand"/>
+            </Command>
+            <Command id="ParametricdiagramCommand" label="%command.ParametricdiagramCommand.label" tooltip="%command.ParametricdiagramCommand.tooltip" image="res/icons/parametricdiagram.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.ParametricDiagramCommand"/>
+            </Command>
+            <Command id="PartExplorerCommand" label="%command.PartExplorerCommand.label" tooltip="%command.PartExplorerCommand.tooltip" image="res/icons/bindableinstance.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.PartExplorerCommand"/>
+            </Command>
+            <Command id="ParticipantPropertyExplorerCommand" label="%command.ParticipantPropertyExplorerCommand.label" tooltip="%command.ParticipantPropertyExplorerCommand.tooltip" image="res/icons/participantproperty.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ParticipantPropertyExplorerCommand"/>
+            </Command>
+            <Command id="PortExplorerCommand" label="%command.PortExplorerCommand.label" tooltip="%command.PortExplorerCommand.tooltip" image="res/icons/port.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Scope metaclass="Standard.Instance" stereotype=""/>
+                <Scope metaclass="Standard.BindableInstance" stereotype=""/>
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Scope metaclass="Standard.Artifact" stereotype=""/>
+                <Scope metaclass="Standard.Node" stereotype=""/>
+                <Scope metaclass="Standard.Signal" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.PortExplorerCommand"/>
+            </Command>
+            <Command id="QuantityKindExplorerCommand" label="%command.QuantityKindExplorerCommand.label" tooltip="%command.QuantityKindExplorerCommand.tooltip" image="res/icons/quantitykind.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.QuantityKindExplorerCommand"/>
+            </Command>
+            <Command id="RateExplorerCommand" label="%command.RateExplorerCommand.label" tooltip="%command.RateExplorerCommand.tooltip" image="res/icons/rateparameter.png" modify-model="true">
+                <Scope metaclass="Standard.Activity" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.RateExplorerCommand"/>
+            </Command>
+            <Command id="ReferenceExplorerCommand" label="%command.ReferenceExplorerCommand.label" tooltip="%command.ReferenceExplorerCommand.tooltip" image="res/icons/reference.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="SysMLArchitect#Block"/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ReferenceExplorerCommand"/>
+            </Command>
+            <Command id="ReturnParameterExplorerCommand" label="%command.ReturnParameterExplorerCommand.label" tooltip="%command.ReturnParameterExplorerCommand.tooltip" image="res/icons/parameterreturn.png" modify-model="true">
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ReturnParameterExplorerCommand"/>
+            </Command>
+            <Command id="SequencediagramCommand" label="%command.SequencediagramCommand.label" tooltip="%command.SequencediagramCommand.tooltip" image="res/icons/sysmlsequencediagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Scope metaclass="Standard.Interface" stereotype=""/>
+                <Scope metaclass="Standard.Signal" stereotype=""/>
+                <Scope metaclass="Standard.Actor" stereotype=""/>
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Scope metaclass="Standard.Node" stereotype=""/>
+                <Scope metaclass="Standard.UseCase" stereotype=""/>
+                <Scope metaclass="Standard.Collaboration" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Scope metaclass="Standard.Interaction" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.SysMLSequenceDiagramCommand"/>
+            </Command>
+            <Command id="StateMachineExplorerCommand" label="%command.StateMachineExplorerCommand.label" tooltip="%command.StateMachineExplorerCommand.tooltip" image="res/icons/statemachine.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.StateMachineExplorerCommand"/>
+            </Command>
+            <Command id="StatediagramCommand" label="%command.StatediagramCommand.label" tooltip="%command.StatediagramCommand.tooltip" image="res/icons/sysmlstatemachinediagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Scope metaclass="Standard.Interface" stereotype=""/>
+                <Scope metaclass="Standard.Signal" stereotype=""/>
+                <Scope metaclass="Standard.Actor" stereotype=""/>
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Scope metaclass="Standard.Node" stereotype=""/>
+                <Scope metaclass="Standard.UseCase" stereotype=""/>
+                <Scope metaclass="Standard.Collaboration" stereotype=""/>
+                <Scope metaclass="Standard.Operation" stereotype=""/>
+                <Scope metaclass="Standard.StateMachine" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.SysMLStateMachineDiagramCommand"/>
+            </Command>
+            <Command id="UnitExplorerCommand" label="%command.UnitExplorerCommand.label" tooltip="%command.UnitExplorerCommand.tooltip" image="res/icons/unit.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.UnitExplorerCommand"/>
+            </Command>
+            <Command id="UseCaseExplorerCommand" label="%command.UseCaseExplorerCommand.label" tooltip="%command.UseCaseExplorerCommand.tooltip" image="res/icons/usecase.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.UseCaseExplorerCommand"/>
+            </Command>
+            <Command id="UsecasediagramCommand" label="%command.UsecasediagramCommand.label" tooltip="%command.UsecasediagramCommand.tooltip" image="res/icons/sysmlusecasediagram.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Scope metaclass="Standard.Interface" stereotype=""/>
+                <Scope metaclass="Standard.Component" stereotype=""/>
+                <Scope metaclass="Standard.UseCase" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.diagram.command.SysMLUseCaseDiagramCommand"/>
+            </Command>
+            <Command id="ValueTypeExplorerCommand" label="%command.ValueTypeExplorerCommand.label" tooltip="%command.ValueTypeExplorerCommand.tooltip" image="res/icons/valuetype.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ValueTypeExplorerCommand"/>
+            </Command>
+            <Command id="ViewExplorerCommand" label="%command.ViewExplorerCommand.label" tooltip="%command.ViewExplorerCommand.tooltip" image="res/icons/view.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ViewExplorerCommand"/>
+            </Command>
+            <Command id="ViewpointExplorerCommand" label="%command.ViewpointExplorerCommand.label" tooltip="%command.ViewpointExplorerCommand.tooltip" image="res/icons/viewpoint.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.sysml.commands.explorer.ViewpointExplorerCommand"/>
+            </Command>
+        </Commands>
+        <Tools>
+            <Tool id="SysMLUMLAssociation" label="%tool.SysMLUMLAssociation.label" tooltip="%tool.SysMLUMLAssociation.tooltip" image="res/icons/association.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLAssociationDiagramCommand">
+                    <HParameter name="metaclass" value="AssociationEnd"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLFlowPort" label="%tool.SysMLFlowPort.label" tooltip="%tool.SysMLFlowPort.tooltip" image="res/icons/flowport_inout.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.FlowPortDiagramCommand">
+                    <HParameter name="metaclass" value="Port"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLOperation" label="%tool.SysMLUMLOperation.label" tooltip="%tool.SysMLUMLOperation.tooltip" image="res/icons/operation.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLOperationDiagramCommand">
+                    <HParameter name="metaclass" value="Operation"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLQuantityKind" label="%tool.SysMLQuantityKind.label" tooltip="%tool.SysMLQuantityKind.tooltip" image="res/icons/quantitykind.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.QuantityKindDiagramCommand">
+                    <HParameter name="metaclass" value="Instance"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLContinuous_Parameter" label="%tool.SysMLContinuous_Parameter.label" tooltip="%tool.SysMLContinuous_Parameter.tooltip" image="res/icons/continuousparameter.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ContinuousParameterDiagramCommand">
+                    <HParameter name="metaclass" value="ActivityParameterNode"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLConstraintBlock" label="%tool.SysMLConstraintBlock.label" tooltip="%tool.SysMLConstraintBlock.tooltip" image="res/icons/constraintblock.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ConstraintBlockDiagramCommand">
+                    <HParameter name="metaclass" value="Class"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLItemFlow" label="%tool.SysMLItemFlow.label" tooltip="%tool.SysMLItemFlow.tooltip" image="res/icons/itemflow.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ItemFlowDiagramCommand">
+                    <HParameter name="metaclass" value="InformationFlow"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLConform" label="%tool.SysMLConform.label" tooltip="%tool.SysMLConform.tooltip" image="res/icons/conform.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ConformDependencyDiagramCommand">
+                    <HParameter name="metaclass" value="Dependency"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLDiscrete_Parameter" label="%tool.SysMLDiscrete_Parameter.label" tooltip="%tool.SysMLDiscrete_Parameter.tooltip" image="res/icons/discreteparameter.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.DiscreteParameterDiagramCommand">
+                    <HParameter name="metaclass" value="ActivityParameterNode"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLRationale" label="%tool.SysMLRationale.label" tooltip="%tool.SysMLRationale.tooltip" image="res/icons/rationale.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.RationaleNoteDiagramCommand">
+                    <HParameter name="metaclass" value="Note"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLBindingConnector" label="%tool.SysMLBindingConnector.label" tooltip="%tool.SysMLBindingConnector.tooltip" image="res/icons/bindingconnector.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.BindingConnectorDiagramCommand">
+                    <HParameter name="metaclass" value="ConnectorEnd"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLComposition" label="%tool.SysMLUMLComposition.label" tooltip="%tool.SysMLUMLComposition.tooltip" image="res/icons/umlcomposition.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLCompositionDiagramCommand">
+                    <HParameter name="metaclass" value="AssociationEnd"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLConnectorProperty" label="%tool.SysMLConnectorProperty.label" tooltip="%tool.SysMLConnectorProperty.tooltip" image="res/icons/connectorproperty.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ConnectorPropertyDiagramCommand">
+                    <HParameter name="metaclass" value="BindableInstance"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLTrace" label="%tool.SysMLTrace.label" tooltip="%tool.SysMLTrace.tooltip" image="res/icons/trace.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.TraceDependencyDiagramCommand">
+                    <HParameter name="metaclass" value="Dependency"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLProbability" label="%tool.SysMLProbability.label" tooltip="%tool.SysMLProbability.tooltip" image="res/icons/probability.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ProbabilityDiagramCommand">
+                    <HParameter name="metaclass" value="ControlFlow"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLRate_ActivityEdge" label="%tool.SysMLRate_ActivityEdge.label" tooltip="%tool.SysMLRate_ActivityEdge.tooltip" image="res/icons/rate.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.RateEdgeDiagramCommand">
+                    <HParameter name="metaclass" value="ControlFlow"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLViewpoint" label="%tool.SysMLViewpoint.label" tooltip="%tool.SysMLViewpoint.tooltip" image="res/icons/viewpoint.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ViewpointDiagramCommand">
+                    <HParameter name="metaclass" value="Class"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLAttribute" label="%tool.SysMLUMLAttribute.label" tooltip="%tool.SysMLUMLAttribute.tooltip" image="res/icons/reference.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ReferenceDiagramCommand">
+                    <HParameter name="metaclass" value="Attribute"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLContinuous_ActivityEdge" label="%tool.SysMLContinuous_ActivityEdge.label" tooltip="%tool.SysMLContinuous_ActivityEdge.tooltip" image="res/icons/continuous.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ContinuousEdgeDiagramCommand">
+                    <HParameter name="metaclass" value="ControlFlow"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLView" label="%tool.SysMLView.label" tooltip="%tool.SysMLView.tooltip" image="res/icons/view.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ViewDiagramCommand">
+                    <HParameter name="metaclass" value="Package"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLRate_Parameter" label="%tool.SysMLRate_Parameter.label" tooltip="%tool.SysMLRate_Parameter.tooltip" image="res/icons/rateparameter.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.RateParameterDiagramCommand">
+                    <HParameter name="metaclass" value="ActivityParameterNode"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLGeneralization" label="%tool.SysMLUMLGeneralization.label" tooltip="%tool.SysMLUMLGeneralization.tooltip" image="res/icons/generalization.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLGeneralizationDiagramCommand">
+                    <HParameter name="metaclass" value="Generalization"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLAllocate" label="%tool.SysMLAllocate.label" tooltip="%tool.SysMLAllocate.tooltip" image="res/icons/allocate.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.AllocateDependencyDiagramCommand">
+                    <HParameter name="metaclass" value="Dependency"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLParticipantProperty_BindableInstance" label="%tool.SysMLParticipantProperty_BindableInstance.label" tooltip="%tool.SysMLParticipantProperty_BindableInstance.tooltip" image="res/icons/participantproperty.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ParticipantPropertyDiagramCommand">
+                    <HParameter name="metaclass" value="BindableInstance"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLFlowProperty" label="%tool.SysMLFlowProperty.label" tooltip="%tool.SysMLFlowProperty.tooltip" image="res/icons/flowproperty.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.FlowPropertyDiagramCommand">
+                    <HParameter name="metaclass" value="Attribute"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLFlowSpecification" label="%tool.SysMLFlowSpecification.label" tooltip="%tool.SysMLFlowSpecification.tooltip" image="res/icons/flowspecification.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.FlowSpecificationDiagramCommand">
+                    <HParameter name="metaclass" value="Interface"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLOptional" label="%tool.SysMLOptional.label" tooltip="%tool.SysMLOptional.tooltip" image="res/icons/optional.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.OptionalDiagramCommand">
+                    <HParameter name="metaclass" value="ActivityParameterNode"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLBlock" label="%tool.SysMLBlock.label" tooltip="%tool.SysMLBlock.tooltip" image="res/icons/block.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.BlockDiagramCommand">
+                    <HParameter name="metaclass" value="Class"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLValueType" label="%tool.SysMLValueType.label" tooltip="%tool.SysMLValueType.tooltip" image="res/icons/valuetype.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ValueTypeDiagramCommand">
+                    <HParameter name="metaclass" value="DataType"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLProblem" label="%tool.SysMLProblem.label" tooltip="%tool.SysMLProblem.tooltip" image="res/icons/problem.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ProblemNoteDiagramCommand">
+                    <HParameter name="metaclass" value="Note"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLConstraintProperty" label="%tool.SysMLConstraintProperty.label" tooltip="%tool.SysMLConstraintProperty.tooltip" image="res/icons/constraintproperty.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.ConstraintPropertyDiagramCommand">
+                    <HParameter name="metaclass" value="BindableInstance"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLDistributedProperty" label="%tool.SysMLDistributedProperty.label" tooltip="%tool.SysMLDistributedProperty.tooltip" image="res/icons/distributedproperty.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.DistributedPropertyDiagramCommand">
+                    <HParameter name="metaclass" value="Attribute"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLSmartGeneralization" label="%tool.SysMLUMLSmartGeneralization.label" tooltip="%tool.SysMLUMLSmartGeneralization.tooltip" image="res/icons/smartgeneralization.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLGeneralizationInterfaceRealizationDiagramCommand">
+                    <HParameter name="metaclass" value="Dependency"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLDiscrete_ActivityEdge" label="%tool.SysMLDiscrete_ActivityEdge.label" tooltip="%tool.SysMLDiscrete_ActivityEdge.tooltip" image="res/icons/discrete.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.DiscreteEdgeDiagramCommand">
+                    <HParameter name="metaclass" value="ControlFlow"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUMLAggregation" label="%tool.SysMLUMLAggregation.label" tooltip="%tool.SysMLUMLAggregation.tooltip" image="res/icons/aggregation.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UMLAggregationDiagramCommand">
+                    <HParameter name="metaclass" value="AssociationEnd"/>
+                </Handler>
+            </Tool>
+            <Tool id="SysMLUnit" label="%tool.SysMLUnit.label" tooltip="%tool.SysMLUnit.tooltip" image="res/icons/unit.png">
+                <Handler class="org.modelio.module.sysml.commands.diagram.UnitDiagramCommand">
+                    <HParameter name="metaclass" value="Instance"/>
+                </Handler>
+            </Tool>
+        </Tools>
+        <ContextualMenu>
+            <CommandRef refid="BlockdiagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="InternalBlockdiagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="PackagediagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="ParametricdiagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="ActivitydiagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="SequencediagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="StatediagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="UsecasediagramCommand" group="%group.SysML diagrams.label" group-image="res/icons/sysmldiagram.png"/>
+            <CommandRef refid="ActivityExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ActorExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="BlockExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ConstraintBlockExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ContinuousExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="DiscreteExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="EnumerationExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="EnumerationLiteralExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="FlowPropertyExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="FlowSpecificationExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="InteractionExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="OperationExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="OptionalExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ParameterExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ConnectorPropertyExplorerCommand" group="%group.Parts.label" group-image=""/>
+            <CommandRef refid="ConstraintPropertyExplorerCommand" group="%group.Parts.label" group-image=""/>
+            <CommandRef refid="PartExplorerCommand" group="%group.Parts.label" group-image=""/>
+            <CommandRef refid="ParticipantPropertyExplorerCommand" group="%group.Parts.label" group-image=""/>
+            <CommandRef refid="FlowPortExplorerCommand" group="%group.Ports.label" group-image=""/>
+            <CommandRef refid="PortExplorerCommand" group="%group.Ports.label" group-image=""/>
+            <CommandRef refid="QuantityKindExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="RateExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="DistributedPropertyExplorerCommand" group="%group.References.label" group-image=""/>
+            <CommandRef refid="ReferenceExplorerCommand" group="%group.References.label" group-image=""/>
+            <CommandRef refid="ReturnParameterExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="StateMachineExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="UnitExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="UseCaseExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ValueTypeExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ViewExplorerCommand" group="" group-image=""/>
+            <CommandRef refid="ViewpointExplorerCommand" group="" group-image=""/>
+        </ContextualMenu>
+        <Diagrams>
+            <DiagramType base-diagram="Standard.SequenceDiagram" stereotype="SysMLArchitect#SysMLSequenceDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.SysMLSequenceDiagram.label" icon="res/icons/sysmlsequencediagram.png" information="%wizard.SysMLSequenceDiagram.info" details="%wizard.SysMLSequenceDiagram.detail" preview-image="res/icons/previewsequencediagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.SysMLSequenceDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.SysMLSequenceDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#SysMLSequenceDiagram"/>
+                    <HParameter name="metaclass" value="SequenceDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="SysMLArchitect#BlockDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.BlockDiagram.label" icon="res/icons/blockdiagram.png" information="%wizard.BlockDiagram.info" details="%wizard.BlockDiagram.detail" preview-image="res/icons/previewblockdiagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.BlockDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.BlockDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#BlockDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="SysMLArchitect#PackageDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.PackageDiagram.label" icon="res/icons/packagediagram.png" information="%wizard.PackageDiagram.info" details="%wizard.PackageDiagram.detail" preview-image="res/icons/previewpackagediagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.PackageDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.PackageDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#PackageDiagram"/>
+                    <HParameter name="metaclass" value="StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="SysMLArchitect#ParametricDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.ParametricDiagram.label" icon="res/icons/parametricdiagram.png" information="%wizard.ParametricDiagram.info" details="%wizard.ParametricDiagram.detail" preview-image="res/icons/previewparametricdiagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.ParametricDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.ParametricDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#ParametricDiagram"/>
+                    <HParameter name="metaclass" value="StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StateMachineDiagram" stereotype="SysMLArchitect#SysMLStateMachineDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.SysMLStateMachineDiagram.label" icon="res/icons/sysmlstatemachinediagram.png" information="%wizard.SysMLStateMachineDiagram.info" details="%wizard.SysMLStateMachineDiagram.detail" preview-image="res/icons/previewstatediagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.SysMLStateMachineDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.SysMLStateMachineDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#SysMLStateMachineDiagram"/>
+                    <HParameter name="metaclass" value="StateMachineDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.UseCaseDiagram" stereotype="SysMLArchitect#SysMLUseCaseDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.SysMLUseCaseDiagram.label" icon="res/icons/sysmlusecasediagram.png" information="%wizard.SysMLUseCaseDiagram.info" details="%wizard.SysMLUseCaseDiagram.detail" preview-image="res/icons/previewusecasediagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.SysMLUseCaseDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.SysMLUseCaseDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#SysMLUseCaseDiagram"/>
+                    <HParameter name="metaclass" value="UseCaseDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="SysMLArchitect#InternalBlockDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.InternalBlockDiagram.label" icon="res/icons/internalblockdiagram.png" information="%wizard.InternalBlockDiagram.info" details="%wizard.InternalBlockDiagram.detail" preview-image="res/icons/previewinternalblockdiagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.InternalBlockDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.InternalBlockDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#InternalBlockDiagram"/>
+                    <HParameter name="metaclass" value="StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.ActivityDiagram" stereotype="SysMLArchitect#SysMLActivityDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.SysMLActivityDiagram.label" icon="res/icons/sysmlactivitydiagram.png" information="%wizard.SysMLActivityDiagram.info" details="%wizard.SysMLActivityDiagram.detail" preview-image="res/icons/previewactivitydiagram.png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="org.modelio.module.sysml.commands.explorer.diagram.wizard.SysMLActivityDiagramWizard"/>
+                </Wizard>
+                <Handler class="org.modelio.module.sysml.customizer.SysMLActivityDiagramCustomizer">
+                    <HParameter name="stereotype" value="SysMLArchitect#SysMLActivityDiagram"/>
+                    <HParameter name="metaclass" value="ActivityDiagram"/>
+                </Handler>
+            </DiagramType>
+        </Diagrams>
+        <Views>
+            <PropertyPage id="SysMLPropertyPage" class="org.modelio.module.sysml.properties.SysMLPropertyPage" label="%propertypage.SysMLPropertyPage.label" image="res/icons/sysml.png"/>
+        </Views>
+    </Gui>
+    <Dependencies>
+        <Required name="ModelerModule" version="9.1.00"/>
+    </Dependencies>
+    <Resources>
+        <DocFiles>
+            <PathEntry path="lib/org.modelio.documentation.sysml-${project.version}.jar"/>
+        </DocFiles>
+    </Resources>
+</Module>

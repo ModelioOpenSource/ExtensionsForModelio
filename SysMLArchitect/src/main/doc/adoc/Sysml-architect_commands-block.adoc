@@ -1,0 +1,26 @@
+The commands available on a Block are as follows:
+
+image:images/Sysml-architect_commands-block_image026.png[image]
+
+[[Commands-on-a-Block]]
+
+[[commands-on-a-block]]
+Commands on a Block
+
+*image:images/Sysml-architect_commands-block_image009.png[image] SysML diagram*: Launch the SyML diagram creation wizard.
+
+*image:images/Sysml-architect_commands-block_image019.png[image]Distributed property*: Creates a Distributed Property.
+
+*image:images/Sysml-architect_commands-block_image020.png[image]Reference*: Creates an Reference.
+
+*image:images/Sysml-architect_commands-block_image021.png[image]Connector property*: Creates a Connector Property.
+
+*image:images/Sysml-architect_commands-block_image022.png[image]Participant property*: Creates a Participant Property.
+
+*image:images/Sysml-architect_commands-block_image023.png[image]Part*: Creates a Part.
+
+*image:images/Sysml-architect_commands-block_image024.png[image]Flow port*: Creates a Flow Port.
+
+*image:images/Sysml-architect_commands-block_image025.png[image]Port*: Creates a Port.
+
+[[footer]]

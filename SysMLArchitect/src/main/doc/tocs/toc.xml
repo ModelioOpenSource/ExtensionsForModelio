@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="SysML" topic="html/Index.html">
+	<topic comment="h2" href="" label="Introduction">
+		<topic comment="entry" href="html/Sysml-architect_introduction.html" label="SysML Architect introduction"></topic>
+	</topic>
+	<topic comment="h2" href="" label="SysML Commands">
+		<topic comment="h4" href="" label="Element creation commands">
+			<topic comment="entry" href="html/Sysml-architect_commands-package.html" label="Commands on a Package"></topic>
+			<topic comment="entry" href="html/Sysml-architect_commands-block.html" label="Commands on a Block"></topic>
+			<topic comment="entry" href="html/Sysml-architect_commands-constraintblock.html" label="Commands on a Constraint Block"></topic>
+		</topic>
+		<topic comment="h4" href="" label="Diagrams creation commands">
+			<topic comment="entry" href="html/Sysml-architect_diagram-block.html" label="Block diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-internalblock.html" label="Internal block diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-parametric.html" label="Parametric diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-package.html" label="Package diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-activity.html" label="SysML Activity diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-sequence.html" label="SysML Sequence diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-state.html" label="SysML State diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-usecase.html" label="SysML Use Case diagram"></topic>
+			<topic comment="entry" href="html/Sysml-architect_diagram-requirement.html" label="SysML Requirement diagram"></topic>
+		</topic>
+	</topic>
+	<topic comment="h2" href="" label="Expert Mode">
+		<topic comment="entry" href="html/Sysml-architect_expert-mode.html" label="SysML Architect in expert mode"></topic>
+	</topic>
+	<topic comment="h2" href="" label="SysML library">
+		<topic comment="entry" href="html/Sysml-architect_library.html" label="SysML model library"></topic>
+	</topic>
+	<topic comment="h2" href="" label="Example">
+		<topic comment="entry" href="html/Sysml-architect_example.html" label="SysML case study"></topic>
+	</topic>
+</toc>

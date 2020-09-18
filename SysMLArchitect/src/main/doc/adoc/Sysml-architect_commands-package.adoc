@@ -1,0 +1,28 @@
+The following commands are accessible by right-clicking on a Package element in the model browser.
+
+image:images/Sysml-architect_commands-package_image018.png[image]
+
+[[SysML-element-creation-commands-available-on-a-Package]]
+
+[[sysml-element-creation-commands-available-on-a-package]]
+SysML element creation commands available on a Package
+
+*image:images/Sysml-architect_commands-package_image009.png[image] SysML diagram*: Launch the SyML diagram creation wizard.
+
+*image:images/Sysml-architect_commands-package_image010.png[image]Block*: Creates a Block.
+
+*image:images/Sysml-architect_commands-package_image011.png[image]Constraint block*: Creates a ConstraintBlock.
+
+*image:images/Sysml-architect_commands-package_image012.png[image]Flow specification*: Creates a FlowSpecification.
+
+*image:images/Sysml-architect_commands-package_image013.png[image]Quantity kind*: Creates a QuantityKind.
+
+*image:images/Sysml-architect_commands-package_image014.png[image]Unit*: Creates a Unit.
+
+*image:images/Sysml-architect_commands-package_image015.png[image]Value type*: Creates a ValueType.
+
+*image:images/Sysml-architect_commands-package_image016.png[image]View*: Creates a View.
+
+*image:images/Sysml-architect_commands-package_image017.png[image]Viewpoint*: Creates Viewpoint.
+
+[[footer]]

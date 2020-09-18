@@ -1,0 +1,91 @@
+[[Parametric-diagrams]]
+
+[[parametric-diagrams]]
+= Parametric diagrams
+
+Parametric diagrams are used to express constraints (equations) existing between value properties. They are a restricted form of internal block diagram and represent constrained use in a particular context.
+
+The most important elements are Constraint Properties and FlowPorts composing the ConstraintBlock, as well as their relationships modeled using Connectors or Item Flow links.
+
+[[Palette]]
+
+[[palette]]
+== Palette
+
+*image:images/Sysml-architect_diagram-parametric_image021.png[image]Connector property*: Creates a ConnectorProperty.
+
+*image:images/Sysml-architect_diagram-parametric_image027.png[image]Contraint property*: Creates a ConstraintProperty.
+
+*image:images/Sysml-architect_diagram-parametric_image022.png[image]Participant property*: Creates a ParticipantProperty.
+
+*image:images/Sysml-architect_diagram-parametric_image023.png[image]Part*: Creates an Instance or a Part inside a Classifier.
+
+*image:images/Sysml-architect_diagram-parametric_image019.png[image]Distributed property*: Creates a DistributedProperty.
+
+*image:images/Sysml-architect_diagram-parametric_image043.png[image]Flow property*: Creates a FlowProperty.
+
+*image:images/Sysml-architect_diagram-parametric_image020.png[image]Attribute*: Creates an Attribute.
+
+*image:images/Sysml-architect_diagram-parametric_image057.png[image]AttributeLink*: Creates an AttributeLink.
+
+*image:images/Sysml-architect_diagram-parametric_image058.png[image]Delegate*: Creates a delegate connector.
+
+*image:images/Sysml-architect_diagram-parametric_image058.png[image]Link*: Creates a Link.
+
+*image:images/Sysml-architect_diagram-parametric_image024.png[image]FlowPort*: Creates a FlowPort.
+
+*image:images/Sysml-architect_diagram-parametric_image025.png[image]Port*: Creates a Port.
+
+*image:images/Sysml-architect_diagram-parametric_image055.png[image]ProvidedInterface*: Creates a ProvidedInterface.
+
+*image:images/Sysml-architect_diagram-parametric_image056.png[image]RequiredInterface*: Creates a RequiredInterface.
+
+*image:images/Sysml-architect_diagram-parametric_image059.png[image]Item Flow*: Creates an Item Flow.
+
+*image:images/Sysml-architect_diagram-parametric_image060.png[image]Information Flow*: Creates an Information flow
+
+*image:images/Sysml-architect_diagram-parametric_image061.png[image]Realized Information Flow*: Creates a realized information flow
+
+*image:images/Sysml-architect_diagram-parametric_image062.png[image]Information Item*: Creates an Information Item
+
+*image:images/Sysml-architect_diagram-parametric_image063.png[image]Allocation*: Creates an Allocate dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image064.png[image]Conform*: Creates a Conform dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image065.png[image]Copy*: Creates a Copy dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image066.png[image]Refine*: Creates a Refine dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image067.png[image]Satisfy*: Creates a Satisfy dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image068.png[image]Verify*: Creates a Verify dependency.
+
+*image:images/Sysml-architect_diagram-parametric_image069.png[image]Dependency*: Creates a Dependency .
+
+*image:images/Sysml-architect_diagram-parametric_image070.png[image]Traceability*: Creates a Traceability link.
+
+*image:images/Sysml-architect_diagram-parametric_image069.png[image]Related diagram link*: Create a link between an element and its related diagram.
+
+*image:images/Sysml-architect_diagram-parametric_image071.png[image]Problem*: Creates a Problem note.
+
+*image:images/Sysml-architect_diagram-parametric_image072.png[image]Rationale*: Creates a Rationale note.
+
+*image:images/Sysml-architect_diagram-parametric_image073.png[image]Note*: Creates a Note.
+
+*image:images/Sysml-architect_diagram-parametric_image074.png[image]Constraint*: Creates a Constraint.
+
+[[Example]]
+
+[[example]]
+== Example
+
+The following example is extracted from the literature and implemented in the SysML ARchitect module.
+
+image:images/Sysml-architect_diagram-parametric_image077.png[image]
+
+[[Parametric-diagram-use-case]]
+
+[[parametric-diagram-use-case]]
+Parametric diagram use case
+
+[[footer]]

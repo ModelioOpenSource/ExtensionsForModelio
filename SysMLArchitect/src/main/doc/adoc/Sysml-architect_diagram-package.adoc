@@ -1,0 +1,45 @@
+[[Package-diagrams]]
+
+[[package-diagrams]]
+= Package diagrams
+
+Package diagrams are dedicated to organizing or grouping the model into views and viewpoints.
+
+[[Palette]]
+
+[[palette]]
+== Palette
+
+The following commands list highlights only those SysML elements present in the package diagram palette.
+
+*image:images/Sysml-architect_diagram-package_image078.png[image]View*: Creates a View.
+
+*image:images/Sysml-architect_diagram-package_image079.png[image]Viewpoint*: Creates a Viewpoint.
+
+*image:images/Sysml-architect_diagram-package_image013.png[image]QuantityKind*: Creates a QuantityKind.
+
+*image:images/Sysml-architect_diagram-package_image014.png[image]Unit*: Creates a Unit.
+
+*image:images/Sysml-architect_diagram-package_image064.png[image]Conform*: Creates a Conform dependency.
+
+*image:images/Sysml-architect_diagram-package_image059.png[image]Item Flow*: Creates an Item Flow.
+
+*image:images/Sysml-architect_diagram-package_image071.png[image]Problem*: Creates a Problem note.
+
+*image:images/Sysml-architect_diagram-package_image072.png[image]Rationale*: Creates a Rationale note.
+
+[[Example]]
+
+[[example]]
+== Example
+
+This example is extracted from the SysML 1.2 specification and implemented in the SysML Architect module.
+
+image:images/Sysml-architect_diagram-package_image080.png[image]
+
+[[Package-modeling-use-case]]
+
+[[package-modeling-use-case]]
+Package modeling use case
+
+[[footer]]

@@ -1,0 +1,139 @@
+/**
+ * Java Class : AddBlockDiagramExplorerCommand.java
+ *
+ * Description :
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing,
+ *    software distributed under the License is distributed on an
+ *    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *    KIND, either express or implied.  See the License for the
+ *    specific language governing permissions and limitations
+ *    under the License.
+ *
+ * @category   Command explorer
+ * @package    com.modeliosoft.modelio.sysml.gui.explorer
+ * @author     Modelio
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    2.0.08
+ **/
+package org.modelio.module.sysml.commands.explorer.diagram.wizard;
+
+import java.util.Arrays;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.modelio.api.modelio.model.IMetamodelExtensions;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.ITransaction;
+import org.modelio.api.modelio.model.scope.ElementScope;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.api.module.contributor.ElementDescriptor;
+import org.modelio.api.module.contributor.diagramcreation.AbstractDiagramWizardContributor;
+import org.modelio.metamodel.diagrams.AbstractDiagram;
+import org.modelio.metamodel.diagrams.SequenceDiagram;
+import org.modelio.metamodel.uml.behavior.interactionModel.Interaction;
+import org.modelio.metamodel.uml.behavior.usecaseModel.Actor;
+import org.modelio.metamodel.uml.behavior.usecaseModel.UseCase;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Profile;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Collaboration;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Interface;
+import org.modelio.metamodel.uml.statik.Node;
+import org.modelio.metamodel.uml.statik.Operation;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.module.sysml.api.ISysMLPeerModule;
+import org.modelio.module.sysml.api.SysMLStereotypes;
+import org.modelio.module.sysml.filters.ConstraintBlockFilter;
+import org.modelio.module.sysml.i18n.I18nMessageService;
+import org.modelio.module.sysml.impl.SysMLModule;
+import org.modelio.module.sysml.utils.SysMLFactory;
+import org.modelio.module.sysml.utils.SysMLResourcesManager;
+import org.modelio.vcore.smkernel.mapi.MClass;
+import org.modelio.vcore.smkernel.mapi.MMetamodel;
+
+/**
+ * This class handles the creation of SysML sequence diagram
+ * 
+ * @author ebrosse
+ */
+@objid ("a8695949-ab7e-4abb-b4cb-6830d829c66c")
+public class SysMLSequenceDiagramWizard extends AbstractDiagramWizardContributor {
+    @objid ("a7e4b22a-73d3-4e1e-96d6-51239ab60b6f")
+    @Override
+    public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
+        IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
+        AbstractDiagram diagram = null;
+        try (ITransaction transaction = session.createTransaction(I18nMessageService.getString("Info.Session.Create", "Activity"))) {
+        
+            diagram = SysMLFactory.createSysMLSequenceDiagram(element, diagramName, description);
+        
+            if (diagram != null) {
+                SysMLModule.getInstance().getModuleContext().getModelioServices().getEditionService().openEditor(diagram);
+            }
+        
+            transaction.commit();
+        }
+        return diagram;
+    }
+
+    @objid ("ff21e25f-2a5f-4b73-a9ca-b8353be436fe")
+    @Override
+    public ElementDescriptor getCreatedElementType() {
+        IModuleContext moduleContext = getModule().getModuleContext();
+        MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
+        MClass mClass = metamodel.getMClass(SequenceDiagram.class);
+        IMetamodelExtensions extensions = moduleContext.getModelingSession().getMetamodelExtensions();
+        Stereotype stereotype = extensions.getStereotype(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.SYSMLSEQUENCEDIAGRAM, mClass);
+        return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
+    }
+
+    @objid ("a85f5927-d916-43a5-95ea-1ac7128f765e")
+    public SysMLSequenceDiagramWizard() {
+        super();
+        
+        setLabel(I18nMessageService.getString ("Ui.Command.SysMLSequenceDiagramExplorerCommand.Label"));
+        setDetails(I18nMessageService.getString ("Ui.Command.SysMLSequenceDiagramExplorerCommand.Details"));
+        setIconDescriptor(ImageDescriptor.createFromFile(null, SysMLResourcesManager.getInstance().getImage("sysmlsequencediagram.png")));
+        setInformation(I18nMessageService.getString ("Ui.Command.SysMLSequenceDiagramExplorerCommand.Information"));
+        
+        IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
+        MMetamodel metamodel = moduleContext.getModelioServices().getMetamodelService().getMetamodel();
+        setScopes(Arrays.asList(
+                new ElementScope(metamodel.getMClass(Package.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Class.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Interface.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Actor.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Component.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Node.class), true, null, true),
+                new ElementScope(metamodel.getMClass(UseCase.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Operation.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Collaboration.class), true, null, true),
+                new ElementScope(metamodel.getMClass(Interaction.class), true, null, true)
+                ));
+    }
+
+    @objid ("a6844404-eb45-4cf7-85cb-b7d785edefe7")
+    @Override
+    protected boolean checkCanCreateIn(ModelElement owner) {
+        return !ConstraintBlockFilter.isAConstraintBlock (owner) && !(owner instanceof Profile);
+    }
+
+    @objid ("aaaf2e58-7c09-42a7-a1e6-76505a4836de")
+    @Override
+    public void dispose() {
+        // Nothing to do
+    }
+
+}

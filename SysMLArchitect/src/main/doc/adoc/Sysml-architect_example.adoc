@@ -1,0 +1,49 @@
+[[Case-study-related-to-SysML-modeling]]
+
+[[case-study-related-to-sysml-modeling]]
+= Case study related to SysML modeling
+
+We are now going to illustrate the modeling of a complex application using the SysML Architect module. This case study has already been presented in literature [M. V. Linhares et al] and is based on the modeling of an industrial automation unit, which expresses different operations and control strategies. For the purposes of this Modelio user guide, we will present the high level models which are modeled using the SysML ARchitectmodule developed by Softeam.
+
+[[Modeling-methodology]]
+
+[[modeling-methodology]]
+== Modeling methodology
+
+The modeling starts from the highest level of the industrial automation unit, by first modeling the different top level components of the system. Next, a behavioral SysML use case diagram is presented to determine the different case scenarios present in the system. Following that, we gradually descend to the low level components and illustrate their relative aspects such as behavior expressed via SysML diagrams like state and sequence diagrams.
+
+[[Top-level-modeling]]
+
+[[top-level-modeling]]
+== Top level modeling
+
+* <<Sysml-architect_example-structure.adoc#,Modeling the system structure>>
+* <<Sysml-architect_example-usecase.adoc#,Modeling the use case diagram related to system behavior>>
+
+[[Modeling-the-subsystems]]
+
+[[modeling-the-subsystems]]
+== Modeling the subsystems
+
+* <<Sysml-architect_example-physubsystem.adoc#,Modeling the physical subsystem>>
+* <<Sysml-architect_example-supsubsystem.adoc#,Modeling the supervisory subsystem>>
+
+[[Modeling-other-aspects-of-the-automation-unit]]
+
+[[modeling-other-aspects-of-the-automation-unit]]
+== Modeling other aspects of the automation unit
+
+* <<Sysml-architect_example-pressure.adoc#,Modeling the pressure device block>>
+* <<Sysml-architect_example-arithmetic.adoc#,Modeling the arithmetic functions block>>
+* <<Sysml-architect_example-sequence.adoc#,Modeling the sequence diagram for Plant operation>>
+* <<Sysml-architect_example-strategy.adoc#,Modeling the control strategy action>>
+* <<Sysml-architect_example-requirements.adoc#,Modeling the system requirements>>
+
+[[References]]
+
+[[references]]
+= References
+
+*M. V. Linhares et al*. 2006._Empirical Evaluation of SysML through the Modeling of an Industrial Automation Unit_. In 11th IEEE International Conference on Emerging Technologies and Factory Automation. Prague, Czech Republic
+
+[[footer]]

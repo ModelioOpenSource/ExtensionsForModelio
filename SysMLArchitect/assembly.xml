@@ -1,0 +1,55 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.0.0.1-SNAPSHOT"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.0.0.1-SNAPSHOT http://maven.apache.org/xsd/assembly-1.0.0.1-SNAPSHOT.xsd">
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<!-- Copy DataSheet HTML files -->
+		<fileSet>
+			<directory>${project.basedir}</directory>
+			<outputDirectory>/${project.name}</outputDirectory>
+			<includes>
+				<include>DataSheet*.html</include>
+			</includes>
+			<filtered>true</filtered>
+		</fileSet>
+		<!-- Copy XML resources -->
+		<fileSet>
+			<directory>${project.basedir}/src/main/conf</directory>
+			<outputDirectory>/${project.name}</outputDirectory>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+			<filtered>true</filtered>
+		</fileSet>
+		<!-- Copy other ressources -->
+		<fileSet>
+			<directory>${project.basedir}/src/main/conf</directory>
+			<outputDirectory>/${project.name}</outputDirectory>
+			<excludes>
+				<exclude>**/*.xml</exclude>
+			</excludes>
+			<filtered>false</filtered>
+		</fileSet>
+		<!-- Copy module's jar file -->
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>${project.name}/lib</outputDirectory>
+			<includes>
+				<include>${project.artifactId}-${project.version}.jar</include>		
+			</includes>
+		</fileSet>
+		<!-- Copy java dependencies needed by the module -->
+		<fileSet>
+			<directory>${project.build.directory}/lib</directory>
+			<outputDirectory>${project.name}/lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>				
+			</includes>			
+		</fileSet>
+	</fileSets>
+</assembly>

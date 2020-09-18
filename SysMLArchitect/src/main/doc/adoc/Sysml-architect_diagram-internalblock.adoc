@@ -1,0 +1,89 @@
+[[Internal-block-diagrams]]
+
+[[internal-block-diagrams]]
+= Internal block diagrams
+
+Internal Block diagrams are dedicated to modeling the internal structure of Blocks in terms of properties and the relationships between properties.
+
+[[Palette]]
+
+[[palette]]
+== Palette
+
+*image:images/Sysml-architect_diagram-internalblock_image021.png[image]Connector property*: Creates a ConnectorProperty. This command is only available for Block elements.
+
+*image:images/Sysml-architect_diagram-internalblock_image027.png[image]Contraint property*: Creates a ConstraintProperty. This command is only available for ConstraintBlock elements.
+
+*image:images/Sysml-architect_diagram-internalblock_image022.png[image]Participant property*: Creates a ParticipantProperty. This command is only available for Block elements.
+
+*image:images/Sysml-architect_diagram-internalblock_image023.png[image]Part*: Creates an Instance inside a Package or create a Part inside a Classifier.
+
+*image:images/Sysml-architect_diagram-internalblock_image019.png[image]Distributed property*: Creates a DistributedProperty. A DistributedProperty can only be created inside Block elements.
+
+*image:images/Sysml-architect_diagram-internalblock_image043.png[image]Flow property*: Creates a FlowProperty. A DistributedProperty can only be created inside Block or FlowSpecification elements.
+
+*image:images/Sysml-architect_diagram-internalblock_image020.png[image]Attribute*: Creates an Attribute.
+
+*image:images/Sysml-architect_diagram-internalblock_image044.png[image]Operation*: Creates an Operation.
+
+*image:images/Sysml-architect_diagram-internalblock_image058.png[image]Delegate*: Creates a delegate connector.
+
+*image:images/Sysml-architect_diagram-internalblock_image058.png[image]Link*: Creates a Link.
+
+*image:images/Sysml-architect_diagram-internalblock_image024.png[image]FlowPort*: Creates a FlowPort.
+
+*image:images/Sysml-architect_diagram-internalblock_image025.png[image]Port*: Creates a Port.
+
+*image:images/Sysml-architect_diagram-internalblock_image055.png[image]ProvidedInterface*: Creates a ProvidedInterface.
+
+*image:images/Sysml-architect_diagram-internalblock_image056.png[image]RequiredInterface*: Creates a RequiredInterface.
+
+*image:images/Sysml-architect_diagram-internalblock_image059.png[image]Item Flow*: Creates an Item Flow.
+
+*image:images/Sysml-architect_diagram-internalblock_image060.png[image]Information Flow*: Creates an Information flow
+
+*image:images/Sysml-architect_diagram-internalblock_image061.png[image]Realized Information Flow*: Creates a realized information flow
+
+*image:images/Sysml-architect_diagram-internalblock_image062.png[image]Information Item*: Creates an Information Item
+
+*image:images/Sysml-architect_diagram-internalblock_image063.png[image]Allocation*: Creates an Allocate dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image064.png[image]Conform*: Creates a Conform dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image065.png[image]Copy*: Creates a Copy dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image066.png[image]Refine*: Creates a Refine dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image067.png[image]Satisfy*: Creates a Satisfy dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image068.png[image]Verify*: Creates a Verify dependency.
+
+*image:images/Sysml-architect_diagram-internalblock_image069.png[image]Dependency*: Creates a Dependency .
+
+*image:images/Sysml-architect_diagram-internalblock_image070.png[image]*: Creates a Traceability link.
+
+*image:images/Sysml-architect_diagram-internalblock_image069.png[image]Related diagram link*: Create a link between an element and its related diagram.
+
+*image:images/Sysml-architect_diagram-internalblock_image071.png[image]Problem*: Creates a Problem note.
+
+*image:images/Sysml-architect_diagram-internalblock_image072.png[image]Rationale*: Creates a Rationale note.
+
+*image:images/Sysml-architect_diagram-internalblock_image073.png[image]Note*: Creates a Note.
+
+*image:images/Sysml-architect_diagram-internalblock_image074.png[image]Constraint*: Creates a Constraint.
+
+[[Example]]
+
+[[example]]
+== Example
+
+This example is extracted from the SysML specification and implemented in the SysML Architect module.
+
+image:images/Sysml-architect_diagram-internalblock_image076.png[image]
+
+[[Internal-Block-modeling-use-case]]
+
+[[internal-block-modeling-use-case]]
+Internal Block modeling use case
+
+[[footer]]

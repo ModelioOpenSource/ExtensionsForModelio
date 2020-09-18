@@ -1,0 +1,83 @@
+/**
+ * Java Class : AddOptionalExplorerButton.java
+ *
+ * Description :
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing,
+ *    software distributed under the License is distributed on an
+ *    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *    KIND, either express or implied.  See the License for the
+ *    specific language governing permissions and limitations
+ *    under the License.
+ *
+ * @category   Command explorer
+ * @package    com.modeliosoft.modelio.sysml.gui.explorer
+ * @author     Modelio
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    2.0.08
+ **/
+package org.modelio.module.sysml.commands.explorer;
+
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.ITransaction;
+import org.modelio.api.module.IModule;
+import org.modelio.api.module.command.DefaultModuleCommandHandler;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Profile;
+import org.modelio.module.sysml.i18n.I18nMessageService;
+import org.modelio.module.sysml.impl.SysMLModule;
+import org.modelio.module.sysml.utils.SysMLFactory;
+import org.modelio.module.sysml.utils.Utils;
+import org.modelio.vcore.smkernel.mapi.MObject;
+
+/**
+ * This command handles the creation of SysML optional in the model explorer
+ * @author ebrosse
+ */
+@objid ("3c0702cf-2133-4fd9-b500-c659d9e1e23d")
+public class InteractionExplorerCommand extends DefaultModuleCommandHandler {
+    @objid ("5fe61099-0925-4333-80d8-785b54c54f86")
+    @Override
+    public void actionPerformed(List<MObject> selectedElements, IModule module) {
+        IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
+        try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Interaction"))){
+        
+            for (MObject element : selectedElements) {
+                SysMLFactory.createSysMLSequenceDiagram((ModelElement)element, "Sequence diagram", "");
+            }
+        
+            transaction.commit ();
+        }
+    }
+
+    @objid ("7ca12ed8-90c4-42e3-a816-eebb0dbfed53")
+    @Override
+    public boolean accept(List<MObject> selectedElements, IModule module) {
+        if (super.accept(selectedElements, module)){
+            return (selectedElements.size() > 0) && Utils.accept(selectedElements.get(0));
+        }
+        return false;
+    }
+
+    @objid ("2f3d5b4b-446e-47e0-adba-ea34dcc4bdf5")
+    @Override
+    public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
+        MObject selectedElt = selectedElements.get(0);
+        if ((selectedElt instanceof Profile)  || (selectedElt instanceof IModule))
+            return false;
+        return selectedElt.getStatus().isModifiable();
+    }
+
+}

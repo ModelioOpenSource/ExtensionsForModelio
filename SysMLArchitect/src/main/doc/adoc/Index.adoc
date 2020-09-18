@@ -1,0 +1,43 @@
+= SysML Architect User Guide
+
+== Introduction
+
+* <<Sysml-architect_introduction.adoc#,SysML Architect introduction>>
+
+
+== SysML Commands
+
+
+===== Element creation commands
+
+* <<Sysml-architect_commands-package.adoc#,Commands on a Package>>
+* <<Sysml-architect_commands-block.adoc#,Commands on a Block>>
+* <<Sysml-architect_commands-constraintblock.adoc#,Commands on a Constraint Block>>
+
+
+===== Diagrams creation commands
+
+* <<Sysml-architect_diagram-block.adoc#,Block diagram>>
+* <<Sysml-architect_diagram-internalblock.adoc#,Internal block diagram>>
+* <<Sysml-architect_diagram-parametric.adoc#,Parametric diagram>>
+* <<Sysml-architect_diagram-package.adoc#,Package diagram>>
+* <<Sysml-architect_diagram-activity.adoc#,SysML Activity diagram>>
+* <<Sysml-architect_diagram-sequence.adoc#,SysML Sequence diagram>>
+* <<Sysml-architect_diagram-state.adoc#,SysML State diagram>>
+* <<Sysml-architect_diagram-usecase.adoc#,SysML Use Case diagram>>
+* <<Sysml-architect_diagram-requirement.adoc#,SysML Requirement diagram>>
+
+
+== Expert Mode
+
+* <<Sysml-architect_expert-mode.adoc#,SysML Architect in expert mode>>
+
+
+== SysML library
+
+* <<Sysml-architect_library.adoc#,SysML model library>>
+
+
+== Example
+
+* <<Sysml-architect_example.adoc#,SysML case study>>

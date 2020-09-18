@@ -1,0 +1,4 @@
+Bundle-SymbolicName: org.modelio.documentation.sysml;singleton=true
+Bundle-Version: 3.10.00
+Bundle-Name: SysML documentation
+Bundle-Vendor: modelio.org

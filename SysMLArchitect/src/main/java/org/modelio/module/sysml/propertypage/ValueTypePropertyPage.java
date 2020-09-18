@@ -1,0 +1,116 @@
+/**
+ * Java Class : ValueTypePropertyPage.java
+ *
+ * Description :
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing,
+ *    software distributed under the License is distributed on an
+ *    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *    KIND, either express or implied.  See the License for the
+ *    specific language governing permissions and limitations
+ *    under the License.
+ *
+ * @category   PropertyDefinition page
+ * @package    org.modelio.module.sysml.gui.propertypage
+ * @author     Modelio
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    2.0.08
+ **/
+package org.modelio.module.sysml.propertypage;
+
+import java.util.List;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.module.sysml.api.ISysMLPeerModule;
+import org.modelio.module.sysml.api.SysMLStereotypes;
+import org.modelio.module.sysml.api.SysMLTagTypes;
+import org.modelio.module.sysml.utils.ModelUtils;
+import org.modelio.module.sysml.utils.SysMLResourcesManager;
+import org.modelio.module.sysml.utils.Utils;
+import org.modelio.vcore.smkernel.mapi.MObject;
+
+/**
+ * This class handles the properties associated to the Value Type stereotype
+ * 
+ * @author ebrosse
+ */
+@objid ("1ff83e3b-889c-4d12-aebe-f6c501eefdd2")
+public class ValueTypePropertyPage implements IPropertyContent {
+    @objid ("0068e385-695f-4d7d-bfac-e2f6e27a800b")
+    private static List<MObject> _quantityKinds = null;
+
+    @objid ("05b6271c-28a3-416e-98ce-ac805b3ff3e8")
+    private static List<MObject> _units = null;
+
+    /**
+     * Constructor ValueTypePropertyPage
+     * @author ebrosse
+     */
+    @objid ("d4fcc910-9d15-4d91-aeb3-236a3681b47c")
+    public ValueTypePropertyPage() {
+    }
+
+    @objid ("1685e35e-9f72-4608-b8ce-3e32820bc70e")
+    @Override
+    public void changeProperty(ModelElement element, int row, String value) {
+        //Quantity Kind
+        if (row == 1) {
+            if (value.equals("")) {
+                ModelUtils.removeStereotypedLink(element, SysMLStereotypes.VALUETYPEQUANTITYKIND);
+            } else {
+                _quantityKinds = ModelUtils.searchElement(Instance.class,ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.QUANTITYKIND);
+                for (MObject quantityKind : _quantityKinds) {
+                    if (Utils.getName(quantityKind).equals(value) && (quantityKind instanceof Instance)) {
+                        ModelUtils.addValue(ISysMLPeerModule.MODULE_NAME, SysMLTagTypes.VALUETYPE_QUANTITYKIND, value, element,
+                                (Instance) quantityKind, ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.VALUETYPEQUANTITYKIND);
+                    }
+                }
+        
+            }
+            //Unit
+        } else if (row == 2) {
+            if (value.equals("")) {
+                ModelUtils.removeStereotypedLink(element, SysMLStereotypes.VALUETYPEUNIT);
+            } else {
+                _units = ModelUtils.searchElement(Instance.class, ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.UNIT);
+                for (MObject unit : _units) {
+                    if (Utils.getName(unit).equals(value) && (unit instanceof Instance)) {
+                        ModelUtils.addValue(ISysMLPeerModule.MODULE_NAME, SysMLTagTypes.VALUETYPE_UNIT, value, element, (Instance) unit,
+                                ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.VALUETYPEUNIT);
+                    }
+                }
+        
+            }
+        
+        }
+    }
+
+    @objid ("7b5813ef-d3dc-4cd0-9b8e-f8834c53ed87")
+    @Override
+    public void update(ModelElement element, IModulePropertyTable table) {
+        //Quantity Kind
+        String value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.VALUETYPEQUANTITYKIND, element);
+        _quantityKinds = ModelUtils.searchElement(Instance.class,ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.QUANTITYKIND);
+        table.addProperty(SysMLResourcesManager.getInstance().getPropertyName(SysMLTagTypes.VALUETYPE_QUANTITYKIND),
+                value_kind, Utils.getNames(_quantityKinds));
+        
+        //Unit
+        value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.VALUETYPEUNIT, element);
+        _units = ModelUtils.searchElement(Instance.class,ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.UNIT);
+        table.addProperty(SysMLResourcesManager.getInstance().getPropertyName(SysMLTagTypes.VALUETYPE_UNIT), value_kind,
+                Utils.getNames(_units));
+    }
+
+}
