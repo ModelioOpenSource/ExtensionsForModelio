@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Modelio-modules-for-use-with-ModelioTogaf-Architect]]
 
 [[modelio-modules-for-use-with-modeliotogaf-architect]]

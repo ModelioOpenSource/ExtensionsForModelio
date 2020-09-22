@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Modeling-Enterprise-Architecture-modeling-with-Modelio]]
 
 [[modeling-enterprise-architecture-modeling-with-modelio]]
@@ -27,18 +34,14 @@ In Modelio, you can create an instance (or part) in the deployment location elem
 
 A simpler way to do this in Modelio is just to drag and drop the deployed element (from the explorer) into the deployment location (appearing in a diagram): an instance typed by the deployed element is automatically created.
 
-image:images/Modeling_Enterprise_Architecture_modeling_with_Modelio_ApplicationComponent.png[32]
+.Deploying application components under hardware devices (workstation, server)
+image::images/Modeling_Enterprise_Architecture_modeling_with_Modelio_ApplicationComponent.png[32]
 
-[[Deploying-application-components-under-hardware-devices-workstation-server]]
 
-[[deploying-application-components-under-hardware-devices-workstation-server.]]
-Deploying application components under hardware devices (workstation, server).
+.There is a sales department in every location. The Marketing department is only in New York (headquarters)
+image::images/Modeling_Enterprise_Architecture_modeling_with_Modelio_Locations.png[33]
 
-image:images/Modeling_Enterprise_Architecture_modeling_with_Modelio_Locations.png[33]
 
-[[There-is-a-sales-department-in-every-location-The-Marketing-department-is-only-in-New-York-headquarters]]
 
-[[there-is-a-sales-department-in-every-location.-the-marketing-department-is-only-in-new-york-headquarters.]]
-There is a sales department in every location. The Marketing department is only in New York (headquarters).
 
 [[footer]]

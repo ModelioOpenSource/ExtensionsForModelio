@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Catalog-and-documentation-generation-tools]]
 
 [[catalog-and-documentation-generation-tools]]
@@ -12,12 +19,12 @@
 
 With Togaf Architect, you can generate documentation catalogs in docx or HTML format from a Togaf model.
 
-image:images/Tools_Catalog_and_documentation_generation_tools_image105.png[image]
+image::images/Tools_Catalog_and_documentation_generation_tools_image105.png[image]
 
 To use this functionality:
 
 * Select the model element(s) that you want to document
-* Run the generation command corresponding to the catalog that you want to generate : "Togaf Architect > Catalog > …".
+* Run the generation command corresponding to the catalog that you want to generate : "Togaf Architect > Catalog > ...".
 * Select the destination directory and the expected format: HTML or OPENXML (docx).
 
 *Note :* This feature requires that the Togaf Architect and Document Publisher modules be used together. The Document Publisher module provides model-based documentation generation services. For more information on Document Publisher, please refer to the user guide for this module.

@@ -1,20 +1,18 @@
-[[Business-modeling]]
+// Disable all captions for figures.
+:!figure-caption:
 
-[[business-modeling]]
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 = Business modeling
 
 *Business Architecture* defines business strategy, governance, organization, and key business processes.
 
 *Data Architecture* describes the structure of an organization’s logical and physical data assets and data management resources.
 
-[[Data-architecture-modeling]]
-
-[[data-architecture-modeling]]
 === Data architecture modeling
 
-[[Class-diagrams]]
-
-[[class-diagrams]]
 ===== Class diagrams
 
 The key purpose of the class diagram is to depict the relationships among the critical data entities (or classes) within the enterprise. This diagram is developed to clearly present these relationships and to help understand the lower-level data models for the enterprise. This is a class diagram, where the main notion is the "Business Entity".
@@ -23,7 +21,7 @@ The TOGAF class diagram as defined is situated at an early, conceptual stage. Th
 
 *Note :* This diagram is at a high level of representation (conceptual). We are interested here in modeling the main business entities, their properties and relationships. The persistency model (_typically_ for RDB) will be inferred later at the application layer.
 
-image:images/Modeling_Business_modeling_image006.png[image]
+image::images/Modeling_Business_modeling_image006.png[image]
 
 [cols=",",options="header",]
 |======================================================================================================================================================================================================================================================
@@ -33,9 +31,6 @@ image:images/Modeling_Business_modeling_image006.png[image]
 |image:images/Modeling_Business_modeling_UMLAssociation.png[image] |*Association between two classes*: An association has a name, and for each extremity provides the role name and cardinalities (possible number of occurrences) of related elements.
 |======================================================================================================================================================================================================================================================
 
-[[Data-dissemination-diagrams]]
-
-[[data-dissemination-diagrams]]
 ===== Data dissemination diagrams
 
 The purpose of the data dissemination diagram is to show the relationship between data entities, business services, and application components. The diagram shows how the logical entities are to be physically realized by application components. This allows effective sizing to be carried out and the
@@ -44,7 +39,7 @@ IT footprint to be refined. Moreover, by assigning business value to data, an in
 
 *Note:* Data dissemination diagrams are a kind of architecture diagram, where data entities are connected to application components. First, drag & drop application components from the application architecture, and then drag and drop business entities, either within the application components to show their localization, or beside them, with dependency links.
 
-image:images/Modeling_Business_modeling_image010.png[image]
+image::images/Modeling_Business_modeling_image010.png[image]
 
 [cols=",",options="header",]
 |================================================================================================================================================================================================================================================================================================================================
@@ -60,9 +55,6 @@ image:images/Modeling_Business_modeling_image010.png[image]
 |image:images/Modeling_Business_modeling_informationflow.png[image] |*Date flow:* Expresses that data (for example business entity) is input or output from a dynamic entity.
 |================================================================================================================================================================================================================================================================================================================================
 
-[[Data-lifecyle-diagrams]]
-
-[[data-lifecyle-diagrams]]
 ===== Data lifecyle diagrams
 
 The data lifecycle diagram is an essential part of managing business data throughout its lifecycle, from conception through disposal, within the constraints of the business process. The data is considered as an entity in its own right, detached from business processes and activities. Each change in state is represented in the diagram, which may include the event or rules that trigger that change in state. The separation of data from process allows common data requirements to be identified, thereby enabling more effective resource sharing to be achieved.
@@ -71,8 +63,8 @@ Defining the lifecycle of business entities enables better formalization of thes
 
 *Note:* Identify the possible states of the entity (for example, a document can be "underConstruction", "underRevision", "approved", and so on), and then define the possible transitions between each states. A state must be a stable data situation: when no action is executed on it, the data is always in one of the identified states.
 
-image:images/Modeling_Business_modeling_image019.gif[image] +
-*Lifecycle of the "Order" business entity*
+.Lifecycle of the "Order" business entity
+image::images/Modeling_Business_modeling_image019.gif[image]
 
 [cols=",",options="header",]
 |====================================================================================================================================================================
@@ -81,9 +73,6 @@ image:images/Modeling_Business_modeling_image019.gif[image] +
 |image:images/Modeling_Business_modeling_image021.gif[image] |*Transition:* Represents the move from one state to another state due to an action on the owner entity.
 |====================================================================================================================================================================
 
-[[Data-migration-diagrams]]
-
-[[data-migration-diagrams]]
 ===== Data migration diagrams
 
 The purpose of the data migration diagram is to show the flow of data from the source to the target applications. The diagram will provide a visual representation of the spread of sources/targets and serve as a tool for data auditing and establishing traceability. This diagram can be elaborated or enhanced and detailed as necessary. For example, the diagram can contain just an overall layout of migration landscape or can go into detail at individual application metadata element level.
@@ -92,74 +81,25 @@ Use the previous data model (which should be in a separate information domain), 
 
 *Note :* Data migration can be expressed at conceptual, logical or physical level. Application communication diagrams can also be used to express data migration. The "migrate" dependency is the key element to formalize migration.
 
-image:images/Modeling_Business_modeling_image022.gif[image] +
-*Migrate dependencies can be between business entities, or be more accurately defined at the "attribute" level*
+.Migrate dependencies can be between business entities, or be more accurately defined at the "attribute" level
+image::images/Modeling_Business_modeling_image022.gif[image]
+
 
 In this example, we see that several attributes from the previous data model have been promoted to "entities" in the new data model.These diagrams can quickly become cluttered by links, when they should be focused on the origin or destination business entities. An alternative is to use tables, as shown below:
 
-Origin
-
-migrates in
-
-Element
-
-Nature
-
-Element
-
-Nature
-
-transportation
-
-Class
-
-Travel
-
-Class
-
-Hotel
-
-Class
-
-Flight
-
-Class
-
-Travel
-
-Class
-
-Travel
-
-Class
-
-Travel.destination
-
-Attribute
-
-Destination
-
-Class
-
-Travel.hotel
-
-Attribute
-
-Hotel
-
-Class
-
-Reservation
-
-Class
-
-Roomreservation
-
-Class
-
-Hotel
-
-Class
+[%header,cols="1,1,1,1"]
+|================================================================
+2+^|Activate creation tool 2+^|Create element
+|*Element* |*Nature* |*Element* |*Nature*
+|transportation |Class |Travel |Class
+|||Hotel |Class
+|||Flight |Class
+|Travel |Class |Travel |Class
+|Travel.destination |Attribute |Destination |Class
+|Travel.hotel |Attribute |Hotel |Class
+|Reservation |Class |Roomreservation |Class
+|||Hotel |Class
+|================================================================
 
 We see that the new model is better structured, as it groups previously scattered information. It is normalized.
 
@@ -171,9 +111,6 @@ We see that the new model is better structured, as it groups previously scattere
 |image:images/Modeling_Business_modeling_Migration.png[image] |*Migrates link:* Migration of elements between two versions of the IS. Generally used between business entities or application components.
 |========================================================================================================================================================================================================================
 
-[[Data-security-diagrams]]
-
-[[data-security-diagrams]]
 ===== Data security diagrams
 
 Data is considered as an asset to the enterprise and data security simply means ensuring that enterprise data is not compromised and that access to it is suitably controlled. The purpose of the data security diagram is to depict which actor (person, organization, or system) can access which enterprise data. This relationship can be shown in matrix form between two objects, or can be shown as a mapping. The diagram can also be used to demonstrate compliance with data privacy laws and other applicable regulations (HIPAA, SOX, etc). This diagram should also consider any trust implications where an enterprise’s partners or other parties may have access to the company’s systems, such as an outsourced situation where information may be managed by other people and may even be hosted in a different country.
@@ -195,9 +132,9 @@ Drag and drop the data (business entities, data entities) you want to show, drag
 
 *Note :* Large diagrams can become hard to read. We recommend that one data security diagram be created per business entity and/or per participant (typically an actor). In particular, diagrams focused on actors and their missions can provide habilitation links. Diagrams may also focus on external access to the system, that is on which data the external actors can access.
 
-image:images/Modeling_Business_modeling_image024.png[image] +
-*This diagram expresses who has the right to access which data and with which rights*
-
+.This diagram expresses who has the right to access which data and with which rights
+image::images/Modeling_Business_modeling_image024.png[image]
+ 
 [cols=",",options="header",]
 |=================================================================================================================================================================================================================================================================================================================================
 |Togaf elements |description
@@ -206,14 +143,9 @@ image:images/Modeling_Business_modeling_image024.png[image] +
 |image:images/Modeling_Business_modeling_image027.gif[image] |*Data flow:* There is one active element on one side (e.g. actor, process) and an element carrying data on the other side (entity, event, product). Habilitation can be expressed on these flows, expressing which access and rights on data the active element has.
 |=================================================================================================================================================================================================================================================================================================================================
 
-[[Business-architecture-modeling]]
 
-[[business-architecture-modeling]]
 === Business architecture modeling
 
-[[Business-footprint-diagrams]]
-
-[[business-footprint-diagrams]]
 ===== Business footprint diagrams
 
 A business footprint diagram describes the links between business goals, organizational units, business functions and services, and maps these functions to the technical components delivering the required capability.
@@ -224,8 +156,8 @@ A business footprint diagram demonstrates only the key facts linking organizatio
 
 *Note :* In the explorer, select the elements (goals, organization units, business functions, business services, applications components) that are being focused on and that should already be defined. Drag & drop them, and create "trace", "participates in", "supports" and "component realization" dependencies.
 
-image:images/Modeling_Business_modeling_image028.png[image] +
-*Business footprint diagram focused on the "sales" function*
+.Business footprint diagram focused on the "sales" function
+image::images/Modeling_Business_modeling_image028.png[image]
 
 Elements used: "support" links between services or processes and functions, participation links between organization units and functions, traces between functions and goals.
 
@@ -244,9 +176,7 @@ Elements used: "support" links between services or processes and functions, part
 |image:images/Modeling_Business_modeling_image036.gif[image] |*Component realization:* An application component realizes the designated element, for example a business process.
 |===========================================================================================================================================================================================================================================
 
-[[Business-serviceinformation-diagrams]]
 
-[[business-serviceinformation-diagrams]]
 ===== Business service/information diagrams
 
 The business service/information diagram shows the information needed to support one or more business services. The business service/information diagram shows what data is consumed or produced by a business service and may also show the source of information. The business service/information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within phase C (data architecture).
@@ -255,8 +185,9 @@ Drag and drop business services and business entities from the explorer, and dra
 
 *Note :* By using "flow" dependencies between business services and business entities, this diagram represents which kind of entity is used or produced by the services.
 
-image:images/Modeling_Business_modeling_image037.gif[image] +
-Three business services are based on four business entities
+.Three business services are based on four business entities
+image::images/Modeling_Business_modeling_image037.gif[image]
+
 
 [cols=",",options="header",]
 |===============================================================================================================================================================================================================
@@ -266,9 +197,6 @@ Three business services are based on four business entities
 |image:images/Modeling_Business_modeling_image018.gif[image] |*Flow link:* Flow link between data (e.g. business entity, event, product) and active elements (e.g. business process, service).
 |===============================================================================================================================================================================================================
 
-[[Event-diagrams-also-called-ldquoprocess-mapsrdquo]]
-
-[[event-diagrams-also-called-process-maps]]
 ===== Event diagrams (also called "process maps")
 
 The purpose of the event diagram is to depict the relationship between events and process. Certain events, such as the arrival of certain information (for example, a customer submits a sales order) or a certain point in time (for example, the end of a fiscal quarter) cause work, and certain actions need to be undertaken within the business. These are often referred to as business
@@ -279,8 +207,9 @@ Event diagrams provide an overview of processes, which helps in their mapping. E
 
 *Note :* Events are connected to processes through "flow" dependencies, roles can initiate or participate in processes, products can be connected to processes through "flow" dependencies.
 
-image:images/Modeling_Business_modeling_image040.png[image] +
-*Event diagrams provide an overview of business processes*
+.Event diagrams provide an overview of business processes
+image::images/Modeling_Business_modeling_image040.png[image]
+
 
 [cols=",",options="header",]
 |========================================================================================================================================================================================================================
@@ -297,9 +226,6 @@ image:images/Modeling_Business_modeling_image040.png[image] +
 |image:images/Modeling_Business_modeling_image047.gif[image] |*Initiator of link:* The origin participant initiates the designated process. It starts the process by realizing a task or activity in it.
 |========================================================================================================================================================================================================================
 
-[[Functional-decomposition-diagrams]]
-
-[[functional-decomposition-diagrams]]
 ===== Functional decomposition diagrams
 
 The purpose of the functional decomposition diagram is to show on a single page the capabilities of an organization that are relevant to the consideration of an architecture. By examining the capabilities of an organization from a functional perspective, it is possible to quickly develop models of what the organization does without being dragged into an extended debate on how the organization does it. Once a basic functional decomposition diagram has been developed, it becomes possible to layer heat-maps on top of this diagram to show scope and decisions. For example, the capabilities to be implemented during the different phases of a change program.
@@ -308,8 +234,9 @@ This diagram can be enriched using links to other parts of the model, to indicat
 
 *Note :* Dedicated dependencies can be used to enrich the model, for example to indicate which application components support which function, which role uses which function, and so on. Function decomposition can be expressed by "containment" (simply create a function in another function), or by using the "part" dependency.
 
-image:images/Modeling_Business_modeling_image048.png[image] +
-*Main functions of the DiscountTravel company*
+.Main functions of the DiscountTravel company
+image::images/Modeling_Business_modeling_image048.png[image]
+
 
 The elements present in this diagram are essentially functions, which can be embedded or linked by "part" dependencies.
 
@@ -319,9 +246,6 @@ The elements present in this diagram are essentially functions, which can be emb
 |image:images/Modeling_Business_modeling_image030.gif[image] |*Function:* Describes one function of the organization.
 |====================================================================================================================
 
-[[GoalObjectiveService-diagrams]]
-
-[[goalobjectiveservice-diagrams]]
 ===== Goal/Objective/Service diagrams
 
 The purpose of a Goal/Objective/Service diagram is to define the ways in which a service contributes to the achievement of a business vision or strategy.
@@ -332,8 +256,9 @@ to similar aspects of business performance. The Goal/Objective/Service diagram a
 
 *Note :* Drag & drop business services and goals, and define "trace" dependencies between services and goals where appropriate.
 
-image:images/Modeling_Business_modeling_image049.gif[image] +
-*Goal/Objective/Service diagram*
+.Goal/Objective/Service diagram
+image::images/Modeling_Business_modeling_image049.gif[image]
+
 
 [cols=",",options="header",]
 |==========================================================================================================================================================================================================
@@ -342,5 +267,3 @@ image:images/Modeling_Business_modeling_image049.gif[image] +
 |image:images/Modeling_Business_modeling_image051.gif[image] |*Goal:* This is a goal or objective of the enterprise.
 |image:images/Modeling_Business_modeling_image052.gif[image] |*General purpose traceability link:* Determines that the origin of the trace has been founded on the trace destination during its definition.
 |==========================================================================================================================================================================================================
-
-[[footer]]

@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Model-Organization]]
 
 [[model-organization]]
@@ -10,11 +17,8 @@ The TOGAF architecture is organized within this structure:
 * *Application Architecture* is structured under "application layer/application architecture". It has two application domains: "service data" to model the data exchanged between business services and System Use Cases to model use cases related to the main application components of the IS.
 * *Technology Architecture* is structured under the "technology architecture" technology domain.
 
-image:images/Modeling_Model_Organization_TogafTree.png[2]
+.Togaf structure
+image::images/Modeling_Model_Organization_TogafTree.png[2]
 
-[[Togaf-structure]]
-
-[[togaf-structure]]
-Togaf structure
 
 [[footer]]

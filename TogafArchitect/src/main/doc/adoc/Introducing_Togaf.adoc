@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Introducing-Togaf]]
 
 [[introducing-togaf]]
@@ -10,7 +17,7 @@ Welcome to the Togaf Architect user guide.
 [[modeling-enterprise-architecture-using-standards]]
 ===== Modeling enterprise architecture using standards
 
-Enterprise architecture is widely used within large enterprises, but still has significant ground to cover. The heterogeneous use of enterprise architecture through different methods, tools and models is an undeniable barrier to its generalization. And yet standards do exist, both for the approach itself (*TOGAF*, *DODAF*, …) and for modeling (*BPMN*, *UML*,*SysML*, …), and enterprise architecture practices are well known (process analysis, requirements analysis, goal analysis, business rules, …).
+Enterprise architecture is widely used within large enterprises, but still has significant ground to cover. The heterogeneous use of enterprise architecture through different methods, tools and models is an undeniable barrier to its generalization. And yet standards do exist, both for the approach itself (*TOGAF*, *DODAF*, ...) and for modeling (*BPMN*, *UML*,*SysML*, ...), and enterprise architecture practices are well known (process analysis, requirements analysis, goal analysis, business rules, ...).
 
 However, each of these standards is a generic toolbox. Any attempt to implement them in a coordinated manner in order to model enterprise architecture requires a great deal of effort, which is beyond most users.
 

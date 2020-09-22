@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Technology-modeling]]
 
 [[technology-modeling]]
@@ -16,8 +23,9 @@ An environments and locations diagram depicts which locations host which applica
 
 *Note :* Drag & drop the locations of the enterprise, then drag and drop the material (typically the servers) into the locations, and then drag & drop the application components or software elements into the material. Typically, this diagram represents where each server is located, and on which server which application is executed.
 
-image:images/Modeling_Technology_modeling_image095.gif[image] +
-*The main applications and devices are located in Dallas*
+.The main applications and devices are located in Dallas
+image::images/Modeling_Technology_modeling_image095.gif[image]
+
 
 [cols=",",options="header",]
 |=============================================================================================================================================================================================================================================================================
@@ -45,8 +53,8 @@ This diagram presents the hardware (servers, workstations) that are interconnect
 
 *Note:* Create workstations and servers and connect them using network devices and associations. Then deploy application components by dragging & dropping them into workstations and servers. You can also link roles or actors to their environment.
 
-image:images/Modeling_Technology_modeling_image100.gif[image] +
-*This diagram shows where application components are deployed, how the computers are networked, and so on*
+.This diagram shows where application components are deployed, how the computers are networked, and so on
+image::images/Modeling_Technology_modeling_image100.gif[image]
 
 [cols=",",options="header",]
 |=================================================================================================================================================================================================================================================================================================================
@@ -80,8 +88,10 @@ Associations between these deployment units will represent the connection (for e
 
 *Note :* Drag & drop application components to deploy them into the deployable units of configuration, which are themselves specific kinds of application components, at a logical technology level.
 
-image:images/Modeling_Technology_modeling_image103.gif[image] +
-*This processing diagram shows how application components are deployed under the different kinds*
+
+.This processing diagram shows how application components are deployed under the different kinds
+image::images/Modeling_Technology_modeling_image103.gif[image]
+
 
 [cols=",",options="header",]
 |==================================================================================================================================================================================================================================================

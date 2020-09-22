@@ -1,43 +1,50 @@
-[[Application-modeling]]
+// Disable all captions for figures.
+:!figure-caption:
 
-[[application-modeling]]
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 = Application modeling
 
 *Application Architecture* provides a blueprint for the deployment of individual application systems, their interactions, and their relationships to the core business processes of the organization.
 
-[[Opportunity-and-solution-modeling]]
-
-[[opportunity-and-solution-modeling]]
 === Opportunity and solution modeling
 
-[[Project-context-diagrams]]
-
-[[project-context-diagrams]]
 ===== Project context diagrams
 
 A project context diagram shows the scope of a work package to be implemented as a part of a broader transformation roadmap. The project context diagram links a work package to the organizations, functions, services, processes, applications, data and technology that will be added, removed or impacted by the project. The project context diagram is also a valuable tool for project portfolio management and project mobilization.
 
 *Note :* Drag & drop the essential application component of the project, the main requirements and the related business processes, business interfaces and business functions, and express which requirements are satisfied by the project, which business processes are implemented, which functions are related, and which roles will use the targeted components. Relationships to other parts of the IS can also be expressed.
 
-image:images/Modeling_Application_modeling_image053.gif[image] +
-*In this diagram, the context is centered on the "DiscountTravelOrderingSite"*
+.In this diagram, the context is centered on the "DiscountTravelOrderingSite"
+image::images/Modeling_Application_modeling_image053.gif[image]
+
 
 [cols=",",options="header",]
 |==============================================================================================================================
 |Togaf elements |description
 |image:images/Modeling_Application_modeling_image025.gif[image] |*External actor:* An actor that is external to the enterprise.
+|image:images/Modeling_Application_modeling_image026.gif[image] | *Internal actor:* An actor that belongs to the enterprise.
+|image:images/Modeling_Application_modeling_image054.gif[image] | *Requirements:* In this context, these are business requirements.
+|image:images/Modeling_Application_modeling_image055.gif[image] | *Interaction application component:* Represents the top level components that manage the interaction with elements outside the IS. In most cases, it is a GUI component, such as here a web interface.
+|image:images/Modeling_Application_modeling_image056.gif[image] | *Function:* Describes one function of the organization.
+|image:images/Modeling_Application_modeling_image057.gif[image] | *Database application component:* Represents a repository. In pure SOA architecture, these elements should not appear. However, for legacy analysis or technology architecture, modeling repositories or repository deployment can be useful.
+|image:images/Modeling_Application_modeling_image017.gif[image] | *Application:* This application component corresponds to legacy applications, off the shelf products, or can be an assembly of application components.
+|image:images/Modeling_Application_modeling_image058.gif[image] | *System federation:* A system federation is the coarser-grained application component. It assembles systems to federate them, such as in the example of cooperation between different information systems between different companies.
+|image:images/Modeling_Application_modeling_image059.png[image] | *Use case:* Represents an interaction between an actor and the system, in order to fulfill a business need. A use case is further described by a set of scenarios that express the interactions between the system and the actors.
+|image:images/Modeling_Application_modeling_image050.gif[image] | *Business service:* Represents a service provided by the business, which may then be realized by one or more IS services.
+|image:images/Modeling_Application_modeling_image060.gif[image] | *Business process:* As presented in process maps (event diagrams). The business process is detailed in flow diagrams.
+|image:images/Modeling_Application_modeling_image061.gif[image] | *Consumes <<* Expresses that a participant (e.g. an actor) consumes an element of the IS (service, operation, application component).
+|image:images/Modeling_Application_modeling_image062.gif[image] | *Information flow:* Defines the flow of any kind of information (business entity, event, product, informal, etc) between active entities of the enterprise.
+|image:images/Modeling_Application_modeling_image061.gif[image] | *Consumes* Expresses that a participant (e.g. an actor) consumes an element of the IS (service, operation, application component).
+|image:images/Modeling_Application_modeling_image063.gif[image] | *Realizes* Component realization. An application component realizes the designated element, for example a business process.
+|image:images/Modeling_Application_modeling_image064.gif[image] | *Satisfy link:* Expresses that an element of the IS satisfies a requirement.
 |==============================================================================================================================
 
-image:images/Modeling_Application_modeling_image026.gif[image] | *Internal actor:* An actor that belongs to the enterprise. image:images/Modeling_Application_modeling_image054.gif[image] | *Requirements:* In this context, these are business requirements. image:images/Modeling_Application_modeling_image055.gif[image] | *Interaction application component:* Represents the top level components that manage the interaction with elements outside the IS. In most cases, it is a GUI component, such as here a web interface. image:images/Modeling_Application_modeling_image056.gif[image] | *Function:* Describes one function of the organization. image:images/Modeling_Application_modeling_image057.gif[image] | *Database application component:* Represents a repository. In pure SOA architecture, these elements should not appear. However, for legacy analysis or technology architecture, modeling repositories or repository deployment can be useful. image:images/Modeling_Application_modeling_image017.gif[image] | *Application:* This application component corresponds to legacy applications, off the shelf products, or can be an assembly of application components. image:images/Modeling_Application_modeling_image058.gif[image] | *System federation:* A system federation is the coarser-grained application component. It assembles systems to federate them, such as in the example of cooperation between different information systems between different companies. image:images/Modeling_Application_modeling_image059.png[image] | *Use case:* Represents an interaction between an actor and the system, in order to fulfill a business need. A use case is further described by a set of scenarios that express the interactions between the system and the actors. image:images/Modeling_Application_modeling_image050.gif[image] | *Business service:* Represents a service provided by the business, which may then be realized by one or more IS services. image:images/Modeling_Application_modeling_image060.gif[image] | *Business process:* As presented in process maps (event diagrams). The business process is detailed in flow diagrams. image:images/Modeling_Application_modeling_image061.gif[image] | *Consumes <<* Expresses that a participant (e.g. an actor) consumes an element of the IS (service, operation, application component). image:images/Modeling_Application_modeling_image062.gif#,image>> | *Information flow:* Defines the flow of any kind of information (business entity, event, product, informal, etc) between active entities of the enterprise. image:images/Modeling_Application_modeling_image061.gif[image] | *Consumes <<* Expresses that a participant (e.g. an actor) consumes an element of the IS (service, operation, application component). image:images/Modeling_Application_modeling_image063.gif#,image>> | *Realizes <<* Component realization. An application component realizes the designated element, for example a business process. image:images/Modeling_Application_modeling_image064.gif#,image>> | *Satisfy link:* Expresses that an element of the IS satisfies a requirement.
 
-[[Architecture-vision-modeling]]
-
-[[architecture-vision-modeling]]
 === Architecture vision modeling
 
-[[Solution-concept-diagrams]]
-
-[[solution-concept-diagrams]]
 ===== Solution concept diagrams
 
 A solution concept diagram provides a high-level orientation of the solution that is envisaged in order to meet the objectives of the architecture engagement. In contrast to the more formal and detailed architecture diagrams developed in the following phases, the solution concept represents a pencil
@@ -48,9 +55,9 @@ Present only the main application components of the solution, and summarize thei
 
 A "macro" vision of the architecture of the targeted solution is therefore presented, including links to the goals and requirements that the different elements of the solution must satisfy.
 
-*Note :* Create and drag & drop the components. Drag & drop the relevant requirements, goals, processes, functions or business services. Unmask or create the appropriate dependencies (consumes, satisfy, assigned, …).
+*Note :* Create and drag & drop the components. Drag & drop the relevant requirements, goals, processes, functions or business services. Unmask or create the appropriate dependencies (consumes, satisfy, assigned, ...).
 
-image:images/Modeling_Application_modeling_image065.gif[image]
+image::images/Modeling_Application_modeling_image065.gif[image]
 
 [cols=",",options="header",]
 |=============================================================================================================================================================================================================================================================================================================
@@ -74,17 +81,15 @@ image:images/Modeling_Application_modeling_image065.gif[image]
 |image:images/Modeling_Application_modeling_image064.gif[image] |*Satisfy link:* Expresses that an element of the IS satisfies a requirement.
 |=============================================================================================================================================================================================================================================================================================================
 
-[[Value-chain-diagrams]]
-
-[[value-chain-diagrams]]
 ===== Value chain diagrams
 
 A value chain diagram provides a high-level orientation view of an enterprise and how it interacts with the outside world. In contrast to the more formal functional decomposition diagram developed within Phase B (Business Architecture), the value chain diagram focuses on presentational impact. The purpose of this diagram is to quickly on-board and align stakeholders for a particular change initiative, so that all participants understand the high- level functional and organizational context of the architecture engagement. A usual practice consists in showing a simplified business process diagram, and for each task defining its value factors and changes needed.
 
 *Note :* Use sequence dependencies between functions to express value chains. The "Value factors" and "Changes needed" types of notes express this key information.
 
-image:images/Modeling_Application_modeling_image068.png[image] +
-*Value chain of the DiscountTravel company*
+.Value chain of the DiscountTravel company
+image::images/Modeling_Application_modeling_image068.png[image]
+
 
 [cols=",",options="header",]
 |=========================================================================================================================
@@ -93,14 +98,8 @@ image:images/Modeling_Application_modeling_image068.png[image] +
 |image:images/Modeling_Application_modeling_image069.gif[image] |*Sequence link:* Represents a sequence between functions.
 |=========================================================================================================================
 
-[[243-Data-architecture-at-application-level]]
-
-[[data-architecture-at-application-level]]
 === 2.4.3 Data architecture at application level
 
-[[244-Application-architecture-modeling]]
-
-[[application-architecture-modeling]]
 === 2.4.4 Application architecture modeling
 
 Application and user location diagrams
@@ -122,8 +121,9 @@ Users typically interact with applications in a variety of ways, for example: * 
 
 by dragging and dropping them. Typically, this diagram represents where each server is located, and on which server which application is executed.
 
-image:images/Modeling_Application_modeling_image070.gif[image] +
-*This diagram shows who is using which application on which site*
+.This diagram shows who is using which application on which site
+image::images/Modeling_Application_modeling_image070.gif[image]
+
 
 [cols=",",options="header",]
 |===============================================================================================================================================================================================================================================================================
@@ -137,9 +137,6 @@ image:images/Modeling_Application_modeling_image070.gif[image] +
 |image:images/Modeling_Application_modeling_image009.gif[image] |*Association between two classes:* An association has a name, and for each extremity provides the role name and cardinalities (possible number of occurrences) of related elements.
 |===============================================================================================================================================================================================================================================================================
 
-[[Application-communication-diagrams]]
-
-[[application-communication-diagrams]]
 ===== Application communication diagrams
 
 The purpose of the application communication diagram is to depict all models
@@ -160,8 +157,9 @@ Components are interconnected via their required and provided services, which ar
 
 connectors. Provided/required services are typed by IS services that are generally modeled elsewhere.
 
-image:images/Modeling_Application_modeling_image073.png[image] +
-*The architecture is layered: the interaction component (site) is on top, process components in the middle, and entity components on the bottom*
+.The architecture is layered: the interaction component (site) is on top, process components in the middle, and entity components on the bottom
+image::images/Modeling_Application_modeling_image073.png[image]
+
 
 [cols=",",options="header",]
 |=============================================================================================================================================================================================================================================================================================================
@@ -182,9 +180,6 @@ image:images/Modeling_Application_modeling_image073.png[image] +
 |image:images/Modeling_Application_modeling_image061.gif[image] |*Comsumes link:* Expresses that a participant (e.g. actor) consumes an element of the IS (service, operation, application component).
 |=============================================================================================================================================================================================================================================================================================================
 
-[[Application-migration-diagrams]]
-
-[[application-migration-diagrams]]
 ===== Application migration diagrams
 
 The application migration diagram identifies application migration from baseline to target application components. It enables a more accurate
@@ -199,8 +194,8 @@ system application component for each of its states. In the context of each vers
 
 The aim is to define the trajectory between the current version of the IS and the version that you wish to obtain, over several stages. The component deployment technique enables you to present the same component deployed in several versions of the IS, and interconnected differently according to the context.
 
-image:images/Modeling_Application_modeling_image078.png[image] +
-*Migration strategy in three steps*
+.Migration strategy in three step
+image::images/Modeling_Application_modeling_image078.png[image] 
 
 In this diagram, we see that the "Travel" application component will be developed in three versions. The first one will still be based on the TravelPortfolioManagement (legacy) application, whilst the second version will work on its own, with direct access to the repository.
 
@@ -216,9 +211,6 @@ Each version of the IS is represented by a different "system element" in which o
 |image:images/Modeling_Application_modeling_image080.gif[image] |*Migrates link:* Migration of elements between two versions of the IS. This is generally used between business entities, or application components.
 |==============================================================================================================================================================================================================================================
 
-[[Enterprise-manageability-diagrams]]
-
-[[enterprise-manageability-diagrams]]
 ===== Enterprise manageability diagrams
 
 The enterprise manageability diagram shows how one or more applications interact with application and technology components that support operational management of a solution. This diagram is really a filter on the application communication diagram, specifically for enterprise management class software.
@@ -227,9 +219,9 @@ Analysis can reveal duplication and gaps, and opportunities in the IT service ma
 
 *Note :* The use of enterprise manageability diagrams is similar to that of application communication diagrams, where some application components and their properties are dragged and dropped from the explorer. The "migrates" dependency is frequently used there.
 
-image:images/Modeling_Application_modeling_image081.gif[image] +
-*Manageability diagram focused on the "Travel" application component migration issue*
-
+.Manageability diagram focused on the "Travel" application component migration issue
+image:images/Modeling_Application_modeling_image081.gif[image]
+ 
 In this example, an enterprise manageability diagram shows how a part of the system will evolve to progressively pass from a hybrid situation (where "Travel" component (V1) uses the earlier "TravelPortfolioManager" application which manages data access), to a situation without this earlier application, where the "Travel" component (V2) uses the new central repository. The use of "migrate" links summarizes which old parts are replaced by which new parts.
 
 [cols=",",options="header",]
@@ -241,9 +233,6 @@ In this example, an enterprise manageability diagram shows how a part of the sys
 
 image:images/Modeling_Application_modeling_image074.gif[image] | *Provided services:* Access points to application components through provided services. image:images/Modeling_Application_modeling_image075.gif[image] | *Required services:* Required services of application components need to be connected to provided services by other components. image:images/Modeling_Application_modeling_image017.gif[image] | *Application:* This application component corresponds to legacy applications, off the shelf products, or can be an assembly of application components. image:images/Modeling_Application_modeling_image057.gif[image] | *Database application component:* Represents a repository. In pure SOA architecture, these elements should not appear. However, for legacy analysis or technology architecture, modeling repositories or repository deployment can be useful. image:images/Modeling_Application_modeling_image082.gif[image] | *Migrates <<* Migration of elements between two versions of the IS. Generally used between business entities, or application components. image:images/Modeling_Application_modeling_image077.gif#,image>> | *Information flow:* Defines the flow of any kind of information (business entity, event, product, informal, etc.) between active entities of the enterprise. image:images/Modeling_Application_modeling_image076.gif[image] | *Connector:* Used between provided or required services, and or instances of application components.
 
-[[ProcessSystem-realization-diagrams]]
-
-[[processsystem-realization-diagrams]]
 ===== Process/System realization diagrams
 
 The purpose of the process/system realization diagram is to clearly depict the sequence of events when multiple applications are involved in the execution of
@@ -256,8 +245,8 @@ simplified, as well as possible rationalization points in the architecture in or
 
 *Note :* Drag & drop the processes that you want to illustrate, drag & drop the application components that are involved, and draw "component realization" dependencies. Indications of role or order can be made using information flows (as in the example), or notes attached to elements.
 
-image:images/Modeling_Application_modeling_image083.gif[image] +
-*Two processes are realized by one application, and two application components*
+.Two processes are realized by one application, and two application components
+image::images/Modeling_Application_modeling_image083.gif[image]
 
 [cols=",",options="header",]
 |======================================================================================================================================================================================================================================================================
@@ -271,9 +260,6 @@ image:images/Modeling_Application_modeling_image083.gif[image] +
 
 image:images/Modeling_Application_modeling_image089.gif[image] | *Access link*: Dependency between parts of the IS, such as typically application components. Expresses that the origin element uses or accesses to elements of the destination. image:images/Modeling_Application_modeling_image090.gif[image] | *Information flow*: Defines the flow of any kind of information (business entity, event, product, informal, etc) between active entities of the enterprise.
 
-[[System-use-case-diagrams]]
-
-[[system-use-case-diagrams]]
 ===== System use case diagrams
 
 A system use case diagram displays the relationships between consumers and providers of application services. Application services are consumed by actors or other application services and the application use case diagram provides added richness in describing application functionality by illustrating how and when that functionality is used. The purpose of the system use case diagram is to help to describe and validate the interaction between actors and their roles with applications. As the architecture progresses, the use case can evolve from functional information to include technical realization details. Architectural system use cases can also be re-used in more detailed system design work.
@@ -282,9 +268,9 @@ System use case diagrams use UML use cases. TOGAF roles and actors are used in p
 
 *Note :* Create use cases, drag and drop roles and actors, drag and drop application components, and draw communication links between roles and use cases, and component realization links between components and use cases.
 
-image:images/Modeling_Application_modeling_image091.png[image] +
-*Use cases are enriched by the presentation of the application components that implement them*
-
+.Use cases are enriched by the presentation of the application components that implement them
+image::images/Modeling_Application_modeling_image091.png[image]
+ 
 [cols=",",options="header",]
 |==================================================================================================================================================================================================================================================================================================
 |Togaf elements |description
@@ -294,5 +280,3 @@ image:images/Modeling_Application_modeling_image091.png[image] +
 |image:images/Modeling_Application_modeling_image093.gif[image] |*Communication link:* Expresses the communication that takes place between actors and the use case in which they are involved.
 |image:images/Modeling_Application_modeling_image094.gif[image] |*Component realization link:* Component realization between an application component and the business element that it implements.
 |==================================================================================================================================================================================================================================================================================================
-
-[[footer]]
