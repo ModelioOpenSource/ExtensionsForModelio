@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Introducing-Modelio-Java-Designer]]
 
 [[introducing-modelio-java-designer]]
@@ -51,6 +58,6 @@ Modelio Java Designer provides <<Javadesigner-_javadeveloper_choose_functional_m
 
 To use Modelio Java Designer, you need a <<Javadesigner-_javadeveloper_intro_gloss.adoc#,JDK>> 1.7 or later.
 
-*_Note:_* You must have a JDK. The JRE allows Java programs to be run, but does not allow them to be developed (compilation, documentation generation).
+*Note:* You must have a JDK. The JRE allows Java programs to be run, but does not allow them to be developed (compilation, documentation generation).
 
 [[footer]]

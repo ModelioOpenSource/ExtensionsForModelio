@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Modelio-Java-Designer-main-features]]
 
 [[modelio-java-designer-main-features]]
@@ -12,7 +19,7 @@ Java code generation consists of producing Java files for a model’s classes, u
 
 Modelio Java Designer has a default strategy for generating parameter and attribute declarations. It converts UML types into Java 5 types, ensuring modern code generation, based on the Java collections framework. Other translations can be implemented easily, using the Modelio Java Designer <<Javadesigner-_javadeveloper_customizing_java_generation_customization_file.adoc#,customization file>>.
 
-*_Note:_* Before actually generating, it may be necessary to specify that classes or packages are Java elements using <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,stereotypes>> or to annotate the model using <<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,tagged values>> and <<Javadesigner-_javadeveloper_generating_java_code_note_types.adoc#,notes>>.
+*Note:* Before actually generating, it may be necessary to specify that classes or packages are Java elements using <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,stereotypes>> or to annotate the model using <<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,tagged values>> and <<Javadesigner-_javadeveloper_generating_java_code_note_types.adoc#,notes>>.
 
 [[Generating-documentation]]
 

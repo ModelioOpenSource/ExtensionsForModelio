@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Overview-of-Java-code-generation]]
 
 [[overview-of-java-code-generation]]
@@ -10,22 +17,22 @@
 
 By default, types are generated with their short name (without namespacing). For example, the following diagram:
 
-image:images/Javadesigner-_javadeveloper_generating_java_code_overview_type_simple.png[image]
+image::images/Javadesigner-_javadeveloper_generating_java_code_overview_type_simple.png[image]
 
-will lead to the generation of the following code for the association of the “_Age_” role in the “_Person_” class :
+will lead to the generation of the following code for the association of the "_Age_" role in the "_Person_" class :
 
 ....
-1private Integer age;
+private Integer age;
 ....
 
 However, it remains possible to generate the association type with its full name by setting the <<Javadesigner-_javadeveloper_generating_java_code_tagged_value_types.adoc#,\{JavaFullName} tagged value>> on the navigable association. This way, the following diagram:
 
-image:images/Javadesigner-_javadeveloper_generating_java_code_overview_type_fullname.png[image]
+image::images/Javadesigner-_javadeveloper_generating_java_code_overview_type_fullname.png[image]
 
 will lead to the generation of this code :
 
 ....
-1private java.lang.Integer age;
+private java.lang.Integer age;
 ....
 
 The above rule applies to the generation of navigable associations, attributes, method parameters, generalizations and implementations.
@@ -42,11 +49,11 @@ This generation can be parameterized to a high level, using the following mechan
 [[defining-java-annotations]]
 === Defining Java annotations
 
-Java annotations are defined in the “Java annotation definition” window.
+Java annotations are defined in the "Java annotation definition" window.
 
-image:images/Javadesigner-_javadeveloper_generating_java_code_overview_annotations.png[image]
+image::images/Javadesigner-_javadeveloper_generating_java_code_overview_annotations.png[image]
 
-This window, accessible by launching the “Edit properties” command on a class <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,stereotyped JavaAnnotation>>, defines all options available on the annotation definition.
+This window, accessible by launching the "Edit properties" command on a class <<Javadesigner-_javadeveloper_generating_java_code_stereo_types.adoc#,stereotyped JavaAnnotation>>, defines all options available on the annotation definition.
 
 [cols=",",options="header",]
 |==================================================================================================================================

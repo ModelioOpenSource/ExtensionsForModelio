@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Managing-resources]]
 
 [[managing-resources]]
@@ -9,7 +16,7 @@ On compilation, the resource file is copied from the source directory to the cor
 
 On jar file creation, the resource file is integrated into the jar file, in the corresponding directory.
 
-image:images/Javadesigner-_javadeveloper_intro_managing_resources_fig3.png[image]
+image::images/Javadesigner-_javadeveloper_intro_managing_resources_fig3.png[image]
 
 Java resource files image:images/Javadesigner-_javadeveloper_intro_managing_resources_file.png[image]can be created on Java packages only. They are useful when modeling property files or images that are integrated directly into your packages.
 

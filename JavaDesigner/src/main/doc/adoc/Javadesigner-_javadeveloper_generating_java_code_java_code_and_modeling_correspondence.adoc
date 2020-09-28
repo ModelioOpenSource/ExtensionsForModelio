@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Java-code-and-modeling-correspondance]]
 
 [[java-code-and-modeling-correspondance]]
@@ -40,8 +47,8 @@ Listed below are the usual concepts for Java development, together with the way 
 |protected visibility |Protected value in the Visibility field on an operation.
 |private visibility |Private value in the Visibility field on an operation.
 |friendly visibility |No value in the Visibility field on an operation.
-|constructor |create stereotype on an operation.
-|finalize() method |destroy stereotype on an operation.
+|constructor |«create» stereotype on an operation.
+|finalize() method |«destroy» stereotype on an operation.
 |abstract |"Abstract" operation field.
 |static |"Class" operation field.
 |final |"Cannot be specialized" operation field.

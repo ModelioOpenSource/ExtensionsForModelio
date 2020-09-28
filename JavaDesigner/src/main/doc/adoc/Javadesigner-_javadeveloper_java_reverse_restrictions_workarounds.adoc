@@ -1,78 +1,91 @@
-[[Restrictions-and-workarounds]]
+// Disable all captions for figures.
+:!figure-caption:
 
-[[restrictions-and-workarounds]]
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 = Restrictions and workarounds
 
-* If the source file contains the sequence “ &# x5d;&# x5d;> ”, the sequence will not be reversed correctly. This string corresponds to the escape characters for the string “ &# x5d;&# x5d;> ” that indicates the end of a CDATA zone in XML. To avoid the incorrect replacement of “&# x5d;&# x5d;>” by “ &# x5d;&# x5d;> ”, use the following code: “&# x5d;”+“&# x5d;>”
-* When a type declaration cannot be expressed in Modelio, it is encapsulated in a \{JavaTypeExpr} tagged value and the attribute, association or parameter type gets the undefined value. This \{JavaTypeExpr} tagged value is not included in the signature of a method. Therefore, if an “m1” method is defined containing the only parameter which has a type that cannot be expressed (a JavaTypeExpr), the creation of a second “m1” method
+* If the source file contains the sequence " &# x5d;&# x5d;> ", the sequence will not be reversed correctly. This string corresponds to the escape characters for the string " &# x5d;&# x5d;> " that indicates the end of a CDATA zone in XML. To avoid the incorrect replacement of "&# x5d;&# x5d;>" by " &# x5d;&# x5d;> ", use the following code: "&# x5d;"+"&# x5d;>"
+* When a type declaration cannot be expressed in Modelio, it is encapsulated in a \{JavaTypeExpr} tagged value and the attribute, association or parameter type gets the undefined value. This \{JavaTypeExpr} tagged value is not included in the signature of a method. Therefore, if an "m1" method is defined containing the only parameter which has a type that cannot be expressed (a JavaTypeExpr), the creation of a second "m1" method
 
 with only one JavaTypeExpr parameter will not be accepted by Modelio. This situation, however, is very rare.
 
 * If a file does not contain a class with the same name as the file, the model is reversed correctly. However, during the next generation, the original name of the file is lost. To avoid this type of situation, make sure that the name of a file always corresponds to one of the classes it contains.
 * Certain formats for comments are not supported. The following constructions must be avoided:
 
-....
-1type  MyVariable = test((/*comment*/a+b)*(c+d));
-....
+[source,java,linenums]
+----
+type  MyVariable = test((/*comment*/a+b)*(c+d));
+----
 
-....
-1int MyVariable = input[/*comment*/0];
-....
+[source,java,linenums]
+----
+int MyVariable = input[/*comment*/0];
+----
 
-....
-1int[] MyAttribute /*comment*/;
-....
+[source,java,linenums]
+----
+int[] MyAttribute /*comment*/;
+----
 
-....
-1private static final String/*comment*/[] MyVariable =
-2{
-3...
-4};
-....
+[source,java,linenums]
+----
+private static final String/*comment*/[] MyVariable =
+{
+...
+};
+----
 
-....
-1private static final String [] MyVariable
-2/*comment*/= {
-3...
-4};
-....
+[source,java,linenums]
+----
+private static final String [] MyVariable
+/*comment*/= {
+...
+};
+----
 
-....
-1if (a == 10 && (/*comment*/
-2// comment
-3b>12
-4)){
-5...
-6}
-....
+[source,java,linenums]
+----
+if (a == 10 && (/*comment*/
+// comment
+b>12
+)){
+...
+}
+----
 
-....
-1public static final String
-2//comment
-3_URL_1_ = "http://www.modeliosoft.com",
-4//comment
-5_URL_2_= "http://www.modeliosoft.fr",
-6_URL_3_= "http://www.modeliosoft.fr";
-....
+[source,java,linenums]
+----
+public static final String
+//comment
+_URL_1_ = "https://www.modeliosoft.com",
+//comment
+_URL_2_= "https://www.modeliosoft.fr",
+_URL_3_= "http://www.modeliosoft.fr";
+----
 
-....
- 1public enum Week{
- 2_Monday_ /*comment*/,
- 3_Tuesday_
- 4//Comment
- 5, _Wednesday_,
- 6_Thursday_,
- 7//Comment
- 8_Friday_,
- 9/*Comment*/ _Saturday_,
-10_Sunday_
-....
+[source,java,linenums]
+----
+public enum Week{
+_Monday_ /*comment*/,
+_Tuesday_
+//Comment
+, _Wednesday_,
+_Thursday_,
+//Comment
+_Friday_,
+/*Comment*/ _Saturday_,
+_Sunday_
+----
 
-....
-1public void actionPerformed(ActionEvent e) {
-2...
-3}   //
-....
+[source,java,linenums]
+----
+public void actionPerformed(ActionEvent e) {
+...
+}   //
+----
 
 * When there is a single line comment at the end of file, the reverse command will fail. To make the reverse succeed, add a return character at the end of the comment.
 
@@ -80,17 +93,18 @@ Example:
 
 Replace:
 
-....
-1...
-2 } //comment<end of file>
-....
+[source,java,linenums]
+----
+...
+ } //comment<end of file>
+----
 
 with:
 
-....
-1...
-2} //comment<end of file><return>
-3<end of file>
-....
+[source,java,linenums]
+----
+...
+} //comment<end of file><return>
+<end of file>
+----
 
-[[footer]]

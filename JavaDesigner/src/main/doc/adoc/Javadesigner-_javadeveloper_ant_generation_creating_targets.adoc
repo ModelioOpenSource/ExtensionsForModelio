@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Creating-targets]]
 
 [[creating-targets]]
@@ -8,8 +15,8 @@
 [[creating-your-own-targets]]
 === Creating your own targets
 
-ANT generation creates a set of predefined targets. If you need to add a specific target, you will need to create an “AntTarget” note and write your own target in it. In this case, these parts will be generated at the end of build.xml file, between markers.
+ANT generation creates a set of predefined targets. If you need to add a specific target, you will need to create an "AntTarget" note and write your own target in it. In this case, these parts will be generated at the end of build.xml file, between markers.
 
-image:images/Javadesigner-_javadeveloper_ant_generation_creating_targets_JarFile.png[image]
+image::images/Javadesigner-_javadeveloper_ant_generation_creating_targets_JarFile.png[image]
 
 [[footer]]

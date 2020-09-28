@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Note-types-for-Java]]
 
 [[note-types-for-java]]
@@ -8,9 +15,9 @@
 [[overview]]
 === Overview
 
-Modelio Java Designer notes are used to complete the UML model with texts expressed in Java syntax. Usually, the internal processing of a UML method is entered in Java in a “JavaCode” type note associated to a method's implementation.
+Modelio Java Designer notes are used to complete the UML model with texts expressed in Java syntax. Usually, the internal processing of a UML method is entered in Java in a "JavaCode" type note associated to a method's implementation.
 
-*_Note:_* Certain notes can be added to certain model elements directly through the “Java” tab. For more information, please see “<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>”.
+*Note:* Certain notes can be added to certain model elements directly through the "Java" tab. For more information, please see "<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>".
 
 [[Type-of-notes-on-a-class]]
 

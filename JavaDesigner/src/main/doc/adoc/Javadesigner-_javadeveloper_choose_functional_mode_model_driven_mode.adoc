@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Model-driven-mode]]
 
 [[model-driven-mode]]
@@ -14,13 +21,13 @@ Marked zones are carefully inserted into the generated Java code, with each of t
 
 Once the zones have been completed, their contents can be transferred back into the model in the form of corresponding notes. This operation can be carried out as many times as possible.
 
-The model-driven engineering mode does not, therefore, involve reverse engineering. All “declarative” modifications, such as, for example, the addition of a new attribute, are in fact model modifications and as such must be carried out within Modelio, before subsequently regenerating the code.
+The model-driven engineering mode does not, therefore, involve reverse engineering. All "declarative" modifications, such as, for example, the addition of a new attribute, are in fact model modifications and as such must be carried out within Modelio, before subsequently regenerating the code.
 
 Certain mechanisms exist to guarantee that the regenerated code does not overwrite any modifications made outside Modelio.
 
 In this way, the entire application can be fine-tuned outside Modelio, as long as the model itself is not modified.
 
-image:images/Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode_modeldriven.png[image]
+image::images/Javadesigner-_javadeveloper_choose_functional_mode_model_driven_mode_modeldriven.png[image]
 
 [[Advantages-of-the-model-driven-engineering-mode]]
 

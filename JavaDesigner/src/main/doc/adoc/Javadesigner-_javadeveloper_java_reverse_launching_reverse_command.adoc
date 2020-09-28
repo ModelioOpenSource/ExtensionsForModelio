@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Launching-the-reverse-command]]
 
 [[launching-the-reverse-command]]
@@ -8,11 +15,11 @@
 [[reversing-existing-classes]]
 === Reversing existing classes
 
-Modelio Java Designer provides the user with the possibility of updating a class' modeling within a project. To do this, select “Update model from sources if necessary” on the class.
+Modelio Java Designer provides the user with the possibility of updating a class' modeling within a project. To do this, select "Update model from sources if necessary" on the class.
 
 This command can also be launched on a package, updating all its child classes in the model.
 
-image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_fig17.png[image]
+image::images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_fig17.png[image]
 
 [[Launching-the-reverse-wizard]]
 
@@ -22,9 +29,9 @@ image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_
 To launch the Reverse wizard, please carry out the following steps:
 
 * Right-click on the root package to display its context menu.
-* Select the command “Java Designer/Reverse Java application from sources” to reverse a source file into the project.
+* Select the command "Java Designer/Reverse Java application from sources" to reverse a source file into the project.
 
-image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_fig13.png[image]
+image::images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_fig13.png[image]
 
 [[Selecting-the-files-to-be-reversed]]
 
@@ -33,11 +40,11 @@ image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_
 
 In the first window of the wizard, the path to the application to be reversed into the project should be entered. The central part of the page updates to display the directory’s content, in order to select the elements to reverse into the project.
 
-image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse1.png[image]
+image::images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse1.png[image]
 
 Select the elements you wish to reverse by checking the associated tickbox.
 
-The “Granularity” field is used to select the desired reversal level.
+The "Granularity" field is used to select the desired reversal level.
 
 Three levels are available:
 
@@ -45,9 +52,9 @@ Three levels are available:
 * Complete structural
 * Complete reverse (this reverse level is only available when reversing from sources)
 
-For further details, please see “<<Javadesigner-_javadeveloper_java_reverse_three_reverse_levels.adoc#,Three reverse levels>>”.
+For further details, please see "<<Javadesigner-_javadeveloper_java_reverse_three_reverse_levels.adoc#,Three reverse levels>>".
 
-Click on the “Next” button to proceed to the next step.
+Click on the "Next" button to proceed to the next step.
 
 [[Reminder-of-the-projectrsquos-current-libraries]]
 
@@ -56,11 +63,11 @@ Click on the “Next” button to proceed to the next step.
 
 The next window of the Wizard shows the current classpath of your project, as defined in the java module’s parameter. It is not modifiable here, but through <<Classpath_and_external_classes.adoc#-Defining-classpath.html#,classpath edition>>.
 
-image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse2.png[image]
+image::images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse2.png[image]
 
 A jar can be ignored in the reverse by unchecking the associated tickbox.
 
-Click on the “Next” button to proceed to the next step.
+Click on the "Next" button to proceed to the next step.
 
 [[Selecting-the-application-libraries]]
 
@@ -69,16 +76,16 @@ Click on the “Next” button to proceed to the next step.
 
 The final window of the Wizard is used to specify the classpath of the application to be reversed.
 
-*_Note:_* All libraries specified here won’t be added to your project’s configuration, but will be considered <<Classpath_and_external_classes.adoc#,accessible>> during the reverse phase.
+*Note:* All libraries specified here won’t be added to your project’s configuration, but will be considered <<Classpath_and_external_classes.adoc#,accessible>> during the reverse phase.
 
-image:images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse3.png[image]
+image::images/Javadesigner-_javadeveloper_java_reverse_launching_reverse_command_reverse3.png[image]
 
-Use the “Add” and “Remove” buttons to add or remove libraries (jar files), and the arrows to reorder them.
+Use the "Add" and "Remove" buttons to add or remove libraries (jar files), and the arrows to reorder them.
 
-To go back to the previous step, click on the “Previous” button.
+To go back to the previous step, click on the "Previous" button.
 
-To launch the reverse operation, click on the “Reverse” button.
+To launch the reverse operation, click on the "Reverse" button.
 
-*_Note:_* A log file is automatically generated in the module’s installation directory (< Project_Path >/mda/JavaDesigner/reverse-log.html). This log file will be overwritten each time a new reverse is launched.
+*Note:* A log file is automatically generated in the module’s installation directory (< Project_Path >/mda/JavaDesigner/reverse-log.html). This log file will be overwritten each time a new reverse is launched.
 
 [[footer]]

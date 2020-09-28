@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Interface-implementation]]
 
 [[interface-implementation]]
@@ -17,15 +24,15 @@ When the name of a method in the interface changes, all the redefined methods in
 [[modifying-automatic-behavior]]
 === Modifying automatic behavior
 
-The “Automation” group of <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>> contains the different behaviors for the automatic update of classes implementing an interface.
+The "Automation" group of <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>> contains the different behaviors for the automatic update of classes implementing an interface.
 
-* The “Always” value does the update automatically each time an interface is modified.
-* The “Never” value deactivates the automatic model update.
-* The modules default value, “Ask”, making the following dialog box to appear after each update on an interface:
+* The "Always" value does the update automatically each time an interface is modified.
+* The "Never" value deactivates the automatic model update.
+* The modules default value, "Ask", making the following dialog box to appear after each update on an interface:
 
-image:images/Javadesigner-_javadeveloper_java_automation_interfaces_auto_update.png[image]
+image::images/Javadesigner-_javadeveloper_java_automation_interfaces_auto_update.png[image]
 
-If you choose “Yes”, the modifications made to the interface will be propagated to the implementing classes, whereas if you choose “No”, the model will remain unmodified. “All” indicates your choice will be keeped for every other modified interface.
+If you choose "Yes", the modifications made to the interface will be propagated to the implementing classes, whereas if you choose "No", the model will remain unmodified. "All" indicates your choice will be keeped for every other modified interface.
 
 [[Launching-the-update-manually]]
 
@@ -37,11 +44,11 @@ Automatic interface implementation can also be launched manually on model elemen
 On an interface:
 
 * Open the contextual menu
-* Launch the image:images/Javadesigner-_javadeveloper_java_automation_interfaces_updateclassesfrominterface.png[image]“Update classes implementing this interface” command
+* Launch the image:images/Javadesigner-_javadeveloper_java_automation_interfaces_updateclassesfrominterface.png[image]"Update classes implementing this interface" command
 
 On a class implementing an interface:
 
 * Open the contextual menu
-* Launch the image:images/Javadesigner-_javadeveloper_java_automation_interfaces_updateclassesfrominterface.png[image]“Update from implemented interface” command
+* Launch the image:images/Javadesigner-_javadeveloper_java_automation_interfaces_updateclassesfrominterface.png[image]"Update from implemented interface" command
 
 [[footer]]

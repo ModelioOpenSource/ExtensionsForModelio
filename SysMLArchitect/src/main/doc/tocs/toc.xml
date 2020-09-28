@@ -26,9 +26,6 @@
 	<topic comment="h2" href="" label="Expert Mode">
 		<topic comment="entry" href="html/Sysml-architect_expert-mode.html" label="SysML Architect in expert mode"></topic>
 	</topic>
-	<topic comment="h2" href="" label="SysML library">
-		<topic comment="entry" href="html/Sysml-architect_library.html" label="SysML model library"></topic>
-	</topic>
 	<topic comment="h2" href="" label="Example">
 		<topic comment="entry" href="html/Sysml-architect_example.html" label="SysML case study"></topic>
 	</topic>

@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Access-methods]]
 
 [[access-methods]]
@@ -8,9 +15,9 @@
 [[overview]]
 === Overview
 
-For each attribute or association in a class, a number of access methods to this data member can be automatically managed in the model. There are two groups of access methods, one for reading (“getX()” or “isX()”) and the other for modification (“setX()”, and so on).
+For each attribute or association in a class, a number of access methods to this data member can be automatically managed in the model. There are two groups of access methods, one for reading ("getX()" or "isX()") and the other for modification ("setX()", and so on).
 
-When creating an attribute, the default choice is “Read”, and an accessor is created. Therefore, according to the element access mode, the following cases are available:
+When creating an attribute, the default choice is "Read", and an accessor is created. Therefore, according to the element access mode, the following cases are available:
 
 [cols=",,,,",options="header",]
 |=============================================================================================================
@@ -28,13 +35,13 @@ set< AssociationRole >
 
 With Modelio Java Designer automation, consistency is permanently maintained between an attribute or association and its access methods. If the name of the attribute changes, all the access methods are updated.
 
-The default “JavaCode” note belonging to all automatically managed access methods contains a specific marker. Removing this marker deactivates the code update for this method, enabling to keep your specific code.
+The default "JavaCode" note belonging to all automatically managed access methods contains a specific marker. Removing this marker deactivates the code update for this method, enabling to keep your specific code.
 
 [[Customization]]
 
 [[customization]]
 ===== Customization
 
-The “Automation” group of <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>> contains the default visibility value for all created access methods, according to the attribute or association visibility. It is also possible to disable the access method management in your model.
+The "Automation" group of <<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>> contains the default visibility value for all created access methods, according to the attribute or association visibility. It is also possible to disable the access method management in your model.
 
 [[footer]]

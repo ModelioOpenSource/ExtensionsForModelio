@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Java-code-generation-functions]]
 
 [[java-code-generation-functions]]
@@ -12,7 +19,7 @@ Java source files can contain several classes. To generate several classes in th
 
 A Java source file containing several classes is generated in the model in the following way:
 
-image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_filegroup.png[image]
+image::images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_filegroup.png[image]
 
 The file’s main class is linked to the other files by an element import link stereotyped JavaFileGroup.
 
@@ -23,10 +30,12 @@ The file’s main class is linked to the other files by an element import link s
 
 Modelio Java Designer generation provides several features related to generation.
 
-image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_fig72_mod.gif[image]
+image::images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_fig72_mod.gif[image]
 
-* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_generate.png[image]: The “Generate” command will generate Java code for the class.
-* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_edit.png[image]: The “Edit” command will open an editor to modify the Java file content. When the editor is closed, the content of the file is automatically reversed.
-* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_update.png[image]: The “Update model” command will reverse the Java code for the class.
+*Keys:*
+
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_generate.png[image]: The "Generate" command will generate Java code for the class.
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_edit.png[image]: The "Edit" command will open an editor to modify the Java file content. When the editor is closed, the content of the file is automatically reversed.
+* image:images/Javadesigner-_javadeveloper_generating_java_code_java_code_generation_functions_update.png[image]: The "Update model" command will reverse the Java code for the class.
 
 [[footer]]

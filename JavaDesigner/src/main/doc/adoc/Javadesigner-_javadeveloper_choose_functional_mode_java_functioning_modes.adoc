@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Java-functioning-modes]]
 
 [[java-functioning-modes]]
@@ -11,7 +18,7 @@
 Two functioning modes are available with Modelio Java Designer:
 
 * Model-driven, which is based on the total generation of declarative code from the model itself. Application code (in other words, the programming of operations) is modeling through notes, or typing in marked zones. This mode does not concern reverse engineering.
-* Round-trip, combining reverse engineering and code generation. Code is generated in exactly the same way as with the model driven mode. The user can freely modify the code nearby in the generated code or work in his favorite IDE. The model is updated when the “Update Source” command is run.
+* Round-trip, combining reverse engineering and code generation. Code is generated in exactly the same way as with the model driven mode. The user can freely modify the code nearby in the generated code or work in his favorite IDE. The model is updated when the "Update Source" command is run.
 * Release, to generate the sources with no Modelio annotation.
 
 [[Configuring-the-functioning-mode]]
@@ -19,8 +26,8 @@ Two functioning modes are available with Modelio Java Designer:
 [[configuring-the-functioning-mode]]
 === Configuring the functioning mode
 
-The Java functioning mode is configured through the standard Modelio configuration interface, which is launched using the “Set module parameters” command. The generation mode is selected in the “Generation mode” field (as shown in the figure below).
+The Java functioning mode is configured through the standard Modelio configuration interface, which is launched using the "Set module parameters" command. The generation mode is selected in the "Generation mode" field (as shown in the figure below).
 
-image:images/Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes_param1.png[image]
+image::images/Javadesigner-_javadeveloper_choose_functional_mode_java_functioning_modes_param1.png[image]
 
 [[footer]]

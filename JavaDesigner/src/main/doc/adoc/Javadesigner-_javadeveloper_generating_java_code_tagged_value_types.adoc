@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Tagged-value-types-for-Java]]
 
 [[tagged-value-types-for-java]]
@@ -10,12 +17,12 @@
 
 The tagged values provided by Modelio Java Designer are designed to let you adapt Java semantics to a UML model, in order to generate all Java notions accurately. For example, the notion of native method in Java does not exist in UML. A \{JavaNative} tagged value on a UML operation enables you to specify this on a model.
 
-*_Note:_* Certain tagged values can be added to certain model elements directly through the “Java” tab. For more information, please see “<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>”.
+*Note:* Certain tagged values can be added to certain model elements directly through the "Java" tab. For more information, please see "<<Javadesigner-_javadeveloper_intro_java_designer_property_view.adoc#,Java Designer property view>>".
 
 [[Tagged-values-on-a-class]]
 
 [[tagged-values-on-a-class]]
-===== Tagged values on a class
+=== Tagged values on a class
 
 [cols=",,,",options="header",]
 |==========================================================================================================

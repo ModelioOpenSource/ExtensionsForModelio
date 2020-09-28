@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Java-documentation-generation-note-types]]
 
 [[java-documentation-generation-note-types]]
@@ -10,9 +17,9 @@
 
 Javadoc notes are used by Modelio Java Designer to enter information that will be included in Java documentation, at class, attribute, operation, operation parameter, operation return parameter and navigable association level.
 
-Javadoc notes can also be created on links stereotyped throw. A parameter allows the use of “description” type notes, as well as “Javadoc” type notes.
+Javadoc notes can also be created on links stereotyped throw. A parameter allows the use of "description" type notes, as well as "Javadoc" type notes.
 
-*_Note:_* Only the final Javadoc zone preceding the documented element is taken into account by the documentation generation operation.
+*Note:* Only the final Javadoc zone preceding the documented element is taken into account by the documentation generation operation.
 
 [cols=",",options="header",]
 |==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -25,6 +32,6 @@ Javadoc notes can also be created on links stereotyped throw. A parameter allows
 |a link stereotyped throw |for the link. Documentation generation options are used to specify whether or not you wish to generate this information in your application's source code. If you check the tickbox, the corresponding @throws marker will be generated in the Javadoc zone of the operation.
 |==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-*_Note:_* For further information on @param, @return, @throws and @see markers, please refer to the related Javadoc documentation provided by Sun.
+*Note:* For further information on @param, @return, @throws and @see markers, please refer to the related Javadoc documentation provided by Sun.
 
 [[footer]]

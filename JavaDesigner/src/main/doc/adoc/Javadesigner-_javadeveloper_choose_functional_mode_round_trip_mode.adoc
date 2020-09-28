@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Round-trip-mode]]
 
 [[round-trip-mode]]
@@ -16,7 +23,7 @@ Unlike the model-driven mode, the round-trip mode allows the model to be directl
 
 In the example shown in the figure below, the String type attribute appears in the model.
 
-image:images/Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode_roundtrip.png[image]
+image::images/Javadesigner-_javadeveloper_choose_functional_mode_round_trip_mode_roundtrip.png[image]
 
 [[Advantages-of-the-round-trip-engineering-mode]]
 
@@ -33,9 +40,9 @@ The main advantage of the round-trip mode is that modifications can be carried o
 The fundamental disadvantage is:
 
 * either that the code will very rapidly differ from the model
-* or that the model returned will be physical and will lose its “overview”
+* or that the model returned will be physical and will lose its "overview"
 * or a mix of the two previously described disadvantages
 
-*_Note:_* See section <<Javadesigner-_javadeveloper_java_reverse_updating_model.adoc#,updating the UML model>> for more information about the @objid annotation.
+*Note:* See section <<Javadesigner-_javadeveloper_java_reverse_updating_model.adoc#,updating the UML model>> for more information about the @objid annotation.
 
 [[footer]]

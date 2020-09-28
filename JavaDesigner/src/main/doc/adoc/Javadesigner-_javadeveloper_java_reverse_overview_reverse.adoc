@@ -1,3 +1,10 @@
+// Disable all captions for figures.
+:!figure-caption:
+
+// Hightlight code source and add the line number
+:source-highlighter: coderay
+:coderay-linenums-mode: table
+
 [[Overview-of-Java-Reverse]]
 
 [[overview-of-java-reverse]]
@@ -10,9 +17,9 @@
 
 Reversing an application or a part of an application consists of creating a project that represents the application. A Java application can be reversed from Java source files. Modelio will produce the best possible model.
 
-However, the reverse operation is not defined or scarcely defined for certain code constructions, either because they are not directly in tune with the UML norm, because they are very specific to Java, or simply because they are not recommended for an object-oriented approach. This introduces some restrictions in the reverse tools ability to retrieve some parts of the code in the modeling project. For more information on these restrictions, please see “<<Javadesigner-_javadeveloper_java_reverse_restrictions_workarounds.adoc#,Restrictions and workarounds>>”.
+However, the reverse operation is not defined or scarcely defined for certain code constructions, either because they are not directly in tune with the UML norm, because they are very specific to Java, or simply because they are not recommended for an object-oriented approach. This introduces some restrictions in the reverse tools ability to retrieve some parts of the code in the modeling project. For more information on these restrictions, please see "<<Javadesigner-_javadeveloper_java_reverse_restrictions_workarounds.adoc#,Restrictions and workarounds>>".
 
-*_Note:_* The reverse tool is compatible with JDK versions 1.5 and more recent.
+*Note:* The reverse tool is compatible with JDK versions 1.5 and more recent.
 
 [[Source-mode]]
 
@@ -23,7 +30,7 @@ This reverse mode is run from the application sources. Using this mode, it is po
 
 * The complete structure of the application to be reversed
 * The complete code of the classes and methods.
-* Some options make it possible to fit the quantity of retrieved elements to your needs. For more information, please see “<<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>”.
+* Some options make it possible to fit the quantity of retrieved elements to your needs. For more information, please see "<<Javadesigner-_javadeveloper_customizing_java_generation_parameters.adoc#,Modelio Java Designer parameters>>".
 
 [[Mixed-mode]]
 
