@@ -37,7 +37,6 @@ The modeling starts from the highest level of the industrial automation unit, by
 * <<Sysml-architect_example-arithmetic.adoc#,Modeling the arithmetic functions block>>
 * <<Sysml-architect_example-sequence.adoc#,Modeling the sequence diagram for Plant operation>>
 * <<Sysml-architect_example-strategy.adoc#,Modeling the control strategy action>>
-* <<Sysml-architect_example-requirements.adoc#,Modeling the system requirements>>
 
 [[References]]
 
