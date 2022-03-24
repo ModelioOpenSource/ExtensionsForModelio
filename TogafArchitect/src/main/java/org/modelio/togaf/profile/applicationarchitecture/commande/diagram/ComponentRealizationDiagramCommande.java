@@ -30,7 +30,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.diagram.tools.DefaultLinkTool;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -84,7 +84,7 @@ public class ComponentRealizationDiagramCommande extends DefaultLinkTool {
 	}
 
 	@Override
-	public void actionPerformed(IDiagramHandle representation, IDiagramGraphic graphic_source, IDiagramGraphic graphic_target, LinkRouterKind kind, ILinkPath path) {
+	public void actionPerformed(IDiagramHandle representation, IDiagramGraphic graphic_source, IDiagramGraphic graphic_target, LinkRouterKind kind, ILinkRoute path) {
 		IModelingSession session = TogafArchitectModule.getInstance().getModuleContext().getModelingSession();
 		try (ITransaction transaction = session.createTransaction("");) {
 
@@ -97,7 +97,7 @@ public class ComponentRealizationDiagramCommande extends DefaultLinkTool {
 			List<IDiagramGraphic> graph = representation.unmask(proxy.getElement(), 0, 0);
 			IDiagramLink link = (IDiagramLink) graph.get(0);
 			link.setRouterKind(kind);
-			link.setPath(path);
+			link.setRoute(path);
 			representation.save();
 
 			transaction.commit();

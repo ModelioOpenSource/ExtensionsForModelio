@@ -34,7 +34,7 @@ import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.tools.DefaultAttachedBoxTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
@@ -63,7 +63,7 @@ public class ProblemNoteDiagramCommand extends DefaultAttachedBoxTool {
 
     @objid ("5541ba41-5675-42e6-9f7d-c96ed42052bc")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg2, LinkRouterKind arg3, ILinkPath arg4, Point arg5) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg2, LinkRouterKind arg3, ILinkRoute arg4, Point arg5) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();                
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Problem Note"))){

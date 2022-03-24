@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -95,7 +95,7 @@ public class UMLGeneralizationInterfaceRealizationDiagramCommand extends Default
 
     @objid ("581414bb-0ada-4fa0-b084-75f9c7daa7af")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic originNode, IDiagramGraphic targetNode, LinkRouterKind routerType, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic originNode, IDiagramGraphic targetNode, LinkRouterKind routerType, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try (ITransaction transaction = session
                 .createTransaction(I18nMessageService.getString(
@@ -126,7 +126,7 @@ public class UMLGeneralizationInterfaceRealizationDiagramCommand extends Default
             for (IDiagramGraphic graphic : graphics) {
                 if (graphic instanceof IDiagramLink) {
                     IDiagramLink link = (IDiagramLink) graphic;
-                    link.setPath(path);
+                    link.setRoute(path);
                 }
             }
         

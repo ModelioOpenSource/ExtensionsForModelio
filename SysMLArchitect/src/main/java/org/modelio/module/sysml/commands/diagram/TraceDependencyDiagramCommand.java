@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -71,7 +71,7 @@ public class TraceDependencyDiagramCommand extends DefaultLinkTool {
 
     @objid ("0ce1b291-ca19-4ce6-8544-56339927bfb8")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Trace Dependency"))){
             ModelElement originElement = (ModelElement) origin.getElement();
@@ -85,7 +85,7 @@ public class TraceDependencyDiagramCommand extends DefaultLinkTool {
                 if (graphic.getElement().equals(dependency)){
                     IDiagramLink link = (IDiagramLink) graphic;
                     try {
-                        link.setPath (path);
+                        link.setRoute (path);
                     } catch (InvalidPointsPathException e) {
                         SysMLModule.logService.error(e);
                     } catch (InvalidSourcePointException e) {

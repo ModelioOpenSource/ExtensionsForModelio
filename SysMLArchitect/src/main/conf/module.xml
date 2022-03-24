@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.module.sysml.impl.SysMLModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="00bc42d0-0000-19fb-0000-000000000000" author="" image="" url="">
+<Module id="${project.name}" class="org.modelio.module.sysml.impl.SysMLModule" binaryversion="5.1.0" version="${project.version}" schema-level="2" uid="00bc42d0-0000-19fb-0000-000000000000" author="" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/org.modelio.documentation.sysml-${project.version}.jar"/>

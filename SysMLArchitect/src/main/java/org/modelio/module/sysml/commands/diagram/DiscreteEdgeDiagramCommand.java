@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -79,7 +79,7 @@ public class DiscreteEdgeDiagramCommand extends DefaultLinkTool {
 
     @objid ("0b316433-e355-4780-aa18-98b4e8368f6e")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Discrete Edge"))){
             ActivityNode originElement = (ActivityNode) origin.getElement();
@@ -92,7 +92,7 @@ public class DiscreteEdgeDiagramCommand extends DefaultLinkTool {
                 IDiagramLink link = (IDiagramLink) graphic;
                 if (link != null) {
                     try {
-                        link.setPath (path);
+                        link.setRoute (path);
                     } catch (InvalidPointsPathException e) {
                         SysMLModule.logService.error(e);
                     } catch (InvalidSourcePointException e) {

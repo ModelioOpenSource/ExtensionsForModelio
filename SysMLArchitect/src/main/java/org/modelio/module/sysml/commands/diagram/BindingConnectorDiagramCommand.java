@@ -35,7 +35,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -92,7 +92,7 @@ public class BindingConnectorDiagramCommand extends DefaultLinkTool {
 
     @objid ("a06bd41c-a753-45fb-8b46-1998797f5646")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Binding"))){
         
@@ -105,7 +105,7 @@ public class BindingConnectorDiagramCommand extends DefaultLinkTool {
                 if (graphic.getElement().equals(connector)){
                     IDiagramLink link = (IDiagramLink) graphic;
                     try {
-                        link.setPath (path);
+                        link.setRoute (path);
                     } catch (InvalidPointsPathException e) {
                         SysMLModule.logService.error(e);
                     } catch (InvalidSourcePointException e) {

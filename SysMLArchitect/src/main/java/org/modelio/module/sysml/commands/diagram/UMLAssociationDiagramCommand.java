@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -73,7 +73,7 @@ public class UMLAssociationDiagramCommand extends DefaultLinkTool {
 
     @objid ("3c1f251d-1302-4671-9d3d-3554c7e192c0")
     @Override
-    public void actionPerformed(final IDiagramHandle representation, final IDiagramGraphic arg1, final IDiagramGraphic arg2, final LinkRouterKind kind, final ILinkPath path) {
+    public void actionPerformed(final IDiagramHandle representation, final IDiagramGraphic arg1, final IDiagramGraphic arg2, final LinkRouterKind kind, final ILinkRoute path) {
         IModelingSession session =  SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
         try (ITransaction transaction = session.createTransaction(I18nMessageService.getString("Info.Session.Create", ""))) {
@@ -105,7 +105,7 @@ public class UMLAssociationDiagramCommand extends DefaultLinkTool {
             for (IDiagramGraphic graphic : graphics) {
                 if (graphic instanceof IDiagramLink) {
                     IDiagramLink link = (IDiagramLink) graphic;
-                    link.setPath(path);
+                    link.setRoute(path);
                 }
             }
         

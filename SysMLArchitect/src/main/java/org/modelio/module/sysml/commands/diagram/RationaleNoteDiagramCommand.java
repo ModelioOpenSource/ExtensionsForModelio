@@ -34,7 +34,7 @@ import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.tools.DefaultAttachedBoxTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
@@ -62,7 +62,7 @@ public class RationaleNoteDiagramCommand extends DefaultAttachedBoxTool {
 
     @objid ("0c80ff4c-03d6-4dca-9c07-638c5ce08b20")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, LinkRouterKind kind, ILinkPath path, Point point) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path, Point point) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Rational Note"))){
             ModelElement targetElement = (ModelElement) target.getElement();

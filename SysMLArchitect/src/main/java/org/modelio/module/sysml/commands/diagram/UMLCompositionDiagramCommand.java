@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -74,7 +74,7 @@ public class UMLCompositionDiagramCommand extends DefaultLinkTool {
 
     @objid ("322a517b-d44e-4f91-8c9f-22c0d4bbd436")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic source, IDiagramGraphic destination, LinkRouterKind kind, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic source, IDiagramGraphic destination, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
         
@@ -109,7 +109,7 @@ public class UMLCompositionDiagramCommand extends DefaultLinkTool {
             for (IDiagramGraphic graphic : graphics){
                 if (graphic instanceof IDiagramLink){
                     IDiagramLink link = (IDiagramLink) graphic;
-                    link.setPath(path);
+                    link.setRoute(path);
                 }
             }
         

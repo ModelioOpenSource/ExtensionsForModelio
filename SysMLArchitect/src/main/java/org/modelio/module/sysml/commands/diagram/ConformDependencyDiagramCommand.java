@@ -34,7 +34,7 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramLink;
 import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
-import org.modelio.api.modelio.diagram.ILinkPath;
+import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.InvalidDestinationPointException;
 import org.modelio.api.modelio.diagram.InvalidPointsPathException;
 import org.modelio.api.modelio.diagram.InvalidSourcePointException;
@@ -85,7 +85,7 @@ public class ConformDependencyDiagramCommand extends DefaultLinkTool {
 
     @objid ("66e3f33d-23bd-4d76-8c37-a6ff69d8f2ba")
     @Override
-    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkPath path) {
+    public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Conform"))){
         
@@ -98,7 +98,7 @@ public class ConformDependencyDiagramCommand extends DefaultLinkTool {
                 if (graphic.getElement().equals(dependency)){
                     IDiagramLink link = (IDiagramLink) graphic;
                     try {
-                        link.setPath (path);
+                        link.setRoute (path);
                     } catch (InvalidPointsPathException e) {
                         SysMLModule.logService.error(e);
                     } catch (InvalidSourcePointException e) {

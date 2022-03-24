@@ -5,7 +5,7 @@
 	<!-- definition -->
 	<groupId>org.modelio.module</groupId>
 	<artifactId>sysmlarchitect</artifactId>
-	<version>3.10.00</version>
+	<version>5.0.00</version>
 	<name>SysMLArchitect</name>
 	<description>SysML Architect is a Modelio extension, used to model SysML architectures.</description>
 
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.modelio</groupId>
 			<artifactId>MDAKit</artifactId>
-			<version>[4.1.0,4.2.0)</version>
+			<version>[5.1.0,5.2.0)</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.modelio</groupId>
 			<artifactId>org.modelio.documentation.sysml</artifactId>
-			<version>${project.version}</version>
+			<version>3.10.00</version>
 		</dependency>
 
 	</dependencies>
@@ -62,7 +62,7 @@
 			<plugin>
 				<groupId>org.modelio</groupId>
 				<artifactId>modelio-maven-plugin</artifactId>
-				<version>4.1.0.00</version>
+				<version>5.1.0.00</version>
 				<executions>
 					<execution>
 						<id>ModuleValidation</id>
