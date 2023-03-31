@@ -52,16 +52,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Problem Note
  * @author ebrosse
  */
-@objid ("9a40b6b8-a777-4573-b6e0-a1379c7d5b8c")
+
 public class ProblemNoteDiagramCommand extends DefaultAttachedBoxTool {
-    @objid ("c529872c-8c90-46e4-b505-5fcb2ff5bc97")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic targetNode) {
         MObject target = targetNode.getElement();
         return ((target instanceof ModelElement) && target.getStatus().isModifiable ()) ;
     }
 
-    @objid ("5541ba41-5675-42e6-9f7d-c96ed42052bc")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg2, LinkRouterKind arg3, ILinkRoute arg4, Point arg5) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -79,7 +79,7 @@ public class ProblemNoteDiagramCommand extends DefaultAttachedBoxTool {
         }
     }
 
-    @objid ("5f21d973-7953-427e-b957-78971d8692ff")
+    
     @Override
     public void actionPerformedInDiagram(IDiagramHandle arg0, Rectangle arg1) {
     }

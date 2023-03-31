@@ -50,17 +50,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an Item Flow
  * @author ebrosse
  */
-@objid ("ded488ae-1b65-4e98-97e4-55621a32d0b3")
+
 public class ItemFlowDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("d6323c28-e4c5-4052-b4e8-5e9552b0e078")
+    
     public ItemFlowDiagramCommand() {
         super();
     }
 
-    @objid ("e865434f-8782-495f-b0d7-47d4afa893fd")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic link) {
         MObject element = link.getElement();
@@ -69,7 +69,7 @@ public class ItemFlowDiagramCommand extends DefaultBoxTool {
                                                                                 || element instanceof ConnectorEnd));
     }
 
-    @objid ("e1ecdbe4-1ff3-4c08-afa4-035de57c0eaa")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg1, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

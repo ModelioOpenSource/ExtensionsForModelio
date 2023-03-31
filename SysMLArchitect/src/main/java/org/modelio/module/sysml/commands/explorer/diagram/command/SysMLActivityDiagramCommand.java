@@ -58,9 +58,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the creation of SysML activity diagram
  * @author ebrosse
  */
-@objid ("fea496b4-235d-4c81-825d-21ec3d2624be")
+
 public class SysMLActivityDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("6136a4f0-621e-4502-a9ad-1e657e8ffecc")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -80,7 +80,7 @@ public class SysMLActivityDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("82da9007-43f2-4586-aed3-f40dd5fa9a33")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

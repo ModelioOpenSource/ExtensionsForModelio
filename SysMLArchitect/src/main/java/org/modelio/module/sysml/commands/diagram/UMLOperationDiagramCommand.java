@@ -49,9 +49,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an SysML/UML Operation
  * @author ebrosse
  */
-@objid ("5fbae7cf-5235-4222-88b4-e55b2a861746")
+
 public class UMLOperationDiagramCommand extends DefaultBoxTool {
-    @objid ("d7440ce4-e68f-43cc-a884-8ae4695ffed5")
+    
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         if ((arg1 != null) && (arg1.getElement() != null)){ 
@@ -63,7 +63,7 @@ public class UMLOperationDiagramCommand extends DefaultBoxTool {
         return false;
     }
 
-    @objid ("e9bd0769-e776-4d63-9024-853c8b15f783")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg1, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

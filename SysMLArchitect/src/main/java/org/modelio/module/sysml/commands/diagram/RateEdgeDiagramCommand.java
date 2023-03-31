@@ -52,9 +52,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Rate Edge
  * @author ebrosse
  */
-@objid ("52d59f37-1436-4f7d-ba2d-5d43c47c75e6")
+
 public class RateEdgeDiagramCommand extends DefaultLinkTool {
-    @objid ("0d00be4c-919a-4d9e-88c5-6fd8d2a51185")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -62,14 +62,14 @@ public class RateEdgeDiagramCommand extends DefaultLinkTool {
                                                                         &&(element instanceof ActivityNode));
     }
 
-    @objid ("23420c3e-1804-4b26-b13e-092e079111da")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (element instanceof ActivityNode);
     }
 
-    @objid ("c8a14d77-a023-4437-8e65-00a1886b4db7")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

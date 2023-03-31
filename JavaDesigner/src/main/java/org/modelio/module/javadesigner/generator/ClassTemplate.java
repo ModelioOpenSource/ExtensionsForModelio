@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.behavior.commonBehaviors.Signal;

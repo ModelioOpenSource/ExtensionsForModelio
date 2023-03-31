@@ -42,16 +42,16 @@ import org.modelio.module.sysml.utils.Utils;
  * This class handles the properties associated to the Allocated stereotype
  * @author ebrosse
  */
-@objid ("66d0d14c-ae68-4b5c-ab1f-62388011746b")
+
 public class AllocatedPropertyPage implements IPropertyContent {
     /**
      * Default constructor
      */
-    @objid ("8832a2c0-e99d-4364-9067-81b40a3a0052")
+    
     public AllocatedPropertyPage() {
     }
 
-    @objid ("a6607e50-ba88-4f04-9796-ab79d506a349")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         /*
@@ -77,7 +77,7 @@ public class AllocatedPropertyPage implements IPropertyContent {
             table.addConsultProperty(I18nMessageService.getString("Ui.Allocated.To"), valuetab);
     }
 
-    @objid ("6df173d4-0083-410d-b7f2-9970f59b0b02")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         // Nothing Todo

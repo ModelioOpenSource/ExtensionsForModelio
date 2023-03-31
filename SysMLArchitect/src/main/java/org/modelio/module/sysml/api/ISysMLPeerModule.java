@@ -34,9 +34,9 @@ import org.modelio.api.module.IPeerModule;
 /**
  * @author ebrosse
  */
-@objid ("2c59b75c-6480-48b9-a2fa-ac88acb9753b")
+
 public interface ISysMLPeerModule extends IPeerModule {
-    @objid ("80ec3b88-e143-4459-984f-26cbb0c2c3fa")
+    
     public static final String MODULE_NAME = "SysMLArchitect";
 
 }

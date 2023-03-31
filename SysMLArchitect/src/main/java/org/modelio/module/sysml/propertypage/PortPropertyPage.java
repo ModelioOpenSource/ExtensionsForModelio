@@ -38,17 +38,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the Port
  * @author ebrosse
  */
-@objid ("fc9da517-e30d-4fff-a3b6-1ab3fb3cf819")
+
 public class PortPropertyPage implements IPropertyContent {
     /**
      * Constructor PinPropertyPage
      * @author ebrosse
      */
-    @objid ("be36d968-e589-423a-b0ac-184b6e880609")
+    
     public PortPropertyPage() {
     }
 
-    @objid ("dcb4d18e-ac18-4195-9f3d-463a9f48d284")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -56,7 +56,7 @@ public class PortPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("96101376-69c3-46c0-9228-09dfa5303686")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         table.addProperty(SysMLResourcesManager.getInstance().getPropertyName("Port_IsConjugated"), ((Port) element).isIsConjugated());

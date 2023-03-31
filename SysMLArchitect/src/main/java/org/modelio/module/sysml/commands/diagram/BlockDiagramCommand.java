@@ -49,17 +49,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a SysMl Block
  * @author ebrosse
  */
-@objid ("e41da0ba-1408-4b43-81d1-9af0797a33f3")
+
 public class BlockDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("6e56a8c9-9a28-425d-a812-1212d31c1485")
+    
     public BlockDiagramCommand() {
         super();
     }
 
-    @objid ("74aba253-7449-4519-b6cf-e569da24b00a")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -70,7 +70,7 @@ public class BlockDiagramCommand extends DefaultBoxTool {
         return CommandExpert.acceptBlock(element);
     }
 
-    @objid ("58b892c8-54a2-46b2-b0e6-72f8ca141e97")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

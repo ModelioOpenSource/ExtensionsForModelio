@@ -46,23 +46,23 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("1ff83e3b-889c-4d12-aebe-f6c501eefdd2")
+
 public class ValueTypePropertyPage implements IPropertyContent {
-    @objid ("0068e385-695f-4d7d-bfac-e2f6e27a800b")
+    
     private static List<MObject> _quantityKinds = null;
 
-    @objid ("05b6271c-28a3-416e-98ce-ac805b3ff3e8")
+    
     private static List<MObject> _units = null;
 
     /**
      * Constructor ValueTypePropertyPage
      * @author ebrosse
      */
-    @objid ("d4fcc910-9d15-4d91-aeb3-236a3681b47c")
+    
     public ValueTypePropertyPage() {
     }
 
-    @objid ("1685e35e-9f72-4608-b8ce-3e32820bc70e")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         //Quantity Kind
@@ -97,7 +97,7 @@ public class ValueTypePropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("7b5813ef-d3dc-4cd0-9b8e-f8834c53ed87")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         //Quantity Kind

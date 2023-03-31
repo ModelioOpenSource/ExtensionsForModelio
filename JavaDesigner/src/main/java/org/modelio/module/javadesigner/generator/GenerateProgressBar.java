@@ -11,13 +11,13 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.IModule;
-import org.modelio.gproject.gproject.GProject;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.statik.Component;
 import org.modelio.metamodel.uml.statik.NameSpace;
@@ -25,10 +25,10 @@ import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.module.javadesigner.api.CustomException;
 import org.modelio.module.javadesigner.api.IJavaDesignerPeerModule;
 import org.modelio.module.javadesigner.i18n.Messages;
+import org.modelio.module.javadesigner.impl.JavaDesignerModule;
 import org.modelio.module.javadesigner.progress.ProgressBar;
 import org.modelio.module.javadesigner.utils.JavaDesignerUtils;
-import org.modelio.vcore.session.api.ICoreSession;
-import org.modelio.vcore.session.api.transactions.ITransaction;
+
 
 public class GenerateProgressBar extends ProgressBar implements IRunnableWithProgress {
 	private Collection<NameSpace> elementsToGenerate;
@@ -101,10 +101,9 @@ public class GenerateProgressBar extends ProgressBar implements IRunnableWithPro
 				Display.getDefault().asyncExec(new Runnable() {
 					@Override
 					public void run() {
-						ICoreSession coreSession = GProject.getProject(filesToMove.get(0).element).getSession();
-						try (ITransaction t = coreSession.getTransactionSupport().createTransaction("Update generation dates")) {
-							t.disableUndo();
-
+					    IModelingSession session = JavaDesignerModule.getInstance().getModuleContext().getModelingSession();
+					//	ICoreSession coreSession = GProject.getProject(filesToMove.get(0).element).getSession();
+						try (ITransaction t = session.createTransaction("Update generation dates")) {
 							Set<Package> generatedPackages = new HashSet<>();
 
 							for (JavaMoveFileStruct tempStruct : filesToMove) {

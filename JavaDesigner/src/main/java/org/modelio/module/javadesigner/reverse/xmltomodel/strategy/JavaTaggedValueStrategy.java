@@ -2,9 +2,9 @@ package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 
 import java.util.Collections;
 import java.util.List;
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
-import com.modelio.module.xmlreverse.model.JaxbTaggedValue;
-import com.modelio.module.xmlreverse.strategy.TaggedValueStrategy;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbTaggedValue;
+import org.modelio.module.javadesigner.xmlreverse.strategy.TaggedValueStrategy;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Note;

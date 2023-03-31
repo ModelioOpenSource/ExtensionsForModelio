@@ -48,24 +48,24 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of constraint property
  * @author ebrosse
  */
-@objid ("70a3cf77-ed88-41b6-9c39-df56bc77c9e5")
+
 public class ConstraintPropertyDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("45b75929-6ee5-4747-b31e-53aebfec3297")
+    
     public ConstraintPropertyDiagramCommand() {
         super();
     }
 
-    @objid ("21de99fe-ef8c-4976-a6dd-739791af6f8b")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (CommandExpert.acceptConstraintProperty(element));
     }
 
-    @objid ("bc341020-2942-4186-b0b6-7d54b5a9a8a0")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

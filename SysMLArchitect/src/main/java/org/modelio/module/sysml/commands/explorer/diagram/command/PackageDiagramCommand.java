@@ -53,9 +53,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("472a2dbc-c244-4696-987f-1a515cfc6bdc")
+
 public class PackageDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("cacbfde1-a3f6-492b-b597-d3d4b9e3c4b3")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -93,7 +93,7 @@ public class PackageDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("8e670732-759b-41ab-9c6c-42e8489a688f")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

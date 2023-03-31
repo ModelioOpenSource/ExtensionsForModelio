@@ -56,9 +56,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the creation of SysML parametric diagram
  * @author ebrosse
  */
-@objid ("b0b5cc3f-d953-4ef0-a68e-114bb8a06200")
+
 public class ParametricDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("e7d44b58-9d4e-42d3-9955-df1d600ae6fa")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -106,7 +106,7 @@ public class ParametricDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("baf4b556-d523-4feb-9497-55863a74e260")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

@@ -20,9 +20,9 @@ import org.modelio.module.sysml.utils.ISysMLCustomizerPredefinedField;
  * This class handles the palette configuration of SysML parametric diagram
  * @author ebrosse
  */
-@objid ("3f9340d8-a0a5-49f0-9eeb-479de83afe43")
+
 public class ParametricDiagramCustomizer extends SysMLDiagramCustomizer implements IDiagramCustomizer {
-    @objid ("2c4fb794-0269-403f-a571-e4a12f9a7dba")
+    
     @Override
     public void fillPalette(PaletteRoot paletteRoot) {
         IDiagramService toolRegistry = SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService();
@@ -41,7 +41,7 @@ public class ParametricDiagramCustomizer extends SysMLDiagramCustomizer implemen
         paletteRoot.add(this.createDefaultFreeDrawingGroup(toolRegistry));
     }
 
-    @objid ("82a7780a-d179-49b2-ba9c-d688c357949c")
+    
     private PaletteEntry createInstanceGroup(final IDiagramService toolRegistry) {
         final PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("SysMLPaletteGroup.Instance"), null);
         
@@ -60,18 +60,18 @@ public class ParametricDiagramCustomizer extends SysMLDiagramCustomizer implemen
         return group;
     }
 
-    @objid ("9c3f4109-5ea4-4334-90d5-102e662c6906")
+    
     @Override
     public boolean keepBasePalette() {
         return false;
     }
 
-    @objid ("b3aa0851-47b7-4d34-b5a7-362a51c3b065")
+    
     @Override
     public void initialize(IModule module, List<org.modelio.api.modelio.diagram.tools.PaletteEntry> tools, Map<String, String> hParameters, boolean keepBasePalette) {
     }
 
-    @objid ("8273585b-299f-4e94-bfa2-3cfe65573dc9")
+    
     @Override
     public Map<String, String> getParameters() {
         return null;

@@ -1,9 +1,9 @@
 package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
-import com.modelio.module.xmlreverse.IReportWriter;
-import com.modelio.module.xmlreverse.model.JaxbTemplateParameter;
-import com.modelio.module.xmlreverse.strategy.TemplateParameterStrategy;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbTemplateParameter;
+import org.modelio.module.javadesigner.xmlreverse.strategy.TemplateParameterStrategy;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.statik.TemplateParameter;
 import org.modelio.module.javadesigner.api.IJavaDesignerPeerModule;

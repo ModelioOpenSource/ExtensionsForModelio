@@ -42,17 +42,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the flow port stereotype
  * @author ebrosse
  */
-@objid ("e19da474-e8f7-475e-ac04-47f9fded6576")
+
 public class FlowPortPropertyPage implements IPropertyContent {
     /**
      * Constructor FlowPortPropertyPage
      * @author ebrosse
      */
-    @objid ("858c60c5-dd10-4fe4-8368-fc2a4400ef61")
+    
     public FlowPortPropertyPage() {
     }
 
-    @objid ("7811d2d3-6abc-431d-8058-4b36fb68cb0c")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         //Direction
@@ -78,7 +78,7 @@ public class FlowPortPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("681a7077-eabd-4317-91e9-e5825ae9b4d1")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         SysMLResourcesManager sysMLResources = SysMLResourcesManager.getInstance();

@@ -49,9 +49,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a ValueType
  * @author ebrosse
  */
-@objid ("50409642-4c0c-4e6c-a7f8-26360ea9a47d")
+
 public class ValueTypeDiagramCommand extends DefaultBoxTool {
-    @objid ("e945f030-c1f0-4020-bb5e-237879e330a5")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -63,7 +63,7 @@ public class ValueTypeDiagramCommand extends DefaultBoxTool {
                                                                         &&(element instanceof Package)));
     }
 
-    @objid ("6db4e938-cc25-45d7-8f85-a9bf28637d9e")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

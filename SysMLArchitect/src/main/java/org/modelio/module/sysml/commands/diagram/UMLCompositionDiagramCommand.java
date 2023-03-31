@@ -54,9 +54,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an UML/SysML Composition
  * @author ebrosse
  */
-@objid ("5d620a0f-7455-4a29-b209-7b906299e627")
+
 public class UMLCompositionDiagramCommand extends DefaultLinkTool {
-    @objid ("15feded6-d80c-4837-a067-bee556a5e67e")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         if ((arg1 != null) && (arg1.getElement() != null)){
@@ -66,13 +66,13 @@ public class UMLCompositionDiagramCommand extends DefaultLinkTool {
         return false;
     }
 
-    @objid ("92480981-5ec9-4ecf-a9c2-ff4cf61c5366")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle arg0, IDiagramGraphic arg1, IDiagramGraphic arg2) {
         return ((arg2 != null) && (arg2.getElement() != null) && (arg2.getElement() instanceof Classifier));
     }
 
-    @objid ("322a517b-d44e-4f91-8c9f-22c0d4bbd436")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic source, IDiagramGraphic destination, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

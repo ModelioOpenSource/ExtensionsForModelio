@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class filters SysML view point
  * @author ebrosse
  */
-@objid ("ca6529eb-65f9-498d-8ec6-e238deeb875f")
+
 public class ViewpointFilter implements IObjectFilter {
     /**
      * Method isABlock
@@ -49,12 +49,12 @@ public class ViewpointFilter implements IObjectFilter {
      * 
      * @return true if the given MObject is a SysML view point
      */
-    @objid ("96754335-caee-41b4-8896-cd98aa3f59fc")
+    
     public static boolean isAViewpoint(MObject element) {
         return ((element instanceof Class) && ((ModelElement) element).isStereotyped(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.VIEWPOINT));
     }
 
-    @objid ("725a1f8a-9534-463d-b2f3-1fc8558c5cad")
+    
     @Override
     public boolean accept(MObject element) {
         return isAViewpoint (element);

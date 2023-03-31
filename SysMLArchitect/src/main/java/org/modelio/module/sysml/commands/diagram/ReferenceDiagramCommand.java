@@ -49,9 +49,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an SysML/UML Attribute
  * @author ebrosse
  */
-@objid ("7151dbfc-8ef3-47ed-9c35-5898dd558395")
+
 public class ReferenceDiagramCommand extends DefaultBoxTool {
-    @objid ("825d7081-b21f-4c54-928b-ae36fe501e10")
+    
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         if ((arg1 != null) && (arg1.getElement() != null)){ 
@@ -63,7 +63,7 @@ public class ReferenceDiagramCommand extends DefaultBoxTool {
         return false;
     }
 
-    @objid ("72543e18-98ff-4c6e-8090-009898ac432c")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg1, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

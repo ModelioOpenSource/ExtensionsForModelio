@@ -45,20 +45,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the properties associated to the View stereotype
  * @author ebrosse
  */
-@objid ("04196877-9be3-4028-820f-98ffac132728")
+
 public class ViewPropertyPage implements IPropertyContent {
-    @objid ("d26b4ac0-a7da-4b98-8342-cdfd22e7df53")
+    
     private static List<MObject> _viewpoints = null;
 
     /**
      * Constructor ViewPropertyPage
      * @author ebrosse
      */
-    @objid ("042d3cce-42de-41ae-9d70-2cfd4fa0e8d9")
+    
     public ViewPropertyPage() {
     }
 
-    @objid ("09453224-71e9-46ea-8484-2a9008cb9e60")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -75,7 +75,7 @@ public class ViewPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("a65cd57d-7d7a-4ed7-b674-db51ea3e5f34")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.CONFORM, element);

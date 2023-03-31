@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.Utils;
  * This class handles the properties common to all SysML stereotypes
  * @author ebrosse
  */
-@objid ("51ddb891-77b7-4aa5-b1f4-f4a4086b13ec")
+
 public class CommonPropertyPage implements IPropertyContent {
     /**
      * Constructor CommonPropertyPage
      * @author ebrosse
      */
-    @objid ("7f608111-53b0-4f3f-81fb-4e1694d0d1a5")
+    
     public CommonPropertyPage() {
     }
 
-    @objid ("b4b8d8a8-c54b-40b0-9cb9-e1b100bb1268")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         /*
@@ -78,7 +78,7 @@ public class CommonPropertyPage implements IPropertyContent {
             table.addConsultProperty(I18nMessageService.getString("Ui.Trace.To"), valuetab);
     }
 
-    @objid ("d185fc0b-9730-4101-8150-1320d0b3eb72")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         // Nothing Todo

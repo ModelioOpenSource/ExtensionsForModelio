@@ -54,9 +54,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an UML/SysML Generalization
  * @author ebrosse
  */
-@objid ("4b2c0e2f-d712-4628-b5be-66a53ca378e1")
+
 public class UMLGeneralizationDiagramCommand extends DefaultLinkTool {
-    @objid ("610890e6-1957-46a7-91b3-55d6e2b2e53d")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle arg0, IDiagramGraphic targetNode) {
         if ((targetNode != null) && (targetNode.getElement() != null)){
@@ -83,7 +83,7 @@ public class UMLGeneralizationDiagramCommand extends DefaultLinkTool {
      * @param targetNode the graphic the is below the mouse ponter.
      * @return an InteractionStatus that represents the result of the acceptSecondElement method.
      */
-    @objid ("2be1e38a-26df-456f-8078-3210d9120c74")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle diagramRepresentation, IDiagramGraphic originNode, IDiagramGraphic targetNode) {
         ModelElement target = (ModelElement) targetNode.getElement();  
@@ -112,7 +112,7 @@ public class UMLGeneralizationDiagramCommand extends DefaultLinkTool {
         return false;
     }
 
-    @objid ("066c682f-2ffc-436d-83fa-8cc497c62547")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic originNode, IDiagramGraphic targetNode, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

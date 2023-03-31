@@ -62,9 +62,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * 
  * @author ebrosse
  */
-@objid ("0f316b78-9b9b-4758-9ef9-0567dd4f7032")
+
 public class PackageDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("c70fe35a-b643-4f7e-a2fb-1a8bcb918b0f")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -102,7 +102,7 @@ public class PackageDiagramWizard extends AbstractDiagramWizardContributor {
         return diagram;
     }
 
-    @objid ("230367ce-1ee8-43f7-9f8a-484e8c11d5cf")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -113,7 +113,7 @@ public class PackageDiagramWizard extends AbstractDiagramWizardContributor {
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("d80daf43-fa9b-4525-8743-dbf2abe22837")
+    
     public PackageDiagramWizard() {
         super();
         
@@ -129,13 +129,13 @@ public class PackageDiagramWizard extends AbstractDiagramWizardContributor {
                 ));
     }
 
-    @objid ("8a34bdec-3850-4e28-af79-b7197dc8b7b7")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return true;
     }
 
-    @objid ("379c96f4-dfda-446c-8730-d23981af774d")
+    
     @Override
     public void dispose() {
         // Nothing to do

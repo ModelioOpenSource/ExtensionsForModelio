@@ -48,9 +48,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML flow properties in the model explorer
  * @author ebrosse
  */
-@objid ("855e4d70-09e1-4a75-bb0d-123e6020c0b5")
+
 public class FlowPropertyExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("54922042-e1ed-420e-a743-331ffec2bcbf")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -64,7 +64,7 @@ public class FlowPropertyExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("51685c97-5801-4050-90ba-751fae7ad3e0")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ( (selectedElements != null)
@@ -84,7 +84,7 @@ public class FlowPropertyExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("2af82dd1-b3d7-4870-bf05-6b16f30df477")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         return ((selectedElements.size() > 0)

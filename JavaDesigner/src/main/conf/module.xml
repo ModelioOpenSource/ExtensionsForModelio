@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.module.javadesigner.impl.JavaDesignerModule" binaryversion="5.1.00" version="${project.version}" schema-level="2" uid="003800a8-0000-022e-0000-000000000000">
+<Module id="${project.name}" class="org.modelio.module.javadesigner.impl.JavaDesignerModule" binaryversion="5.3.00" version="${project.version}" schema-level="2" uid="003800a8-0000-022e-0000-000000000000">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/org.modelio.documentation.javadesigner-${project.version}.jar"/>
-        <PathEntry path="lib/xmlreverse-3.4.03.jar"/>
+        <PathEntry path="lib/xmlreverse-3.5.00.jar"/>
+        <PathEntry path="lib/jaxb-api-2.4.0-b180830.0359.jar"/>
+        <PathEntry path="lib/javax.activation-api-1.2.0.jar"/>
+        <PathEntry path="lib/stax-api-1.0-2.jar"/>
         <PathEntry path="lib/javatuples-1.2.jar"/>
         <PathEntry path="lib/antlr-runtime-3.4.1.jar"/>
+        <PathEntry path="lib/jaxb-api-2.2.2.jar"/>
+        <PathEntry path="lib/activation-1.1.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="25801104-0000-1069-0000-000000000000" id="JavaExtensions">

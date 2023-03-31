@@ -45,20 +45,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the properties associated to the ItemFlow stereotype
  * @author ebrosse
  */
-@objid ("214e4c34-136a-4216-b92f-a43e1a479d17")
+
 public class ItemFlowPropertyPage implements IPropertyContent {
-    @objid ("eca98168-15d4-4554-9904-0b52631a9298")
+    
     private static List<MObject> _itemproperties = null;
 
     /**
      * Constructor ItemFlowPropertyPage
      * @author ebrosse
      */
-    @objid ("ee9cb6bf-149c-4f2c-b2ba-e25d56f0a4c3")
+    
     public ItemFlowPropertyPage() {
     }
 
-    @objid ("b9b12fbf-9a90-450b-a55e-f61b206a0da8")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -75,7 +75,7 @@ public class ItemFlowPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("a050f80c-849e-401b-8857-577720330738")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.ITEMPROPERTY, element);

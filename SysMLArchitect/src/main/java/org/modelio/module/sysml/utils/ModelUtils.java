@@ -59,7 +59,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 /**
  * @author Tony Marchand This class provides services on model. At the moment, services are about tagged values.
  */
-@objid ("c98c4981-c6fe-4a06-89ca-6e7daa7678e8")
+
 public class ModelUtils {
     /**
      * This operation returns the first tagged value with the &lt;tagName&gt; name on the &lt;element&gt; ModelElement.
@@ -69,7 +69,7 @@ public class ModelUtils {
      * @param tagName String containing the tagged value name
      * @return The TaggedValue
      */
-    @objid ("7e417d2c-009d-4c63-86cc-49020a7442cd")
+    
     public static TaggedValue getFirstTaggedValue(ModelElement element, String tagName) {
         TaggedValue tag = null;
         int i;
@@ -92,7 +92,7 @@ public class ModelUtils {
      * @param tagName String containing the tagged value name
      * @return The parameter values
      */
-    @objid ("4e584430-2e49-467e-a3e9-1c5cd79280c3")
+    
     public static ArrayList<String> getParametersOfTag(ModelElement element, String tagName) {
         List<TaggedValue> tags = element.getTag();
         ArrayList<String> parameters = null;
@@ -117,7 +117,7 @@ public class ModelUtils {
      * @param tagName String containing the tagged value name
      * @return The value of the first tag parameter
      */
-    @objid ("a53e4797-81d4-482f-a764-b9804fac92ff")
+    
     public static String getProperty(ModelElement element, String tagName) {
         TaggedValue tag = getFirstTaggedValue(element, tagName);
         String value;
@@ -134,7 +134,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("60e5b461-b630-462e-b447-34f48619077b")
+    
     public static NameSpace getNearestNameSpace(ModelElement source) {
         ModelElement owner = source;
         
@@ -158,7 +158,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("19fd6e45-4698-4507-91a1-ea202c42d180")
+    
     public static void addValue(String modulename, String name, String values, ModelElement element) {
         // DON'T place Transition HERE
         boolean exist = false;
@@ -209,7 +209,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("2859dbba-2d61-4628-904d-b5c554645b8f")
+    
     public static String getTaggedValue(String tagtype, ModelElement element) {
         for (TaggedValue tag : element.getTag()) {
             TagType type = tag.getDefinition();
@@ -233,7 +233,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("6e44f1b3-b1cb-4ffa-8b1a-53601a8099be")
+    
     public static void addValue(String modulename, String name, String value, ModelElement element, ModelElement related, String modulelink, String stereotypeLink) {
         // DON'T place Transition HERE
         
@@ -276,7 +276,7 @@ public class ModelUtils {
      * 
      * @param _element @return
      */
-    @objid ("522b4d73-046f-44e3-9cee-35d8d7af605b")
+    
     public static boolean hasTaggedValue(String tagtype, ModelElement _element) {
         List<TaggedValue> tagElements = _element.getTag();
         Iterator<TaggedValue> itChildren = tagElements.iterator();
@@ -299,7 +299,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("cfe4f93a-f764-414f-913d-c00134b467e6")
+    
     public static void setTaggedValue(String name, ModelElement elt, String value) {
         List<TaggedValue> tagElements = elt.getTag();
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
@@ -335,7 +335,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("7464086c-3b04-4192-b676-defd0632a1b3")
+    
     public static void setTaggedValue(TaggedValue tvFound, ModelElement elt, String value, ModelElement related, String modulelink, String stereotypeLink) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         
@@ -371,7 +371,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("8499bc6d-983a-4435-b989-428f9509c8aa")
+    
     public static List<MObject> searchElement(java.lang.Class<? extends MObject> extendedClass, String modulename, String stereotype) {
         // initialize the result
         List<MObject> result = new ArrayList<>();
@@ -394,7 +394,7 @@ public class ModelUtils {
      * Method updateSource
      * @author ebrosse
      */
-    @objid ("165e7abd-efda-4e2f-9813-f3a862840ff5")
+    
     public static void updateSource(ModelElement element, String tagtypeName, String modulename, String linkName) {
         try {
         
@@ -452,7 +452,7 @@ public class ModelUtils {
      * @param element : element source of stereotyped dependencies
      * @param stereotypelink : stereotype name of the dependency
      */
-    @objid ("d66041f8-0f8f-4236-9de3-bf3226ab4621")
+    
     public static void removeStereotypedLink(ModelElement element, String stereotypelink) {
         for (Dependency existingLinks : element.getDependsOnDependency()) {
             if (existingLinks.isStereotyped(ISysMLPeerModule.MODULE_NAME, stereotypelink)) {
@@ -466,7 +466,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("1274094e-4920-47a4-84fd-e0395e6ddf3e")
+    
     public static void updateTarget(ModelElement element, String modulename, String tagtypeName, String modulelinkname, String linkName) {
         if (element.getStatus().isModifiable()){
         
@@ -527,7 +527,7 @@ public class ModelUtils {
 //     * @author ebrosse
 //     * @return
 //     */
-//    @objid ("45de48fa-6e35-4341-b08f-68877f0ac5de")
+//    
 //    public static void synchronizeSysMLModel() {
 //        synchronizeUnit();
 //        synchronizeValueType();
@@ -538,7 +538,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("213168ef-3a36-4016-9b5c-04e3b961f336")
+    
     private static void synchronizeView() {
         Collection<Class> listElements =  SysMLModule.getInstance().getModuleContext().getModelingSession().findByClass(Class.class);
         
@@ -553,7 +553,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("fd777d3f-7aa7-4913-bbc8-2ff48a5c1777")
+    
     private static void update(Dependency updatedElement, String modulename, String linkStereotype, String tagSource, String tagTarget) {
         updateSource(updatedElement.getDependsOn(),modulename, tagSource, linkStereotype);
         updateTarget(updatedElement.getImpacted(),modulename, tagTarget,modulename, linkStereotype);
@@ -564,7 +564,7 @@ public class ModelUtils {
 //     * @author ebrosse
 //     * @return
 //     */
-//    @objid ("9e26ba5e-2f3d-49ee-b7c3-3d0dc2eb6d17")
+//    
 //    private static void synchronizeValueType() {
 //        Collection<DataType> listElements =  SysMLModule.getInstance().getModuleContext().getModelingSession().findByClass(DataType.class);
 //
@@ -580,7 +580,7 @@ public class ModelUtils {
 //     * @author ebrosse
 //     * @return
 //     */
-//    @objid ("24dd9696-12ae-489b-81bd-afc9c794636e")
+//    
 //    private static void synchronizeUnit() {
 //        Collection<Instance> listElements =  SysMLModule.getInstance().getModuleContext().getModelingSession().findByClass(Instance.class);
 //
@@ -595,7 +595,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("1f6b3812-619f-40b1-a0cd-d0e4a8d23641")
+    
     public static boolean isStereotypedSysML(ModelElement eltToTest) {
         List<Stereotype> sterList = eltToTest.getExtension();
         for (Stereotype sterCurrent : sterList) {
@@ -610,7 +610,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("e0a5d0a6-c52f-45c4-a17f-cd76227d3af7")
+    
     public static ArrayList<MObject> searchConnector(NameSpace owner) {
         ArrayList<MObject> result = new ArrayList<>();
         if ((owner instanceof Classifier) && (owner.isStereotyped(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.BLOCK))) {
@@ -641,7 +641,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("f24d5be2-5b8e-42f9-8a79-b878efd5e950")
+    
     public static String getTaggedValueLink(String module, String stereotypeLink, ModelElement element) {
         for (Dependency depend : element.getDependsOnDependency()) {
             if (depend.isStereotyped(module,stereotypeLink)) {
@@ -656,7 +656,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("2a179c90-346b-40d4-9bfb-fd95cef176a3")
+    
     public static List<MObject> searchEnds(BindableInstance element) {
         NameSpace base = element.getBase();
         List<MObject> result = new ArrayList<>();
@@ -681,7 +681,7 @@ public class ModelUtils {
      * @author ebrosse
      * @return
      */
-    @objid ("517f339b-dc18-4574-9115-d66df6d41d83")
+    
     public static ArrayList<MObject> getBindableInstance(InformationFlow element) {
         ArrayList<MObject> result = new ArrayList<>();
         
@@ -725,7 +725,7 @@ public class ModelUtils {
         return result;
     }
 
-     @objid ("e71ccebe-c3c1-4da1-91db-adc3bb4773c0")
+     
     public static boolean isAllocated(ModelElement element) {
         boolean isAllocated = false;
         
@@ -752,7 +752,7 @@ public class ModelUtils {
      * @param element : element source of stereotyped dependencies
      * @param tagtypeName : stereotype name of the dependency
      */
-    @objid ("bb5c0150-5732-459d-b79b-66ed5cde7737")
+    
     public static void removeTagType(ModelElement element, String tagtypeName) {
         List<TaggedValue> taglist = element.getTag();
         for (TaggedValue taggedValue : taglist) {

@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the block stereotype
  * @author ebrosse
  */
-@objid ("a9277c7d-9f65-4878-a050-a85b30be9742")
+
 public class BlockPropertyPage implements IPropertyContent {
     /**
      * Constructor BlockPropertyPage
      * @author ebrosse
      */
-    @objid ("c62ebf79-3377-4da9-ba2a-fae69981ea49")
+    
     public BlockPropertyPage() {
     }
 
-    @objid ("dc083f14-16da-4384-889c-dd5fce538bd4")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -58,7 +58,7 @@ public class BlockPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("1ed9737d-7806-4c4c-a63b-d4f155d33068")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         table.addProperty(SysMLResourcesManager.getInstance().getPropertyName(SysMLTagTypes.BLOCK_ISENCAPSULATED), ModelUtils.hasTaggedValue(SysMLTagTypes.BLOCK_ISENCAPSULATED, element));

@@ -3,7 +3,7 @@ package org.modelio.module.javadesigner.reverse.javatoxml.source;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 import org.modelio.module.javadesigner.i18n.Messages;
 import org.modelio.module.javadesigner.impl.JavaDesignerModule;
 import org.modelio.module.javadesigner.progress.ProgressBar;

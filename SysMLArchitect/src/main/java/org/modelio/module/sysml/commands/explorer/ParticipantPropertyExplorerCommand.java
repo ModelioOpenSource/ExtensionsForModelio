@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML participant properties in the model explorer
  * @author ebrosse
  */
-@objid ("19a30fe4-97f9-4c40-92ea-8e44d055dcec")
+
 public class ParticipantPropertyExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("a010fec4-382e-47c4-b7ed-9dc8e150e1e4")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class ParticipantPropertyExplorerCommand extends DefaultModuleCommandHand
         }
     }
 
-    @objid ("d4349b6b-91c2-48ab-af5c-7dcb38fe3161")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -73,7 +73,7 @@ public class ParticipantPropertyExplorerCommand extends DefaultModuleCommandHand
         return false;
     }
 
-    @objid ("6eaebd95-71cb-467b-901d-4ad6a75c8e33")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

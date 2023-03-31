@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the flow property stereotype
  * @author ebrosse
  */
-@objid ("c8f2ba31-9951-4fc9-9961-fddcff485c75")
+
 public class FlowPropertyPropertyPage implements IPropertyContent {
     /**
      * Constructor FlowPropertyPropertyPage
      * @author ebrosse
      */
-    @objid ("e823d07a-6c2b-4e28-9df7-89f5b82de545")
+    
     public FlowPropertyPropertyPage() {
     }
 
-    @objid ("fd780761-3a8a-4288-9d57-85cc00da18e9")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -58,7 +58,7 @@ public class FlowPropertyPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("2b3f3321-2794-4984-aa3d-f3de3a005d37")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String[] tabDirection = {"In", "Out", "In/Out"};

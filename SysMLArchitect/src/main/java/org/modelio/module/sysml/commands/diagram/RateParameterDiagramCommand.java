@@ -52,9 +52,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Rate Parameter
  * @author ebrosse
  */
-@objid ("9459be8b-9f1c-4821-916f-b9510c2283e7")
+
 public class RateParameterDiagramCommand extends DefaultBoxTool {
-    @objid ("5dd3951d-e766-4104-b72c-10f76c5113f0")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -66,7 +66,7 @@ public class RateParameterDiagramCommand extends DefaultBoxTool {
                                                                         && (( element instanceof Operation) || ( element instanceof Activity))));
     }
 
-    @objid ("50b2379e-d8e8-4aca-95a3-54e1129b7318")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

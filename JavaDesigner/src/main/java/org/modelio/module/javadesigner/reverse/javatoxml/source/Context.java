@@ -1,6 +1,6 @@
 package org.modelio.module.javadesigner.reverse.javatoxml.source;
 
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 import org.modelio.module.javadesigner.reverse.javatoxml.identification.IdentifierManager;
 import org.modelio.module.javadesigner.reverse.javatoxml.structuralModel.SourceStructuralModel;
 

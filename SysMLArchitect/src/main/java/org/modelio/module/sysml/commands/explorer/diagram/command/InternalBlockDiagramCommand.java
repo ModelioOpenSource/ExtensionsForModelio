@@ -56,9 +56,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("2bffe6b1-9de1-4f3d-96b9-dbbd003e1021")
+
 public class InternalBlockDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("f59b9855-dbc9-4c6b-9088-d860204809be")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -103,7 +103,7 @@ public class InternalBlockDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("d0a94cd8-f722-40a1-8977-b002ceb5bf87")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) 

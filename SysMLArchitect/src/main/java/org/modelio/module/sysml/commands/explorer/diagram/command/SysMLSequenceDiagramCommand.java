@@ -58,9 +58,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("e5510059-7e95-4a5f-8b47-898d7009c87e")
+
 public class SysMLSequenceDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("151536d9-15f3-481c-93ae-708ae8ee933e")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -80,7 +80,7 @@ public class SysMLSequenceDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("bc5cf5d0-853f-4870-919c-c3095473a6e5")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

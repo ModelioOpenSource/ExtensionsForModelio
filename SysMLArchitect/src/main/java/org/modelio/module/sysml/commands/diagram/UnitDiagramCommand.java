@@ -49,9 +49,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an Unit
  * @author ebrosse
  */
-@objid ("54d89091-2422-478b-8aef-1b1ca316d4c8")
+
 public class UnitDiagramCommand extends DefaultBoxTool {
-    @objid ("67e02bdd-524d-4cc0-859c-0d4dc5cf30fb")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -63,7 +63,7 @@ public class UnitDiagramCommand extends DefaultBoxTool {
                                                                         && (element instanceof Package)));
     }
 
-    @objid ("6c952744-4a63-44c7-a683-6f07c593c45c")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

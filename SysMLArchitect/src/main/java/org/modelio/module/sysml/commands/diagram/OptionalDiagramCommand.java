@@ -52,17 +52,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an Optional parameter
  * @author ebrosse
  */
-@objid ("e849918e-5b15-4d4c-929c-e41fb765bb80")
+
 public class OptionalDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("95fa16b4-023a-4293-bdfd-fa1f68c2c6a2")
+    
     public OptionalDiagramCommand() {
         super();
     }
 
-    @objid ("8fd51bb9-898c-4a45-baa0-ca9e4d0050a4")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -73,7 +73,7 @@ public class OptionalDiagramCommand extends DefaultBoxTool {
                                                                         && (( element instanceof Operation) || ( element instanceof Activity))));
     }
 
-    @objid ("fc41de0c-e923-449e-9a85-63ed27bc7737")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

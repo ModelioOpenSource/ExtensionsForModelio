@@ -62,9 +62,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * This class handles the creation of SysML block diagram
  * @author ebrosse
  */
-@objid ("6231f791-602c-4704-9fa5-3e9b49c3cc5b")
+
 public class BlockDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("0b4c1b08-d91e-424e-b798-68841e9371e3")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -102,7 +102,7 @@ public class BlockDiagramWizard extends AbstractDiagramWizardContributor {
         return diagram;
     }
 
-    @objid ("64165b15-db0a-43b8-94fa-b8d9ddfa42fd")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -113,7 +113,7 @@ public class BlockDiagramWizard extends AbstractDiagramWizardContributor {
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("7b583377-8c4d-4e73-9c6a-5f44b8e9feaa")
+    
     public BlockDiagramWizard() {
         super();
         
@@ -129,13 +129,13 @@ public class BlockDiagramWizard extends AbstractDiagramWizardContributor {
                 ));
     }
 
-    @objid ("96329f18-218b-401c-9702-6b3b6f880679")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return !(owner instanceof Profile);
     }
 
-    @objid ("c3b6bad9-15ed-449d-8e80-bd4cc541f386")
+    
     @Override
     public void dispose() {
         // Nothing to do

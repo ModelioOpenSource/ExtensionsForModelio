@@ -45,20 +45,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the properties associated to the connector property stereotype
  * @author ebrosse
  */
-@objid ("b6ff5c85-5a9d-4980-9fd8-e02ef832e6a8")
+
 public class ConnectorPropertyPropertyPage implements IPropertyContent {
-    @objid ("b9addf0e-588c-4ca4-8f6d-6f6738d348bd")
+    
     private static List<MObject> _connectors = null;
 
     /**
      * Constructor ConnectorPropertyPropertyPage
      * @author ebrosse
      */
-    @objid ("0cc06e03-eff9-4c24-a5d8-66a1d7aaf5d3")
+    
     public ConnectorPropertyPropertyPage() {
     }
 
-    @objid ("8981c372-0e7a-49e7-bfbb-2892b2110b7c")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -77,7 +77,7 @@ public class ConnectorPropertyPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("657e1523-89b3-4374-9b84-376e5ab380bf")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.CONNECTORPROPERTYCONNECTOR, element);

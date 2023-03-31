@@ -68,9 +68,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * 
  * @author ebrosse
  */
-@objid ("a8695949-ab7e-4abb-b4cb-6830d829c66c")
+
 public class SysMLSequenceDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("a7e4b22a-73d3-4e1e-96d6-51239ab60b6f")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -88,7 +88,7 @@ public class SysMLSequenceDiagramWizard extends AbstractDiagramWizardContributor
         return diagram;
     }
 
-    @objid ("ff21e25f-2a5f-4b73-a9ca-b8353be436fe")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -99,7 +99,7 @@ public class SysMLSequenceDiagramWizard extends AbstractDiagramWizardContributor
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("a85f5927-d916-43a5-95ea-1ac7128f765e")
+    
     public SysMLSequenceDiagramWizard() {
         super();
         
@@ -124,13 +124,13 @@ public class SysMLSequenceDiagramWizard extends AbstractDiagramWizardContributor
                 ));
     }
 
-    @objid ("a6844404-eb45-4cf7-85cb-b7d785edefe7")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return !ConstraintBlockFilter.isAConstraintBlock (owner) && !(owner instanceof Profile);
     }
 
-    @objid ("aaaf2e58-7c09-42a7-a1e6-76505a4836de")
+    
     @Override
     public void dispose() {
         // Nothing to do

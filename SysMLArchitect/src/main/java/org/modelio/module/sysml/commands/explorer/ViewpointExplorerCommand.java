@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML viewpoints in the model explorer
  * @author ebrosse
  */
-@objid ("d9aa9623-2bd2-4199-9dae-78498ea1d2f6")
+
 public class ViewpointExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("585a7e21-3661-4028-b51e-a9505671f7e9")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class ViewpointExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("a9b2230c-713d-4f40-8c75-03a3395a638a")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class ViewpointExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("fe0bc3e0-73aa-42f4-a9fd-74a1c71fc365")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

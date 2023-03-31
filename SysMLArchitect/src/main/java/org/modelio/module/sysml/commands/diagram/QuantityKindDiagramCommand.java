@@ -49,9 +49,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Quantity Kind
  * @author ebrosse
  */
-@objid ("4ec7fc04-c6b7-49f0-89be-f005719f681a")
+
 public class QuantityKindDiagramCommand extends DefaultBoxTool {
-    @objid ("11929052-b59b-49c3-b1c0-6d7448c453d4")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -63,7 +63,7 @@ public class QuantityKindDiagramCommand extends DefaultBoxTool {
                                                                                 && (element instanceof Package)));
     }
 
-    @objid ("e15761f1-1752-4c0f-ac75-79f02cdf6f89")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

@@ -1,6 +1,6 @@
 package org.modelio.module.javadesigner.reverse.retrieve;
 
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 
 public abstract class NoteData implements IRetrieveData {
     protected String noteType = null;

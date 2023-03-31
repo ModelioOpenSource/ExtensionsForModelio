@@ -49,17 +49,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Constraint Block
  * @author ebrosse
  */
-@objid ("74d7c64d-9721-4f5f-bff5-8375c853c562")
+
 public class ConstraintBlockDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("e4c09b96-df26-4625-851c-58dee1b4ab5f")
+    
     public ConstraintBlockDiagramCommand() {
         super();
     }
 
-    @objid ("4360c024-2923-4bcc-a642-702538b52377")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -72,7 +72,7 @@ public class ConstraintBlockDiagramCommand extends DefaultBoxTool {
                                                                         && (element instanceof Package));
     }
 
-    @objid ("6c18ea56-aa5a-4fb9-b5d7-eee4430a76cd")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

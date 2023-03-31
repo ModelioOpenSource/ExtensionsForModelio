@@ -2,10 +2,10 @@ package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
-import com.modelio.module.xmlreverse.model.JaxbOperation;
-import com.modelio.module.xmlreverse.model.JaxbTaggedValue;
-import com.modelio.module.xmlreverse.strategy.OperationStrategy;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbOperation;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbTaggedValue;
+import org.modelio.module.javadesigner.xmlreverse.strategy.OperationStrategy;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.mmextensions.infrastructure.ElementNotUniqueException;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;

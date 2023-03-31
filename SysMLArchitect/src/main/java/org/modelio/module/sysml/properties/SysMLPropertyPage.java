@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 /**
  * This class extends
  */
-@objid ("1a63c204-c285-4918-b7c6-37ecb2161836")
+
 public class SysMLPropertyPage extends AbstractModulePropertyPage {
     /**
      * Constructor
@@ -51,7 +51,7 @@ public class SysMLPropertyPage extends AbstractModulePropertyPage {
      * @param label : the label of the property page
      * @param bitmap : the bitmap of the property page
      */
-    @objid ("f96f6803-d702-4bb6-8cab-f51cd2cc8902")
+    
     public SysMLPropertyPage(IModule module, String name, String label, String bitmap) {
         super (module, name, label, bitmap);
     }
@@ -61,7 +61,7 @@ public class SysMLPropertyPage extends AbstractModulePropertyPage {
      * The ?selectedElements? parameter contains the list of the newly selected elements. The ?table? parameter is the
      * table that must be filled with the updated contents of the property box before returning.
      */
-    @objid ("76f28a18-41e1-4272-8c3c-1231fab0ae94")
+    
     @Override
     public void update(List<MObject> selectedElements, IModulePropertyTable table) {
         if ((selectedElements != null) && (selectedElements.size() > 0)
@@ -81,7 +81,7 @@ public class SysMLPropertyPage extends AbstractModulePropertyPage {
      * parameter contains the list of the currently selected elements. The ?row? parameter is the row number of the
      * modified value. The ?value? parameter is the new value the user has set to the given row.
      */
-    @objid ("412872bf-6a0f-44b6-b070-1fa2db4fde78")
+    
     @Override
     public void changeProperty(List<MObject> selectedElements, int row, String value) {
         if ((selectedElements != null) && (selectedElements.size() > 0) && (selectedElements.get(0) instanceof ModelElement)){

@@ -47,9 +47,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML references in the model explorer
  * @author ebrosse
  */
-@objid ("00ca4523-1bf6-4b54-80d3-1bc2efe7d7c2")
+
 public class ReferenceExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("68368edb-75e8-4197-b233-7231212fba71")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -67,7 +67,7 @@ public class ReferenceExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("6825dd12-25ab-48ad-b1ce-b3181fcd6fac")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements == null)
@@ -78,7 +78,7 @@ public class ReferenceExplorerCommand extends DefaultModuleCommandHandler {
         return super.accept(selectedElements, module);
     }
 
-    @objid ("e7e1d2c6-4fdf-48e9-9ae4-acd897bd96e3")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

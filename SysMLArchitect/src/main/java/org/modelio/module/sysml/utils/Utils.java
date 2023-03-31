@@ -52,15 +52,15 @@ import org.modelio.module.sysml.filters.ViewpointFilter;
 import org.modelio.module.sysml.impl.SysMLModule;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("7e4d165a-97e6-4c08-9f59-2ddbcbc4c41f")
+
 public class Utils {
-    @objid ("03c844c0-55b0-498c-86b3-93aa9326ade4")
+    
     private static String namespacingSeparator = "::";
 
-    @objid ("1eb66349-9e40-455c-95a6-a415cd482946")
+    
     private static String elementSeparator = ";";
 
-    @objid ("f1bc4fde-ed8c-4d63-9266-5be37e655fc2")
+    
     public static boolean accept(MObject selectedElement) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         
@@ -81,7 +81,7 @@ public class Utils {
     /**
      * @return
      */
-    @objid ("eba0e676-65d5-452e-854b-fb153ee6c171")
+    
     public static List<Stereotype> computePropertyList(final ModelElement element) {
         List<Stereotype> result = new ArrayList<>();
         int i = 0;
@@ -110,7 +110,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("5ca7cf77-4aec-4465-8577-0588c7ad472d")
+    
     public static String getFreeName(ModelElement parent, String type, int nb) {
         ArrayList<ModelElement> children = null;
         StringBuffer testedName;
@@ -178,7 +178,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("aef47cfa-a040-4d69-a3bd-a6b27d9249da")
+    
     public static Class getViewpoint(Package view) {
         List<Dependency> dependencies = view.getDependsOnDependency();
         for (Dependency dependency : dependencies) {
@@ -195,7 +195,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("c7f0c313-78ea-447b-9ba7-4910250a4f4b")
+    
     public static NameSpace getNameSpaceOwner(MObject element) {
         MObject parent = element.getCompositionOwner();
         while (!(parent instanceof NameSpace)) {
@@ -210,7 +210,7 @@ public class Utils {
 //     * @param element
 //     * @param testedName @return
 //     */
-//    @objid ("3fe6b6b6-ea84-4248-bc77-c3d4afdeb8bd")
+//    
 //    public static void setUMLFreeName(ModelElement element, String testedName) {
 //        element.setName("");
 //        int i = 1;
@@ -234,7 +234,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("b1350628-e92c-4349-8d03-816b4456221c")
+    
     public static String[] getAbsoluteNames(ArrayList<ModelElement> listElt) {
         String[] result = new String[listElt.size()];
         int i = 0;
@@ -250,7 +250,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("3f391c00-3088-469e-bbec-51289fd2e1d0")
+    
     public static String[] getNames(Collection<? extends MObject> listElt) {
         String[] result = new String[listElt.size() + 1];
         List<String> temp = new ArrayList<>();
@@ -274,7 +274,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("c1624fa6-61ab-44e8-9d3d-889a1de3696c")
+    
     public static String getName(MObject elt) {
         MObject owner = elt.getCompositionOwner();
         
@@ -290,7 +290,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("fb4e9f93-1b49-4cc0-a8d4-b2d49f569144")
+    
     public static String getAbsoluteName(ModelElement elt) {
         String result = elt.getName();
         MObject temp = elt;
@@ -308,7 +308,7 @@ public class Utils {
      * @author ebrosse
      * @return
      */
-    @objid ("1b5f0e0b-4e7a-4a0c-9943-eeb467e010fb")
+    
     public static String getAbsoluteNamesWithSeparator(List<ModelElement> listElt) {
         String result = "";
         int size = listElt.size();

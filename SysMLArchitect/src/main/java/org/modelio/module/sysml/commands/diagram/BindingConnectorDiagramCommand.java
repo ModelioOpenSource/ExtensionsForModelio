@@ -53,12 +53,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Binding connector
  * @author ebrosse
  */
-@objid ("d41ece5b-cac6-488f-b7bd-525d29527d31")
+
 public class BindingConnectorDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("0d05c845-3b17-4dfe-a976-ef3bbfab4f7c")
+    
     public BindingConnectorDiagramCommand() {
         super();
     }
@@ -70,12 +70,12 @@ public class BindingConnectorDiagramCommand extends DefaultLinkTool {
      * @param icon : Icon of the command
      * @param tooltip : Tool tip of the command
      */
-    @objid ("82a83fd9-9912-457a-aa93-4be27847f534")
+    
     public BindingConnectorDiagramCommand(String label, ImageDescriptor icon, String tooltip) {
         super();
     }
 
-    @objid ("75270236-d819-49be-a133-3bc454bbea33")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -83,14 +83,14 @@ public class BindingConnectorDiagramCommand extends DefaultLinkTool {
                         &&(element instanceof BindableInstance));
     }
 
-    @objid ("c099013f-23b2-4608-8e50-f6d99c36717f")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (element instanceof BindableInstance);
     }
 
-    @objid ("a06bd41c-a753-45fb-8b46-1998797f5646")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

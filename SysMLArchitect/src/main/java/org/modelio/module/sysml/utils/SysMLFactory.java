@@ -86,99 +86,99 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the creation of all SysML elements
  * @author ebrosse
  */
-@objid ("73af9047-e4a9-4c9c-b9d1-b8936d54f79c")
+
 public class SysMLFactory {
-    @objid ("184027c2-aaf7-4f3d-aec2-09e602b94956")
+    
     private static final String LOCALS = "locals";
 
-    @objid ("42582255-c35c-4889-84d3-95e9310f5e7c")
+    
     private static final String DESCRIPTION = "description";
 
-    @objid ("fece2683-2281-43c0-acd2-3b1f6a4c7f4a")
+    
     private static final String FLOW_PORT = "FlowPort";
 
-    @objid ("10566a4f-039e-4665-9085-a99e9173ee76")
+    
     private static final String FLOW_SPECIFICATION = "FlowSpecification";
 
-    @objid ("59937dc8-163e-4ef3-b59d-404e295c325f")
+    
     private static final String VIEW = "View";
 
-    @objid ("bd499d4c-86d4-468c-9eca-96826914f149")
+    
     private static final String VALUETYPE = "VT";
 
-    @objid ("5d7e8e92-f220-4e71-a690-d520af5858e3")
+    
     private static final String VIEWPOINT = "Viewpoint";
 
-    @objid ("4199f649-3fd3-4972-8d95-361a1c50f058")
+    
     private static final String UNIT = "Unit";
 
-    @objid ("5366423a-c9bc-48d9-8e52-a11fdf734369")
+    
     private static final String QUANTITY = "Quantity";
 
-    @objid ("95b5db51-b87d-450b-b844-af198b2a4b3d")
+    
     private static final String CONNECTORPROPERTY = "co";
 
-    @objid ("d73ce528-a1a7-4226-a795-df64f18a420d")
+    
     private static final String DISTRIBUTEDPROPERTY = "d";
 
-    @objid ("24114796-6e4d-40b0-9752-dfda0a8d7b9b")
+    
     private static final String PARTICIPANTPROPERTY = "p";
 
-    @objid ("d4a9cc0d-b92a-4b5a-a54e-dabeddddcf92")
+    
     private static final String CONSTRAINTPROPERTY = "ct";
 
-    @objid ("2b721666-ba8c-43b5-811c-8e5b66df91b5")
+    
     private static final String PROPERTYSPECIFICTYPE = "PST";
 
-    @objid ("7e713e75-8f9b-41c6-b4cb-06d4de7e73bd")
+    
     private static final String OPERATOR = "Operator";
 
-    @objid ("4953cc38-067c-4639-b78f-6b144653b8bb")
+    
     private static final String OPERATION = "Operation";
 
-    @objid ("385d6135-613e-4897-85fc-749e645d11c0")
+    
     private static final String ENUMERATION_LITERAL = "Enumeration Literal";
 
-    @objid ("607f1824-56a5-42ec-a809-343eaccfddab")
+    
     private static final String ENUMERATION = "Enumeration";
 
-    @objid ("d1ad2238-f348-49a8-b3b7-8c639ae3e189")
+    
     private static final String ACTOR = "Actor";
 
-    @objid ("2d372422-ff7f-44c8-b3a6-542f9076aab2")
+    
     private static final String USE_CASE = "Use Case";
 
-    @objid ("74dbe298-7371-46b8-b067-21750421363a")
+    
     private static final String RETURN_PARAMETER = "Return Parameter";
 
-    @objid ("850699d1-885e-42a1-8dc0-c836e289b16d")
+    
     private static final String PARAMETER = "Parameter";
 
-    @objid ("93a33414-6403-4b30-a29d-848079e3e053")
+    
     private static final String FLOWPROPERTY = "fp";
 
-    @objid ("0157d0b6-c4e3-4846-b6c4-138dc11925c0")
+    
     private static final String TRACE = "trace";
 
-    @objid ("e9ee1585-e53c-473d-8f63-edb3ca18544e")
+    
     private static final String MODELER_MODULE = "ModelerModule";
 
-    @objid ("2178c9cd-33b1-4879-af69-0dfa4459bf61")
+    
     private static final String DISCRETE = "discrete";
 
-    @objid ("bad45d82-f6eb-4105-95a5-1e00ce3c7354")
+    
     private static final String TESTCASE = "TC";
 
-    @objid ("996be1e3-033f-4b43-be6d-7b984866ca59")
+    
     private static final String OPTIONAL = "opt";
 
-    @objid ("21f31767-5bb8-4683-9e9f-ab54860e1f36")
+    
     private static final String RATE = "rate";
 
-    @objid ("946429b2-0c19-4caa-912c-c16a6b98a00a")
+    
     private static final String CONTINUOUS = "continuous";
 
-    @objid ("8ca21932-ec44-46d7-bd78-2310a71b610c")
+    
     private static void setContinuousParameter(Parameter result) {
         IModelingSession modelingSession = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = modelingSession.getModel();
@@ -189,7 +189,7 @@ public class SysMLFactory {
         model.getDefaultNameService().setDefaultName(result, CONTINUOUS);
     }
 
-    @objid ("a347b978-3fb6-4dd1-9b57-206d9fe5b276")
+    
     private static void setRateParameter(Parameter result) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -200,7 +200,7 @@ public class SysMLFactory {
         model.getDefaultNameService().setDefaultName(result, RATE);
     }
 
-    @objid ("e2557b8a-2628-4919-a4ea-5759fa3a044a")
+    
     private static void setOptionalParameter(Parameter result) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -211,7 +211,7 @@ public class SysMLFactory {
         result.setMultiplicityMin("0");
     }
 
-    @objid ("2927aeeb-86b0-4573-af8f-a25c65b35f52")
+    
     private static void setDiscreteParameter(Parameter result) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -230,7 +230,7 @@ public class SysMLFactory {
      * @param target : the target of the dependency
      * @return the allocate dependency
      */
-    @objid ("94cf556b-d566-4bf7-9561-9119eb084d44")
+    
     public static Dependency createAllocateAbstraction(ModelElement origin, ModelElement target) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -257,7 +257,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("222fabd0-fe7e-47a5-9642-bc2f075726e4")
+    
     public static Class createBlock(MObject owner) {
         if (owner instanceof Package){
             return createBlock((Package) owner);
@@ -272,7 +272,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("77d4b068-aa1b-4307-8aca-f256208b4a75")
+    
     private static Class createBlock(Package owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         
@@ -291,7 +291,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e1247f5d-3bd9-4d10-ae03-f24089272111")
+    
     private static Class createBlock(Class owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         
@@ -310,7 +310,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("a68fe0c3-48d8-4767-b5f7-071117e410f4")
+    
     public static SequenceDiagram createSysMLSequenceDiagram(ModelElement owner, String diagramName, String description) {
         Interaction interaction = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -364,7 +364,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("b027315d-c329-40b5-b6b4-196f9cd45c74")
+    
     public static SequenceDiagram createSysMLSequenceDiagram(ModelElement owner, String diagramName) {
         Interaction interaction = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -418,7 +418,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("13db3c1e-e7a4-43b5-a626-769494c808b8")
+    
     public static StateMachineDiagram createSysMLStateMachineDiagram(ModelElement owner, String diagramName, String description) {
         StateMachine statemachine = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -471,7 +471,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("06682b35-ac55-4c42-9bd5-8042ee31f799")
+    
     public static StateMachineDiagram createSysMLStateMachineDiagram(ModelElement owner, String diagramName) {
         StateMachine statemachine = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -524,7 +524,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("ca8163f8-8da5-405e-9484-3766ac818bb3")
+    
     public static ActivityDiagram createSysMLActivityDiagram(ModelElement owner, String diagName, String description) {
         Activity activity = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -576,7 +576,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("56308980-2fe4-4a86-b644-e4f8ff0ef34f")
+    
     public static ActivityDiagram createSysMLActivityDiagram(ModelElement owner, String diagName) {
         Activity activity = null;
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -628,7 +628,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("c3dd17ad-7c3c-418d-9f18-7c6915a6ce2e")
+    
     public static StaticDiagram createSysMLUseCaseDiagram(ModelElement owner, String name, String descriptionContent) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         StaticDiagram diagram = null;
@@ -650,7 +650,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("f4f9836d-651c-461e-b254-595c1acbedd6")
+    
     public static StaticDiagram createSysMLUseCaseDiagram(ModelElement owner, String name) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         StaticDiagram diagram = null;
@@ -670,7 +670,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("cc10566c-87f1-4b6f-8445-638e750a455f")
+    
     public static Dependency createConformDependency(Package view, Class viewpoint) {
         try {
             return SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ().createDependency (view, viewpoint,ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.CONFORM);
@@ -685,7 +685,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("200bd6d7-fe50-4810-b9d9-c98f8f14f7af")
+    
     public static Class createConstraintBlock(NameSpace owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         
@@ -704,7 +704,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("6dfeb610-fae1-4d96-acc3-3b57a91c264f")
+    
     public static Port createFlowPort(Instance owner) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -728,7 +728,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("f6d70986-961b-4bb6-8a53-2d51a2520ef9")
+    
     public static Port createFlowPort(Classifier owner) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -752,7 +752,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e263a36d-389d-4910-b0b3-e76e6c8ab424")
+    
     public static Interface createFlowSpecification(NameSpace owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         
@@ -771,7 +771,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("b00a45e3-9ab6-42b1-ad15-8e3cee7ddf01")
+    
     public static void createItemFlow(ModelElement end, UmlModelElement originElement, UmlModelElement targetElement) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -816,7 +816,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("32d3fff6-9304-4276-b8e9-0267cd75352f")
+    
     public static DataType createValueType(NameSpace owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         try {
@@ -835,7 +835,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e3273a5c-0de4-4a4d-b743-bf1dddeb934f")
+    
     public static Package createView(NameSpace owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         
@@ -854,7 +854,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("5559940a-9849-4712-bbf3-04f12bd5b33a")
+    
     public static Class createViewpoint(NameSpace owner) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession ().getModel ();
         
@@ -873,7 +873,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e89269bd-a598-485e-ba20-eb647a4ef6f0")
+    
     public static Instance createUnit(NameSpace element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         Instance result = null;
@@ -905,7 +905,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("d139a792-b05f-4ee1-b512-07e0a700ca57")
+    
     public static Instance createQuantityKind(NameSpace element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         Instance result = null;
@@ -935,7 +935,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("9ab5c12c-1b7b-41c0-ba80-d82995d8e7f9")
+    
     public static BindableInstance createConnectorProperty(Classifier element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         BindableInstance result = null;
@@ -959,7 +959,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("fb140874-7408-4720-a843-d90a36f3d07e")
+    
     public static Attribute createDistributedProperty(Classifier element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         Attribute result = null;
@@ -982,7 +982,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("09235b93-6551-450b-9663-d51bd6ec58d7")
+    
     public static BindableInstance createParticipantProperty(NameSpace element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         BindableInstance result = null;
@@ -1010,7 +1010,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("afda50f8-ab22-4b54-9135-03307ca70745")
+    
     public static BindableInstance createConstraintProperty(NameSpace element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         BindableInstance result = null;
@@ -1038,7 +1038,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e4b237bb-2a9c-4dbd-afc9-c72fdf0418a9")
+    
     public static Class createPropertySpecificType(NameSpace element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -1061,7 +1061,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("f9341ab1-fe17-4276-b023-9a227bc50c0a")
+    
     public static Operation createControlOperatorOperation(Classifier element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -1084,7 +1084,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("68d2cc76-c6f4-4948-86ec-eaab4772ff82")
+    
     public static Parameter createContinuousParameter(MObject element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         Parameter result = null;
@@ -1112,7 +1112,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("a94502e6-1fde-49e9-a77f-8027c722d1b4")
+    
     public static ActivityEdge createContinuousEdge(ActivityNode source, ActivityNode target) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -1134,7 +1134,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("2207f2a7-6459-41e1-b138-181807cf29de")
+    
     public static Parameter createRateParameter(MObject element) {
         try {
             IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -1163,7 +1163,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("d53ff779-4809-4cac-835c-234f42a0262d")
+    
     public static Parameter createOptional(MObject element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -1193,7 +1193,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("a84a517e-15ac-4b76-a337-617820c58794")
+    
     public static Operation createTestcase(Classifier element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -1216,7 +1216,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("fc67a65e-d0a0-44ef-b591-cceefdd39f2c")
+    
     public static Parameter createDiscreteParameter(MObject element) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         Parameter result = null;
@@ -1245,7 +1245,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("3c936905-d32f-4a44-8dbe-1afdfdb988a9")
+    
     public static ActivityEdge createDiscreteEdge(ActivityNode source, ActivityNode target) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         
@@ -1267,7 +1267,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("7d03763d-d59d-4e72-9da0-dfbbf80bcbf1")
+    
     public static ActivityEdge createRateEdge(ActivityNode source, ActivityNode target) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         
@@ -1289,7 +1289,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("1434b4ce-09db-42a9-aeee-c36ef585b4f8")
+    
     public static Link createBindingConnector(BindableInstance source, BindableInstance target) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel();
@@ -1313,7 +1313,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("5f064565-b239-4792-8d5b-6bde9789eec1")
+    
     public static ActivityEdge createProbability(ActivityNode source, ActivityNode target) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         
@@ -1335,7 +1335,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("206a9a33-52ac-4200-8cc3-93510bf9905b")
+    
     public static Dependency createTraceDependency(ModelElement originElement, ModelElement targetElement) {
         try {
             IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -1354,7 +1354,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("730341bc-7a95-4cc7-91dc-df15c65d164c")
+    
     public static Attribute createFlowProperty(Classifier owner) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         IUmlModel model = session.getModel ();
@@ -1379,7 +1379,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Operation
      */
-    @objid ("fc54e2b3-b1f2-4c88-8ae6-b74b6bab4122")
+    
     public static Operation createOperation(Classifier element) {
         return  SysMLModule.getInstance().getModuleContext().getModelingSession().getModel().createOperation(OPERATION, element);
     }
@@ -1390,7 +1390,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Parameter
      */
-    @objid ("9b17f88f-fab7-4976-8658-6a589126e87f")
+    
     public static Parameter createParameter(Operation element) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         Parameter result = model.createParameter();
@@ -1405,7 +1405,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Return Parameter
      */
-    @objid ("a09cfa76-bd66-44cf-b945-af84ee223775")
+    
     public static Parameter createReturnParameter(Operation element) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         Parameter result = model.createParameter();
@@ -1420,7 +1420,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Use Case
      */
-    @objid ("557613cc-143a-4850-87a1-112c6b51f293")
+    
     public static UseCase createUseCase(NameSpace element) {
         return  SysMLModule.getInstance().getModuleContext().getModelingSession().getModel().createUseCase(USE_CASE, element);
     }
@@ -1431,7 +1431,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Actor
      */
-    @objid ("f5192061-b112-4498-a504-cebb5be92491")
+    
     public static Actor createActor(NameSpace element) {
         return  SysMLModule.getInstance().getModuleContext().getModelingSession().getModel().createActor(ACTOR, element);
     }
@@ -1442,7 +1442,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Enumeration
      */
-    @objid ("c3a270c6-c34f-4e06-803c-ae7e523ac5c8")
+    
     public static Enumeration createEnumeration(NameSpace element) {
         return  SysMLModule.getInstance().getModuleContext().getModelingSession().getModel().createEnumeration(ENUMERATION, element);
     }
@@ -1453,7 +1453,7 @@ public class SysMLFactory {
      * 
      * @return the created UML Enumeration Literal
      */
-    @objid ("b0aaef76-c293-4c1d-a766-ea58ff57aa26")
+    
     public static EnumerationLiteral createEnumerationLiteral(Enumeration element) {
         return  SysMLModule.getInstance().getModuleContext().getModelingSession().getModel().createEnumerationLiteral(ENUMERATION_LITERAL, element);
     }
@@ -1463,7 +1463,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("6dee890a-d093-4d98-be20-3ff9324b13da")
+    
     public static StaticDiagram createBlockDiagram(ModelElement element, String name, String descriptionContent) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1485,7 +1485,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("b9112fdd-12c6-4eb6-b237-406d2d5aa769")
+    
     public static StaticDiagram createBlockDiagram(ModelElement element, String name) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1509,7 +1509,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("86836491-5454-47fc-b595-ce79feb9d339")
+    
     public static StaticDiagram createIBD(ModelElement element, String name, String descriptionContent) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1526,7 +1526,7 @@ public class SysMLFactory {
         return result;
     }
 
-    @objid ("6c7ce4a5-934e-47d2-8e14-2c1ff1c2963c")
+    
     public static StaticDiagram createIBD(ModelElement element, String name) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1546,7 +1546,7 @@ public class SysMLFactory {
         return result;
     }
 
-    @objid ("036d1ca8-c4e3-429f-ba38-98866882473f")
+    
     public static StaticDiagram createPackageDiagram(ModelElement owner, String name) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1569,7 +1569,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("e286c980-b0d3-4f5b-a470-d7c683f2df87")
+    
     public static StaticDiagram createPackageDiagram(ModelElement element, String name, String descriptionContent) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1591,7 +1591,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("f5278a50-27f3-4910-b202-77d8fb05dafd")
+    
     public static StaticDiagram createParametricDiagram(ModelElement element, String name, String descriptionContent) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1608,7 +1608,7 @@ public class SysMLFactory {
         return result;
     }
 
-    @objid ("bc17507d-cf82-4796-911e-bb231f1b5797")
+    
     public static StaticDiagram createParametricDiagram(ModelElement owner, String name) {
         IModuleContext context = SysMLModule.getInstance().getModuleContext();
         IModelingSession session  =  context.getModelingSession();
@@ -1632,7 +1632,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("2200d973-d3fb-4cbb-a11f-2bbd876612ff")
+    
     public static ActivityEdge createActivityEdge(ActivityNode source, ActivityNode target) {
         IUmlModel model = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel();
         ActivityEdge result = null;
@@ -1651,7 +1651,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("9c5ac333-0c44-4f0e-8aee-2db7326edbfe")
+    
     public static Association createAssociation(Classifier c_source, Classifier c_destination) {
         Association association = SysMLModule.getInstance().getModuleContext().getModelingSession().getModel()
                 .createAssociation(c_source, c_destination, "");
@@ -1673,7 +1673,7 @@ public class SysMLFactory {
      * @author ebrosse
      * @return
      */
-    @objid ("c09e27cf-5ed2-42d6-8753-bd3a93c21b1d")
+    
     public static Link createSmartLink(Instance c_source, Instance c_destination) {
         Link result = null;
         

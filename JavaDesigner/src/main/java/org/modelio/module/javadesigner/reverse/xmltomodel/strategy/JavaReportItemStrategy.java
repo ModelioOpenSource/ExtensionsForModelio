@@ -1,11 +1,11 @@
 package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 
 import java.util.List;
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
-import com.modelio.module.xmlreverse.IReportWriter;
-import com.modelio.module.xmlreverse.model.JaxbReportItem;
-import com.modelio.module.xmlreverse.model.JaxbTargetItem;
-import com.modelio.module.xmlreverse.strategy.ReportItemStrategy;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbReportItem;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbTargetItem;
+import org.modelio.module.javadesigner.xmlreverse.strategy.ReportItemStrategy;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 public class JavaReportItemStrategy extends ReportItemStrategy {

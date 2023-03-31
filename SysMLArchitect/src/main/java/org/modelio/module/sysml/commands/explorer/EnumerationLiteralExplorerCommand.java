@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML optional in the model explorer
  * @author ebrosse
  */
-@objid ("d4907085-d57b-48fe-a56c-ebcd1ec5a0b1")
+
 public class EnumerationLiteralExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("9176b888-c5e0-4d5f-8d2b-fb79e7b0adcb")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class EnumerationLiteralExplorerCommand extends DefaultModuleCommandHandl
         }
     }
 
-    @objid ("d17c66fb-f2e7-4ed2-a5e3-97489422dcd5")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class EnumerationLiteralExplorerCommand extends DefaultModuleCommandHandl
         return false;
     }
 
-    @objid ("ee431c54-01ce-4fda-ac3d-d7b216395503")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

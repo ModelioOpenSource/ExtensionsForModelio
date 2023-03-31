@@ -47,9 +47,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML blocks in the model explorer
  * @author ebrosse
  */
-@objid ("6e3b065e-9c4c-4caa-bd13-9ee790114ae3")
+
 public class BlockExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("6ce249e4-7c5d-4cb0-a3a1-7b239b85c040")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();       
@@ -63,7 +63,7 @@ public class BlockExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("81adf86e-ddfb-4ba1-9de0-a6f094d4871d")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -73,7 +73,7 @@ public class BlockExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("6a3fbf1d-c662-4acb-b7b9-7503db303dab")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

@@ -53,9 +53,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an UML/SysML Association
  * @author ebrosse
  */
-@objid ("0d0facbc-a700-4add-906a-1d350c58b398")
+
 public class UMLAssociationDiagramCommand extends DefaultLinkTool {
-    @objid ("09650535-22f6-4f18-b9da-0e1b13153ee7")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         if ((arg1 != null) && (arg1.getElement() != null)){ 
@@ -65,13 +65,13 @@ public class UMLAssociationDiagramCommand extends DefaultLinkTool {
         return false;
     }
 
-    @objid ("c40dd1f3-8231-4548-b7c1-a80d0d0fec34")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle arg0, IDiagramGraphic arg1, IDiagramGraphic arg2) {
         return ((arg2 != null) && (arg2.getElement() != null) && (arg2.getElement() instanceof Classifier));
     }
 
-    @objid ("3c1f251d-1302-4671-9d3d-3554c7e192c0")
+    
     @Override
     public void actionPerformed(final IDiagramHandle representation, final IDiagramGraphic arg1, final IDiagramGraphic arg2, final LinkRouterKind kind, final ILinkRoute path) {
         IModelingSession session =  SysMLModule.getInstance().getModuleContext().getModelingSession();

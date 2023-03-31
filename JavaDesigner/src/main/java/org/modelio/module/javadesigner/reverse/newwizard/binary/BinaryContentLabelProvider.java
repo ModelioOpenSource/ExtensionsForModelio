@@ -1,11 +1,11 @@
 package org.modelio.module.javadesigner.reverse.newwizard.binary;
 
-import com.modelio.module.xmlreverse.model.JaxbClass;
-import com.modelio.module.xmlreverse.model.JaxbDataType;
-import com.modelio.module.xmlreverse.model.JaxbEnumeration;
-import com.modelio.module.xmlreverse.model.JaxbGroup;
-import com.modelio.module.xmlreverse.model.JaxbInterface;
-import com.modelio.module.xmlreverse.model.JaxbPackage;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbClass;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbDataType;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbEnumeration;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbGroup;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbInterface;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbPackage;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.swt.graphics.Image;

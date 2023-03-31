@@ -51,17 +51,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Distributed property
  * @author ebrosse
  */
-@objid ("68ab433a-fd6d-4f0b-be23-1211e5372cdd")
+
 public class DistributedPropertyDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("cc33ffab-d430-4cac-a415-99f682bf5e80")
+    
     public DistributedPropertyDiagramCommand() {
         super();
     }
 
-    @objid ("4a0edc36-aac6-4400-b5f3-8550b4fcc9a3")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -71,7 +71,7 @@ public class DistributedPropertyDiagramCommand extends DefaultBoxTool {
                                                                                 || (((Classifier) element).isStereotyped(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.VALUETYPE))));
     }
 
-    @objid ("e20d8aea-40b5-4f9a-9633-3375add2b947")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

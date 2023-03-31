@@ -2,7 +2,7 @@ package org.modelio.module.javadesigner.report;
 
 import java.util.Set;
 import java.util.TreeSet;
-import com.modelio.module.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
 import org.modelio.module.javadesigner.impl.JavaDesignerModule;
 import org.modelio.vcore.smkernel.mapi.MObject;
 

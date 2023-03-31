@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of UML port in the model explorer
  * @author ebrosse
  */
-@objid ("99776d18-a0cd-44a9-8e84-e135598375b1")
+
 public class PortExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("427e2509-890d-4994-91ab-5c6505604fa7")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -70,7 +70,7 @@ public class PortExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("2f131095-2d84-414f-8825-9dee7cb0daa5")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -83,7 +83,7 @@ public class PortExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("df66b217-acb1-42d0-b346-2b545d4e5718")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

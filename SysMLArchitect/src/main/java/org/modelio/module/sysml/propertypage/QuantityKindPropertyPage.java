@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the Quantity Kind stereotype
  * @author ebrosse
  */
-@objid ("d96041c1-ba18-42d1-ac23-e0a1a667616c")
+
 public class QuantityKindPropertyPage implements IPropertyContent {
     /**
      * Constructor QuantityKindPropertyPage
      * @author ebrosse
      */
-    @objid ("e6cf60a3-2cb0-4946-8207-4cdb29b1ab60")
+    
     public QuantityKindPropertyPage() {
     }
 
-    @objid ("5ed0b7eb-6424-4b8d-ac50-046190a655a2")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -64,7 +64,7 @@ public class QuantityKindPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("dde2a4b8-0a7c-476b-88cc-6521a7b2ba19")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValue(SysMLTagTypes.QUANTITYKIND_SYMBOL, element);

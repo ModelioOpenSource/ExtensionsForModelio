@@ -45,9 +45,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 /**
  * @author ebrosse
  */
-@objid ("69a87f6a-dae9-4c0e-894b-c158cef8704d")
+
 public class SysMLModelChangeHandler implements IModelChangeHandler {
-    @objid ("08c5c88b-c92f-45c9-8c32-379a2fe25954")
+    
     @Override
     public void handleModelChange(IModelingSession session, IModelChangeEvent event) {
 
@@ -84,7 +84,7 @@ public class SysMLModelChangeHandler implements IModelChangeHandler {
         }
     }
 
-    @objid ("875d8e01-c5ca-492f-a54e-a32d55c29200")
+    
     private void updateFlowPort(Port port) {
         if (port.isStereotyped(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.FLOWPORT)){
            if (port.getDirection().equals(PortOrientation.NONE)){

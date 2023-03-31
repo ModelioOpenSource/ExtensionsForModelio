@@ -45,9 +45,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML discrete in the model explorer
  * @author ebrosse
  */
-@objid ("6f5776b2-9dc7-4c3d-b03f-50c1680658bc")
+
 public class DiscreteExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("0aecdd20-acef-4ee3-9d75-43776d3c0985")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -60,7 +60,7 @@ public class DiscreteExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("c01a5c31-4478-4898-8859-c0b8d0c35022")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -70,7 +70,7 @@ public class DiscreteExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("a1e04a7c-7357-4a73-b17e-79716aae9a55")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

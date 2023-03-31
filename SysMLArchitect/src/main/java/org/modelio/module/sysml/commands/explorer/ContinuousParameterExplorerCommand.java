@@ -45,9 +45,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML continuous in the model explorer
  * @author ebrosse
  */
-@objid ("94b2712e-0ecd-44c1-9bce-cc48f00d6a80")
+
 public class ContinuousParameterExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("f6cd0172-667d-4e1b-a83b-6bbbf209bec7")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -61,7 +61,7 @@ public class ContinuousParameterExplorerCommand extends DefaultModuleCommandHand
         }
     }
 
-    @objid ("b409a100-02cb-4f1d-a253-fa2cdfbaff9d")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -71,7 +71,7 @@ public class ContinuousParameterExplorerCommand extends DefaultModuleCommandHand
         return false;
     }
 
-    @objid ("408bf767-b866-44c4-9b91-ffda1d159942")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

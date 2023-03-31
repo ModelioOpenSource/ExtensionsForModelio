@@ -59,9 +59,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * 
  * @author ebrosse
  */
-@objid ("81d04a0d-544f-491f-903e-094c9e8cea14")
+
 public class SysMLUseCaseDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("91c87606-6111-4705-bfc2-f17b16a04873")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -79,7 +79,7 @@ public class SysMLUseCaseDiagramWizard extends AbstractDiagramWizardContributor 
         return diagram;
     }
 
-    @objid ("8467c2e8-e993-4e4e-a77b-2fad92e70e37")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -90,7 +90,7 @@ public class SysMLUseCaseDiagramWizard extends AbstractDiagramWizardContributor 
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("a6c2dda7-6a8d-4a1f-9cc2-e16db71f95c1")
+    
     public SysMLUseCaseDiagramWizard() {
         super();
         
@@ -107,13 +107,13 @@ public class SysMLUseCaseDiagramWizard extends AbstractDiagramWizardContributor 
                 ));
     }
 
-    @objid ("66c1a8f8-b155-43ac-9267-738c91c81919")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return !(owner instanceof Profile);
     }
 
-    @objid ("ddf37307-389a-48b7-a7c9-4a5cf4674176")
+    
     @Override
     public void dispose() {
         // Nothing to do

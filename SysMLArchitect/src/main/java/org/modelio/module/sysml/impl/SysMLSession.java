@@ -52,9 +52,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("32e56309-bc6a-41fc-aa41-641775756f69")
+
 public class SysMLSession extends DefaultModuleLifeCycleHandler {
-    @objid ("f25706f3-f04b-4f75-8395-a77020cff01e")
+    
     private SysMLModelChangeHandler modelChangeHandler = null;
 
     /**
@@ -63,12 +63,12 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
      * 
      * @param module : the SysML Mdac
      */
-    @objid ("6df96b95-98f7-4605-84eb-a6f6602b0c56")
+    
     public SysMLSession(SysMLModule module) {
         super(module);
     }
 
-    @objid ("6eaf1975-1976-4f9e-9a1f-1d4e41fade4c")
+    
     @Override
     public boolean start() throws ModuleException {
         /*
@@ -91,7 +91,7 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         return super.start();
     }
 
-    @objid ("814f92e8-8bcd-40b1-b716-dddb988d977b")
+    
     @Override
     public void stop() throws ModuleException {
         this.module.getModuleContext().getModelingSession().removeModelHandler(this.modelChangeHandler);
@@ -99,7 +99,7 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         super.stop();
     }
 
-    @objid ("f277201f-b185-42fa-b5c6-e68f0ac3c333")
+    
     private void installRamc() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
         
@@ -119,7 +119,7 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         modelComponentService.deployModelComponent(new File(mdaplugsPath.resolve("res" + File.separator + "ramc" + File.separator + "SIDefinitions.ramc").toString()), new NullProgressMonitor());
     }
 
-    @objid ("6b984ec9-69c1-41f8-9888-05ac97a1c044")
+    
     private void installStyles() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
         
@@ -130,13 +130,13 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService().registerStyle("sysmlpackage", "default", new File(mdaplugsPath.resolve("res" + File.separator + "style" + File.separator + "sysmlpackage.style").toString()));
     }
 
-    @objid ("bab0a697-fbed-499d-b4a9-fba204e1b193")
+    
     @Override
     public boolean select() throws ModuleException {
         return super.select();
     }
 
-    @objid ("7b42efb9-eca7-4476-af3c-b6aba0b47b59")
+    
     @Override
     public void upgrade(Version oldVersion, Map<String, String> oldParameters) {
         Version lastVersion = new Version("2.1.10");

@@ -52,17 +52,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a discrete edge
  * @author ebrosse
  */
-@objid ("f906ae40-3970-444e-916c-4b239e43dce9")
+
 public class DiscreteEdgeDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("19fea02b-7e41-4e67-ab13-e791047c52b9")
+    
     public DiscreteEdgeDiagramCommand() {
         super();
     }
 
-    @objid ("2460718b-a085-4a2d-9b10-fb14acde9139")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -70,14 +70,14 @@ public class DiscreteEdgeDiagramCommand extends DefaultLinkTool {
                                                                         && (element instanceof ActivityNode));
     }
 
-    @objid ("65af8170-bdf0-4ff0-93ad-eeecde060aa9")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (element instanceof ActivityNode) ;
     }
 
-    @objid ("0b316433-e355-4780-aa18-98b4e8368f6e")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

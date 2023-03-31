@@ -52,12 +52,12 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an Allocate Dependency
  * @author ebrosse
  */
-@objid ("59e146ec-7482-4bbf-a9d2-7cbc0a29b3a8")
+
 public class AllocateDependencyDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("a18dec92-3168-4450-a5f4-70283758fa4f")
+    
     public AllocateDependencyDiagramCommand() {
     }
 
@@ -69,7 +69,7 @@ public class AllocateDependencyDiagramCommand extends DefaultLinkTool {
      * @param target : the tested node
      * @return the boolean representing the acceptation
      */
-    @objid ("a70a3757-28a6-4994-bc1b-c3fb885d95af")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -77,14 +77,14 @@ public class AllocateDependencyDiagramCommand extends DefaultLinkTool {
                         && (element instanceof ModelElement));
     }
 
-    @objid ("9e3a6ce8-8bc6-4886-a66f-d221e69611c3")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic source, IDiagramGraphic target) {
         MObject element = target.getElement();
         return  (element instanceof ModelElement) ;
     }
 
-    @objid ("c48f42c1-3176-4bfd-94af-a5911dbdd3f7")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

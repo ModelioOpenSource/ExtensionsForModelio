@@ -66,9 +66,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * This class handles the creation of SysML parametric diagram
  * @author ebrosse
  */
-@objid ("6312900a-2cb1-460f-b504-57b3f3e1be7f")
+
 public class ParametricDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("b6fecc5d-7f5a-45e2-8577-80c41497cf1d")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement owner, String diagramName, String description) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -116,7 +116,7 @@ public class ParametricDiagramWizard extends AbstractDiagramWizardContributor {
         return diagram;
     }
 
-    @objid ("1e8ccf2a-45a6-4d59-9f92-692a5f1f5e0d")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -127,7 +127,7 @@ public class ParametricDiagramWizard extends AbstractDiagramWizardContributor {
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("49e65f82-9aba-4a5e-9d0e-2d31be2d7795")
+    
     public ParametricDiagramWizard() {
         super();
         
@@ -143,13 +143,13 @@ public class ParametricDiagramWizard extends AbstractDiagramWizardContributor {
                 ));
     }
 
-    @objid ("db1a6087-5bb6-4f50-87ea-69b898c98298")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return ConstraintBlockFilter.isAConstraintBlock (owner);
     }
 
-    @objid ("da3f3f49-31b5-49d4-b298-8c6f180bcd56")
+    
     @Override
     public void dispose() {
         // Nothing to do

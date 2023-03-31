@@ -51,16 +51,16 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Rationale Note
  * @author ebrosse
  */
-@objid ("4fbb3131-01f7-4b24-9286-3712b514de1f")
+
 public class RationaleNoteDiagramCommand extends DefaultAttachedBoxTool {
-    @objid ("2285e589-7b21-4bf2-9803-fed172b93517")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic targetNode) {
         MObject target = targetNode.getElement();
         return ((target instanceof ModelElement) && target.getStatus().isModifiable ()) ;
     }
 
-    @objid ("0c80ff4c-03d6-4dca-9c07-638c5ce08b20")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path, Point point) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -79,7 +79,7 @@ public class RationaleNoteDiagramCommand extends DefaultAttachedBoxTool {
         }
     }
 
-    @objid ("3f6a8706-e8d2-4249-9ab3-bb137e8a754d")
+    
     @Override
     public void actionPerformedInDiagram(IDiagramHandle representation, Rectangle rect) {
     }

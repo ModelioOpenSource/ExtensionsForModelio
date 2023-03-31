@@ -41,7 +41,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("a4550a57-ee1e-4454-85d1-04b81367371f")
+
 public class BlockFilter implements IObjectFilter {
     /**
      * Method isABlock
@@ -51,7 +51,7 @@ public class BlockFilter implements IObjectFilter {
      * 
      * @return true if the given MObject is a SysML block
      */
-    @objid ("0e2cfd18-9bae-4148-8405-fe773c32f155")
+    
     public static boolean isABlock(MObject element) {
         return ((element instanceof Class) 
                 && ((((ModelElement) element).isStereotyped(ISysMLPeerModule.MODULE_NAME,
@@ -60,7 +60,7 @@ public class BlockFilter implements IObjectFilter {
                                 SysMLStereotypes.CONSTRAINTBLOCK)));
     }
 
-    @objid ("774a308a-89e4-43a8-ac6f-e8b0facdaa16")
+    
     @Override
     public boolean accept(MObject element) {
         return isABlock(element);

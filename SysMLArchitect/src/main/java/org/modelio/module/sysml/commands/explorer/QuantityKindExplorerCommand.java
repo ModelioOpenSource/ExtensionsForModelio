@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML quantity kinds in the model explorer
  * @author ebrosse
  */
-@objid ("3240b17c-1653-4d39-9987-6d161fea3681")
+
 public class QuantityKindExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("8b257504-ce78-4ef7-9847-546d309c2d3a")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class QuantityKindExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("49c4e467-5a6c-403a-9b45-22e4d44718c8")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class QuantityKindExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("6e6f4aa7-c8da-422b-b56b-e35a0f6d7405")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

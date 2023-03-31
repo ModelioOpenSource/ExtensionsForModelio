@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML distributed properties in the model explorer
  * @author ebrosse
  */
-@objid ("adb6fa22-fe97-432a-af6e-e35824fdbe8d")
+
 public class DistributedPropertyExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("65301942-ba7b-4c66-bc70-0ca61ed52df6")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class DistributedPropertyExplorerCommand extends DefaultModuleCommandHand
         }
     }
 
-    @objid ("82fc591d-1479-43c3-9669-4a0ac840cc40")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class DistributedPropertyExplorerCommand extends DefaultModuleCommandHand
         return false;
     }
 
-    @objid ("b33e64c6-1282-4b82-8cc7-1109aa0853f6")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

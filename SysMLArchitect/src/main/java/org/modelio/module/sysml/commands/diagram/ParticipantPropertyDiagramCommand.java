@@ -48,17 +48,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Participant property
  * @author ebrosse
  */
-@objid ("c5908f20-7150-44b5-843b-21cd961f244a")
+
 public class ParticipantPropertyDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("befacac6-116c-43db-a243-32c177223966")
+    
     public ParticipantPropertyDiagramCommand() {
         super();
     }
 
-    @objid ("2a4d797f-d1a3-413b-adf7-88bedc2a3cdb")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -66,7 +66,7 @@ public class ParticipantPropertyDiagramCommand extends DefaultBoxTool {
                                                                         && ( BlockFilter.isABlock (element)));
     }
 
-    @objid ("0ae1601f-f886-4827-b001-b67edfd6ca0e")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

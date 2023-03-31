@@ -4,7 +4,7 @@
 
 	<groupId>org.modelio</groupId>
 	<artifactId>org.modelio.documentation.sysml</artifactId>
-	<version>3.10.00</version>
+	<version>5.3.0</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<properties>

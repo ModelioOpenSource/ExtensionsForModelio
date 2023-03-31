@@ -42,12 +42,12 @@ import org.modelio.module.sysml.api.SysMLStereotypes;
 import org.modelio.module.sysml.api.SysMLTagTypes;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("3a101877-47d6-4c27-b99d-e96dd896b468")
+
 public class SysMLModelComponentContributor extends AbstractModelComponentContributor {
-    @objid ("e9551df6-af68-4e65-ace9-74d9a72ceb24")
+    
     private IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
 
-    @objid ("c1fbbea8-76e6-4c38-ada4-310d5aafaba5")
+    
     public SysMLModelComponentContributor(IModule module) {
         super(module);
     }
@@ -55,7 +55,7 @@ public class SysMLModelComponentContributor extends AbstractModelComponentContri
     /**
      * Get a TagType from the metamodel extensions.
      */
-    @objid ("8c0f0a76-e164-4754-babe-3f0ed17f06aa")
+    
     private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getTagType(ISysMLPeerModule.MODULE_NAME, tagTypeName, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
@@ -64,7 +64,7 @@ public class SysMLModelComponentContributor extends AbstractModelComponentContri
     /**
      * Get a Steretotype from the metamodel extensions.
      */
-    @objid ("a4976413-d3b8-4d0f-823b-a9a4b80e9cd4")
+    
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getStereotype(ISysMLPeerModule.MODULE_NAME, stereotypeName, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
@@ -73,13 +73,13 @@ public class SysMLModelComponentContributor extends AbstractModelComponentContri
     /**
      * Get a NoteType from the metamodel extensions.
      */
-    @objid ("2349ef3b-9c12-4394-b19f-4ed0375a594d")
+    
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getNoteType(ISysMLPeerModule.MODULE_NAME, noteTypeName, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
     }
 
-    @objid ("984df2b0-6a03-47fe-af71-5d6cc329e841")
+    
     @Override
     public Set<Stereotype> getDependencyStereotypes() {
         Set<Stereotype> stereotypes = new HashSet<>();
@@ -136,19 +136,19 @@ public class SysMLModelComponentContributor extends AbstractModelComponentContri
         return stereotypes;
     }
 
-    @objid ("82091d1c-2804-475e-904d-e955715b9f3e")
+    
     @Override
     public Set<MObject> getElements() {
         return Collections.emptySet();
     }
 
-    @objid ("00fa267b-d5a4-4b69-902e-8783c7cfc3a5")
+    
     @Override
     public Set<ExportedFileEntry> getFiles() {
         return Collections.emptySet();
     }
 
-    @objid ("ae3f6d2c-9f19-4b18-b580-46868b9edea0")
+    
     @Override
     public Set<NoteType> getNoteTypes() {
         Set<NoteType> noteTypes = new HashSet<>();
@@ -157,7 +157,7 @@ public class SysMLModelComponentContributor extends AbstractModelComponentContri
         return noteTypes;
     }
 
-    @objid ("ee545dc7-e2d4-491c-98b2-9250b4f27a72")
+    
     @Override
     public Set<TagType> getTagTypes() {
         Set<TagType> tagTypes = new HashSet<>();

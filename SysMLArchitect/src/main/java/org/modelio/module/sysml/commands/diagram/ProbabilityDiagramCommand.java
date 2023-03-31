@@ -52,31 +52,31 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Probability
  * @author ebrosse
  */
-@objid ("21297dd5-4662-4353-ac6d-b8911b803543")
+
 public class ProbabilityDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("855278c2-7333-4589-9f63-0b69f01d1b80")
+    
     public ProbabilityDiagramCommand() {
         super();
     }
 
-    @objid ("85f2d841-fb02-4527-b987-403dd566de8c")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle diagramRepresentation, IDiagramGraphic targetNode) {
         MObject target = targetNode.getElement();
         return ((target instanceof ActivityNode) && target.getStatus().isModifiable ()) ;
     }
 
-    @objid ("0abb8592-ad0f-4cd5-90c7-961df0285315")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return(element instanceof ActivityNode);
     }
 
-    @objid ("977b49ef-0644-4ec6-be35-a5e0249a7085")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

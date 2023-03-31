@@ -1,7 +1,7 @@
 package org.modelio.module.javadesigner.reverse.newwizard.binary;
 
 import java.util.List;
-import com.modelio.module.xmlreverse.model.IVisitorElement;
+import org.modelio.module.javadesigner.xmlreverse.model.IVisitorElement;
 import org.eclipse.jface.viewers.CheckStateChangedEvent;
 import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.jface.viewers.ICheckStateListener;

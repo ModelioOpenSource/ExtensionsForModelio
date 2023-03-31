@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.Utils;
  * This class handles the properties associated to the requirement related stereotype
  * @author ebrosse
  */
-@objid ("cdf1abff-f261-4391-8a43-bc28a62f450b")
+
 public class RequirementRelatedPropertyPage implements IPropertyContent {
     /**
      * Constructor RequirementRelatedPropertyPage
      * @author ebrosse
      */
-    @objid ("dac29c19-7887-4e4c-8abd-37b409bab337")
+    
     public RequirementRelatedPropertyPage() {
     }
 
-    @objid ("864dad29-ac59-4fe5-9fde-8cfa4dc418a2")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         /*
@@ -91,7 +91,7 @@ public class RequirementRelatedPropertyPage implements IPropertyContent {
         table.addConsultProperty(I18nMessageService.getString("Ui.Verify.To"), valuetab);
     }
 
-    @objid ("02ea4edf-27d7-469b-b198-775fdcc4b4aa")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
     }

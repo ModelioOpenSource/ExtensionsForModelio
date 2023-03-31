@@ -47,17 +47,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a control Operator
  * @author ebrosse
  */
-@objid ("24223fbb-4082-4356-8526-5987f793bd2c")
+
 public class ControlOperatorDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("2a320f56-b2f0-4aff-9fdf-c699b56dc8ce")
+    
     public ControlOperatorDiagramCommand() {
         super();
     }
 
-    @objid ("db282e1f-161a-4d61-b7a6-4662995f4e64")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -65,7 +65,7 @@ public class ControlOperatorDiagramCommand extends DefaultBoxTool {
                                                                         && ( element instanceof Classifier));
     }
 
-    @objid ("6f200e11-7d47-42cc-bbd1-6b096f7da612")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

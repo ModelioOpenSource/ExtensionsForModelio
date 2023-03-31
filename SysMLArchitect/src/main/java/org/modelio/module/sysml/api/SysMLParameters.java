@@ -33,6 +33,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 /**
  * @author ebrosse
  */
-@objid ("5a28a115-9c2d-4ec6-a11d-6eb7e78116eb")
+
 public interface SysMLParameters {
 }

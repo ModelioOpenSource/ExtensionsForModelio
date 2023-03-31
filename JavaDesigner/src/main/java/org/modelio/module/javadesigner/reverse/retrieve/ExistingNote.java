@@ -1,7 +1,7 @@
 package org.modelio.module.javadesigner.reverse.retrieve;
 
-import com.modelio.module.xmlreverse.IReportWriter;
-import com.modelio.module.xmlreverse.Repository;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.Repository;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.mmextensions.infrastructure.ElementNotUniqueException;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;

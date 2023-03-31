@@ -2,8 +2,8 @@ package org.modelio.module.javadesigner.reverse.newwizard.api;
 
 import java.io.File;
 import java.util.List;
-import com.modelio.module.xmlreverse.model.IVisitorElement;
-import com.modelio.module.xmlreverse.model.JaxbReversedData;
+import org.modelio.module.javadesigner.xmlreverse.model.IVisitorElement;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbReversedData;
 import org.modelio.module.javadesigner.reverse.ReverseConfig.GeneralReverseMode;
 
 public interface IFileChooserModel {

@@ -52,17 +52,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Continuous parameter
  * @author ebrosse
  */
-@objid ("d729f765-5156-4051-b968-2f37112c3b47")
+
 public class ContinuousParameterDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("b761732f-b6c8-482a-a6d2-bcd826d5710c")
+    
     public ContinuousParameterDiagramCommand() {
         super();
     }
 
-    @objid ("3f9bfa3c-de5b-410a-bede-302f520597b7")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -73,7 +73,7 @@ public class ContinuousParameterDiagramCommand extends DefaultBoxTool {
                                                                         && (( element instanceof Operation) || ( element instanceof Activity))));
     }
 
-    @objid ("f5cddfec-8a47-4545-9b4e-15231b37fa65")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

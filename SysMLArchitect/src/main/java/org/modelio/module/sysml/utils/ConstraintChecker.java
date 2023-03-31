@@ -52,7 +52,7 @@ import org.modelio.module.sysml.impl.SysMLModule;
  * This class provides services for checking SysML profile constraintes
  * @author ebrosse
  */
-@objid ("85cb0457-feea-49e5-841d-3a95970a2cad")
+
 public class ConstraintChecker {
     /**
      * Method CheckUpdatedElement
@@ -60,7 +60,7 @@ public class ConstraintChecker {
      * 
      * @param toCheck : the checked element
      */
-    @objid ("d8570c36-cd07-47b3-a15c-cd62e5962930")
+    
     public static void CheckUpdatedElement(Element toCheck) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Check Update"))){
@@ -93,7 +93,7 @@ public class ConstraintChecker {
      * Method CheckUpdatedInterface
      * @author ebrosse
      */
-    @objid ("11d1fae4-19af-4650-8a58-7ff59112a996")
+    
     private static void CheckUpdatedInterface(Interface toCheck) {
         /**Flow specifications cannot own operations or receptions (they can only own FlowProperties).**/
         /**Every ?ownedAttribute? of a FlowSpecification must be a FlowProperty**/
@@ -126,7 +126,7 @@ public class ConstraintChecker {
      * 
      * @param toCheck : the MObject to check
      */
-    @objid ("689d874f-d939-4515-85ff-ffd182894570")
+    
     public static void CheckCreatedElement(Element toCheck) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
         try( ITransaction transaction = session.createTransaction (I18nMessageService.getString ("Info.Session.Create", "Activity"))){
@@ -147,7 +147,7 @@ public class ConstraintChecker {
      * Method CheckCreatedOperation
      * @author ebrosse
      */
-    @objid ("8c87abde-1950-4f6e-b4e3-71f296d693d7")
+    
     private static void CheckCreatedOperation(Operation toCheck) {
         /**Flow specifications cannot own operations or receptions (they can only own FlowProperties).**/
         Classifier owner = toCheck.getOwner();
@@ -163,7 +163,7 @@ public class ConstraintChecker {
      * Method CheckCreatedAttribute
      * @author ebrosse
      */
-    @objid ("ff7cdfe7-eb79-4b9c-a035-f8267d870c9f")
+    
     private static void CheckCreatedAttribute(Attribute toCheck) {
         /**Flow specifications cannot own operations or receptions (they can only own FlowProperties).**/
         Classifier owner = toCheck.getOwner();
@@ -179,7 +179,7 @@ public class ConstraintChecker {
      * Method CheckUpdatedClassifier
      * @author ebrosse
      */
-    @objid ("eb17ad2c-7331-43a6-b9be-48a1fa95a9e4")
+    
     private static void CheckUpdatedClassifier(Classifier toCheck) {
         /**The name of a classifier to which a PropertySpecificType is applied must be missing. (The ?name? attribute of the NamedElement metaclass must be empty.)**/
         if  (toCheck.isStereotyped(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.PROPERTYSPECIFICTYPE)){
@@ -195,7 +195,7 @@ public class ConstraintChecker {
      * Method CheckUpdatedAttribute
      * @author ebrosse
      */
-    @objid ("9cb465cd-899f-4adb-b639-c62db1cff6fa")
+    
     private static void CheckUpdatedAttribute(Attribute toCheck) {
         /**If a property owned by a SysML Block or SysML ValueType is typed by a SysML ValueType,
         then the aggregation attribute of the property must be ?composite.?**/
@@ -230,7 +230,7 @@ public class ConstraintChecker {
      * Method CheckUpdatedPort
      * @author ebrosse
      */
-    @objid ("a58a0d7b-252b-4a86-a661-47c06be25bca")
+    
     private static void CheckUpdatedPort(Port toCheck) {
         /**A FlowPort must be typed by a FlowSpecification, Block, Signal, or ValueType.**/
         NameSpace type = toCheck.getBase();
@@ -250,7 +250,7 @@ public class ConstraintChecker {
      * Method CheckUpdatedBindableInstance
      * @author ebrosse
      */
-    @objid ("d35a5873-765f-4c86-a56c-0eb78dbff2d6")
+    
     private static void CheckUpdatedBindableInstance(BindableInstance toCheck) {
         /**ConnectorProperty may only be applied to properties of classes stereotyped by Block.**/
         Classifier owner = toCheck.getInternalOwner();

@@ -1,7 +1,7 @@
 package org.modelio.module.javadesigner.reverse.newwizard.binary;
 
-import com.modelio.module.xmlreverse.model.JaxbModel;
-import com.modelio.module.xmlreverse.model.JaxbReversedData;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbModel;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbReversedData;
 import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;

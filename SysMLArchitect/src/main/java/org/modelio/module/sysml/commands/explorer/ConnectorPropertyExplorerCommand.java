@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML connector properties in the model explorer
  * @author ebrosse
  */
-@objid ("eaccfcf3-4f38-4baa-a4ae-0025b17e1bd8")
+
 public class ConnectorPropertyExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("99462de1-75ef-49ad-9a96-324bc279ee9f")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class ConnectorPropertyExplorerCommand extends DefaultModuleCommandHandle
         }
     }
 
-    @objid ("57440b30-0242-4b98-9531-59b70a15be90")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class ConnectorPropertyExplorerCommand extends DefaultModuleCommandHandle
         return false;
     }
 
-    @objid ("6752554d-1b97-4342-a68e-2e17ee4a3493")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

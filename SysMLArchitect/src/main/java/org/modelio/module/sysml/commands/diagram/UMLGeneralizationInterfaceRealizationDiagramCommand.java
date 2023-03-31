@@ -57,9 +57,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("c9bc94f0-af1f-45c3-87b7-7ca03de3a82c")
+
 public class UMLGeneralizationInterfaceRealizationDiagramCommand extends DefaultLinkTool {
-    @objid ("4d553ca3-688d-40f1-8837-b3d973d13004")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle arg0, IDiagramGraphic targetNode) {
         return ((targetNode != null) && (targetNode.getElement() != null))
@@ -67,7 +67,7 @@ public class UMLGeneralizationInterfaceRealizationDiagramCommand extends Default
                                                                         && (targetNode.getElement() instanceof NameSpace);
     }
 
-    @objid ("cbdd5641-eb3d-4df2-bce9-3d062659d68f")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle diagramRepresentation, IDiagramGraphic originNode, IDiagramGraphic targetNode) {
         if (targetNode != null) {
@@ -93,7 +93,7 @@ public class UMLGeneralizationInterfaceRealizationDiagramCommand extends Default
         return false;
     }
 
-    @objid ("581414bb-0ada-4fa0-b084-75f9c7daa7af")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic originNode, IDiagramGraphic targetNode, LinkRouterKind routerType, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

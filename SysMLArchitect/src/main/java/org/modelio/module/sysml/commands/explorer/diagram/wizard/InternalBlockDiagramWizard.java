@@ -68,9 +68,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * 
  * @author ebrosse
  */
-@objid ("f090d62d-0bab-48ed-b43a-0068d2975fd4")
+
 public class InternalBlockDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("f95f92dc-2403-4d40-9367-b9676a56709d")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -116,7 +116,7 @@ public class InternalBlockDiagramWizard extends AbstractDiagramWizardContributor
         return diagram;
     }
 
-    @objid ("a919b41f-fa87-4e88-ba1d-1cccf33e751d")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -127,7 +127,7 @@ public class InternalBlockDiagramWizard extends AbstractDiagramWizardContributor
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("41231ffb-7ebf-4be2-bf50-1b970802cf28")
+    
     public InternalBlockDiagramWizard() {
         super();
         
@@ -143,13 +143,13 @@ public class InternalBlockDiagramWizard extends AbstractDiagramWizardContributor
                 ));
     }
 
-    @objid ("6d4f4385-2b6d-4046-9a95-2d40701fa552")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return  (BlockFilter.isABlock(owner)) && (!ConstraintBlockFilter.isAConstraintBlock(owner));
     }
 
-    @objid ("e6654c32-994e-44c4-b297-f80ad712c404")
+    
     @Override
     public void dispose() {
         // Nothing to do

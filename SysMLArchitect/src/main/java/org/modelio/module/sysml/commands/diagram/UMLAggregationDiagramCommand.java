@@ -54,9 +54,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of an SysML/UML Aggregation
  * @author ebrosse
  */
-@objid ("d71e1bd4-8a1d-414f-a589-e8bd98ec64d4")
+
 public class UMLAggregationDiagramCommand extends DefaultLinkTool {
-    @objid ("0338b07f-cfb7-4938-b4fe-e472276e9b73")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         if ((arg1 != null) && (arg1.getElement() != null)){ 
@@ -66,13 +66,13 @@ public class UMLAggregationDiagramCommand extends DefaultLinkTool {
         return false;
     }
 
-    @objid ("2cf715ae-25e1-4be6-abc3-a5eace7674c2")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle arg0, IDiagramGraphic arg1, IDiagramGraphic arg2) {
         return ((arg2 != null) && (arg2.getElement() != null) && (arg2.getElement() instanceof Classifier));
     }
 
-    @objid ("c1bf511e-c8eb-4809-ad6d-2ff9807fbf37")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic arg1, IDiagramGraphic arg2, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

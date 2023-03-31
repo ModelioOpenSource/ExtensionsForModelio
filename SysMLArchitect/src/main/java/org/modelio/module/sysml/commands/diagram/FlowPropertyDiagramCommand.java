@@ -50,17 +50,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Flow property
  * @author ebrosse
  */
-@objid ("290d5515-64fe-4851-a12e-7f7e038ee035")
+
 public class FlowPropertyDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("a7266127-e7e3-4ebd-b5cf-0c4dbfd3ef2d")
+    
     public FlowPropertyDiagramCommand() {
         super();
     }
 
-    @objid ("1f1216a7-ab1d-46bf-83ca-f874bd9d8d33")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -70,7 +70,7 @@ public class FlowPropertyDiagramCommand extends DefaultBoxTool {
                                                                                 && (!((Classifier)element).isStereotyped(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.CONSTRAINTBLOCK)));
     }
 
-    @objid ("8259fb51-48eb-4dfc-8bbe-1995a86143bd")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

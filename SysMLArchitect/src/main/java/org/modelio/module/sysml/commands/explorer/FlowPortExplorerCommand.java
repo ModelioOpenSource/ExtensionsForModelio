@@ -50,9 +50,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML flow ports in the model explorer
  * @author ebrosse
  */
-@objid ("8d6954af-cf76-4b25-880d-c42daa9ddb18")
+
 public class FlowPortExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("d15cc47b-ff22-4860-83a2-9628955655af")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -69,7 +69,7 @@ public class FlowPortExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("2393011d-9e95-48eb-b376-63e4802afd0e")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ( (selectedElements != null)
@@ -93,7 +93,7 @@ public class FlowPortExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("da27ed04-1ddc-46c9-bfdc-f133ddc017b6")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

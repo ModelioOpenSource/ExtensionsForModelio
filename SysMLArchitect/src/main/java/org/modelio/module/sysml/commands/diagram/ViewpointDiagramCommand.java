@@ -50,9 +50,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a SysML Viewpoint
  * @author ebrosse
  */
-@objid ("7a4bdfe1-1c0c-484c-ad42-60e81bb69979")
+
 public class ViewpointDiagramCommand extends DefaultBoxTool {
-    @objid ("ee70fa39-1ee9-4f9b-aba2-4c1b801a4c13")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -64,7 +64,7 @@ public class ViewpointDiagramCommand extends DefaultBoxTool {
                                                                                 && (element instanceof Package)));
     }
 
-    @objid ("3a233210-5d75-4e58-a44f-2a04d38eecbe")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

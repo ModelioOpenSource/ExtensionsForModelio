@@ -2,7 +2,7 @@ package org.modelio.module.javadesigner.reverse.xmltomodel;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;

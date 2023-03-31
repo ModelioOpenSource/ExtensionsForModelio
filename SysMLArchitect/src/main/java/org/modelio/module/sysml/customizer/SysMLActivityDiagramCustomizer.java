@@ -19,9 +19,9 @@ import org.modelio.module.sysml.utils.ISysMLCustomizerPredefinedField;
 /**
  * Activity diagram palette configurer.
  */
-@objid ("fa636582-392b-4d0f-aa28-3c36bd731092")
+
 public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer implements IDiagramCustomizer {
-    @objid ("7f575a0b-ca1e-439c-9fbd-6f9ec1138a5f")
+    
     @Override
     public void fillPalette(PaletteRoot paletteRoot) {
         IDiagramService toolRegistry = SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService();
@@ -42,7 +42,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         paletteRoot.add(this.createDefaultFreeDrawingGroup(toolRegistry));
     }
 
-    @objid ("12d8e37e-a0b7-4d3f-8f5f-2e3f7a51388e")
+    
     private PaletteEntry createPartitionGroup(final IDiagramService toolRegistry) {
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Partition"), null);
         
@@ -62,7 +62,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
      * 
      * @return The created group.
      */
-    @objid ("0c9b8fef-bb46-4f20-b635-0f72a5023b68")
+    
     private PaletteDrawer createDependencyGroup(final IDiagramService toolRegistry) {
         // common group
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Common"), null);
@@ -75,7 +75,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         return group;
     }
 
-    @objid ("26c2a201-dade-46b5-a4f5-b3e8030e0980")
+    
     private PaletteEntry createEventGroup(final IDiagramService toolRegistry) {
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Event"), null);
         
@@ -89,7 +89,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         return group;
     }
 
-    @objid ("a79100e9-0ed6-46b0-b7a1-488d5e094282")
+    
     private PaletteEntry createFlowGroup(final IDiagramService toolRegistry) {
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Flow"), null);
         
@@ -106,7 +106,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         return group;
     }
 
-    @objid ("5374542f-11ad-4e15-9653-c7b26187cb52")
+    
     private PaletteEntry createDataGroup(final IDiagramService toolRegistry) {
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Data"), null);
         
@@ -128,7 +128,7 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         return group;
     }
 
-    @objid ("afeb25b4-e27f-4d4b-b8de-71bff39eff14")
+    
     private PaletteEntry createControlGroup(final IDiagramService toolRegistry) {
         PaletteDrawer group = new PaletteDrawer(I18nMessageService.getString("ActivityPaletteGroup.Control"), null);
         
@@ -153,18 +153,18 @@ public class SysMLActivityDiagramCustomizer extends SysMLDiagramCustomizer imple
         return group;
     }
 
-    @objid ("3cd9010e-87d0-4ef8-8282-2bcb4802e338")
+    
     @Override
     public boolean keepBasePalette() {
         return false;
     }
 
-    @objid ("ebb75955-8e29-4971-9aa0-2f1f4cb7a6a1")
+    
     @Override
     public void initialize(IModule module, List<org.modelio.api.modelio.diagram.tools.PaletteEntry> tools, Map<String, String> hParameters, boolean keepBasePalette) {
     }
 
-    @objid ("b703bea2-f21a-4ffe-94ee-46127b33a7db")
+    
     @Override
     public Map<String, String> getParameters() {
         return null;

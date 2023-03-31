@@ -14,9 +14,9 @@ import org.modelio.module.sysml.utils.ISysMLCustomizerPredefinedField;
 /**
  * State Machine diagram palette configurer.
  */
-@objid ("2be36872-150f-4337-b491-049356134df5")
+
 public class SysMLStateMachineDiagramCustomizer extends SysMLDiagramCustomizer implements IDiagramCustomizer {
-    @objid ("c8e4ca9a-7fb0-4947-a675-d09c50dadb9a")
+    
     @Override
     public void fillPalette(PaletteRoot paletteRoot) {
         for (Object children : paletteRoot.getChildren()){
@@ -30,18 +30,18 @@ public class SysMLStateMachineDiagramCustomizer extends SysMLDiagramCustomizer i
         }
     }
 
-    @objid ("5cc2f3e8-5903-469c-bd6e-c64f8a203499")
+    
     @Override
     public boolean keepBasePalette() {
         return true;
     }
 
-    @objid ("9ce7d160-2bcf-4858-8780-8412cb916bc1")
+    
     @Override
     public void initialize(IModule module, List<org.modelio.api.modelio.diagram.tools.PaletteEntry> tools, Map<String, String> hParameters, boolean keepBasePalette) {
     }
 
-    @objid ("d745f748-5234-47e5-9ae1-ab74391bec57")
+    
     @Override
     public Map<String, String> getParameters() {
         return null;

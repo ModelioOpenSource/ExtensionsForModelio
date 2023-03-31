@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the probability stereotype
  * @author ebrosse
  */
-@objid ("fe1f3108-c198-46e7-8ac5-c078c774f11d")
+
 public class ProbabilityPropertyPage implements IPropertyContent {
     /**
      * Constructor ActivityEdgePropertyPage
      * @author ebrosse
      */
-    @objid ("aedd852d-39c4-4bc5-a2bc-d912fd7f6468")
+    
     public ProbabilityPropertyPage() {
     }
 
-    @objid ("a5dfca59-3c86-40d9-b7c3-19b2fbd0f6fa")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -58,7 +58,7 @@ public class ProbabilityPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("c4ae9b7b-4e8a-4b6d-aba5-f764ee7ecb82")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValue(SysMLTagTypes.PROBABILITY_PROBABILITY, element);

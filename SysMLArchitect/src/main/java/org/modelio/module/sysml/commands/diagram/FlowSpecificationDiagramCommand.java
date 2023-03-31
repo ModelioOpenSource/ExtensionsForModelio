@@ -49,17 +49,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Flow specification
  * @author ebrosse
  */
-@objid ("7cff5b8c-3461-4268-9fb8-94ca7cd5599b")
+
 public class FlowSpecificationDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("9a018b44-a897-4dde-9c31-434b8181a9e9")
+    
     public FlowSpecificationDiagramCommand() {
         super();
     }
 
-    @objid ("d988aef2-d438-4925-99b4-c6cf5462a32f")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -71,7 +71,7 @@ public class FlowSpecificationDiagramCommand extends DefaultBoxTool {
                                                                         && (element instanceof Package));
     }
 
-    @objid ("21190a20-9ab9-4f78-b0fc-fe0816d2115f")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML optional in the model explorer
  * @author ebrosse
  */
-@objid ("30eb3af9-4859-4067-b2b0-ea88d4834e86")
+
 public class StateMachineExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("a988b775-b6be-4d90-b363-2dbf1a318670")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -61,7 +61,7 @@ public class StateMachineExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("58761982-7324-44d2-9b1c-d03e488e0fd7")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -70,7 +70,7 @@ public class StateMachineExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("08dc52f6-6930-453b-a8c5-7841d11b4055")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

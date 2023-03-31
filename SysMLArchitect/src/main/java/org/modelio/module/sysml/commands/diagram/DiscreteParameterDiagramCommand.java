@@ -52,17 +52,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Discrete parameter
  * @author ebrosse
  */
-@objid ("95df3ec8-92b1-4981-b26c-23d4b900af6b")
+
 public class DiscreteParameterDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("f16a6e93-a8ad-43dc-8ab2-8ee58d49936e")
+    
     public DiscreteParameterDiagramCommand() {
         super();
     }
 
-    @objid ("1fa34312-e89a-4f7b-b62a-33721a307844")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -73,7 +73,7 @@ public class DiscreteParameterDiagramCommand extends DefaultBoxTool {
                                                                         && (( element instanceof Operation) || ( element instanceof Activity))));
     }
 
-    @objid ("980449bb-ef1d-4396-b87e-146ca23dfaa0")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML flow specification in the model explorer
  * @author ebrosse
  */
-@objid ("e01f2702-8e23-4edb-903c-384ba2432a23")
+
 public class FlowSpecificationExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("59363172-553d-464b-b351-6b778af6d7ad")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession(); 
@@ -62,7 +62,7 @@ public class FlowSpecificationExplorerCommand extends DefaultModuleCommandHandle
         }
     }
 
-    @objid ("ee1cc91b-f15c-48e1-97d3-e816a3a001a4")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class FlowSpecificationExplorerCommand extends DefaultModuleCommandHandle
         return false;
     }
 
-    @objid ("1131870f-1c8c-4fe4-b560-0607dec9093b")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

@@ -41,22 +41,22 @@ import org.modelio.module.sysml.i18n.I18nMessageService;
  * This class handles the properties associated to the constraint proper stereotype
  * @author ebrosse
  */
-@objid ("8f0359d7-6a00-4a0a-aa9d-aad8ae1478ef")
+
 public class ConstraintPropertyPropertyPage implements IPropertyContent {
     /**
      * Constructor ConstraintPropertyPropertyPage
      * @author ebrosse
      */
-    @objid ("dbccdea6-14bc-443f-a6c8-debaaa6071f0")
+    
     public ConstraintPropertyPropertyPage() {
     }
 
-    @objid ("12fd5994-1416-487f-b1c6-4b8e12e820ea")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
     }
 
-    @objid ("c3aae81c-0085-4158-b2dd-33ace043b8a0")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         /*

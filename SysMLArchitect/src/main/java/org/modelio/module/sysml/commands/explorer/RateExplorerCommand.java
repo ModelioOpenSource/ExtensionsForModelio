@@ -45,9 +45,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML rate parameters in the model explorer
  * @author ebrosse
  */
-@objid ("80c33e4d-7f01-49c2-b474-0292fd04fef4")
+
 public class RateExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("db0a77be-35b3-4aae-83ac-fd3cc822c204")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -61,7 +61,7 @@ public class RateExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("b2fb7679-cd55-4d02-afeb-ae8d7bdfbb4c")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -71,7 +71,7 @@ public class RateExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("5f589427-8c50-4f89-858f-7fb8d2e2e6e3")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

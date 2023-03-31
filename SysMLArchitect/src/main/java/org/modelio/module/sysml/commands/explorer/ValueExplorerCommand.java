@@ -48,9 +48,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML values in the model explorer
  * @author ebrosse
  */
-@objid ("232d3e9d-ce2e-4a3a-a4c3-1320822eebfb")
+
 public class ValueExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("7eac9e1b-9d38-4240-aaff-89b9c6e791ee")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -71,7 +71,7 @@ public class ValueExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("c2fb3223-eec8-4cf4-b604-a932057c3529")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -81,7 +81,7 @@ public class ValueExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("f6ce7fa9-f96d-4be1-a07d-8fa1780eebd6")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

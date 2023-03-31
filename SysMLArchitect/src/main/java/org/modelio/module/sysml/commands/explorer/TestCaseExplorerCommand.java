@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML test cases in the model explorer
  * @author ebrosse
  */
-@objid ("dcce3b06-5d04-4e5c-9696-b8c735036e8d")
+
 public class TestCaseExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("2995468e-89b5-4efe-96e2-4bea0ce3cd1b")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class TestCaseExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("1907893f-83bb-4fc1-81ac-510eca86d0c3")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class TestCaseExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("9bc421ac-6daf-4604-97e4-94fd5dde972a")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

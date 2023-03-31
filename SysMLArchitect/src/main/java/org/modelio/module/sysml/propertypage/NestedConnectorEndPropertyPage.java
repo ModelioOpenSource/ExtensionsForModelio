@@ -36,22 +36,22 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
  * This class handles the properties associated to the Nested Connector End stereotype
  * @author ebrosse
  */
-@objid ("7130385e-0d98-440c-ab52-d677e994931b")
+
 public class NestedConnectorEndPropertyPage implements IPropertyContent {
     /**
      * Constructor NestedConnectorEndPropertyPage
      * @author ebrosse
      */
-    @objid ("9a76ee35-acd9-4cec-b166-ce6224853e22")
+    
     public NestedConnectorEndPropertyPage() {
     }
 
-    @objid ("5fd17467-1a61-4534-b774-bf2924c7ad98")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
     }
 
-    @objid ("546a2b87-e8df-402e-a6d5-9a13e9d5085b")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
     }

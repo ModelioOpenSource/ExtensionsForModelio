@@ -36,7 +36,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
  * This interface defines the contract of all property pages
  * @author ebrosse
  */
-@objid ("d8ce3052-252b-4469-94bb-59f4219f7175")
+
 public interface IPropertyContent {
     /**
      * This method handles the changes of the given property, identified by its row index, of a selected element
@@ -46,7 +46,7 @@ public interface IPropertyContent {
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("886cb839-8ac3-42a7-a0d4-37a270bd0232")
+    
     void changeProperty(ModelElement element, int row, String value);
 
     /**
@@ -55,7 +55,7 @@ public interface IPropertyContent {
      * 
      * @param table : the property table to fulfill
      */
-    @objid ("c3e27d81-bbf9-49a4-8e1d-6983fbee2165")
+    
     void update(ModelElement element, IModulePropertyTable table);
 
 }

@@ -55,9 +55,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the creation of SysML block diagram
  * @author ebrosse
  */
-@objid ("e576e6b5-b563-48ca-b4bb-7d7621f3df81")
+
 public class BlockDiagramCommand extends DefaultModuleCommandHandler {
-    @objid ("ee5ca3bf-6fec-4c18-9e36-4f8c5053a371")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModuleContext moduleContext = SysMLModule.getInstance().getModuleContext();
@@ -96,7 +96,7 @@ public class BlockDiagramCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("f14b8794-f745-457c-a477-2b749890a2d4")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

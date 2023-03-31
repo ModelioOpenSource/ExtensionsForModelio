@@ -46,20 +46,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the properties associated to the Rate stereotype
  * @author ebrosse
  */
-@objid ("c7a10db7-5f6d-4ca0-aca4-7d7dfd3d37f5")
+
 public class RateParameterPropertyPage implements IPropertyContent {
-    @objid ("e38f374d-3aa3-42d1-929c-e2f6ce484c33")
+    
     private static Collection<Instance> _instances;
 
     /**
      * Constructor ValueTypePropertyPage
      * @author ebrosse
      */
-    @objid ("bfa379e7-ac48-42c8-8d56-056c27c8e83a")
+    
     public RateParameterPropertyPage() {
     }
 
-    @objid ("f7f73136-6467-4c08-ad94-e4d6b441c4c7")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -76,7 +76,7 @@ public class RateParameterPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("c93b05c6-7f29-4ae9-b3e3-ef9c98cd51bf")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValueLink(ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.RATE, element);

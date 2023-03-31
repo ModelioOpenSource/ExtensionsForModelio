@@ -52,9 +52,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a trace dependency
  * @author ebrosse
  */
-@objid ("fe16af60-b4e6-4b07-8b53-26bd711ab1e0")
+
 public class TraceDependencyDiagramCommand extends DefaultLinkTool {
-    @objid ("f1d5bf32-f1a1-42dd-a75e-fff1e94fffc1")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -62,14 +62,14 @@ public class TraceDependencyDiagramCommand extends DefaultLinkTool {
                                                                         &&(element instanceof ModelElement));
     }
 
-    @objid ("b220e231-9225-4300-bb2c-14d3d971cbe3")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (element instanceof ModelElement);
     }
 
-    @objid ("0ce1b291-ca19-4ce6-8544-56339927bfb8")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

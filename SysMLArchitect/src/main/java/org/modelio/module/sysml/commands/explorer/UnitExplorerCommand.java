@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML units in the model explorer
  * @author ebrosse
  */
-@objid ("9b2f0964-0bcd-41e0-a6bb-a7d6d9d84ee3")
+
 public class UnitExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("6928e294-dd0e-476c-8b56-45e85947e243")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class UnitExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("d4ad7921-66b0-4b81-b5e2-4de83785580e")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class UnitExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("5c7f6dae-90d5-49a6-90bd-1aad5aac9939")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

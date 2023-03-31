@@ -57,17 +57,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Conform dependency
  * @author ebrosse
  */
-@objid ("8321761e-e123-4f38-b175-cf4d98952051")
+
 public class ConformDependencyDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("7fde298c-c617-41ba-a907-19ab8949d3ac")
+    
     public ConformDependencyDiagramCommand() {
         super();
     }
 
-    @objid ("cf583fa2-2513-4c6f-be3e-e6b9cfc9b782")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -76,14 +76,14 @@ public class ConformDependencyDiagramCommand extends DefaultLinkTool {
                                                                         && (Utils.getViewpoint ((Package) element) == null));
     }
 
-    @objid ("1aca6e39-ecd4-4f13-b62f-c1e18c621ae8")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (ViewpointFilter.isAViewpoint (element));
     }
 
-    @objid ("66e3f33d-23bd-4d76-8c37-a6ff69d8f2ba")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

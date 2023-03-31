@@ -40,17 +40,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the ViewPoint stereotype
  * @author ebrosse
  */
-@objid ("c18168d8-a078-4aba-a5b0-246236543528")
+
 public class ViewpointPropertyPage implements IPropertyContent {
     /**
      * Constructor ViewpointPropertyPage
      * @author ebrosse
      */
-    @objid ("4aadfee3-3a0f-459e-9db4-cb3f2520a77b")
+    
     public ViewpointPropertyPage() {
     }
 
-    @objid ("abbf29cb-b028-4535-acc9-f422202f6f85")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -70,7 +70,7 @@ public class ViewpointPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("78ffeab4-68f6-4c88-bd37-3ee1eba4eef9")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValue(SysMLTagTypes.VIEWPOINT_STAKEHOLDERS, element);

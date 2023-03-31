@@ -48,9 +48,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of UML part in the model explorer
  * @author ebrosse
  */
-@objid ("fa4707d6-4ea4-4192-97c0-fb49ea04e05b")
+
 public class PartExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("1eff9329-3c07-4518-9a2e-712132c9d0e0")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -68,7 +68,7 @@ public class PartExplorerCommand extends DefaultModuleCommandHandler {
         }
     }
 
-    @objid ("4848273c-e352-4e99-a651-a9229ab4f10b")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -79,7 +79,7 @@ public class PartExplorerCommand extends DefaultModuleCommandHandler {
         return false;
     }
 
-    @objid ("03bbeeb8-edcb-476f-94d4-e6784c217259")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

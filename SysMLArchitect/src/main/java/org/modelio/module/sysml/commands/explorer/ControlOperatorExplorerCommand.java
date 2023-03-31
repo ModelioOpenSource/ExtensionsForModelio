@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML control operator in the model explorer
  * @author ebrosse
  */
-@objid ("4bbd0850-7287-4f89-846d-aca3c3199c09")
+
 public class ControlOperatorExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("45be91a3-c283-4bb0-b3af-8b31bfc64bef")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -61,7 +61,7 @@ public class ControlOperatorExplorerCommand extends DefaultModuleCommandHandler 
         }
     }
 
-    @objid ("6dbdc396-4822-49fa-b99d-a5dab0dfe964")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -71,7 +71,7 @@ public class ControlOperatorExplorerCommand extends DefaultModuleCommandHandler 
         return false;
     }
 
-    @objid ("48ef9113-ed63-4e0a-9eb4-9b2b501d12ea")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

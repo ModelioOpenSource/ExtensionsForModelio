@@ -55,17 +55,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("3ebbfab3-2abc-4cd7-96bc-4cf3dfc9cf5c")
+
 public class FlowPortDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("16869e97-4584-47c4-8452-dcaf0a7406ec")
+    
     public FlowPortDiagramCommand() {
         super();
     }
 
-    @objid ("dc9f9a6f-ae76-4a05-8f80-27a2245f924b")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -73,7 +73,7 @@ public class FlowPortDiagramCommand extends DefaultBoxTool {
                                                                         || (element instanceof Component) || (element instanceof Artifact) || (element instanceof Node) || (element instanceof Signal)));
     }
 
-    @objid ("8fbf535e-aa48-49e6-84e2-b919d523f872")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

@@ -49,17 +49,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Connector property
  * @author ebrosse
  */
-@objid ("c551b5b7-7ff9-4d28-a622-937c619cef3b")
+
 public class ConnectorPropertyDiagramCommand extends DefaultBoxTool {
     /**
      * Default constructor
      */
-    @objid ("4605a943-aeb1-4bc7-b4f0-0fe6c4ba066d")
+    
     public ConnectorPropertyDiagramCommand() {
         super();
     }
 
-    @objid ("25f9325a-dd08-4638-9823-0f6285b6e819")
+    
     @Override
     public boolean acceptElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -68,7 +68,7 @@ public class ConnectorPropertyDiagramCommand extends DefaultBoxTool {
                                                                         && !(ConstraintBlockFilter.isAConstraintBlock(element));
     }
 
-    @objid ("c50e685e-1e4b-4030-bb8a-8943f2b95862")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic target, Rectangle rect) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

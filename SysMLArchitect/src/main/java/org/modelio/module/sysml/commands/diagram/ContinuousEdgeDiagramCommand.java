@@ -52,17 +52,17 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * The diagram command which handles the creation of a Continuous edge
  * @author ebrosse
  */
-@objid ("c4ab7ce8-579f-4028-8f7c-76836bdf18d2")
+
 public class ContinuousEdgeDiagramCommand extends DefaultLinkTool {
     /**
      * Default constructor
      */
-    @objid ("5f1d36a3-0244-46a0-992f-46273a741cfa")
+    
     public ContinuousEdgeDiagramCommand() {
         super();
     }
 
-    @objid ("8f2bce96-51ac-4722-8440-11ccf4d23d13")
+    
     @Override
     public boolean acceptFirstElement(IDiagramHandle representation, IDiagramGraphic target) {
         MObject element = target.getElement();
@@ -70,14 +70,14 @@ public class ContinuousEdgeDiagramCommand extends DefaultLinkTool {
                                                                         &&  (element instanceof ActivityNode));
     }
 
-    @objid ("8ae5b0bb-ceeb-4075-9db4-07e9941f5c74")
+    
     @Override
     public boolean acceptSecondElement(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target) {
         MObject element = target.getElement();
         return (element instanceof ActivityNode);
     }
 
-    @objid ("d2c13d81-18aa-4bdf-b816-87604c09a78a")
+    
     @Override
     public void actionPerformed(IDiagramHandle representation, IDiagramGraphic origin, IDiagramGraphic target, LinkRouterKind kind, ILinkRoute path) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();

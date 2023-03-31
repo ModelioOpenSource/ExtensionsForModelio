@@ -45,20 +45,20 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class handles the properties associated to the Unit stereotype
  * @author ebrosse
  */
-@objid ("7a71ca6e-4871-431a-9b65-0fa3f98310d1")
+
 public class UnitPropertyPage implements IPropertyContent {
-    @objid ("3d9b0756-1fcd-4cd7-9183-5fe4f4542f32")
+    
     private static List<MObject> _quantityKinds = null;
 
     /**
      * Constructor UnitPropertyPage
      * @author ebrosse
      */
-    @objid ("6f20257d-3f05-408d-8edc-18f41fb70d38")
+    
     public UnitPropertyPage() {
     }
 
-    @objid ("3a817600-f916-40e6-a719-a54c6725977b")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -85,7 +85,7 @@ public class UnitPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("0cd882c3-df2f-4cfc-8bc4-6278df7719e5")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         String value_kind = ModelUtils.getTaggedValue(SysMLTagTypes.UNIT_SYMBOL, element);

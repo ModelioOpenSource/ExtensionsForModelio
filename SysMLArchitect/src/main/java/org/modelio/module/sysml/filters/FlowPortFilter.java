@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This class filters SysML flowPort
  * @author ebrosse
  */
-@objid ("c64c425c-9cd1-453f-809b-f5ad6666a9b1")
+
 public class FlowPortFilter implements IObjectFilter {
     /**
      * Method isAFlowPort
@@ -49,13 +49,13 @@ public class FlowPortFilter implements IObjectFilter {
      * 
      * @return true if the given MObject is a SysML Flow Port
      */
-    @objid ("302f423f-b654-4183-badc-7832c08b05ce")
+    
     public static boolean isAFlowPort(MObject element) {
         return ((element instanceof Port) && 
                                                                         (((ModelElement) element).isStereotyped (ISysMLPeerModule.MODULE_NAME,SysMLStereotypes.FLOWPORT)));
     }
 
-    @objid ("229d0dc0-6e2f-48a5-b255-2cf215e30577")
+    
     @Override
     public boolean accept(MObject element) {
         return isAFlowPort(element);

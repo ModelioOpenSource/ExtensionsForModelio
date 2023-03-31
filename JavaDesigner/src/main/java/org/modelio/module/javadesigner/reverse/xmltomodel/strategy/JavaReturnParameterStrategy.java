@@ -2,11 +2,11 @@ package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.modelio.module.xmlreverse.IReadOnlyRepository;
-import com.modelio.module.xmlreverse.IReportWriter;
-import com.modelio.module.xmlreverse.model.JaxbReturnParameter;
-import com.modelio.module.xmlreverse.model.JaxbTaggedValue;
-import com.modelio.module.xmlreverse.strategy.ReturnParameterStrategy;
+import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
+import org.modelio.module.javadesigner.xmlreverse.IReportWriter;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbReturnParameter;
+import org.modelio.module.javadesigner.xmlreverse.model.JaxbTaggedValue;
+import org.modelio.module.javadesigner.xmlreverse.strategy.ReturnParameterStrategy;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.statik.GeneralClass;
 import org.modelio.metamodel.uml.statik.Parameter;

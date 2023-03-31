@@ -68,9 +68,9 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
  * This class handles the creation of SysML activity diagram
  * @author ebrosse
  */
-@objid ("febf2166-ada0-44ef-a721-2e2aa775b1dd")
+
 public class SysMLActivityDiagramWizard extends AbstractDiagramWizardContributor {
-    @objid ("80728d9d-04ab-4da4-8498-922ad8ea6eed")
+    
     @Override
     public AbstractDiagram actionPerformed(ModelElement element, String diagramName, String description) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -88,7 +88,7 @@ public class SysMLActivityDiagramWizard extends AbstractDiagramWizardContributor
         return diagram;
     }
 
-    @objid ("a7ca22b9-ed36-4c8f-bec9-97903663c02c")
+    
     @Override
     public ElementDescriptor getCreatedElementType() {
         IModuleContext moduleContext = getModule().getModuleContext();
@@ -99,7 +99,7 @@ public class SysMLActivityDiagramWizard extends AbstractDiagramWizardContributor
         return stereotype != null ? new ElementDescriptor(mClass, stereotype) : null;
     }
 
-    @objid ("59843c15-5a8b-4306-a5b1-96411fe6b3ea")
+    
     public SysMLActivityDiagramWizard() {
         super();
         
@@ -125,13 +125,13 @@ public class SysMLActivityDiagramWizard extends AbstractDiagramWizardContributor
                 ));
     }
 
-    @objid ("5ff6db3e-caa5-441e-9bd6-a619ae901c3c")
+    
     @Override
     protected boolean checkCanCreateIn(ModelElement owner) {
         return !ConstraintBlockFilter.isAConstraintBlock (owner) && !(owner instanceof Profile);
     }
 
-    @objid ("da906817-d4e1-4d22-ba45-d0e376b1d666")
+    
     @Override
     public void dispose() {
         // Nothing to do

@@ -41,17 +41,17 @@ import org.modelio.module.sysml.utils.SysMLResourcesManager;
  * This class handles the properties associated to the Pin stereotype
  * @author ebrosse
  */
-@objid ("62f2677a-1070-4f3b-8e77-96b843a81055")
+
 public class PinPropertyPage implements IPropertyContent {
     /**
      * Constructor PinPropertyPage
      * @author ebrosse
      */
-    @objid ("3117283d-e9af-4f50-8297-8c5bf218c3fb")
+    
     public PinPropertyPage() {
     }
 
-    @objid ("0fbc4a26-cf88-4bf1-9dc7-ad3037be404e")
+    
     @Override
     public void changeProperty(ModelElement element, int row, String value) {
         if(row == 1){
@@ -61,7 +61,7 @@ public class PinPropertyPage implements IPropertyContent {
         }
     }
 
-    @objid ("689c2d00-02ae-4662-8591-125835905afc")
+    
     @Override
     public void update(ModelElement element, IModulePropertyTable table) {
         table.addProperty(SysMLResourcesManager.getInstance().getPropertyName(SysMLTagTypes.PIN_ISSTREAM),

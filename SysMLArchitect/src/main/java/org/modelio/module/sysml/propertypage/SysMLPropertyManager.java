@@ -28,7 +28,7 @@ import org.modelio.vcore.smkernel.mapi.MMetamodel;
 /**
  * @author ebrosse
  */
-@objid ("e395d0d5-2e97-4651-88c4-cf4b95ecc47d")
+
 public class SysMLPropertyManager {
     /**
      * @param MObject
@@ -38,7 +38,7 @@ public class SysMLPropertyManager {
      * @param value : the new value of the prpoperty
      * @return the new value of the row
      */
-    @objid ("5b6aae85-6d2f-493d-a4e2-d6d6df8b531c")
+    
     public int changeProperty(ModelElement element, int row, String value) {
         IPropertyContent propertypage = null;
         IMetamodelExtensions extensions = SysMLModule.getInstance().getModuleContext().getModelingSession().getMetamodelExtensions();
@@ -185,7 +185,7 @@ public class SysMLPropertyManager {
      * 
      * @param table : the property table
      */
-    @objid ("43e3c9f8-93ae-4d8f-857d-cac725f7c1eb")
+    
     public void update(ModelElement element, IModulePropertyTable table) {
         IMetamodelExtensions extensions = SysMLModule.getInstance().getModuleContext().getModelingSession().getMetamodelExtensions();
         IPropertyContent propertypage = null;

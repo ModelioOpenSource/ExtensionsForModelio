@@ -46,9 +46,9 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * This command handles the creation of SysML constraint properties in the model explorer
  * @author ebrosse
  */
-@objid ("1d9de068-77f6-47ae-ab81-9d652e1afc8d")
+
 public class ConstraintPropertyExplorerCommand extends DefaultModuleCommandHandler {
-    @objid ("8191547b-b039-4b2d-b3e6-abcdf15ed13b")
+    
     @Override
     public void actionPerformed(List<MObject> selectedElements, IModule module) {
         IModelingSession session = SysMLModule.getInstance().getModuleContext().getModelingSession();
@@ -62,7 +62,7 @@ public class ConstraintPropertyExplorerCommand extends DefaultModuleCommandHandl
         }
     }
 
-    @objid ("edc81f27-11d9-4762-809c-ab13fef129d2")
+    
     @Override
     public boolean accept(List<MObject> selectedElements, IModule module) {
         if (super.accept(selectedElements, module)){
@@ -72,7 +72,7 @@ public class ConstraintPropertyExplorerCommand extends DefaultModuleCommandHandl
         return false;
     }
 
-    @objid ("d559544c-8947-4a2a-aa7f-7f07938ff6f7")
+    
     @Override
     public boolean isActiveFor(List<MObject> selectedElements, IModule module) {
         MObject selectedElt = selectedElements.get(0);

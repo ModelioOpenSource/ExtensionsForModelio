@@ -41,7 +41,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  * 
  * @author ebrosse
  */
-@objid ("42951e3e-ce42-4fd9-950e-67128fda9e49")
+
 public class ConformFilter implements IObjectFilter {
     /**
      * Method isABlock
@@ -51,13 +51,13 @@ public class ConformFilter implements IObjectFilter {
      * 
      * @return true if the given MObject is a conform dependency
      */
-    @objid ("00d706ec-ff2a-47e8-9023-d99fbdb94d8b")
+    
     public static boolean isAConform(MObject element) {
         return ((element instanceof Dependency) && ((ModelElement) element).isStereotyped(ISysMLPeerModule.MODULE_NAME,
                                                                         SysMLStereotypes.CONFORM));
     }
 
-    @objid ("4259c79a-6766-4547-8cad-9c35bbd22a6d")
+    
     @Override
     public boolean accept(MObject element) {
         return isAConform(element);

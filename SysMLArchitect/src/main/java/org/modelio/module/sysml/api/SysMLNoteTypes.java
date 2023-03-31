@@ -33,12 +33,12 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 /**
  * @author ebrosse
  */
-@objid ("ae4db5c6-bf5d-4e6b-a3ee-b24b2c5cd692")
+
 public interface SysMLNoteTypes {
-    @objid ("ed5b76da-e234-4fc4-a8c1-30aa9c4a2ad1")
+    
     public static final String MODELELEMENT_PROBLEM = "Problem";
 
-    @objid ("d8bc7e1e-573c-44a4-909a-b4f36696e306")
+    
     public static final String MODELELEMENT_RATIONALE = "Rationale";
 
 }
