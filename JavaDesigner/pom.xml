@@ -5,7 +5,7 @@
 	<!-- definition -->
 	<groupId>org.modelio.module</groupId>
 	<artifactId>javadesigner</artifactId>
-	<version>5.3.0</version>
+	<version>5.4.01</version>
 	<name>JavaDesigner</name>
 	<description>The Java Designer module provides a complete range of features dedicated to Java development, including Java code and Javadoc generation from UML2 models. It also provides an automatic model completion feature, incorporating automatic accessor production and synchronization, and a reverse service used to reverse-engineer existing Java application.</description>
 
@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.modelio</groupId>
             <artifactId>MDAKit</artifactId>
-            <version>[5.3.0,5.4.0)</version>
+            <version>[5.4.0,5.4.2)</version>
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
@@ -42,7 +42,7 @@
         	<dependency>
 			<groupId>org.modelio</groupId>
 			<artifactId>org.modelio.documentation.javadesigner</artifactId>
-			<version>5.3.0</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<dependency>
@@ -91,7 +91,7 @@
             <plugin>
                 <groupId>org.modelio</groupId>
                 <artifactId>modelio-maven-plugin</artifactId>
-                <version>5.3.0.00</version>
+                <version>5.4.0.00</version>
                 <executions>
                     <execution>
                         <id>ModuleValidation</id>
@@ -215,7 +215,7 @@
                                                 modelio-maven-plugin
                                             </artifactId>
                                             <versionRange>
-                                                [5.3.0.00,)
+                                                [5.4.0.00,)
                                             </versionRange>
                                             <goals>
                                                 <goal>

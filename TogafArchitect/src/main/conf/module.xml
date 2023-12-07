@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.togaf.impl.TogafArchitectModule" binaryversion="5.3.00" version="${project.version}" schema-level="2" uid="a79b1502-ac66-11df-8037-0014224f9977">
+<Module id="${project.name}" class="org.modelio.togaf.impl.TogafArchitectModule" binaryversion="5.4.00" version="${project.version}" schema-level="2" uid="a79b1502-ac66-11df-8037-0014224f9977">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/org.modelio.documentation.togaf-5.4.0.jar"/>
         <PathEntry path="lib/poi-3.9.jar"/>
         <PathEntry path="lib/commons-codec-1.5.jar"/>
     </ClassPath>
@@ -2506,7 +2507,7 @@
         </Views>
     </Gui>
     <Dependencies>
-        <Required name="ModelerModule" version="9.1.00"/>
+        <Required name="ModelerModule" version="9.4.00"/>
     </Dependencies>
     <Resources>
         <Styles>
@@ -2516,7 +2517,7 @@
             <Style id="TogafUseCase" path="res/style/usecase.style"/>
         </Styles>
         <DocFiles>
-            <PathEntry path="lib/org.modelio.documentation.togaf-${project.version}.jar"/>
+            <PathEntry path="lib/org.modelio.documentation.togaf-5.4.0.jar"/>
         </DocFiles>
     </Resources>
 </Module>

@@ -2,7 +2,6 @@ package org.modelio.module.javadesigner.impl;
 
 import java.io.File;
 import java.util.Map;
-
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.event.IModelChangeHandler;
 import org.modelio.api.modelio.model.event.IModelChangeListener;
@@ -96,13 +95,13 @@ public class JavaDesignerSession extends DefaultModuleLifeCycleHandler implement
     public boolean start() throws ModuleException {
         IModuleContext context = this.module.getModuleContext();
         IModelingSession session = context.getModelingSession();
-        
+
         // Remove the metamodelVersion
         Version version = this.module.getVersion ();
         String fullVersion = version.toString();
 
         // Display the copyright
-        JavaDesignerModule.getInstance().getModuleContext().getLogService().info("Modelio/" + this.module.getName() + " " + fullVersion + " - Copyright 2008-2015 Modeliosoft"); //$NON-NLS-1$ //$NON-NLS-2$  //$NON-NLS-3$
+        JavaDesignerModule.getInstance().getModuleContext().getLogService().info("Modelio/" + this.module.getName() + " " + fullVersion + " - Copyright 2008-2023 Docaposte"); //$NON-NLS-1$ //$NON-NLS-2$  //$NON-NLS-3$
 
         /*
          * Notifications
@@ -209,7 +208,7 @@ public class JavaDesignerSession extends DefaultModuleLifeCycleHandler implement
     public void stop() throws ModuleException {
         IModuleContext context = this.module.getModuleContext();
         IModelingSession session = context.getModelingSession();
-        
+
         session.removeStatusListener(this.statusChangeHandler);
         session.removeModelHandler (this.modelChangeHandler);
         session.removeModelListener (this.modelChangeListener);

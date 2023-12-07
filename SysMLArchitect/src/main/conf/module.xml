@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.module.sysml.impl.SysMLModule" binaryversion="5.3.0" version="${project.version}" schema-level="2" uid="00bc42d0-0000-19fb-0000-000000000000" author="" image="" url="">
+<Module id="${project.name}" class="org.modelio.module.sysml.impl.SysMLModule" binaryversion="5.4.00" version="${project.version}" schema-level="2" uid="00bc42d0-0000-19fb-0000-000000000000" author="" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/org.modelio.documentation.sysml-${project.version}.jar"/>
+        <PathEntry path="lib/org.modelio.documentation.sysml-5.4.0.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="00bc42a4-0000-1968-0000-000000000000" id="sysml">
@@ -848,11 +848,11 @@
         </Views>
     </Gui>
     <Dependencies>
-        <Required name="ModelerModule" version="9.1.00"/>
+        <Required name="ModelerModule" version="9.4.00"/>
     </Dependencies>
     <Resources>
         <DocFiles>
-            <PathEntry path="lib/org.modelio.documentation.sysml-${project.version}.jar"/>
+            <PathEntry path="lib/org.modelio.documentation.sysml-5.4.0.jar"/>
         </DocFiles>
     </Resources>
 </Module>

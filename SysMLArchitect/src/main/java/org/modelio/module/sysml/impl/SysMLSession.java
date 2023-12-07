@@ -49,26 +49,26 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 /**
  * This class represents the life of SysMl module
- * 
+ *
  * @author ebrosse
  */
 
 public class SysMLSession extends DefaultModuleLifeCycleHandler {
-    
+
     private SysMLModelChangeHandler modelChangeHandler = null;
 
     /**
      * Constructor
      * @author ebrosse
-     * 
+     *
      * @param module : the SysML Mdac
      */
-    
+
     public SysMLSession(SysMLModule module) {
         super(module);
     }
 
-    
+
     @Override
     public boolean start() throws ModuleException {
         /*
@@ -80,18 +80,18 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         // Display the copyright
         // SysMLInfo cannot be used in this operation, because there is a Java
         // error when the MDAC is deployed
-        SysMLModule.logService.info("Modelio/" + this.module.getName() + " " + completeVersion + " - Copyright 2011-2015 Modeliosoft");
-        
+        SysMLModule.logService.info("Modelio/" + this.module.getName() + " " + completeVersion + " - Copyright 2011-2023 Docaposte");
+
         IModelingSession session = this.module.getModuleContext().getModelingSession();
         this.modelChangeHandler = new SysMLModelChangeHandler();
         session.addModelHandler(this.modelChangeHandler);
-        
+
         installStyles();
         installRamc();
         return super.start();
     }
 
-    
+
     @Override
     public void stop() throws ModuleException {
         this.module.getModuleContext().getModelingSession().removeModelHandler(this.modelChangeHandler);
@@ -99,10 +99,10 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
         super.stop();
     }
 
-    
+
     private void installRamc() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
-        
+
         final IModelComponentService modelComponentService = SysMLModule.getInstance().getModuleContext().getModelioServices().getModelComponentService();
         for (IModelComponentDescriptor mc : modelComponentService.getModelComponents()) {
             if (mc.getName().equals("SIDefinitions")) {
@@ -114,29 +114,29 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
                 }
             }
         }
-        
+
         // No ramc found, deploy it
         modelComponentService.deployModelComponent(new File(mdaplugsPath.resolve("res" + File.separator + "ramc" + File.separator + "SIDefinitions.ramc").toString()), new NullProgressMonitor());
     }
 
-    
+
     private void installStyles() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
-        
+
         SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService().registerStyle("sysml", "default", new File(mdaplugsPath.resolve("res" + File.separator + "style" + File.separator + "sysml.style").toString()));
-        
+
         SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService().registerStyle("sysmlinternal", "default", new File(mdaplugsPath.resolve("res" + File.separator + "style" + File.separator + "sysmlinternal.style").toString()));
-        
+
         SysMLModule.getInstance().getModuleContext().getModelioServices().getDiagramService().registerStyle("sysmlpackage", "default", new File(mdaplugsPath.resolve("res" + File.separator + "style" + File.separator + "sysmlpackage.style").toString()));
     }
 
-    
+
     @Override
     public boolean select() throws ModuleException {
         return super.select();
     }
 
-    
+
     @Override
     public void upgrade(Version oldVersion, Map<String, String> oldParameters) {
         Version lastVersion = new Version("2.1.10");
@@ -146,30 +146,30 @@ public class SysMLSession extends DefaultModuleLifeCycleHandler {
             for (MObject existingPort : existingPorts) {
                 if (existingPort instanceof Port) {
                     Port currentPort = (Port) existingPort;
-        
+
                     Stereotype flowPortSter = session.getMetamodelExtensions().getStereotype(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWPORT, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(Port.class));
-        
+
                     if (currentPort.isStereotyped(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWIN)) {
-        
+
                         Stereotype flowINSter = session.getMetamodelExtensions().getStereotype(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWIN, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(Port.class));
                         currentPort.setDirection(PortOrientation.IN);
                         currentPort.getExtension().remove(flowINSter);
-        
+
                     } else if (currentPort.isStereotyped(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWOUT)) {
-        
+
                         Stereotype flowOUTSter = session.getMetamodelExtensions().getStereotype(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWOUT, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(Port.class));
                         currentPort.setDirection(PortOrientation.OUT);
                         currentPort.getExtension().remove(flowOUTSter);
-        
+
                     } else if (currentPort.isStereotyped(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWINOUT)) {
-        
+
                         Stereotype flowINOUTSter = session.getMetamodelExtensions().getStereotype(ISysMLPeerModule.MODULE_NAME, SysMLStereotypes.FLOWINOUT, SysMLModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(Port.class));
                         currentPort.setDirection(PortOrientation.INOUT);
                         currentPort.getExtension().remove(flowINOUTSter);
                     }
-        
+
                     currentPort.getExtension().add(flowPortSter);
-        
+
                 }
             }
         }
