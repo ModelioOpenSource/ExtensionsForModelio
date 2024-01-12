@@ -4,6 +4,11 @@ Modules are the means of defining, implementing and deploying extensions for Mod
 They are used to extend and adapt Modelio Modeler by providing additional functionalities and services that meet your specific needs. +
 The current repository contains source code of several open source modules provided with Modelio.
 
+== Compilation Instructions
+
+Modules are produced from source using maven. 
+
+To compile and package a module from source, use the pom available under *ModuleName/aggergator/pom.xml*
 
 == Java Designer 
 
