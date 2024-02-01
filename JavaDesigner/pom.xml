@@ -5,7 +5,7 @@
 	<!-- definition -->
 	<groupId>org.modelio.module</groupId>
 	<artifactId>javadesigner</artifactId>
-	<version>5.4.01</version>
+	<version>5.4.02</version>
 	<name>JavaDesigner</name>
 	<description>The Java Designer module provides a complete range of features dedicated to Java development, including Java code and Javadoc generation from UML2 models. It also provides an automatic model completion feature, incorporating automatic accessor production and synchronization, and a reverse service used to reverse-engineer existing Java application.</description>
 
@@ -65,12 +65,12 @@
 			<scope>provided</scope>
 		</dependency>
 
-	<dependency>
-		<groupId>javax.xml.bind</groupId>
-		<artifactId>jaxb-api</artifactId>
-		<version>2.2.2</version>
-		<type>jar</type>
-	</dependency>
+		<dependency>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<groupId>jakarta.xml.bind</groupId>
+			<version>4.0.0</version>
+		</dependency>
+
     </dependencies>
 
     <!-- // Build // -->

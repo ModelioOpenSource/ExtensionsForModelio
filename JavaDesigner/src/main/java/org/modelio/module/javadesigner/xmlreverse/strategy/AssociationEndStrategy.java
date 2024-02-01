@@ -2,7 +2,7 @@ package org.modelio.module.javadesigner.xmlreverse.strategy;
 
 import java.util.Collection;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
 import org.modelio.module.javadesigner.xmlreverse.IReverseBox;
 import org.modelio.module.javadesigner.xmlreverse.Repository;

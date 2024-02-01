@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="H:\modelio\alouette\toolkit\jdk17" version="17.0.9"/>
+    <libraryInfo home="H:\modelio\alouette\toolkit\..\toolkit\jdk1.8" version="1.8.0_232">
+        <bootpath>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\resources.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\rt.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\sunrsasign.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\jsse.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\jce.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\charsets.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\jfr.jar"/>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="H:\modelio\alouette\toolkit\jdk1.8\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="H:\modelio\alouette\toolkit\..\toolkit\jdk11" version="11.0.10"/>
+</libraryInfos>

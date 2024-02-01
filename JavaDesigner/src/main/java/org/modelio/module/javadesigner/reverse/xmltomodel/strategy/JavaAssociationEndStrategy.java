@@ -3,7 +3,7 @@ package org.modelio.module.javadesigner.reverse.xmltomodel.strategy;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 import org.modelio.module.javadesigner.xmlreverse.IReadOnlyRepository;
 import org.modelio.module.javadesigner.xmlreverse.model.JaxbAssociationEnd;
 import org.modelio.module.javadesigner.xmlreverse.model.JaxbClassType;
