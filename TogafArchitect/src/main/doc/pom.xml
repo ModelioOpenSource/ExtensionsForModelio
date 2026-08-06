@@ -4,109 +4,217 @@
 
 	<groupId>org.modelio</groupId>
 	<artifactId>org.modelio.documentation.togaf</artifactId>
-	<version>5.4.0</version>
-	<packaging>eclipse-plugin</packaging>
+	<version>6.2.0</version>
+	<packaging>jar</packaging>
 
 	<properties>
-		<tycho-version>1.5.0</tycho-version>
-		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
-		<html.directory>html</html.directory>
-		<adoc.directory>adoc</adoc.directory>
-		<asciidoctor.version>1.5.7.1</asciidoctor.version>
-		<phase.generate-documentation>generate-resources</phase.generate-documentation>
-	</properties>
+      <!-- maven assembly plugin to build the jar -->
+      <maven-assembly-groupid>org.apache.maven.plugins</maven-assembly-groupid>
+      <maven-assembly-id>maven-assembly-plugin</maven-assembly-id>
+      <maven-assembly-version>2.3</maven-assembly-version>
+      <!-- to convert Asciidoc to html files -->
+      <html.directory>html</html.directory>
+      <adoc.directory>adoc</adoc.directory>
+      <nlfr.directory>nl/fr</nlfr.directory>
+      <asciidoctor.version>2.1.0</asciidoctor.version>
+      <phase.generate-documentation>generate-resources</phase.generate-documentation>
+  </properties>
 
-	<repositories>
-		<repository>
-			<id>modelio-plugin</id>
-			<url>http://repository.modelio.org/</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>modelio-plugin</id>
-			<url>http://repository.modelio.org/</url>
-		</pluginRepository>
-	</pluginRepositories>
+  <build>
+      <plugins>
+<!-- PACKAGING using an assembly -->
+<plugin>
+  <groupId>${maven-assembly-groupid}</groupId>
+  <artifactId>${maven-assembly-id}</artifactId>
+  <version>${maven-assembly-version}</version>
+  <configuration>
+    <encoding>${project.build.sourceEncoding}</encoding>
+    <descriptors>
+      <descriptor>assembly.xml</descriptor>
+    </descriptors>
+    <finalName>${project.name}-${project.version}</finalName>
+    <attach>false</attach>
+    <appendAssemblyId>false</appendAssemblyId>
+    <archive>
+    <manifestFile>META-INF/MANIFEST.MF</manifestFile>
+    <manifest>
+      <addDefaultImplementationEntries>false</addDefaultImplementationEntries>
+    </manifest>
+    </archive>
+  </configuration>
+  <executions>
+    <execution>
+      <id>make-assembly</id>
+      <phase>package</phase>
+      <goals>
+        <goal>single</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>${tycho-groupid}</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<resolver>p2</resolver>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>${tycho-groupid}</groupId>
-				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<strictVersions>false</strictVersions>
-					<archive>
-						<addMavenDescriptor>false</addMavenDescriptor>
-					</archive>
-				</configuration>
-			</plugin>
+<!-- ASCIIDOCTOR -->
+<!-- Convert asciidoc files to html files (images are copied too) -->
+<plugin>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-maven-plugin</artifactId>
+  <version>${asciidoctor.version}</version>
+  <executions>
+  <!-- Asciidoctor conversion for 'default = en' -->
+  <execution>
+    <id>output-html-default</id>
+    <phase>${phase.generate-documentation}</phase>
+    <goals><goal>process-asciidoc</goal></goals>
+    <configuration>
+      <headerFooter>true</headerFooter>
+      <compact>true</compact>
+      <sourceDirectory>en/asciidoc</sourceDirectory>
+      <outputDirectory>target/html</outputDirectory>
+      <preserveDirectories>true</preserveDirectories>
+      <relativeBaseDir>true</relativeBaseDir>
+      <backend>html5</backend>
+      <attributes>
+        <linkcss>true</linkcss>
+        <imagesdir>.</imagesdir>
+        <stylesheet>modeliosoft.css</stylesheet>
+        <module_version>${project.version}</module_version>
+        <attribute-missing>warn</attribute-missing>
+        <attribute-undefined>warn</attribute-undefined>
+      </attributes>
+      <resources>
+        <resource>
+          <!-- (Mandatory) Directory to copy from. Paths are relative to maven's  ${baseDir} -->
+          <directory>en/asciidoc/css</directory>
+          <!-- (Optional) Directory to copy to. By default uses the option `outputDirectory` -->
+          <targetPath>.</targetPath>
+          <includes><include>**/*.css</include></includes>
+        </resource>
+        <resource>
+           <!-- (Mandatory) Directory to copy from. Paths are relative to maven's  ${baseDir} -->
+           <directory>en/asciidoc</directory>
+           <!-- (Optional) Directory to copy to. By default uses the option `outputDirectory` -->
+           <targetPath>.</targetPath>
+           <includes><include>**/*.png</include></includes>
+        </resource>
+      </resources>
+    </configuration>
+  </execution>
+  <!-- Asciidoctor conversion for 'fr' -->
+  <execution>
+      <id>output-html-fr</id>
+    <phase>${phase.generate-documentation}</phase>
+    <goals><goal>process-asciidoc</goal></goals>
+    <configuration>
+      <headerFooter>true</headerFooter>
+      <compact>true</compact>
+      <sourceDirectory>fr/asciidoc</sourceDirectory>
+      <outputDirectory>target/nl/fr/html</outputDirectory>
+      <preserveDirectories>true</preserveDirectories>
+      <relativeBaseDir>true</relativeBaseDir>
+      <backend>html5</backend>
+      <!-- Scenarios for linking vs embedding assets: Link to both stylesheets and images:
+        - don't set embedAssets option
+        - set linkcss attribute to true
+        - set imagesdir attribute to path relative to AsciiDoc source file -->
+      <attributes>
+        <linkcss>true</linkcss>
+        <imagesdir>.</imagesdir>
+        <stylesheet>modeliosoft.css</stylesheet>
+        <module_version>${project.version}</module_version>
+        <attribute-missing>warn</attribute-missing>
+        <attribute-undefined>warn</attribute-undefined>
+      </attributes>
+      <resources>
+        <resource>
+          <!-- (Mandatory) Directory to copy from. Paths are relative to maven's  ${baseDir} -->
+          <directory>fr/asciidoc/css</directory>
+          <!-- (Optional) Directory to copy to. By default uses the option `outputDirectory` -->
+          <targetPath>.</targetPath>
+          <includes><include>**/*.css</include></includes>
+        </resource>
+        <resource>
+           <!-- (Mandatory) Directory to copy from. Paths are relative to maven's  ${baseDir} -->
+           <directory>fr/asciidoc</directory>
+           <!-- (Optional) Directory to copy to. By default uses the option `outputDirectory` -->
+           <targetPath>.</targetPath>
+           <includes><include>**/*.png</include></includes>
+        </resource>
+      </resources>
+    </configuration>
+  </execution>
+  </executions>
+</plugin>
 
-			<!-- Convert all asciidoc files in adoc directory to html files in ${html.directory}
-				directory (images are copied too) -->
-			<plugin>
-				<groupId>org.asciidoctor</groupId>
-				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>${asciidoctor.version}</version>
-				<executions>
-					<execution>
-						<id>output-html</id>
-						<phase>${phase.generate-documentation}</phase>
-						<goals>
-							<goal>process-asciidoc</goal>
-						</goals>
-						<configuration>
-							<headerFooter>true</headerFooter>
-							<compact>true</compact>
-							<sourceDirectory>${adoc.directory}</sourceDirectory>
-							<outputDirectory>${html.directory}</outputDirectory>
-							<preserveDirectories>true</preserveDirectories>
-							<backend>html5</backend>
-							<sourceHighlighter>coderay</sourceHighlighter>
-							<attributes>
-								<linkcss>true</linkcss>
-								<imagesdir>.</imagesdir>
-							</attributes>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+<!-- HTML and tocs copy -->
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-antrun-plugin</artifactId>
+  <version>1.7</version>
+  <executions>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<id>clean-generated-files</id>
-						<phase>initialize</phase>
-						<configuration>
-							<target>
-								<delete verbose="false" failonerror="false">
-									<fileset dir="${project.basedir}/${html.directory}">
-										<include name="**/*" />
-									</fileset>
-								</delete>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+<!-- Copy HTML files for 'fr' -->
+<execution>
+  <id>copy-html-files-fr</id>
+  <phase>${phase.generate-documentation}</phase>
+  <goals><goal>run</goal></goals>
+  <configuration>
+    <target name='Copy html files - fr'>
+      <copy todir='${project.build.directory}/nl/fr/html'>
+        <fileset erroronmissingdir='false' dir='fr/html'>
+          <include name='**/*'/>
+        </fileset>
+      </copy>
+    </target>
+  </configuration>
+</execution>
 
-		</plugins>
-	</build>
-
+<!-- Copy tocs for 'fr' -->
+<execution>
+  <id>copy-tocs-files-fr</id>
+  <phase>${phase.generate-documentation}</phase>
+  <goals><goal>run</goal></goals>
+  <configuration>
+    <target name='Copy tocs files - fr'>
+      <copy todir='${project.build.directory}/nl/fr/tocs'>
+      <fileset erroronmissingdir='false' dir='fr/tocs'>
+          <include name='**/*'/>
+        </fileset>
+      </copy>
+    </target>
+  </configuration>
+</execution>
+<!-- Copy HTML files for 'default = en' -->
+<execution>
+  <id>copy-html-files-default</id>
+  <phase>${phase.generate-documentation}</phase>
+  <goals><goal>run</goal></goals>
+  <configuration>
+    <target name="Copy html files - default (en) ">
+      <copy todir='${project.build.directory}/html'>
+        <fileset erroronmissingdir='false' dir='en/html'>
+          <include name='**/*'/>
+        </fileset>
+      </copy>
+    </target>
+  </configuration>
+</execution>
+<!-- Copy tocs for 'default = en' -->
+<execution>
+  <id>copy-tocs-files-default</id>
+  <phase>${phase.generate-documentation}</phase>
+  <goals><goal>run</goal></goals>
+  <configuration>
+    <target name='Copy tocs files - default (en)'>
+      <copy todir='${project.build.directory}/tocs'>
+      <fileset erroronmissingdir='false' dir='en/tocs'>
+          <include name='**/*'/>
+        </fileset>
+      </copy>
+    </target>
+  </configuration>
+</execution>
+  </executions>
+</plugin>
+      </plugins>
+  </build>
 </project>
